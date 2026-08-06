@@ -1,4 +1,4 @@
-# Third-MUB loci and fourth-MUB negative evidence in Karlsson )
+# Third-MUB loci and fourth-MUB negative evidence in Karlsson 
 
 Reproducible research on mutually unbiased bases (MUBs) arising from Karlsson's three-parameter complex Hadamard family in dimension six. Scope is **\(K_6^{(3)}\) only** — not all CHMs in \(\mathbb{C}^6\), not a proof of Zauner's conjecture \(N(6)=3\).
 
