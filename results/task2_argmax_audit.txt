@@ -1,0 +1,17 @@
+=== Task 2: argmax fix audit ===
+  src/mub_zauner_6d_liang_chen.jl mtime: 1.7857514410153515e9
+  special_loci_run_log.txt mtime:    1.7857471292895725e9
+  Quick run predates fix: true
+  check_four_mub_extension: NO try/catch — argmax bug only affects ortho_defect branch
+  found_fourth set BEFORE buggy argmax block → not silently false-negative
+
+point                          cliq    3rd    4th   bug?   pool   timing
+F6 (Fourier)                      6   true  false     ok     48  pre-fix
+F6_theta0 (θ=0 subfamily)         6   true  false  CRASH     48  pre-fix
+Dita anchor                       6   true  false     ok     72  pre-fix
+theta_0 slice (π/4,π/6)           0  false  false     ok      0  pre-fix
+F6_theta0 duplicate               6   true  false  CRASH     48  pre-fix
+
+--- backup848 found_third=true unique coords (quick-run anchors) ---
+  F6_theta0 (0.0000000000, 0.5000000000, 0.3000000000): csv_4th=false timing=pre-fix
+  Dita (0.9553166181, 0.7853981634, 0.4000000000): csv_4th=false timing=pre-fix

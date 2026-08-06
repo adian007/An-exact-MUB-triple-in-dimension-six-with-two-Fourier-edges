@@ -1,0 +1,2166 @@
+=== Step 1: Audit third-MUB candidates ===
+
+Loaded 347 rows; 16 third-MUB candidates (dedupe=false)
+
+[32mTracking 252 paths...   1%|█                            |  ETA: 1:05:09[39m[K
+[34m                   # paths tracked: 2[39m[K
+[34m   # non-singular solutions (real): 2 (1)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 2 (1)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  16%|█████                        |  ETA: 0:02:49[39m[K
+[34m                   # paths tracked: 40[39m[K
+[34m   # non-singular solutions (real): 33 (2)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 33 (2)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  29%|█████████                    |  ETA: 0:01:20[39m[K
+[34m                   # paths tracked: 72[39m[K
+[34m   # non-singular solutions (real): 60 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 60 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  39%|████████████                 |  ETA: 0:00:51[39m[K
+[34m                   # paths tracked: 98[39m[K
+[34m   # non-singular solutions (real): 82 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 82 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  49%|███████████████              |  ETA: 0:00:34[39m[K
+[34m                   # paths tracked: 123[39m[K
+[34m   # non-singular solutions (real): 101 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 101 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  59%|██████████████████           |  ETA: 0:00:23[39m[K
+[34m                   # paths tracked: 149[39m[K
+[34m   # non-singular solutions (real): 124 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 124 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  66%|████████████████████         |  ETA: 0:00:17[39m[K
+[34m                   # paths tracked: 166[39m[K
+[34m   # non-singular solutions (real): 137 (15)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 137 (15)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  77%|███████████████████████      |  ETA: 0:00:10[39m[K
+[34m                   # paths tracked: 194[39m[K
+[34m   # non-singular solutions (real): 157 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 157 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  87%|██████████████████████████   |  ETA: 0:00:05[39m[K
+[34m                   # paths tracked: 219[39m[K
+[34m   # non-singular solutions (real): 177 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 177 (23)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  95%|████████████████████████████ |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 239[39m[K
+[34m   # non-singular solutions (real): 192 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 192 (23)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:33[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 1  F6_theta0                 θ=0.000000 φ=0.500000 λ=0.300000  near=Mobius_z4_dev    d=NaN  hp=true  exact=theta=0
+[32mTracking 252 paths...  34%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 85[39m[K
+[34m   # non-singular solutions (real): 80 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 80 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  46%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 115[39m[K
+[34m   # non-singular solutions (real): 109 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 109 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  61%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 153[39m[K
+[34m   # non-singular solutions (real): 147 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 147 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  75%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 188[39m[K
+[34m   # non-singular solutions (real): 180 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 180 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  89%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 225[39m[K
+[34m   # non-singular solutions (real): 214 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 214 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+ 2  Dita                      θ=0.955317 φ=0.785398 λ=0.400000  near=Dita             d=0.00e+00  hp=true  exact=phi=pi/4; theta=arccos(1/sqrt(3))
+[32mTracking 252 paths...  23%|███████                      |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 57[39m[K
+[34m   # non-singular solutions (real): 49 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 49 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  33%|██████████                   |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 82[39m[K
+[34m   # non-singular solutions (real): 74 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 74 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  43%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 108[39m[K
+[34m   # non-singular solutions (real): 98 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 98 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  52%|███████████████              |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 130[39m[K
+[34m   # non-singular solutions (real): 115 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 115 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  65%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 164[39m[K
+[34m   # non-singular solutions (real): 137 (17)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 137 (17)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  80%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 201[39m[K
+[34m   # non-singular solutions (real): 166 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 166 (19)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  93%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 235[39m[K
+[34m   # non-singular solutions (real): 191 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 191 (24)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 3  ref_F6_theta0             θ=0.000000 φ=0.495000 λ=0.297500  near=Fourier_theta0   d=0.00e+00  hp=true  exact=theta=0
+[32mTracking 252 paths...  31%|█████████                    |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 78[39m[K
+[34m   # non-singular solutions (real): 61 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 61 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  42%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 106[39m[K
+[34m   # non-singular solutions (real): 83 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 83 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  54%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 137[39m[K
+[34m   # non-singular solutions (real): 110 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 110 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  63%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 158[39m[K
+[34m   # non-singular solutions (real): 125 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 125 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  76%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 192[39m[K
+[34m   # non-singular solutions (real): 156 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 156 (19)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  88%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 221[39m[K
+[34m   # non-singular solutions (real): 177 (20)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 177 (20)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  98%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 248[39m[K
+[34m   # non-singular solutions (real): 201 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 201 (23)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 4  ref_F6_theta0             θ=0.000000 φ=0.495000 λ=0.300000  near=Mobius_z4_dev    d=NaN  hp=true  exact=theta=0
+[32mTracking 252 paths...  37%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 92[39m[K
+[34m   # non-singular solutions (real): 71 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 71 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  52%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 132[39m[K
+[34m   # non-singular solutions (real): 107 (13)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 107 (13)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  67%|████████████████████         |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 169[39m[K
+[34m   # non-singular solutions (real): 139 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 139 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  79%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 198[39m[K
+[34m   # non-singular solutions (real): 164 (20)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 164 (20)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  89%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 224[39m[K
+[34m   # non-singular solutions (real): 182 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 182 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 5  ref_F6_theta0             θ=0.000000 φ=0.497500 λ=0.297500  near=Fourier_theta0   d=0.00e+00  hp=true  exact=theta=0
+[32mTracking 252 paths...  33%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 82[39m[K
+[34m   # non-singular solutions (real): 65 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 65 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  44%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 111[39m[K
+[34m   # non-singular solutions (real): 86 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 86 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  58%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 146[39m[K
+[34m   # non-singular solutions (real): 114 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 114 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  70%|█████████████████████        |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 177[39m[K
+[34m   # non-singular solutions (real): 138 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 138 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  84%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 211[39m[K
+[34m   # non-singular solutions (real): 167 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 167 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  97%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 244[39m[K
+[34m   # non-singular solutions (real): 196 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 196 (24)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 6  ref_F6_theta0             θ=0.000000 φ=0.497500 λ=0.300000  near=Mobius_z4_dev    d=NaN  hp=true  exact=theta=0
+[32mTracking 252 paths...  34%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 86[39m[K
+[34m   # non-singular solutions (real): 67 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 67 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  48%|███████████████              |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 122[39m[K
+[34m   # non-singular solutions (real): 96 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 96 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  60%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 152[39m[K
+[34m   # non-singular solutions (real): 123 (13)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 123 (13)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  72%|█████████████████████        |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 181[39m[K
+[34m   # non-singular solutions (real): 147 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 147 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  83%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 210[39m[K
+[34m   # non-singular solutions (real): 170 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 170 (19)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  92%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 232[39m[K
+[34m   # non-singular solutions (real): 187 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 187 (23)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 7  ref_F6_theta0             θ=0.000000 φ=0.500000 λ=0.297500  near=Fourier_theta0   d=0.00e+00  hp=true  exact=theta=0
+[32mTracking 252 paths...  31%|█████████                    |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 77[39m[K
+[34m   # non-singular solutions (real): 58 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 58 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  44%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 110[39m[K
+[34m   # non-singular solutions (real): 89 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 89 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  56%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 141[39m[K
+[34m   # non-singular solutions (real): 115 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 115 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  65%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 164[39m[K
+[34m   # non-singular solutions (real): 134 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 134 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  77%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 195[39m[K
+[34m   # non-singular solutions (real): 160 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 160 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  85%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 213[39m[K
+[34m   # non-singular solutions (real): 175 (20)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 175 (20)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  94%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 238[39m[K
+[34m   # non-singular solutions (real): 195 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 195 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 8  ref_F6_theta0             θ=0.000000 φ=0.502500 λ=0.297500  near=Fourier_theta0   d=0.00e+00  hp=true  exact=theta=0
+[32mTracking 252 paths...  41%|████████████                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 104[39m[K
+[34m   # non-singular solutions (real): 81 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 81 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  60%|██████████████████           |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 150[39m[K
+[34m   # non-singular solutions (real): 120 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 120 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  79%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 198[39m[K
+[34m   # non-singular solutions (real): 161 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 161 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  93%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 234[39m[K
+[34m   # non-singular solutions (real): 188 (21)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 188 (21)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+ 9  ref_F6_theta0             θ=0.000000 φ=0.502500 λ=0.300000  near=Mobius_z4_dev    d=NaN  hp=true  exact=theta=0
+[32mTracking 252 paths...  32%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 80[39m[K
+[34m   # non-singular solutions (real): 68 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 68 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  46%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 117[39m[K
+[34m   # non-singular solutions (real): 94 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 94 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  57%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 144[39m[K
+[34m   # non-singular solutions (real): 114 (15)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 114 (15)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  69%|█████████████████████        |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 175[39m[K
+[34m   # non-singular solutions (real): 141 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 141 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  82%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 207[39m[K
+[34m   # non-singular solutions (real): 165 (20)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 165 (20)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  91%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 230[39m[K
+[34m   # non-singular solutions (real): 185 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 185 (23)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+10  ref_F6_theta0             θ=0.000000 φ=0.505000 λ=0.297500  near=Fourier_theta0   d=0.00e+00  hp=true  exact=theta=0
+[32mTracking 252 paths...  30%|█████████                    |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 76[39m[K
+[34m   # non-singular solutions (real): 57 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 57 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  44%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 111[39m[K
+[34m   # non-singular solutions (real): 87 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 87 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  56%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 142[39m[K
+[34m   # non-singular solutions (real): 113 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 113 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  70%|█████████████████████        |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 177[39m[K
+[34m   # non-singular solutions (real): 139 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 139 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  81%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 205[39m[K
+[34m   # non-singular solutions (real): 164 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 164 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  95%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 240[39m[K
+[34m   # non-singular solutions (real): 193 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 193 (19)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+11  ref_F6_theta0             θ=0.000000 φ=0.505000 λ=0.300000  near=Mobius_z4_dev    d=NaN  hp=true  exact=theta=0
+[32mTracking 252 paths...  25%|████████                     |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 64[39m[K
+[34m   # non-singular solutions (real): 60 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 60 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  38%|████████████                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 97[39m[K
+[34m   # non-singular solutions (real): 92 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 92 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  52%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 131[39m[K
+[34m   # non-singular solutions (real): 125 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 125 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  61%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 154[39m[K
+[34m   # non-singular solutions (real): 146 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 146 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  71%|█████████████████████        |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 179[39m[K
+[34m   # non-singular solutions (real): 170 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 170 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  81%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 203[39m[K
+[34m   # non-singular solutions (real): 193 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 193 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  93%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 235[39m[K
+[34m   # non-singular solutions (real): 225 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 225 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+12  ref_Dita                  θ=0.955317 φ=0.785398 λ=0.395000  near=Dita             d=0.00e+00  hp=true  exact=phi=pi/4; theta=arccos(1/sqrt(3))
+[32mTracking 252 paths...  34%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 86[39m[K
+[34m   # non-singular solutions (real): 82 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 82 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  44%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 111[39m[K
+[34m   # non-singular solutions (real): 106 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 106 (6)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  62%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 155[39m[K
+[34m   # non-singular solutions (real): 148 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 148 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  76%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 191[39m[K
+[34m   # non-singular solutions (real): 184 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 184 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  93%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 235[39m[K
+[34m   # non-singular solutions (real): 223 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 223 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+13  ref_Dita                  θ=0.955317 φ=0.785398 λ=0.397500  near=Dita             d=0.00e+00  hp=true  exact=phi=pi/4; theta=arccos(1/sqrt(3))
+[32mTracking 252 paths...  27%|████████                     |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 68[39m[K
+[34m   # non-singular solutions (real): 66 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 66 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  36%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 91[39m[K
+[34m   # non-singular solutions (real): 88 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 88 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  45%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 113[39m[K
+[34m   # non-singular solutions (real): 110 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 110 (6)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  56%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 142[39m[K
+[34m   # non-singular solutions (real): 137 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 137 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  70%|█████████████████████        |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 176[39m[K
+[34m   # non-singular solutions (real): 168 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 168 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  85%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 213[39m[K
+[34m   # non-singular solutions (real): 204 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  99%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 251[39m[K
+[34m   # non-singular solutions (real): 239 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 239 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+14  ref_Dita                  θ=0.955317 φ=0.785398 λ=0.402500  near=Dita             d=0.00e+00  hp=true  exact=phi=pi/4; theta=arccos(1/sqrt(3))
+[32mTracking 252 paths...  36%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 91[39m[K
+[34m   # non-singular solutions (real): 87 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 87 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  47%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 118[39m[K
+[34m   # non-singular solutions (real): 113 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 113 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  62%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 155[39m[K
+[34m   # non-singular solutions (real): 150 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 150 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  78%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 196[39m[K
+[34m   # non-singular solutions (real): 190 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 190 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  96%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 243[39m[K
+[34m   # non-singular solutions (real): 233 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 233 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+15  ref_Dita                  θ=0.955317 φ=0.785398 λ=0.405000  near=Dita             d=0.00e+00  hp=true  exact=phi=pi/4; theta=arccos(1/sqrt(3))
+[32mTracking 252 paths...  32%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 81[39m[K
+[34m   # non-singular solutions (real): 67 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 67 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  46%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 116[39m[K
+[34m   # non-singular solutions (real): 93 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 93 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  61%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 154[39m[K
+[34m   # non-singular solutions (real): 116 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 116 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  73%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 183[39m[K
+[34m   # non-singular solutions (real): 137 (21)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 137 (21)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  85%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 214[39m[K
+[34m   # non-singular solutions (real): 163 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 163 (24)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  97%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 245[39m[K
+[34m   # non-singular solutions (real): 188 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 188 (24)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 192 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 192 (24)[39m[K
+16  degen_circulant_match     θ=1.570796 φ=0.050000 λ=6.233185  near=Mobius_z4_dev    d=3.11e-15  hp=false  exact=theta=pi/2
+
+Wrote D:\IBM-Quantum\MUBs in 6-dimension\results\third_mub_candidates_audit.csv
+
+=== Step 2: Fourth-MUB per third basis ===
+
+[32mTracking 252 paths...  33%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 84[39m[K
+[34m   # non-singular solutions (real): 62 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 62 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  52%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 131[39m[K
+[34m   # non-singular solutions (real): 100 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 100 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  65%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 163[39m[K
+[34m   # non-singular solutions (real): 126 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 126 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  77%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 193[39m[K
+[34m   # non-singular solutions (real): 151 (17)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 151 (17)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  90%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 228[39m[K
+[34m   # non-singular solutions (real): 183 (20)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 183 (20)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  1 (F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  29%|█████████                    |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 73[39m[K
+[34m   # non-singular solutions (real): 71 (2)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 71 (2)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  39%|████████████                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 99[39m[K
+[34m   # non-singular solutions (real): 94 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 94 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  50%|███████████████              |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 127[39m[K
+[34m   # non-singular solutions (real): 121 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 121 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  62%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 155[39m[K
+[34m   # non-singular solutions (real): 145 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 145 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  72%|█████████████████████        |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 181[39m[K
+[34m   # non-singular solutions (real): 170 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 170 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  83%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 209[39m[K
+[34m   # non-singular solutions (real): 197 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 197 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  96%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 241[39m[K
+[34m   # non-singular solutions (real): 229 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 229 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+Candidate  2 (Dita): n_pool=72 aggregate_fourth=false bases=4
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  33%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 84[39m[K
+[34m   # non-singular solutions (real): 71 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 71 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  44%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 111[39m[K
+[34m   # non-singular solutions (real): 90 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 90 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  58%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 146[39m[K
+[34m   # non-singular solutions (real): 119 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 119 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  74%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 187[39m[K
+[34m   # non-singular solutions (real): 156 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 156 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  91%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 230[39m[K
+[34m   # non-singular solutions (real): 186 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 186 (24)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  3 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  25%|████████                     |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 63[39m[K
+[34m   # non-singular solutions (real): 55 (2)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 55 (2)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  37%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 94[39m[K
+[34m   # non-singular solutions (real): 79 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 79 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  46%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 117[39m[K
+[34m   # non-singular solutions (real): 94 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 94 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  57%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 144[39m[K
+[34m   # non-singular solutions (real): 119 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 119 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  67%|████████████████████         |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 168[39m[K
+[34m   # non-singular solutions (real): 138 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 138 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  76%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 192[39m[K
+[34m   # non-singular solutions (real): 159 (17)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 159 (17)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  90%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 227[39m[K
+[34m   # non-singular solutions (real): 184 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 184 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  4 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  38%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 95[39m[K
+[34m   # non-singular solutions (real): 75 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 75 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  56%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 141[39m[K
+[34m   # non-singular solutions (real): 111 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 111 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  74%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 187[39m[K
+[34m   # non-singular solutions (real): 150 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 150 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  89%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 225[39m[K
+[34m   # non-singular solutions (real): 183 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 183 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  5 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  27%|████████                     |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 67[39m[K
+[34m   # non-singular solutions (real): 54 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 54 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  39%|████████████                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 98[39m[K
+[34m   # non-singular solutions (real): 80 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 80 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  53%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 134[39m[K
+[34m   # non-singular solutions (real): 110 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 110 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  64%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 161[39m[K
+[34m   # non-singular solutions (real): 132 (15)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 132 (15)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  76%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 191[39m[K
+[34m   # non-singular solutions (real): 154 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 154 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  86%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 217[39m[K
+[34m   # non-singular solutions (real): 175 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 175 (19)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  98%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 246[39m[K
+[34m   # non-singular solutions (real): 198 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 198 (23)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  6 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  31%|█████████                    |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 78[39m[K
+[34m   # non-singular solutions (real): 66 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 66 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  47%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 119[39m[K
+[34m   # non-singular solutions (real): 95 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 95 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  57%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 144[39m[K
+[34m   # non-singular solutions (real): 114 (15)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 114 (15)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  73%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 184[39m[K
+[34m   # non-singular solutions (real): 146 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 146 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  88%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 223[39m[K
+[34m   # non-singular solutions (real): 180 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 180 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  7 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  35%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 87[39m[K
+[34m   # non-singular solutions (real): 73 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 73 (6)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  51%|███████████████              |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 128[39m[K
+[34m   # non-singular solutions (real): 109 (15)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 109 (15)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  67%|████████████████████         |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 169[39m[K
+[34m   # non-singular solutions (real): 142 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 142 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  80%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 201[39m[K
+[34m   # non-singular solutions (real): 165 (20)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 165 (20)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  92%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 231[39m[K
+[34m   # non-singular solutions (real): 187 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 187 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  8 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  27%|████████                     |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 69[39m[K
+[34m   # non-singular solutions (real): 54 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 54 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  41%|████████████                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 104[39m[K
+[34m   # non-singular solutions (real): 81 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 81 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  55%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 138[39m[K
+[34m   # non-singular solutions (real): 107 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 107 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  62%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 157[39m[K
+[34m   # non-singular solutions (real): 125 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 125 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  77%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 194[39m[K
+[34m   # non-singular solutions (real): 157 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 157 (19)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  87%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 218[39m[K
+[34m   # non-singular solutions (real): 177 (22)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 177 (22)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  99%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 249[39m[K
+[34m   # non-singular solutions (real): 201 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 201 (24)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate  9 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  36%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 90[39m[K
+[34m   # non-singular solutions (real): 72 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 72 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  48%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 120[39m[K
+[34m   # non-singular solutions (real): 97 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 97 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  58%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 147[39m[K
+[34m   # non-singular solutions (real): 119 (13)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 119 (13)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  71%|█████████████████████        |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 179[39m[K
+[34m   # non-singular solutions (real): 146 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 146 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  83%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 210[39m[K
+[34m   # non-singular solutions (real): 168 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 168 (19)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  94%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 237[39m[K
+[34m   # non-singular solutions (real): 192 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 192 (24)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate 10 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  32%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 81[39m[K
+[34m   # non-singular solutions (real): 65 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 65 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  41%|████████████                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 104[39m[K
+[34m   # non-singular solutions (real): 80 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 80 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  56%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 140[39m[K
+[34m   # non-singular solutions (real): 112 (13)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 112 (13)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  68%|████████████████████         |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 172[39m[K
+[34m   # non-singular solutions (real): 142 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 142 (16)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  80%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 202[39m[K
+[34m   # non-singular solutions (real): 167 (17)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 167 (17)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  96%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 241[39m[K
+[34m   # non-singular solutions (real): 195 (21)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 195 (21)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+Candidate 11 (ref_F6_theta0): n_pool=48 aggregate_fourth=false bases=8
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+  basis 5: n_filtered=0 max_clique=0 found_fourth=false
+  basis 6: n_filtered=0 max_clique=0 found_fourth=false
+  basis 7: n_filtered=0 max_clique=0 found_fourth=false
+  basis 8: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  29%|█████████                    |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 72[39m[K
+[34m   # non-singular solutions (real): 68 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 68 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  42%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 105[39m[K
+[34m   # non-singular solutions (real): 101 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 101 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  54%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 136[39m[K
+[34m   # non-singular solutions (real): 132 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 132 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  65%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 165[39m[K
+[34m   # non-singular solutions (real): 161 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 161 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  76%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 191[39m[K
+[34m   # non-singular solutions (real): 187 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 187 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  87%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 220[39m[K
+[34m   # non-singular solutions (real): 213 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 213 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  98%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 248[39m[K
+[34m   # non-singular solutions (real): 236 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 236 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+Candidate 12 (ref_Dita): n_pool=72 aggregate_fourth=false bases=4
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  25%|████████                     |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 63[39m[K
+[34m   # non-singular solutions (real): 60 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 60 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  37%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 94[39m[K
+[34m   # non-singular solutions (real): 90 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 90 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  50%|███████████████              |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 125[39m[K
+[34m   # non-singular solutions (real): 119 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 119 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  59%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 149[39m[K
+[34m   # non-singular solutions (real): 140 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 140 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  70%|█████████████████████        |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 177[39m[K
+[34m   # non-singular solutions (real): 167 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 167 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  81%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 205[39m[K
+[34m   # non-singular solutions (real): 193 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 193 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  96%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 241[39m[K
+[34m   # non-singular solutions (real): 229 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 229 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+Candidate 13 (ref_Dita): n_pool=72 aggregate_fourth=false bases=4
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  27%|████████                     |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 68[39m[K
+[34m   # non-singular solutions (real): 66 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 66 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  35%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 89[39m[K
+[34m   # non-singular solutions (real): 86 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 86 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  47%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 119[39m[K
+[34m   # non-singular solutions (real): 114 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 114 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  58%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 147[39m[K
+[34m   # non-singular solutions (real): 139 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 139 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  74%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 186[39m[K
+[34m   # non-singular solutions (real): 176 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 176 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  86%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 216[39m[K
+[34m   # non-singular solutions (real): 204 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+Candidate 14 (ref_Dita): n_pool=72 aggregate_fourth=false bases=4
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  32%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 80[39m[K
+[34m   # non-singular solutions (real): 76 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 76 (6)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  46%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 115[39m[K
+[34m   # non-singular solutions (real): 110 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 110 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  60%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 151[39m[K
+[34m   # non-singular solutions (real): 144 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 144 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  73%|██████████████████████       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 185[39m[K
+[34m   # non-singular solutions (real): 176 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 176 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  90%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 228[39m[K
+[34m   # non-singular solutions (real): 217 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 217 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+Candidate 15 (ref_Dita): n_pool=72 aggregate_fourth=false bases=4
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+  basis 3: n_filtered=0 max_clique=0 found_fourth=false
+  basis 4: n_filtered=0 max_clique=0 found_fourth=false
+[32mTracking 252 paths...  37%|███████████                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 92[39m[K
+[34m   # non-singular solutions (real): 68 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 68 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  49%|███████████████              |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 123[39m[K
+[34m   # non-singular solutions (real): 95 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 95 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  64%|███████████████████          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 162[39m[K
+[34m   # non-singular solutions (real): 124 (14)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 124 (14)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  77%|███████████████████████      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 195[39m[K
+[34m   # non-singular solutions (real): 153 (18)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 153 (18)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  90%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 228[39m[K
+[34m   # non-singular solutions (real): 174 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 174 (23)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 192 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 192 (24)[39m[K
+Candidate 16 (degen_circulant_match): n_pool=48 aggregate_fourth=false bases=2
+  basis 1: n_filtered=0 max_clique=0 found_fourth=false
+  basis 2: n_filtered=0 max_clique=0 found_fourth=false
+
+Wrote D:\IBM-Quantum\MUBs in 6-dimension\results\fourth_mub_per_basis.csv
+
+=== Step 3: Clustering of third-MUB points ===
+
+[32mTracking 252 paths...  33%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 84[39m[K
+[34m   # non-singular solutions (real): 84 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 84 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  46%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 117[39m[K
+[34m   # non-singular solutions (real): 116 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 116 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  60%|██████████████████           |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 150[39m[K
+[34m   # non-singular solutions (real): 149 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 149 (6)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  71%|█████████████████████        |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 179[39m[K
+[34m   # non-singular solutions (real): 178 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 178 (6)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  85%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 215[39m[K
+[34m   # non-singular solutions (real): 214 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 214 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  99%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 249[39m[K
+[34m   # non-singular solutions (real): 248 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 248 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 251 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 251 (12)[39m[K
+[32mTracking 252 paths...  24%|███████                      |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 60[39m[K
+[34m   # non-singular solutions (real): 60 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 60 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  27%|████████                     |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 69[39m[K
+[34m   # non-singular solutions (real): 69 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 69 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  30%|█████████                    |  ETA: 0:00:03[39m[K
+[34m                   # paths tracked: 75[39m[K
+[34m   # non-singular solutions (real): 75 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 75 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  42%|█████████████                |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 105[39m[K
+[34m   # non-singular solutions (real): 105 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 105 (6)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  58%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 147[39m[K
+[34m   # non-singular solutions (real): 147 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 147 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  71%|█████████████████████        |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 179[39m[K
+[34m   # non-singular solutions (real): 179 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 179 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  81%|████████████████████████     |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 203[39m[K
+[34m   # non-singular solutions (real): 203 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 203 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  88%|██████████████████████████   |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 222[39m[K
+[34m   # non-singular solutions (real): 222 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 222 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  99%|█████████████████████████████|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 249[39m[K
+[34m   # non-singular solutions (real): 249 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 249 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:02[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 252 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 252 (12)[39m[K
+[32mTracking 252 paths...  33%|██████████                   |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 83[39m[K
+[34m   # non-singular solutions (real): 83 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 83 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  45%|██████████████               |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 113[39m[K
+[34m   # non-singular solutions (real): 112 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 112 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  58%|█████████████████            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 145[39m[K
+[34m   # non-singular solutions (real): 144 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 144 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  67%|████████████████████         |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 169[39m[K
+[34m   # non-singular solutions (real): 168 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 168 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  81%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 204[39m[K
+[34m   # non-singular solutions (real): 203 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 203 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  94%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 237[39m[K
+[34m   # non-singular solutions (real): 236 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 236 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 251 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 251 (12)[39m[K
+[32mTracking 252 paths...  25%|████████                     |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 63[39m[K
+[34m   # non-singular solutions (real): 63 (3)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 63 (3)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  32%|██████████                   |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 81[39m[K
+[34m   # non-singular solutions (real): 81 (4)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 81 (4)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  44%|█████████████                |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 110[39m[K
+[34m   # non-singular solutions (real): 110 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 110 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  54%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 137[39m[K
+[34m   # non-singular solutions (real): 137 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 137 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  66%|████████████████████         |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 166[39m[K
+[34m   # non-singular solutions (real): 166 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 166 (8)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  77%|███████████████████████      |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 193[39m[K
+[34m   # non-singular solutions (real): 193 (10)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 193 (10)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  85%|█████████████████████████    |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 214[39m[K
+[34m   # non-singular solutions (real): 214 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 214 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  95%|████████████████████████████ |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 240[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:02[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 252 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 252 (12)[39m[K
+[32mTracking 252 paths...  23%|███████                      |  ETA: 0:00:02[39m[K
+[34m                   # paths tracked: 58[39m[K
+[34m   # non-singular solutions (real): 58 (2)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 58 (2)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  40%|████████████                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 100[39m[K
+[34m   # non-singular solutions (real): 100 (5)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 100 (5)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  55%|████████████████             |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 138[39m[K
+[34m   # non-singular solutions (real): 138 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 138 (7)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  66%|████████████████████         |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 167[39m[K
+[34m   # non-singular solutions (real): 167 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 167 (9)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  81%|████████████████████████     |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 205[39m[K
+[34m   # non-singular solutions (real): 205 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 205 (11)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths...  92%|███████████████████████████  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 231[39m[K
+[34m   # non-singular solutions (real): 231 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 231 (12)[39m[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[A[32mTracking 252 paths... 100%|█████████████████████████████| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 252 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 252 (12)[39m[K
+Parameter-space SVD rank (of 16 points): 3
+Singular values: 5.887178, 1.754972, 0.010624
+  perturb idx=1 eps=1e-04 third_survives=false max_clique=2
+  perturb idx=2 eps=1e-04 third_survives=false max_clique=2
+  perturb idx=3 eps=1e-04 third_survives=false max_clique=2
+  perturb idx=4 eps=1e-04 third_survives=false max_clique=2
+  perturb idx=5 eps=1e-04 third_survives=false max_clique=2
+
+Wrote D:\IBM-Quantum\MUBs in 6-dimension\results\validation_summary.txt

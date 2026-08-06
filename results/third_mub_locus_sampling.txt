@@ -1,0 +1,57 @@
+=== Part A: Third-MUB locus local sampling ===
+Date: 2026-08-03 12:45
+Anchors: Dita, F6_theta0
+Isotropic: 100 Gaussian samples per radius in [1.0e-6, 1.0e-5, 0.0001, 0.001, 0.01]
+Tolerances: mu=1.0e-10 ortho=1.0e-10 HP bits=256 on any clique>=6
+
+--- Exact anchor probes ---
+  Dita: clique=6 third=true hp=true
+  F6_theta0: clique=6 third=true hp=true
+
+=== A1: Multi-radius isotropic Gaussian ===
+anchor	radius	valid	n_clique6	n_clique2	n_other
+Dita	1e-06	100	0	100	0
+Dita	1e-05	100	0	100	0
+Dita	1e-04	100	0	100	0
+Dita	1e-03	100	0	100	0
+Dita	1e-02	100	0	100	0
+F6_theta0	1e-06	100	0	99	1
+F6_theta0	1e-05	100	0	100	0
+F6_theta0	1e-04	100	0	100	0
+F6_theta0	1e-03	100	0	100	0
+F6_theta0	1e-02	100	0	100	0
+
+=== A2: Directional sweeps ===
+
+--- Pure axis (smallest drop below 6) ---
+anchor	axis	max|delta|_clique6	first_drop_mag
+Dita	theta	0e+00	1e-06
+Dita	phi	0e+00	1e-06
+Dita	lambda	1e-02	>0.01
+F6_theta0	theta	0e+00	1e-06
+F6_theta0	phi	1e-02	>0.01
+F6_theta0	lambda	1e-02	1e-06
+
+--- Pairwise combinations ---
+anchor	pair	max_m_clique6
+Dita	theta+phi	0e+00
+Dita	theta+lambda	0e+00
+Dita	phi+lambda	0e+00
+F6_theta0	theta+phi	0e+00
+F6_theta0	theta+lambda	0e+00
+F6_theta0	phi+lambda	1e-02
+
+--- 3 fixed random directions ---
+anchor	seed	max_m_clique6	dir
+Dita	1	0e+00	[0.941,0.282,-0.188]
+Dita	2	0e+00	[0.092,0.925,0.370]
+Dita	3	0e+00	[0.432,-0.259,0.864]
+F6_theta0	1	0e+00	[0.941,0.282,-0.188]
+F6_theta0	2	0e+00	[0.092,0.925,0.370]
+F6_theta0	3	0e+00	[0.432,-0.259,0.864]
+
+=== PRIORITY HITS (clique>=6 beyond anchor) ===
+(anchor = "Dita", kind = "axis_lambda", r = 0.01, clique = 6, hp = true)
+(anchor = "F6_theta0", kind = "axis_phi", r = 0.01, clique = 6, hp = true)
+(anchor = "F6_theta0", kind = "axis_lambda", r = 0.01, clique = 6, hp = true)
+(anchor = "F6_theta0", kind = "pair_(:phi, :lambda)", r = 0.01, clique = 6, hp = true)

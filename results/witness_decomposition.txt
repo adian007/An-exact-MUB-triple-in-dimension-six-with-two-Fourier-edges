@@ -1,0 +1,26 @@
+=== Task 3: Witness decomposition at F6 and Dita ===
+Script: scripts/julia/witness_decomposition.jl
+Date: 2026-08-03
+
+Per-H MU pool system: 10 polynomial equations, 10 variables (z_{1..5}, w_{1..5}).
+
+--- F6 (Fourier matrix) ---
+  mixed_volume=252  tracked=156  certified=156  mv_gap=96
+  Dimension: ZERO (square system, finite isolated roots)
+  witness_set: API error (codim bounds); inferred 0-dim from finite solve
+  NID: not completed (process crash on this host)
+  Representative solutions (first 3 coords):
+    sol[1]: (1.866-3.232im, 1.866+3.232im, -3.732)
+    sol[2]: (-0.134+0.232im, 0.134+0.232im, 0.268)
+    sol[3]: (-0.500-0.866im, -0.500+0.866im, 1.000)
+  RECOMMEND: local Groebner feasible (degree ~156-252); deprioritize full-family elimination
+
+--- Dita Karlsson (theta=arccos(1/sqrt(3)), phi=pi/4, lambda=0.4) ---
+  mixed_volume=252  tracked=240  certified=240  mv_gap=12
+  Dimension: ZERO (finite isolated roots)
+  witness_set: API error; inferred 0-dim from finite solve
+  Representative solutions (first 3 coords):
+    sol[1]: (0.005-0.100im, 0.121-0.107im, -0.097-0.093im)
+    sol[2]: (0.447+0.894im, ~0-1.000im, 1.000)
+    sol[3]: (0.247+0.104im, ~0-0.268im, -0.247-0.104im)
+  RECOMMEND: local Groebner feasible (degree ~240); full-family Groebner deprioritized

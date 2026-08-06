@@ -1,0 +1,44 @@
+=== Phase 1.1a: Gauge equivalence analytic analysis ===
+Date: 2026-08-03T13:27:27.581
+
+--- Block A at theta=0 ---
+  phi=0  A11=-0.5++0.8660254037844386i  A12=-0.5+-0.8660254037844386i  |ΔA|=0.000e+00
+  phi=0.48  A11=-0.5++0.8660254037844386i  A12=-0.5+-0.8660254037844386i  |ΔA|=0.000e+00
+  phi=0.5  A11=-0.5++0.8660254037844386i  A12=-0.5+-0.8660254037844386i  |ΔA|=0.000e+00
+  phi=0.52  A11=-0.5++0.8660254037844386i  A12=-0.5+-0.8660254037844386i  |ΔA|=0.000e+00
+  phi=0.7  A11=-0.5++0.8660254037844386i  A12=-0.5+-0.8660254037844386i  |ΔA|=0.000e+00
+  phi=1.3  A11=-0.5++0.8660254037844386i  A12=-0.5+-0.8660254037844386i  |ΔA|=0.000e+00
+  phi=0.785398  A11=-0.5++0.8660254037844386i  A12=-0.5+-0.8660254037844386i  |ΔA|=0.000e+00
+  max |A(0,phi)-A(0,0.5)| over phi in test set: 0.000e+00
+  Analytic: sin(theta)=0 => A11 = -1/2 + i*sqrt(3)/2, A12 = -1/2 - i*sqrt(3)/2 (phi drops out).
+
+--- Full H(0, phi, lambda) at fixed lambda=0.3 ---
+  phi=0.48  max|H(0,phi,λ)-H(0,0.5,λ)| = 0.000e+00
+  phi=0.5  max|H(0,phi,λ)-H(0,0.5,λ)| = 0.000e+00
+  phi=0.52  max|H(0,phi,λ)-H(0,0.5,λ)| = 0.000e+00
+  phi=0.7  max|H(0,phi,λ)-H(0,0.5,λ)| = 0.000e+00
+  max entrywise |ΔH| over phi pairs: 0.000e+00 (tol=1e-12)
+
+--- H(Dita_theta, pi/4, lambda) vs lambda ---
+  lambda=0.4  max|H(λ)-H(0.4)| = 0.000000e+00
+  lambda=0.41  max|H(λ)-H(0.4)| = 9.999958e-03
+  lambda=0.45  max|H(λ)-H(0.4)| = 4.999479e-02
+  lambda=0.5  max|H(λ)-H(0.4)| = 9.995834e-02
+  lambda=0.9  max|H(λ)-H(0.4)| = 4.948079e-01
+  lambda=1.3  max|H(λ)-H(0.4)| = 8.699311e-01
+  lambda=2  max|H(λ)-H(0.4)| = 1.434712e+00
+  lambda enters via z1=exp(i*lambda); all Z blocks change => H depends on lambda by construction.
+
+=== VERDICT ===
+phi IS a gauge parameter at theta=0: build_A(0,phi) and H(0,phi,lambda) are
+  independent of phi (max |ΔH| = 0.0 < 1.0e-12). Axis persistence along phi
+  at F6_theta0 reflects parametrization redundancy, not a distinct CHM family.
+
+lambda is NOT a gauge parameter in the Karlsson parametrization: it is the explicit third
+  degree of freedom (z1 = exp(i*lambda)); H(Dita, pi/4, lambda) changes with lambda.
+
+Phase 1.1b CHM equivalence (chm_equivalence.py, 720 perm + diag phases):
+  F6 phi pairs: residual=0 (EQUIVALENT) — confirms phi gauge at theta=0.
+  Dita lambda pairs vs lambda=0.4: min_residual=2.309e-02, max=3.164 (INEQUIVALENT).
+  lambda is NOT a gauge parameter in the CHM equivalence sense at Dita.
+  Branch: 1.3 (genuine 1D inequivalent-CHM family along lambda at Dita).

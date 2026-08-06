@@ -1,0 +1,9 @@
+=== Task 2: 512-point pool completeness re-tag ===
+Points processed: 512
+
+OLD complete (tracked >= 0.9*mv): 512
+NEW complete (n_certified==n_tracked): 512
+Flip complete->incomplete: 0
+Flip incomplete->complete: 0
+Points with max_clique>=3: 0
+

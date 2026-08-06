@@ -1,0 +1,7 @@
+n_csv_rows=928
+n_candidates=45
+cluster_rank=3
+cluster_sv=16.33507426788715,2.4940262883602204,0.03534969820471293
+hp_survived=36
+any_fourth=false
+tangent_note=cluster rank 3; tangent test 0/5 preserve third-MUB

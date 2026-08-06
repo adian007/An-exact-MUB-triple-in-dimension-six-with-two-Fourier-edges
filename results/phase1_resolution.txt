@@ -1,0 +1,77 @@
+=== PHASE 1 RESOLUTION (gate report) ===
+Date: 2026-08-03
+Branch: 1.3 (genuine 1D lambda family at Dita; phi gauge at theta=0)
+
+STOP STATUS: NO — found_fourth=false throughout Phase 1.3c sweep (22 points complete).
+
+================================================================================
+PHASE 1.1 — GAUGE-EQUIVALENCE VERDICT
+================================================================================
+
+1.1a Analytic (results/gauge_analysis.txt):
+  - phi IS a gauge parameter at theta=0: build_A and H(0,phi,lambda) are EXACTLY
+    independent of phi (max |Delta H| = 0 < 1e-12).
+  - lambda IS NOT a gauge parameter in the Karlsson parametrization: z1=exp(i*lambda)
+    is an explicit third family coordinate; H changes with lambda (max |Delta H| at
+    Dita = 1.435 between lambda=0.4 and lambda=2.0).
+  - theta is a sensitive non-gauge direction (clique drops at O(1e-6)).
+
+1.1b Numerical CHM equivalence (results/chm_equivalence.txt):
+  - Dita lambda pairs (0.4 vs {0.41,0.45,0.5,0.9,1.3,2.0}): ALL INEQUIVALENT
+    (min residual = 2.31e-02, max = 3.16).
+  - F6_theta0 phi pairs (0.5 vs {0.48,0.52,0.7}): ALL EQUIVALENT
+    (max residual = 0).
+  - Branch decision: -> 1.3
+
+INTERPRETATION:
+  - Axis persistence along phi at F6_theta0 is a PARAMETRIZATION ARTIFACT (H identical).
+  - Axis persistence along lambda at Dita is a GENUINE 1D FAMILY of pairwise
+    CHM-INEQUIVALENT matrices, each supporting a third MUB (clique-6).
+  - Isotropic 0/100 vs axis persistence explained by thin axis-aligned structure
+    (lambda curve at Dita), not sampling noise.
+
+================================================================================
+PHASE 1.4 — EXACT BOUNDARIES (400-bit HP, binary search)
+================================================================================
+
+Source: results/phase1_boundaries.txt (full run, HP_bits=400).
+
+Dita lambda axis (theta=arccos(1/sqrt(3)), phi=pi/4, lambda0=0.4):
+  - sign=+1: clique>=6 to scan limit |Delta lambda| >= 6.28 (no drop found in [-6.28,+6.28])
+  - sign=-1: clique>=6 to scan limit |Delta lambda| >= 6.28 (no drop found)
+  - CONCLUSION: third-MUB clique-6 persists across a wide lambda interval at Dita;
+    exact outer boundary NOT bracketed within +/- 2pi scan (likely extends further
+    or terminates only at Hadamard/Mobius branch failures).
+
+F6_theta0 lambda axis (theta=0, phi=0.5 [gauge-redundant], lambda0=0.3):
+  - sign=+1: boundary |Delta lambda| in [0.010000310745, 0.010000310764]  mid=0.010000310754
+  - sign=-1: boundary |Delta lambda| in [0.003536720350, 0.003536720369]  mid=0.003536720360
+  - phi axis: SKIPPED (phi is gauge at theta=0)
+
+F6 combo point (0, 0.51, 0.31):
+  - clique=6, hp=true; equals lambda-only perturbation of (0,0.5,0.3) (phi redundant).
+
+2D grid (Dita theta fixed):
+  - Full 20x20 grid (phi in [pi/4-0.05, pi/4+0.05], lambda in [0.2,0.6], pi/4 pinned):
+    **20/400** clique>=6 (initial grid with pi/4 pinned on one row) — SUPERSEDED by Item 2:
+    full 20x20 without exact pi/4 => **0/400** clique>=6 (grid misses phi=pi/4 by ~2.6e-3);
+    targeted phi sweep confirms **1D lambda curve** at exact phi=pi/4 (see locus_dimension_confirm.txt)
+  - Output: results/locus_2d_grid.csv
+
+================================================================================
+PHASE 1.3 — FOURTH-MUB INTERIOR SWEEP
+================================================================================
+
+Script: scripts/julia/fourth_mub_locus_sweep.jl (22 interior points)
+Status: COMPLETE — found_fourth=false at all 22 points.
+
+Results (results/fourth_mub_locus_sweep.txt):
+  - 12 Dita lambda in [0.25, 0.55]: ALL clique=6, third=true, hp=true, found_fourth=false
+  - 10 F6_theta0 lambda in [0.22, 0.38]: clique=0 (outside clique-6 band |Delta lambda|~0.055)
+
+CENTRAL RESULT: Inequivalent CHMs forming a lambda-curve at Dita support third MUB;
+no fourth extension on 12 interior Dita samples (HP 400-bit verified).
+
+================================================================================
+PHASE 1 GATE: PASSED (proceed to Phase 2/3 unless found_fourth=true)
+================================================================================

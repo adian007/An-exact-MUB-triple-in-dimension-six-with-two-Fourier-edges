@@ -1,0 +1,66 @@
+=== Item 2: 1D vs 2D locus dimension at Dita ===
+Date: 2026-08-03T14:46:38.989
+
+--- 20x20 grid (locus_2d_grid.csv) ---
+  points: 400, clique>=6: 0
+  phi range: [0.735398163397, 0.835398163397] (20 pts, does NOT include exact pi/4=0.785398163397)
+  nearest grid phi to pi/4: 0.78276658445 (delta=2.63e-03)
+
+--- Targeted phi sweep (400-bit HP) ---
+  theta=arccos(1/sqrt(3)), phi = pi/4 +/- delta, lambda in {0.3, 0.4, 0.5}
+
+  lambda=0.3:
+    phi=pi/4 +0.000 (+0): clique=6 third=true hp=true
+    phi=pi/4 +0.001 (+0.001): clique=2 third=false hp=true
+    phi=pi/4 -0.001 (-0.001): clique=2 third=false hp=true
+    phi=pi/4 +0.005 (+0.005): clique=2 third=false hp=true
+    phi=pi/4 -0.005 (-0.005): clique=2 third=false hp=true
+    phi=pi/4 +0.010 (+0.01): clique=2 third=false hp=true
+    phi=pi/4 -0.010 (-0.01): clique=2 third=false hp=true
+    phi=pi/4 +0.020 (+0.02): clique=2 third=false hp=true
+    phi=pi/4 -0.020 (-0.02): clique=2 third=false hp=true
+    phi=pi/4 +0.050 (+0.05): clique=2 third=false hp=true
+    phi=pi/4 -0.050 (-0.05): clique=2 third=false hp=true
+    phi=pi/4 +0.100 (+0.1): clique=2 third=false hp=true
+    phi=pi/4 -0.100 (-0.1): clique=2 third=false hp=true
+
+  lambda=0.4:
+    phi=pi/4 +0.000 (+0): clique=6 third=true hp=true
+    phi=pi/4 +0.001 (+0.001): clique=2 third=false hp=true
+    phi=pi/4 -0.001 (-0.001): clique=2 third=false hp=true
+    phi=pi/4 +0.005 (+0.005): clique=2 third=false hp=true
+    phi=pi/4 -0.005 (-0.005): clique=2 third=false hp=true
+    phi=pi/4 +0.010 (+0.01): clique=2 third=false hp=true
+    phi=pi/4 -0.010 (-0.01): clique=2 third=false hp=true
+    phi=pi/4 +0.020 (+0.02): clique=2 third=false hp=true
+    phi=pi/4 -0.020 (-0.02): clique=2 third=false hp=true
+    phi=pi/4 +0.050 (+0.05): clique=2 third=false hp=true
+    phi=pi/4 -0.050 (-0.05): clique=2 third=false hp=true
+    phi=pi/4 +0.100 (+0.1): clique=2 third=false hp=true
+    phi=pi/4 -0.100 (-0.1): clique=2 third=false hp=true
+
+  lambda=0.5:
+    phi=pi/4 +0.000 (+0): clique=6 third=true hp=true
+    phi=pi/4 +0.001 (+0.001): clique=2 third=false hp=true
+    phi=pi/4 -0.001 (-0.001): clique=2 third=false hp=true
+    phi=pi/4 +0.005 (+0.005): clique=2 third=false hp=true
+    phi=pi/4 -0.005 (-0.005): clique=2 third=false hp=true
+    phi=pi/4 +0.010 (+0.01): clique=2 third=false hp=true
+    phi=pi/4 -0.010 (-0.01): clique=2 third=false hp=true
+    phi=pi/4 +0.020 (+0.02): clique=2 third=false hp=true
+    phi=pi/4 -0.020 (-0.02): clique=2 third=false hp=true
+    phi=pi/4 +0.050 (+0.05): clique=2 third=false hp=true
+    phi=pi/4 -0.050 (-0.05): clique=2 third=false hp=true
+    phi=pi/4 +0.100 (+0.1): clique=2 third=false hp=true
+    phi=pi/4 -0.100 (-0.1): clique=2 third=false hp=true
+
+--- Exact Dita anchor ---
+  (theta, phi=pi/4, lambda=0.4): clique=6 third=true hp=true
+
+CONCLUSION: 1D CURVE CONFIRMED
+  - Exact phi=pi/4: clique>=6 for lambda in [0.2,0.6] (20/20 on pi/4 row in 5x5 grid; full circle Item 1)
+  - 20x20 grid: 0/400 clique>=6 — grid misses exact phi=pi/4 (min |Delta phi| ~ 2.6e-3)
+  - lambda=0.4: first phi drop at |Delta phi| >= 0.001
+  - lambda=0.3: first phi drop at |Delta phi| >= 0.001
+  - lambda=0.5: first phi drop at |Delta phi| >= 0.001
+  - Off phi=pi/4 by O(1e-3): clique drops to 2 => thin 1D curve, NOT 2D region

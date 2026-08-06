@@ -1,0 +1,45 @@
+=== Item 3: CSV reconciliation (588 vs actual) ===
+Date: 2026-08-05T15:52:32.931
+  degen_cap=80 (see docs/SEARCH_SETS.md for S588 vs S*)
+
+--- Intended primary queue ---
+  anchors: 20
+  degeneracy_candidates.csv rows (raw): 1845
+  degeneracy unique (theta,phi,lambda): 1845
+  degeneracy loaded (cap 80, sorted -z4_dev): 80
+  primary total: 100
+
+--- Actual CSV ---
+  data rows (valid): 928
+  expected (verify_csv): 588
+  gap vs 588: -340 (negative = more rows than target)
+  historical baseline (phase2): 471 rows, gap=117
+
+--- Row categories ---
+  anchor/non-ref names: 21
+  degen_* rows: 108
+  ref_* (level 1): 372
+  ref_ref_* (level 2+): 428
+  total ref rows: 799
+
+  unique coordinate keys: 925 (duplicates: 3)
+
+--- Status breakdown ---
+  not_hadamard: 29
+  ok: 899
+
+  rows eligible for refinement spawn: 45
+
+--- Refinement estimate (theoretical max, no dedup) ---
+  from 45 spawn-eligible rows: up to 2500 ref points (125 each if clique>=6)
+  actual ref rows in CSV: 799
+
+=== GAP EXPLANATION (588 - 928 = -340) ===
+  - degen cap: only 80/1845 unique degen candidates loaded (−1765 never queued)
+  - refinement shortfall: ~1701 ref points not written (crash/incomplete run/dedup skips)
+  - second-level ref_ref blocked by can_spawn_refinement (only primary + ref_* level-1 spawn)
+  - coordinate dedup: refinements overlapping anchors/degen skipped
+
+--- Log evidence ---
+  special_loci_log.txt size: 0 bytes (utf16=true)
+  contains errors/exceptions: false

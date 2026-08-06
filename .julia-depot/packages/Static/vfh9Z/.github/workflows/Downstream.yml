@@ -1,0 +1,29 @@
+name: IntegrationTest
+on:
+  push:
+    branches: [master]
+    tags: [v*]
+  pull_request:
+
+jobs:
+  test:
+    name: ${{ matrix.package.repo }}/${{ matrix.package.group }}/${{ matrix.julia-version }}
+    strategy:
+      fail-fast: false
+      matrix:
+        julia-version: [1]
+        package:
+          - {user: JuliaSIMD, repo: VectorizationBase.jl, group: All}
+          - {user: JuliaSIMD, repo: LoopVectorization.jl, group: All}
+          - {user: SciML, repo: FastBroadcast.jl, group: Core}
+          - {user: SciML, repo: DiffEqFlux.jl, group: All}
+          - {user: SciML, repo: DeepEquilibriumNetworks.jl, group: Core}
+          - {user: SciML, repo: ReservoirComputing.jl, group: All}
+    uses: "SciML/.github/.github/workflows/downstream.yml@v1"
+    with:
+      julia-version: "${{ matrix.julia-version }}"
+      julia-arch: "x64"
+      owner: "${{ matrix.package.user }}"
+      repo: "${{ matrix.package.repo }}"
+      group: "${{ matrix.package.group }}"
+    secrets: "inherit"

@@ -1,0 +1,10 @@
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
+HomotopyContinuation = "f213a82b-91d6-5c5d-acf7-10f1c761b327"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+
+# Oscar.jl (optional, for symbolic_elimination.jl Groebner probes):
+#   ] add Oscar
+# Fallback: Macaulay2 scripts in symbolic_export/

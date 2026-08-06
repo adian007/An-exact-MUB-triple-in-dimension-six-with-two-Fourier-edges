@@ -1,0 +1,27 @@
+=== Fourth-MUB locus sweep (Phase 1.3c) ===
+Date: 2026-08-03T13:45:42.591  n_points=22  HP_bits=400
+
+Dita  theta=0.955317 phi=0.785398 lambda=0.25  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.277273  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.304545  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.331818  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.359091  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.386364  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.413636  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.440909  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.468182  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.495455  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.522727  clique=6 third=true fourth=false hp=true pool_complete=true
+Dita  theta=0.955317 phi=0.785398 lambda=0.55  clique=6 third=true fourth=false hp=true pool_complete=true
+F6_theta0  theta=0 phi=0.5 lambda=0.22  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.237778  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.255556  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.273333  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.291111  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.308889  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.326667  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.344444  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.362222  clique=0 third=false fourth=false hp=false pool_complete=false
+F6_theta0  theta=0 phi=0.5 lambda=0.38  clique=0 third=false fourth=false hp=false pool_complete=false
+
+Summary: 22 points, 12 with third MUB, found_fourth=false

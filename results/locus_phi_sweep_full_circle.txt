@@ -1,0 +1,102 @@
+=== Item A: Dita phi-offset sweep (full lambda circle samples) ===
+Date: 2026-08-03T14:55:17.733  HP_bits=400
+  theta=arccos(1/sqrt(3)), phi=pi/4 +/- delta
+  lambda in {0.3, 0.4, 0.5, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0}
+  delta in {0.0, 0.001, 0.005, 0.01}
+
+--- lambda=0.3 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=0.4 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=0.5 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=1 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=2 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=3 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=4 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=5 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+--- lambda=6 ---
+  phi=pi/4 +0.000: clique=6 third=true hp=true
+  phi=pi/4 +0.001: clique=2 third=false hp=true
+  phi=pi/4 -0.001: clique=2 third=false hp=true
+  phi=pi/4 +0.005: clique=2 third=false hp=true
+  phi=pi/4 -0.005: clique=2 third=false hp=true
+  phi=pi/4 +0.010: clique=2 third=false hp=true
+  phi=pi/4 -0.010: clique=2 third=false hp=true
+
+=== Consolidated table ===
+lambda   | clique@pi/4  | clique@pi/4+0.001 | clique@pi/4-0.001 | hp_verified
+----------------------------------------------------------------------
+0.3      | 6            | 2                | 2            | yes
+0.4      | 6            | 2                | 2            | yes
+0.5      | 6            | 2                | 2            | yes
+1        | 6            | 2                | 2            | yes
+2        | 6            | 2                | 2            | yes
+3        | 6            | 2                | 2            | yes
+4        | 6            | 2                | 2            | yes
+5        | 6            | 2                | 2            | yes
+6        | 6            | 2                | 2            | yes
+
+SUMMARY: 9/9 clique=6 at phi=pi/4; 9/9 drop at +0.001; 9/9 drop at -0.001; hp_verified=9/9
+CONCLUSION: 1D CURVE CONFIRMED across 9 lambda values on full circle

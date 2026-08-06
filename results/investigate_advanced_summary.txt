@@ -1,0 +1,26 @@
+Advanced investigation (Step 4) — representative anchors
+============================================================
+
+F6_theta0 (0, 0.5, 0.3)
+  max_clique=6, found_third=true, found_fourth=false
+  Per-basis fourth: n_filtered=0 for all 8 third bases
+  Monodromy: failed (MonodromyOptions API mismatch on HC version)
+  PSLQ: theta=0 [Fourier slice] (via exact params)
+  Clifford/Z_6: not completed (permutations bug fixed post-run)
+
+Dita (arccos(1/sqrt(3)), pi/4, 0.4)
+  max_clique=6, found_third=true, found_fourth=false
+  Per-basis fourth: n_filtered=0 for all bases tested
+  Monodromy: failed (same API issue)
+  PSLQ: theta=arccos(1/sqrt(3)), phi=pi/4
+  Clifford/Z_6: completed after permutations fix (see investigate_Dita.txt)
+
+degen_circulant_match (pi/2, 0.05, 6.233...)
+  CSV search reported max_clique=6; HP re-verify FAILED (hp_survival=false)
+  Likely sharp locus / coordinate sensitivity (cf. Dita rounding issue)
+  Fourth test: n_filtered=0, aggregate found_fourth=false
+
+Symbolic elimination (symbolic_elimination.jl)
+  theta=0 slice: 36 pts, 6 third, 0 fourth
+  Witness sizing: 60 vars, 105 eqs at F6/Dita/theta0
+  Oscar.jl: not installed; Macaulay2 exports in symbolic_export/

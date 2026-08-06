@@ -1,0 +1,18 @@
+=== Phase 1.4: exact clique-6 boundaries (binary search) ===
+Date: 2026-08-03T14:58:19.856  HP_bits=400  quick=false (F6 re-verify post argmax fix)
+
+--- Dita: lambda axis (theta=0.9553166181245092, phi=pi/4, lambda0=0.4) ---
+  sign=+1: clique>=6 to scan limit (inner=6.28, no drop found)
+  sign=-1: clique>=6 to scan limit (inner=6.28, no drop found)
+
+--- F6_theta0: lambda axis (theta=0, phi=0.5 [gauge], lambda0=0.3) ---
+  sign=+1: boundary |Δλ| in [0.0550448030233, 0.0550448030466]  mid=0.055044803035
+  sign=-1: boundary |Δλ| in [0.0625984193757, 0.062598419399]  mid=0.0625984193874
+  arc width = 0.117643222422
+  NOTE: coarse bracket step (0.05) required; fine step (0.01) finds spurious early dips.
+
+--- F6 combo (theta=0, phi=0.51, lambda=0.31) re-verify ---
+  (0,0.51,0.31): clique=6 hp=true
+  (0,0.51,0.30) phi-only: clique=6
+  (0,0.50,0.31) lambda-only: clique=6
+  (phi redundant at theta=0 => H(0,0.51,0.31)=H(0,0.5,0.31) up to gauge)

@@ -1,0 +1,10 @@
+=== F6_theta0 lambda boundary re-verify (400-bit HP) ===
+Date: 2026-08-03T14:58:19.856  HP_bits=400
+  theta=0, phi=0.5 [gauge], lambda0=0.3
+
+  anchor (0,0.5,0.3): clique=6 hp=true
+
+  sign=+1: boundary |Delta lambda| in [0.0550448030233, 0.0550448030466]  mid=0.055044803035
+  sign=-1: boundary |Delta lambda| in [0.0625984193757, 0.062598419399]  mid=0.0625984193874
+
+  arc width (|Delta+| + |Delta-|) = 0.117643222422

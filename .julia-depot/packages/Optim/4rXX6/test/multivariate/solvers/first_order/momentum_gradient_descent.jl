@@ -1,0 +1,22 @@
+@testset "Momentum Gradient Descent" begin
+    # TODO: check the skips and exceptions, maybe it's enough to increase number of iterations?
+    skip = (
+        "Rosenbrock",
+        "Extended Powell",
+        "Extended Rosenbrock",
+        "Trigonometric",
+        "Penalty Function I",
+        "Beale",
+        "Paraboloid Random Matrix",
+        "Paraboloid Diagonal",
+        "Powell",
+        "Polynomial",
+        "Fletcher-Powell",
+    )
+    run_optim_tests(
+        MomentumGradientDescent(),
+        skip = skip,
+        iteration_exceptions = (("Paraboloid Diagonal", 10000), ("Powell", 10000)),
+        show_name = debug_printing,
+    )
+end

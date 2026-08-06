@@ -1,0 +1,21 @@
+index,name,theta,phi,lambda,d_theta0,nearest_locus,nearest_dist,hp_survival,ortho_max_hp,float_artifact,exact_confirmed
+1,F6_theta0,0.0,0.5,0.3,0.0,Mobius_z4_dev,NaN,true,2.329307406825331e-16,false,theta=0
+2,Dita,0.9553166181245092,0.7853981633974483,0.4,0.9553166181245092,Dita,0.0,true,6.97126759238126e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+3,degen_circulant_match,1.5707963268,0.05,6.2331853072,1.5707963268,Mobius_z4_dev,3.112970120408428e-15,false,NaN,false,theta=pi/2
+4,ref_F6_theta0,0.0,0.495,0.2975,0.0,Fourier_theta0,0.0,true,1.43469517188838e-16,false,theta=0
+5,ref_F6_theta0,0.0,0.495,0.3,0.0,Mobius_z4_dev,NaN,true,2.5123117302348216e-16,false,theta=0
+6,ref_F6_theta0,0.0,0.4975,0.2975,0.0,Fourier_theta0,0.0,true,1.3438854648385667e-16,false,theta=0
+7,ref_F6_theta0,0.0,0.4975,0.3,0.0,Mobius_z4_dev,NaN,true,2.647109115262424e-16,false,theta=0
+8,ref_F6_theta0,0.0,0.5,0.2975,0.0,Fourier_theta0,0.0,true,2.0781406248203308e-16,false,theta=0
+9,ref_F6_theta0,0.0,0.5025,0.2975,0.0,Fourier_theta0,0.0,true,1.3993551952630397e-16,false,theta=0
+10,ref_F6_theta0,0.0,0.5025,0.3,0.0,Mobius_z4_dev,NaN,true,1.650536711435836e-16,false,theta=0
+11,ref_F6_theta0,0.0,0.505,0.2975,0.0,Fourier_theta0,0.0,true,1.5459489257817328e-16,false,theta=0
+12,ref_F6_theta0,0.0,0.505,0.3,0.0,Mobius_z4_dev,NaN,true,2.824370557274786e-16,false,theta=0
+13,ref_Dita,0.9553166181245092,0.7853981633974483,0.395,0.9553166181245092,Dita,0.0,true,2.5777964238800382e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+14,ref_Dita,0.9553166181245092,0.7853981633974483,0.3975,0.9553166181245092,Dita,0.0,true,3.9862452983715675e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+15,ref_Dita,0.9553166181245092,0.7853981633974483,0.4025,0.9553166181245092,Dita,0.0,true,3.439823165854207e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+16,ref_Dita,0.9553166181245092,0.7853981633974483,0.405,0.9553166181245092,Dita,0.0,true,4.0417009820761504e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+17,ref_degen_circulant_match,1.5707963268,0.045000000000000005,6.2381853072,1.5707963268,Mobius_z4_dev,1.2374513654982248e-15,false,NaN,false,theta=pi/2
+18,ref_degen_circulant_match,1.5707963268,0.0475,6.235685307200001,1.5707963268,Mobius_z4_dev,3.5560862138150785e-15,false,NaN,false,theta=pi/2
+19,ref_degen_circulant_match,1.5707963268,0.052500000000000005,6.2306853072,1.5707963268,Mobius_z4_dev,2.1059356651110042e-19,false,NaN,false,theta=pi/2
+20,ref_degen_circulant_match,1.5707963268,0.055,6.2281853072,1.5707963268,Mobius_z4_dev,1.4058321189052861e-15,false,NaN,false,theta=pi/2

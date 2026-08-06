@@ -1,0 +1,74 @@
+=== Phase 2 Technical Report ===
+Date: 2026-08-03
+
+================================================================================
+2.1 CSV RECONCILIATION (471 vs 588)
+================================================================================
+
+verify-only (search_special_loci.jl --verify-only, expected_rows=588):
+  FAIL — expected 588 data rows, got 471
+
+Current special_loci_search.csv:
+  data rows:           471
+  primary (non-ref_*): 99
+  ref_* refinements:   372
+  ref_ref_* nested:    0
+  max_clique=6 (all):  20
+  max_clique=6 (primary only): 3
+
+Historical counts:
+  special_loci_log.txt full run: 588 points, 18 third-MUB hits
+  special_loci_search_interim.csv: 347 rows, 16 clique-6 (3 primary + 13 ref_*)
+  Current CSV: 471 rows, 20 clique-6 (3 primary + 17 ref_*)
+
+Gap source (588 - 471 = 117 rows):
+  - load_degeneracy_candidates() caps at 80/1845 degen rows (script limit)
+  - Full 588 run evaluated more degen + refinements before dedup/truncation
+  - Current file = 20 anchors + 79 degen + adaptive ref_* (one level only; from_primary guard)
+
+Primary third-MUB hits (exact coords):
+  1. F6_theta0     (0, 0.5, 0.3)                           — TRUSTED
+  2. Dita           (arccos(1/sqrt(3)), pi/4, 0.4)          — TRUSTED
+  3. degen_circulant (pi/2, 0.05, 6.2331853072)             — NON-REPRODUCING
+
+2-hit delta (18 vs 20 all-clique6):
+  +2 from ref_degen_circulant_match refinements (4 ref rows) still listing clique=6
+    in CSV but parent point fails post-fix re-solve (max_clique=2).
+  Net trusted third hits: F6_theta0 + Dita only (2 primary).
+
+Definition of S (final):
+  S = { rows in special_loci_search.csv with pool_complete_flag=true,
+        n_certified=n_tracked, excluding ref_ref_* }
+  Current |S| = 471 certified parameter points (not 588).
+
+================================================================================
+2.2 pi/2 NON-REPRODUCING CANDIDATE (merged §5.2/§5.3)
+================================================================================
+
+Single finding: degen_circulant_match at (pi/2, 0.05, 6.2331853072)
+  - Pre-fix CSV / quick run: max_clique=6
+  - Post-fix verify_extra_third_hit.jl: max_clique=2, found_third=false, 192/192 certified
+  - Status: RESOLVED — spurious hit from pre-argmax-fix run; exclude from trusted set
+  - 4 ref_degen_* rows in CSV retain stale clique=6 labels; re-run would downgrade them
+
+================================================================================
+2.3 NID / GROEBNER
+================================================================================
+
+witness_set API (HC v2.22.1, square 10-eq/10-var system):
+  witness_set() and witness_set(dim=0): FAIL (ArgumentError: codim between 0 and n)
+  NID: SUCCESS — ~240 components, each dim=0 degree=1 at Dita lambda=0.4
+  Multi-point NID along Dita lambda {0.4,0.5,0.6,0.8,1.0}: all dim=0 degree=1 per point
+  F6_theta0 lambda=0.3: dim=0 degree=1 components
+
+Interpretation: fixed-H MU-pool stays zero-dimensional throughout Dita lambda slice;
+  does NOT contradict genuine 1D locus of CHM-inequivalent H each with isolated pool.
+
+Macaulay2 Groebner (fourth_mub_w_elimination_Dita.m2):
+  M2 not on PATH — NOT RUN (2-hour bounded attempt skipped)
+  Oscar.jl: not installed
+
+Output: results/nid_probe.txt
+
+================================================================================
+PHASE 2 STATUS: COMPLETE (CSV reconciled; pi/2 merged; NID multi-point done; M2 skipped)

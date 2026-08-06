@@ -1,0 +1,64 @@
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.4
+[33m[1m│ [22m[39m  z4_dev = 1.84212198800577
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.395
+[33m[1m│ [22m[39m  z4_dev = 1.8459931287262346
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.3975
+[33m[1m│ [22m[39m  z4_dev = 1.8440633210608794
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.4025
+[33m[1m│ [22m[39m  z4_dev = 1.8401691416942325
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.405
+[33m[1m│ [22m[39m  z4_dev = 1.8382047943315496
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[32mComputing mixed cells... 101    Time: 0:00:00[39m[K
+[34m   mixed_volume: 116[39m[K[A
+[K[A[32mComputing mixed cells... 215    Time: 0:00:00[39m[K
+[34m   mixed_volume: 252[39m[K
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.39
+[33m[1m│ [22m[39m  z4_dev = 1.849818119714626
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.3925
+[33m[1m│ [22m[39m  z4_dev = 1.8479113989405442
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.40750000000000003
+[33m[1m│ [22m[39m  z4_dev = 1.8362289581948854
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1m│ [22m[39m  theta = 0.9553166181245092
+[33m[1m│ [22m[39m  phi = 0.7853981633974483
+[33m[1m│ [22m[39m  lambda_ = 0.41000000000000003
+[33m[1m│ [22m[39m  z4_dev = 1.8342416456332102
+[33m[1m└ [22m[39m[90m@ Main D:\IBM-Quantum\MUBs in 6-dimension\mub_zauner_6d_liang_chen.jl:103[39m
+[32mMixed volume:  163    Time: 0:00:00[39m[K[32mMixed volume:  252    Time: 0:00:00[39m[K
+[32mMixed volume:  228    Time: 0:00:00[39m[K[32mMixed volume:  252    Time: 0:00:00[39m[K
+[32mComputing mixed cells... 101    Time: 0:00:00[39m[K
+[34m   mixed_volume: 132[39m[K[A
+[K[A[32mComputing mixed cells... 198    Time: 0:00:00[39m[K
+[34m   mixed_volume: 252[39m[K

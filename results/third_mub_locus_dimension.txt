@@ -1,0 +1,23 @@
+=== Task 3: Third-MUB locus dimension ===
+Date: 2026-08-03
+Sampling: radius=0.0001, n=100 per Karlsson anchor
+
+F6 (Fourier): clique=6 third=true
+Dita exact: clique=6 third=true
+F6_theta0 exact: clique=6 third=true
+
+--- Perturbation tests ---
+  theta=0 + 1e-4: clique=2 third=false ok=true
+  theta=0 + 1e-3: clique=2 third=false ok=true
+  theta=0 + 0.01: clique=2 third=false ok=true
+  Dita + 1e-4 theta: clique=2 third=false ok=true
+  Dita + 1e-3 theta: clique=2 third=false ok=true
+  Dita + 0.01 theta: clique=2 third=false ok=true
+
+--- Local Gaussian sampling ---
+  Dita: valid=100 clique6=0 (0.0%) clique2=100 (100.0%) min=2 max=2
+  F6_theta0: valid=100 clique6=0 (0.0%) clique2=100 (100.0%) min=2 max=2
+
+--- Parametric system ---
+  build_parametric_pool_system: OK (10 vars)
+  HC monodromy/NID on extended system: not run (API issues on host)

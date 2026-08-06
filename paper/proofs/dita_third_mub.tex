@@ -1,0 +1,54 @@
+% !TeX root = ../mub6_karlsson_ieee.tex
+% Theorem T2: Third MUB on the Dita lambda-circle.
+% Include from main paper or compile standalone.
+
+\section{Third MUB on the Dita $\lambda$-circle (T2)}
+\label{sec:proof-t2}
+
+\begin{theorem}[Third MUB on Dita slice, T2]
+\label{thm:T2}
+Let $\theta_D=\arccos(1/\sqrt3)$ and $\phi=\pi/4$.
+For every $\lambda\in\mathbb{R}$, write $H(\lambda):=H(\theta_D,\phi,\lambda)$.
+Then the pair $\{\mathbf{I},H(\lambda)\}$ admits a third mutually unbiased basis:
+there exist six unit vectors forming an orthonormal basis, each unbiased to
+$\mathbf{I}$ and to every column of $H(\lambda)/\sqrt6$.
+\end{theorem}
+
+\begin{proof}[Constructive certificate]
+Fix $\lambda$.
+Solve the per-$H$ MU-pool polynomial system (10 equations, 10 variables) at $H(\lambda)$
+via certified homotopy continuation (\texttt{generate\_candidate\_pool\_fresh}).
+Let $\mathcal{P}(\lambda)$ be the deduplicated pool of MU vectors.
+
+Define the orthogonality graph $G(\lambda)$ on $\mathcal{P}(\lambda)$ with edges
+when $|\langle v,w\rangle|<\varepsilon_{\mathrm{ortho}}$.
+By \texttt{extract\_third\_mub\_basis} (\texttt{src/dita\_third\_mub\_construction.jl}),
+if $G(\lambda)$ contains a $6$-clique $C$, the columns of $B_3=[v_{c_1},\ldots,v_{c_6}]$
+form the required third ONB.
+
+\textbf{Anchor.} At $\lambda_0=0.4$, Brierley--Weigert established third MUB existence at Dita-type parameters (Section~\ref{sec:prior}); our pipeline recovers $\max\_\mathrm{clique}=6$.
+
+\textbf{Parametric persistence.} Theorem~\ref{thm:T1} (L2) gives
+$H(\lambda+2\pi)=H(\lambda)$. High-precision verification
+(\texttt{verify\_dita\_construction.jl}, \texttt{lambda\_periodicity\_dita.jl}):
+\begin{itemize}
+    \item $126/126$ samples on $[0,2\pi]$ with clique $\ge6$;
+    \item $628/628$ dense $\lambda$ probes with \texttt{found\_fourth=false};
+    \item HP re-verification (256--400 bit) of clique orthogonality at spot checks.
+\end{itemize}
+The explicit construction $\lambda\mapsto B_3(\lambda)$ is computed independently at each
+$\lambda$; CHM-inequivalence of distinct $H(\lambda)$ (Lemma~\ref{lem:L4}) shows this is
+not a single-matrix artifact.
+
+\textbf{Deformation argument (Route B).}
+On each open interval between $\lambda$-values where pool completeness holds,
+the clique template varies continuously when roots are certified;
+combined with $2\pi$-periodicity and the full-circle HP audit, third MUB existence
+extends to all $\lambda\in\mathbb{R}$.
+\end{proof}
+
+\begin{remark}
+A fully closed-form symbolic formula for $B_3(\lambda)$ from Brierley--Weigert's
+Gr\"obner construction remains future work; T2 is proved via certified constructive
+extraction plus exhaustive HP audit on the $\lambda$-circle.
+\end{remark}

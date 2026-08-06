@@ -1,0 +1,27 @@
+=== Item 1: Lambda periodicity at Dita ===
+Date: 2026-08-03T13:56:15.295
+theta=0.9553166181245092 (= arccos(1/sqrt(3))), phi=pi/4=0.7853981633974483, lambda0=0.4
+HP_bits=400
+
+--- Spot checks (absolute lambda) ---
+  lambda=0: hadamard=true clique=6 third=true hp=true clique6=true
+  lambda=1.57079632679: hadamard=true clique=6 third=true hp=true clique6=true
+  lambda=3.14159265359: hadamard=true clique=6 third=true hp=true clique6=true
+  lambda=4.71238898038: hadamard=true clique=6 third=true hp=true clique6=true
+  lambda=6.27318530718: hadamard=true clique=6 third=true hp=true clique6=true
+  lambda=6.28318530718: hadamard=true clique=6 third=true hp=true clique6=true
+  lambda=6.29318530718: hadamard=true clique=6 third=true hp=true clique6=true
+  clique>=6 count: 7 / 7
+
+--- Fine sweep [6.15, 6.283] step=0.01 ---
+  points=14 clique>=6=14
+
+--- Fine sweep [-0.05, 0.05] step=0.01 ---
+  points=11 clique>=6=11
+
+--- Full period scan [0, 2pi] step=0.05 ---
+  points=126 clique>=6=126 clique<6=0
+
+VERDICT: FULL CIRCLE — clique>=6 at all 126 samples on [0, 2pi] (step 0.05)
+  Spot checks: 7/7 clique>=6
+  Wrap continuity [6.15,6.283] and [-0.05,0.05]: no drops detected

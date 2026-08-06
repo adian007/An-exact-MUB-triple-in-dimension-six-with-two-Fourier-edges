@@ -1,0 +1,156 @@
+## Description #############################################################################
+#
+# Typst Back End: Tests related with the cell alignment.
+#
+############################################################################################
+
+@testset "Alignment" verbose = true begin
+    matrix  = [(i, j) for i in 1:5, j in 1:5]
+    backend = :typst
+
+    @testset "Alignment as a Symbol" verbose = true begin
+        expected = """
+#{
+  table(
+    align: (center, center, center, center, center,),
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr,),
+    stroke: none,
+    // == Horizontal Lines =================================================================
+    table.hline(y: 0, stroke: 1.5pt,),
+    table.hline(y: 1, stroke: 0.8pt,),
+    table.hline(y: 6, stroke: 1.5pt,),
+    // == Vertical Lines ===================================================================
+    table.vline(x: 0, end: 6, stroke: 1.5pt),
+    table.vline(x: 1, end: 6, stroke: 0.8pt),
+    table.vline(x: 2, end: 6, stroke: 0.8pt),
+    table.vline(x: 3, end: 6, stroke: 0.8pt),
+    table.vline(x: 4, end: 6, stroke: 0.8pt),
+    table.vline(x: 5, end: 6, stroke: 1.5pt),
+    // == Table Header =====================================================================
+    table.header(
+      // -- Column Labels: Row 1 -----------------------------------------------------------
+      [#text(weight: "bold",)[Col. 1]],
+      [#text(weight: "bold",)[Col. 2]],
+      [#text(weight: "bold",)[Col. 3]],
+      [#text(weight: "bold",)[Col. 4]],
+      [#text(weight: "bold",)[Col. 5]],
+    ),
+    // == Table Body =======================================================================
+    // -- Data: Row 1 ----------------------------------------------------------------------
+    [(1, 1)],
+    [(1, 2)],
+    [(1, 3)],
+    [(1, 4)],
+    [(1, 5)],
+    // -- Data: Row 2 ----------------------------------------------------------------------
+    [(2, 1)],
+    [(2, 2)],
+    table.cell(align: right,)[(2, 3)],
+    [(2, 4)],
+    [(2, 5)],
+    // -- Data: Row 3 ----------------------------------------------------------------------
+    [(3, 1)],
+    [(3, 2)],
+    [(3, 3)],
+    [(3, 4)],
+    [(3, 5)],
+    // -- Data: Row 4 ----------------------------------------------------------------------
+    [(4, 1)],
+    [(4, 2)],
+    [(4, 3)],
+    [(4, 4)],
+    table.cell(align: left,)[(4, 5)],
+    // -- Data: Row 5 ----------------------------------------------------------------------
+    [(5, 1)],
+    [(5, 2)],
+    [(5, 3)],
+    [(5, 4)],
+    [(5, 5)],
+  )
+}
+"""
+
+        result = pretty_table(
+            String,
+            matrix;
+            backend,
+            alignment = :c,
+            data_column_widths = ["1fr", "1fr", "1fr", "1fr", "1fr"],
+            cell_alignment = [(2, 3) => :r, (4, 5) => :l],
+        )
+
+        @test result == expected
+
+        expected = """
+#{
+  table(
+    align: (left, center, right, right, right,),
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr,),
+    stroke: none,
+    // == Horizontal Lines =================================================================
+    table.hline(y: 0, stroke: 1.5pt,),
+    table.hline(y: 1, stroke: 0.8pt,),
+    table.hline(y: 6, stroke: 1.5pt,),
+    // == Vertical Lines ===================================================================
+    table.vline(x: 0, end: 6, stroke: 1.5pt),
+    table.vline(x: 1, end: 6, stroke: 0.8pt),
+    table.vline(x: 2, end: 6, stroke: 0.8pt),
+    table.vline(x: 3, end: 6, stroke: 0.8pt),
+    table.vline(x: 4, end: 6, stroke: 0.8pt),
+    table.vline(x: 5, end: 6, stroke: 1.5pt),
+    // == Table Header =====================================================================
+    table.header(
+      // -- Column Labels: Row 1 -----------------------------------------------------------
+      [#text(weight: "bold",)[Col. 1]],
+      [#text(weight: "bold",)[Col. 2]],
+      [#text(weight: "bold",)[Col. 3]],
+      [#text(weight: "bold",)[Col. 4]],
+      [#text(weight: "bold",)[Col. 5]],
+    ),
+    // == Table Body =======================================================================
+    // -- Data: Row 1 ----------------------------------------------------------------------
+    [(1, 1)],
+    [(1, 2)],
+    [(1, 3)],
+    [(1, 4)],
+    [(1, 5)],
+    // -- Data: Row 2 ----------------------------------------------------------------------
+    [(2, 1)],
+    [(2, 2)],
+    [(2, 3)],
+    [(2, 4)],
+    [(2, 5)],
+    // -- Data: Row 3 ----------------------------------------------------------------------
+    [(3, 1)],
+    [(3, 2)],
+    [(3, 3)],
+    [(3, 4)],
+    [(3, 5)],
+    // -- Data: Row 4 ----------------------------------------------------------------------
+    [(4, 1)],
+    [(4, 2)],
+    [(4, 3)],
+    [(4, 4)],
+    table.cell(align: left,)[(4, 5)],
+    // -- Data: Row 5 ----------------------------------------------------------------------
+    [(5, 1)],
+    [(5, 2)],
+    [(5, 3)],
+    [(5, 4)],
+    [(5, 5)],
+  )
+}
+"""
+
+        result = pretty_table(
+            String,
+            matrix;
+            backend = :typst,
+            data_column_widths = ["1fr", "1fr", "1fr", "1fr", "1fr"],
+            alignment = [:l, :c, :r, :n, :X],
+            cell_alignment = [(2, 3) => :r, (4, 5) => :l],
+        )
+
+        @test result == expected
+    end
+end

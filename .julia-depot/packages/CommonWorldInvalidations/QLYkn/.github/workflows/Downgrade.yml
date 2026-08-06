@@ -1,0 +1,17 @@
+name: Downgrade
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  downgrade:
+    strategy:
+      matrix:
+        julia-version: ['lts']
+    uses: "SciML/.github/.github/workflows/downgrade.yml@v1"
+    with:
+      julia-version: "${{ matrix.julia-version }}"
+    secrets: "inherit"

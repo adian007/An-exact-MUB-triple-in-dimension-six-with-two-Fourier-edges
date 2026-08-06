@@ -1,0 +1,23 @@
+=== Track D locus classification (Phase 2) ===
+Date: 2026-08-05T15:58:31.566
+Search CSV: D:\MUBs in 6-dimension\results\special_loci_search.csv
+Audit CSV: D:\MUBs in 6-dimension\results\third_mub_audit.csv
+HP-verified clique-6: 36
+
+--- F6_theta0 ---
+  coords: theta=0 phi=0.5 lambda=0.29999999999999999
+  topology: 1D bounded arc in lambda at theta=0 [0.2925, 0.3000]
+  chm_class: F6_family_phi_gauge
+  hp_count: 27
+
+--- Dita ---
+  coords: theta=0.95531661812450919 phi=0.78539816339744828 lambda=0.40000000000000002
+  topology: 1D circle in lambda (Dita, phi=pi/4)
+  chm_class: Dita_lambda_family_CHM_inequivalent
+  hp_count: 9
+
+=== CHM between cluster representatives ===
+CHM F6_theta0 vs Dita: residual=5.241449e+00 equiv=false
+
+F6 vs Dita cross-locus: residual=5.241449e+00 equiv=false (distinct components)
+JSON: D:\MUBs in 6-dimension\results\locus_classification.json

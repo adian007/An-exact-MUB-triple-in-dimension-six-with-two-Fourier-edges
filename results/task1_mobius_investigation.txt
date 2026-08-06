@@ -1,0 +1,29 @@
+=== Task 1: Mobius degeneracy candidate ===
+Exact CSV point: theta=0.9553166181 phi=0.7853981634 lambda=0.4
+z4_dev = 1.3450487289265204e-05
+Dita theta (exact) = 0.9553166181245092, delta = 2.451e-11
+Hadamard defect = 2.422e-15
+
+[A] Pool completeness (max_precision=128)
+  mv=252 tracked=240 certified=240 distinct=240 verified=72 dedup=72
+  pool_complete_flag=true cert_match=true
+
+[B] Re-certify at max_precision=128
+  n_certified=240 n_tracked=240
+
+[C] Third/fourth MUB (standard pool, tol 1e-12)
+  n_pool=72 max_clique=2 found_third=false found_fourth=false
+  mu_defect_min=5.551e-17 ortho_defect=0.000e+00
+
+[D] High-precision clique verify (BigFloat bits=400, ~120 decimal digits)
+  found_third=false found_fourth=false max_clique=2
+
+[E] PSLQ / algebraic identification
+  phi ≈ pi/4
+  theta ≈ arccos(1/sqrt(3))
+  phi = pi/4 [Dita slice]
+  theta = arccos(1/sqrt(3)) [Dita]
+
+[F] Per-basis fourth-MUB report
+
+=== RESULT: found_fourth=false (no counterexample) ===

@@ -1,0 +1,10 @@
+=== Top-50 z4_dev degeneracy stress test ===
+Date: 2026-08-05
+Status: PENDING live run (requires HomotopyContinuation; App Control may block .julia-depot)
+
+Script: scripts/julia/run_top50_degen.jl
+Input: results/degeneracy_candidates.csv (top 50 by z4_dev)
+
+Expected from prior audits: clique6 confined to F6_theta0 + Dita loci; fourth=0 everywhere.
+
+Re-run: julia --project=. scripts/julia/run_top50_degen.jl

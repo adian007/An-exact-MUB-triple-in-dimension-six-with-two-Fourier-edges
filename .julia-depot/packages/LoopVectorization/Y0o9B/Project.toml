@@ -1,0 +1,67 @@
+name = "LoopVectorization"
+uuid = "bdcacae8-1622-11e9-2a5c-532679323890"
+authors = ["Chris Elrod <elrodc@gmail.com>"]
+version = "0.12.174"
+
+[deps]
+ArrayInterface = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
+CPUSummary = "2a0fbf3d-bb9c-48f3-b0a9-814d99fd7ab9"
+ChainRulesCore = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
+CloseOpenIntervals = "fb6a15b2-703c-40df-9091-08a04967cfa9"
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+HostCPUFeatures = "3e5b6fbb-0976-4d2c-9146-d79de83f2fb0"
+IfElse = "615f187c-cbe4-4ef1-ba3b-2fcf58d6d173"
+LayoutPointers = "10f19ff3-798f-405d-979b-55457f8fc047"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+OffsetArrays = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
+PolyesterWeave = "1d0040c9-8b98-4ee7-8388-3f51789ca0ad"
+PrecompileTools = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
+SIMDTypes = "94e857df-77ce-4151-89e5-788b33177be4"
+SLEEFPirates = "476501e8-09a2-5ece-8869-fb82de89a1fa"
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
+Static = "aedffcd0-7271-4cad-89d0-dc628f76c6d3"
+StaticArrayInterface = "0d7ed370-da01-4f52-bd93-41d350b8b718"
+ThreadingUtilities = "8290d209-cae3-49c0-8002-c8c24d57dab5"
+UnPack = "3a884ed6-31ef-47d7-9d2a-63182c4928ed"
+VectorizationBase = "3d5dd08c-fd9d-11e8-17fa-ed2836048c2f"
+
+[weakdeps]
+ChainRulesCore = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+NNlib = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
+
+[extensions]
+ForwardDiffExt = ["ChainRulesCore", "ForwardDiff"]
+ForwardDiffNNlibExt = ["ForwardDiff", "NNlib"]
+SpecialFunctionsExt = "SpecialFunctions"
+
+[compat]
+ArrayInterface = "7"
+CPUSummary = "0.1.3 - 0.1.8, 0.1.11, 0.2.1"
+ChainRulesCore = "1"
+CloseOpenIntervals = "0.1.10"
+DocStringExtensions = "0.8, 0.9"
+ForwardDiff = "0.9, 0.10, 1"
+HostCPUFeatures = "0.1.10"
+IfElse = "0.1"
+LayoutPointers = "0.1.11"
+LinearAlgebra = "1"
+NNlib = "0.9.31"
+OffsetArrays = "1.4.1"
+PolyesterWeave = "0.1.10, 0.2"
+PrecompileTools = "1"
+SIMDTypes = "0.1"
+SLEEFPirates = "0.6.23"
+SpecialFunctions = "1, 2"
+Static = "0.8.4, 1"
+StaticArrayInterface = "1"
+ThreadingUtilities = "0.5"
+UnPack = "1"
+VectorizationBase = "0.21.74"
+julia = "1.10"
+
+[extras]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+NNlib = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"

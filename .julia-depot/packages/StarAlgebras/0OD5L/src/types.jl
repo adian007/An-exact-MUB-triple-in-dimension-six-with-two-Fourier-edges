@@ -1,0 +1,235 @@
+# This file is a part of StarAlgebras.jl. License is MIT: https://github.com/JuliaAlgebra/StarAlgebras.jl/blob/main/LICENSE
+# Copyright (c) 2021-2025: Marek Kaluba, Benoît Legat
+
+abstract type AbstractStarAlgebra{O,T} end
+
+function _key_type_check(coeffs, A::AbstractStarAlgebra)
+    KC = key_type(coeffs)
+    KA = key_type(basis(A))
+    if KC != KA
+        throw(
+            ArgumentError(
+                "The key type `$KC` of the coefficients does not match the key type `$KA` of the algebra `$A`",
+            ),
+        )
+    end
+end
+
+function _sanity_checks(coeffs, A::AbstractStarAlgebra)
+    return _key_type_check(coeffs, A)
+end
+function _sanity_checks(coeffs::AbstractVector, A::AbstractStarAlgebra)
+    @assert Base.haslength(basis(A))
+    @assert length(coeffs) == length(basis(A))
+end
+
+"""
+    struct StarAlgebra{O,T,M<:MultiplicativeStructure{T}} <: AbstractStarAlgebra{O,T}
+        object::O
+        mstructure::M
+    end
+
+Star algebra implementation with an `object` that should implement `one(::O)` and
+a [`MultiplicativeStructure`](@ref) `mstructure`.
+"""
+struct StarAlgebra{O,T,M<:MultiplicativeStructure{T}} <:
+       AbstractStarAlgebra{O,T}
+    object::O
+    mstructure::M
+end
+
+function StarAlgebra(object, basis::AbstractBasis)
+    return StarAlgebra(object, DiracMStructure(basis, *))
+end
+
+mstructure(A::StarAlgebra) = A.mstructure
+basis(A::StarAlgebra) = basis(mstructure(A))
+function MA.promote_operation(
+    ::typeof(basis),
+    ::Type{StarAlgebra{O,T,M}},
+) where {O,T,M}
+    return MA.promote_operation(basis, M)
+end
+object(A::StarAlgebra) = A.object
+Base.isempty(A::StarAlgebra) = isempty(basis(A))
+function Base.:(==)(a::StarAlgebra, b::StarAlgebra)
+    return a.object == b.object && a.mstructure == b.mstructure
+end
+
+"""
+    struct AlgebraElement{T,A<:AbstractStarAlgebra,V} <: MA.AbstractMutable
+        coeffs::V
+        parent::A
+    end
+
+Represent an element of the algebra `parent` with coefficients `coeffs`.
+The coefficients is a mapping from `keys(coeffs)` to `values(coeffs)`.
+The basis element correponding to a key `key` can be obtained via `parent[key]`.
+
+The coefficients are **always** in canonicalized state, meaning the coefficients are
+sorted in increasing key order without duplicate keys.
+Don't call this constructor with a value of `coeffs` that is in canonical form.
+If unsure whether `coeffs` is in canonical form, call [`algebra_element`](@ref) instead of the `AlgebraElement` constructor.
+
+The [`UnsafeAddMul`] and [`UnsafeAdd`] operations may break the canonicalized state of
+`AlgebraElement`, hence the `Unsafe` prefix in their name,
+the algebra element, say `a`, should be canonicalized with
+`MA.operate!(canonical, a)` after using these unsafe operations and
+before using other operations which assumes the canonicalized state.
+"""
+struct AlgebraElement{T,A<:AbstractStarAlgebra,V} <: MA.AbstractMutable
+    coeffs::V
+    parent::A
+end
+
+# TODO we could add an additional argument with SortedUniqState etc... from MultivariatePolynomials
+"""
+    algebra_element(coeffs, parent::AbstractStarAlgebra)
+
+Same as `AlgebraElement(coeffs, parent)` but also canonicalizes `coeffs`.
+"""
+function algebra_element(coeffs, parent::AbstractStarAlgebra)
+    a = AlgebraElement(coeffs, parent)
+    MA.operate!(canonical, a)
+    return a
+end
+
+Base.parent(a::AlgebraElement) = a.parent
+Base.in(x::AlgebraElement, A::AbstractStarAlgebra) = parent(x) == A
+
+mstructure(a::AlgebraElement) = mstructure(parent(a))
+function Base.eltype(::Type{A}) where {A<:AlgebraElement}
+    return value_type(MA.promote_operation(coeffs, A))
+end
+Base.eltype(a::AlgebraElement) = eltype(typeof(a))
+function MA.promote_operation(
+    ::typeof(coeffs),
+    ::Type{AlgebraElement{T,A,V}},
+) where {T,A,V}
+    return V
+end
+coeffs(a::AlgebraElement) = a.coeffs
+
+function MA.operate!(T::typeof(canonical), a::AlgebraElement)
+    return MA.operate!(T, coeffs(a))
+end
+
+function coeffs(x::AlgebraElement, b::AbstractBasis)
+    return coeffs(coeffs(x), basis(x), b)
+end
+function adjoint_coeffs(a::AlgebraElement, target::AbstractBasis)
+    return adjoint_coeffs(coeffs(a), target, basis(a))
+end
+function MA.promote_operation(
+    ::typeof(basis),
+    ::Type{<:AlgebraElement{T,A}},
+) where {T,A}
+    return MA.promote_operation(basis, A)
+end
+basis(a::AlgebraElement) = basis(parent(a))
+
+function AlgebraElement(coeffs, A::AbstractStarAlgebra)
+    _sanity_checks(coeffs, A)
+    return AlgebraElement{value_type(coeffs),typeof(A),typeof(coeffs)}(
+        coeffs,
+        A,
+    )
+end
+
+function AlgebraElement(
+    coeffs::SparseCoefficients{T},
+    A::AbstractStarAlgebra{O,T},
+) where {O,T}
+    return AlgebraElement{value_type(coeffs),typeof(A),typeof(coeffs)}(
+        coeffs,
+        A,
+    )
+end
+
+### constructing elements
+function __coerce(A::AbstractStarAlgebra, (x, v)::Pair{K,V}) where {K,V}
+    if iszero(v)
+        return AlgebraElement(zero_coeffs(V, basis(A)), A)
+    elseif x in basis(A)
+        cfs = zero_coeffs(V, basis(A))
+        cfs[basis(A)[x]] = v
+        return AlgebraElement(cfs, A)
+        # elseif x in object(A)
+        #     sc = SparseCoefficients([x], [v])
+        #     return AlgebraElement(
+        #         coeffs(sc, DiracBasis(object(A)), basis(A)),
+        #         A,
+        #     )
+    else
+        throw(ArgumentError("cannot coerce $x to $A"))
+    end
+end
+
+Base.zero(A::AbstractStarAlgebra) = zero(Int, A)
+function Base.zero(T::Type, A::AbstractStarAlgebra)
+    return AlgebraElement(zero_coeffs(T, basis(A)), A)
+end
+Base.zero(a::AlgebraElement) = (b = similar(a); return MA.operate!(zero, b))
+Base.iszero(a::AlgebraElement) = iszero(coeffs(a))
+
+Base.one(A::AbstractStarAlgebra) = one(Int, A)
+function Base.one(T::Type, A::AbstractStarAlgebra)
+    return __coerce(A, (one(object(A)) => one(T)))
+end
+Base.one(a::AlgebraElement) = one(eltype(a), parent(a))
+
+function Base.isone(a::AlgebraElement)
+    A = parent(a)
+    id = one(object(A))
+    if id in basis(A)
+        for (i, v) in nonzero_pairs(coeffs(a))
+            isone(v) || return false
+            id == basis(A)[i] || return false
+        end
+        return true
+    else
+        throw(
+            ArgumentError(
+                "basis of $A does not contain $id; `one` and `isone` are unsupported",
+            ),
+        )
+        # return a == one(a)
+    end
+end
+
+(A::AbstractStarAlgebra{O,T})(elt::T) where {O,T} = __coerce(A, (elt => 1))
+(A::AbstractStarAlgebra)(x::Number) = __coerce(A, (one(object(A)) => x))
+
+function similar_type(::Type{AlgebraElement{T,A,V}}, ::Type{C}) where {A,T,V,C}
+    return AlgebraElement{C,A,similar_type(V, C)}
+end
+
+function Base.similar(X::AlgebraElement, T = eltype(X))
+    return AlgebraElement(similar(coeffs(X), T), parent(X))
+end
+
+function AlgebraElement{T}(X::AlgebraElement) where {T}
+    v = coeffs(X)
+    w = similar(v, T)
+    MA.operate!(zero, w)
+    for (k, v) in nonzero_pairs(v)
+        w[k] = v
+    end
+    return AlgebraElement(w, parent(X))
+end
+
+function Base.convert(
+    ::Type{AlgebraElement{T,A,V}},
+    a::AlgebraElement{T,A,V},
+) where {T,A,V}
+    return a
+end
+
+# Useful for instance if `V` is `SparseCoefficients` with `Tuple`
+# and `U` is `SparseCoefficients` with `Vector`
+function Base.convert(
+    ::Type{AlgebraElement{T,A,U}},
+    a::AlgebraElement{T,A,V},
+) where {A,T,U,V}
+    return AlgebraElement(convert(U, coeffs(a)), parent(a))
+end

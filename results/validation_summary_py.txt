@@ -1,0 +1,5 @@
+n_csv_rows=848
+n_candidates=15
+cluster_rank=3
+cluster_sv=1.8296965100374443,0.010727359492243066,0.008781421681075865
+found_fourth_any=False

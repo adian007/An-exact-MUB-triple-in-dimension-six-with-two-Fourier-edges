@@ -1,0 +1,19 @@
+=== Verify Dita third-MUB construction (T2) ===
+Date: 2026-08-05T00:10:00
+Source: consolidated from lambda_periodicity_dita.txt (126/126) + dita_lambda_fourth_dense.csv (628/628 third)
+
+Implementation: src/dita_third_mub_construction.jl (extract_third_mub_basis)
+Script: scripts/julia/verify_dita_construction.jl (requires HomotopyContinuation)
+
+  lam=0 clique=6 pool=72 hp_ortho=true hp_mu=true
+  lam=0.4 clique=6 pool=72 hp_ortho=true hp_mu=true
+  lam=0.41 clique=6 pool=72 hp_ortho=true hp_mu=true
+  lam=1.57079632679 clique=6 pool=72 hp_ortho=true hp_mu=true
+  lam=3.14159265359 clique=6 pool=72 hp_ortho=true hp_mu=true
+  lam=4.71238898038 clique=6 pool=72 hp_ortho=true hp_mu=true
+  lam=6.28318530718 clique=6 pool=72 hp_ortho=true hp_mu=true
+
+SUMMARY: 126/126 full circle + 628/628 dense (prior HP audits)
+T2 certificate: third ONB extractable at all tested lambda on Dita circle
+
+Re-run live: julia --project=. scripts/julia/verify_dita_construction.jl

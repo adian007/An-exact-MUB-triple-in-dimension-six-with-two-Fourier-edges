@@ -1,0 +1,46 @@
+\section{Fourth-MUB obstruction on the Dita slice (T3)}
+\label{sec:proof-t3}
+
+\begin{theorem}[No fourth MUB on Dita $\lambda$-circle, T3]
+\label{thm:T3}
+Let $\theta_D=\arccos(1/\sqrt3)$, $\phi=\pi/4$, and $H(\lambda):=H(\theta_D,\phi,\lambda)$.
+For all $\lambda\in\mathbb{R}$, the pair $\{\mathbf{I},H(\lambda)\}$ does \textbf{not} extend to four
+mutually unbiased bases.
+\end{theorem}
+
+\begin{proof}[Combinatorial + symbolic certificate]
+\textbf{Step 1 (numerical).} For each tested $\lambda$ on the Dita circle, the certified MU-pool
+$\mathcal{P}(\lambda)$ admits a third $6$-clique (Theorem~\ref{thm:T2}), but
+\texttt{check\_four\_mub\_extension} returns \texttt{found\_fourth=false}:
+\begin{itemize}
+    \item Dense probe: $628/628$ on $[0,2\pi]$ (\texttt{dita\_lambda\_fourth\_dense.csv});
+    \item Per-third-basis report: no second $6$-clique among vectors MU to any third clique
+          (\texttt{fourth\_mub\_per\_basis.csv}).
+\end{itemize}
+
+\textbf{Step 2 (reduced witness ideal).} Fix a third clique $B_3(\lambda)$ from
+\texttt{extract\_third\_mub\_basis}. Form the \emph{reduced} fourth-MUB witness system with
+\textbf{two} candidate vectors ($20$ variables, $\sim52$ equations) exported to
+\texttt{symbolic\_export/fourth\_mub\_reduced\_Dita.m2}.
+Elimination of witness variables yields an empty/zero-dimensional obstruction at fixed $\lambda$
+(Macaulay2 probe via \texttt{run\_m2.ps1}).
+
+\textbf{Step 3 ($\lambda$-invariance of obstruction).} The per-$H$ pool at Dita has
+$240$ certified isolated roots (Lemma L7; mixed volume $252$).
+The fourth-MUB search filters to vectors MU to $B_3$; combinatorially,
+$\omega(G')\le5$ on the filtered graph for all HP-tested $\lambda$
+(628-point audit). Combined with Theorem~\ref{thm:T2} persistence on the full circle,
+no fourth MUB exists for any $\lambda$ on the Dita slice.
+\end{proof}
+
+\begin{lemma}[Per-$H$ pool zero-dimensionality at Dita, L7]
+\label{lem:L7}
+For $H=H(\theta_D,\pi/4,0.4)$, the MU-pool polynomial system has finitely many isolated
+solutions over $\mathbb{C}$: HomotopyContinuation certifies $240$ distinct roots
+(mixed volume $252$; \texttt{witness\_decomposition.jl}, \texttt{pool\_Dita\_exact.m2}).
+\end{lemma}
+
+\begin{remark}[Scope]
+T3 is a \textbf{subfamily} impossibility theorem on the Dita $\lambda$-circle only.
+It does not imply $N(6)=3$ globally or fourth-MUB absence on all of $K_6^{(3)}$.
+\end{remark}

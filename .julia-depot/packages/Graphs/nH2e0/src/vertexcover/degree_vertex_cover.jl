@@ -1,0 +1,51 @@
+export DegreeVertexCover
+
+struct DegreeVertexCover end
+
+"""
+    vertex_cover(g, DegreeVertexCover())
+
+Obtain a vertex cover using a greedy heuristic.
+
+### Implementation Notes
+An edge is said to be covered if it has at least one end-point in the vertex cover.
+Initialise the vertex cover to an empty set and iteratively choose the vertex with the most uncovered
+edges.
+
+### Performance
+Runtime: O((|V|+|E|)*log(|V|))
+Memory: O(|V|)
+
+# Examples
+```jldoctest
+julia> using Graphs
+
+julia> vertex_cover(path_graph(3), DegreeVertexCover())
+1-element Vector{Int64}:
+ 2
+
+julia> vertex_cover(cycle_graph(3), DegreeVertexCover())
+2-element Vector{Int64}:
+ 1
+ 3
+```
+"""
+function vertex_cover(g::AbstractGraph{T}, alg::DegreeVertexCover) where {T<:Integer}
+    nvg = nv(g)
+    in_cover = falses(nvg)
+    length_cover = 0
+    degree_queue = PriorityQueue(Base.Order.Reverse, enumerate(degree(g)))
+
+    while !isempty(degree_queue) && first(degree_queue)[2] > 0
+        v = popfirst!(degree_queue).first
+        in_cover[v] = true
+        length_cover += 1
+
+        @inbounds @simd for u in neighbors(g, v)
+            if !in_cover[u]
+                degree_queue[u] -= 1
+            end
+        end
+    end
+    return Graphs.findall!(in_cover, Vector{T}(undef, length_cover))
+end

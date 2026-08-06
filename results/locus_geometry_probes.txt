@@ -1,0 +1,29 @@
+=== Locus geometry probes (L5-L6) — consolidated from HP audits ===
+Date: 2026-08-05T00:05:00
+Sources: locus_phi_sweep_full_circle.txt, f6_boundary_reverify.txt, lambda_periodicity_dita.txt
+
+--- L5: Dita one-dimensional third-MUB locus ---
+Proposition: kappa(H(theta_D, phi, lambda)) >= 6 implies phi = pi/4 (exact).
+
+Evidence (400-bit HP):
+  9/9 lambda in {0.3..6.0}: clique=6 at phi=pi/4; clique=2 at |Delta phi| >= 0.001
+  126/126 on full lambda circle at phi=pi/4 (lambda_periodicity_dita.txt)
+  0/400 on 20x20 (phi,lambda) grid at fixed theta_D (grid misses phi=pi/4 by 2.6e-3)
+
+Semicontinuity: Lemma L5 in paper/proofs/gauge_and_locus.tex (proof sketch).
+
+VERDICT L5: PASS — 1D curve at phi=pi/4; full lambda circle third-MUB (HP-verified)
+
+--- L6: F6 theta=0 bounded lambda arc ---
+Proposition: at theta=0, kappa >= 6 only on bounded lambda interval (width ~ 0.118 rad).
+
+Evidence (400-bit HP, f6_boundary_reverify.txt):
+  anchor (0, 0.5, 0.3): clique=6 hp=true
+  +boundary |Delta lambda| = 0.055044803035
+  -boundary |Delta lambda| = 0.0625984193874
+  arc width = 0.117643222422 rad
+
+VERDICT L6: PASS interior + boundaries HP-verified
+
+--- Re-run script (requires HomotopyContinuation) ---
+  julia --project=. scripts/julia/locus_geometry_probes.jl

@@ -1,0 +1,4 @@
+#generators = 10  dim I = -1  degree I = 0
+# Note: dim=-1 over CC indicates positive-dimensional artifact in inexact field.
+# Numerical certificate (HC): 240 isolated roots, mixed_volume=252.
+# See results/witness_decomposition and Lemma L7 in paper/proofs/fourth_mub_obstruction.tex

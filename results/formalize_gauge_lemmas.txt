@@ -1,0 +1,10 @@
+=== Formal verification of Lemmas L1-L4 (Theorem T1) ===
+Date: 2026-08-05T15:37:19
+Tolerance: 1.0e-12
+
+L1 (phi-gauge at theta=0): PASS
+L2 (lambda 2pi periodicity): PASS
+L3 (Dita A-block): PASS  |ΔA|=5.551e-17  unitary_err=0.000e+00
+L4 (lambda not CHM-gauge): PASS  entry_diff=1.000e-02  chm_residual=2.828e-02
+
+VERDICT: ALL PASS — Theorem T1 numerically certified

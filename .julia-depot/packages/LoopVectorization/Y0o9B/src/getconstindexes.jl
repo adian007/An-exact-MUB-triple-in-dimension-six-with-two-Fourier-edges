@@ -1,0 +1,46 @@
+const EXTRACTFUNS = (
+  :first,
+  :second,
+  :third,
+  :fourth,
+  :fifth,
+  :sixth,
+  :seventh,
+  :eighth,
+  :ninth,
+  :tenth,
+  :eleventh,
+  :twelfth,
+  :thirteenth,
+  :fourteenth,
+  :fifteenth,
+  :sixteenth,
+  :seventeenth,
+  :eighteenth,
+  :nineteenth,
+  :twentieth,
+  :twentyfirst,
+  :twentysecond,
+  :twentythird,
+  :twentyfourth,
+  :twentyfifth,
+  :twentysixth,
+  :twentyseventh,
+  :twentyeighth,
+  :twentyninth,
+  :thirtieth,
+  :thirtyfirst,
+  :thirtysecond,
+  :thirtythird,
+  :thirtyfourth,
+  :thirtyfifth,
+  :thirtysixth,
+  :thirtyseventh,
+  :thirtyeighth,
+  :last
+)
+
+for (i, f) ∈ enumerate(EXTRACTFUNS)
+  (i == 1 || i == length(EXTRACTFUNS)) && continue
+  @eval @inline $f(x) = @inbounds getindex(x, $i)
+end

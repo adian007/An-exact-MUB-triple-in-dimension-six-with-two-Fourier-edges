@@ -1,0 +1,14 @@
+phase: 3 (real pool export + witness skeleton)
+theta0_slice: n=36 third=6 fourth=0
+oscar_available: false
+pool_F6: n_eqs=10 stub=false path=d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\pool_F6.m2
+pool_Dita: n_eqs=10 stub=false path=d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\pool_Dita.m2
+pool_F6_theta0: n_eqs=10 stub=false path=d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\pool_F6_theta0.m2
+F6: witness_vars=50 eqs=125
+Dita: witness_vars=50 eqs=125
+theta0: witness_vars=50 eqs=125
+export: d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\fourth_mub_w_elimination_F6.m2
+export: d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\fourth_mub_w_elimination_Dita.m2
+export: d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\fourth_mub_w_elimination_theta0.m2
+export: d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\theta0_fourth_mub_witness.m2
+export: d:\IBM-Quantum\MUBs in 6-dimension\symbolic_export\mobius_degeneracy_locus.m2

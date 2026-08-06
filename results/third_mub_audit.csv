@@ -1,0 +1,46 @@
+index,name,theta,phi,lambda,d_theta0,nearest_locus,nearest_dist,hp_survival,ortho_max_hp,float_artifact,exact_confirmed
+1,F6_theta0,0.0,0.5,0.3,0.0,Mobius_z4_dev,NaN,true,2.0168394789452204e-16,false,theta=0
+2,Dita,0.9553166181245092,0.7853981633974483,0.4,0.9553166181245092,Dita,0.0,true,6.196757765756507e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+3,degen_circulant_match,1.5707963268,0.05,6.2331853072,1.5707963268,Mobius_z4_dev,3.112970120408428e-15,false,NaN,false,theta=pi/2
+4,ref_F6_theta0,0.0,0.495,0.2975,0.0,Fourier_theta0,0.0,true,2.4289238800415844e-16,false,theta=0
+5,ref_F6_theta0,0.0,0.495,0.3,0.0,Mobius_z4_dev,NaN,true,1.9139549489276285e-16,false,theta=0
+6,ref_F6_theta0,0.0,0.4975,0.2975,0.0,Fourier_theta0,0.0,true,1.8277179961428454e-16,false,theta=0
+7,ref_F6_theta0,0.0,0.4975,0.3,0.0,Mobius_z4_dev,NaN,true,3.611064427367918e-16,false,theta=0
+8,ref_F6_theta0,0.0,0.5,0.2975,0.0,Fourier_theta0,0.0,true,1.5748126697786945e-16,false,theta=0
+9,ref_F6_theta0,0.0,0.5025,0.2975,0.0,Fourier_theta0,0.0,true,1.7847300208386002e-16,false,theta=0
+10,ref_F6_theta0,0.0,0.5025,0.3,0.0,Mobius_z4_dev,NaN,true,2.4053266210645253e-16,false,theta=0
+11,ref_F6_theta0,0.0,0.505,0.2975,0.0,Fourier_theta0,0.0,true,1.9482034761802537e-16,false,theta=0
+12,ref_F6_theta0,0.0,0.505,0.3,0.0,Mobius_z4_dev,NaN,true,1.5710005084745362e-16,false,theta=0
+13,ref_Dita,0.9553166181245092,0.7853981633974483,0.395,0.9553166181245092,Dita,0.0,true,4.2964330655509276e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+14,ref_Dita,0.9553166181245092,0.7853981633974483,0.3975,0.9553166181245092,Dita,0.0,true,8.231096638660226e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+15,ref_Dita,0.9553166181245092,0.7853981633974483,0.4025,0.9553166181245092,Dita,0.0,true,7.409652323216596e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+16,ref_Dita,0.9553166181245092,0.7853981633974483,0.405,0.9553166181245092,Dita,0.0,true,4.474668799432968e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+17,ref_degen_circulant_match,1.5707963268,0.045000000000000005,6.2381853072,1.5707963268,Mobius_z4_dev,1.2374513654982248e-15,false,NaN,false,theta=pi/2
+18,ref_degen_circulant_match,1.5707963268,0.0475,6.235685307200001,1.5707963268,Mobius_z4_dev,3.5560862138150785e-15,false,NaN,false,theta=pi/2
+19,ref_degen_circulant_match,1.5707963268,0.052500000000000005,6.2306853072,1.5707963268,Mobius_z4_dev,2.1059356651110042e-19,false,NaN,false,theta=pi/2
+20,ref_degen_circulant_match,1.5707963268,0.055,6.2281853072,1.5707963268,Mobius_z4_dev,1.4058321189052861e-15,false,NaN,false,theta=pi/2
+21,ref_ref_F6_theta0,0.0,0.49,0.2925,0.0,Fourier_theta0,0.0,true,2.1741185486089493e-16,false,theta=0
+22,ref_ref_F6_theta0,0.0,0.49,0.2975,0.0,Fourier_theta0,0.0,true,1.7131480439331596e-16,false,theta=0
+23,ref_ref_F6_theta0,0.0,0.49,0.3,0.0,Mobius_z4_dev,NaN,true,2.4689595081823307e-16,false,theta=0
+24,ref_ref_F6_theta0,0.0,0.4925,0.2925,0.0,Fourier_theta0,0.0,true,3.0476488782439203e-16,false,theta=0
+25,ref_ref_F6_theta0,0.0,0.4925,0.2975,0.0,Fourier_theta0,0.0,true,1.9588839281707755e-16,false,theta=0
+26,ref_ref_F6_theta0,0.0,0.4925,0.3,0.0,Mobius_z4_dev,NaN,true,2.281649934025602e-16,false,theta=0
+27,ref_ref_F6_theta0,0.0,0.495,0.2925,0.0,Fourier_theta0,0.0,true,2.8437672614162195e-16,false,theta=0
+28,ref_ref_F6_theta0,0.0,0.4975,0.2925,0.0,Fourier_theta0,0.0,true,3.409627752529908e-16,false,theta=0
+29,ref_ref_F6_theta0,0.0,0.5,0.2925,0.0,Fourier_theta0,0.0,true,2.0381995073778313e-16,false,theta=0
+30,ref_ref_F6_theta0,0.0,0.5025,0.2925,0.0,Fourier_theta0,0.0,true,1.6926364095629658e-16,false,theta=0
+31,ref_ref_F6_theta0,0.0,0.505,0.2925,0.0,Fourier_theta0,0.0,true,2.2181269716634843e-16,false,theta=0
+32,ref_ref_F6_theta0,0.0,0.5075,0.2925,0.0,Fourier_theta0,0.0,true,3.516551337814468e-16,false,theta=0
+33,ref_ref_F6_theta0,0.0,0.5075,0.2975,0.0,Fourier_theta0,0.0,true,2.4441896459275625e-16,false,theta=0
+34,ref_ref_F6_theta0,0.0,0.5075,0.3,0.0,Mobius_z4_dev,NaN,true,2.300625200665525e-16,false,theta=0
+35,ref_ref_F6_theta0,0.0,0.51,0.2925,0.0,Fourier_theta0,0.0,true,3.5556287724146704e-16,false,theta=0
+36,ref_ref_F6_theta0,0.0,0.51,0.2975,0.0,Fourier_theta0,0.0,true,2.1290720254125247e-16,false,theta=0
+37,ref_ref_F6_theta0,0.0,0.51,0.3,0.0,Mobius_z4_dev,NaN,true,1.9628722899716769e-16,false,theta=0
+38,ref_ref_Dita,0.9553166181245092,0.7853981633974483,0.39,0.9553166181245092,Dita,0.0,true,7.526530508054016e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+39,ref_ref_Dita,0.9553166181245092,0.7853981633974483,0.3925,0.9553166181245092,Dita,0.0,true,7.125630563510765e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+40,ref_ref_Dita,0.9553166181245092,0.7853981633974483,0.40750000000000003,0.9553166181245092,Dita,0.0,true,4.879580061250974e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+41,ref_ref_Dita,0.9553166181245092,0.7853981633974483,0.41000000000000003,0.9553166181245092,Dita,0.0,true,6.815294401405887e-16,false,phi=pi/4; theta=arccos(1/sqrt(3))
+42,ref_ref_degen_circulant_match,1.5707963268,0.04000000000000001,6.2431853072,1.5707963268,Mobius_z4_dev,6.842273879141969e-15,false,NaN,false,theta=pi/2
+43,ref_ref_degen_circulant_match,1.5707963268,0.0425,6.240685307200001,1.5707963268,Mobius_z4_dev,6.479025859499657e-16,false,NaN,false,theta=pi/2
+44,ref_ref_degen_circulant_match,1.5707963268,0.0575,6.2256853072,1.5707963268,Mobius_z4_dev,9.897510461269767e-16,false,NaN,false,theta=pi/2
+45,ref_ref_degen_circulant_match,1.5707963268,0.06,6.2231853072000005,1.5707963268,Mobius_z4_dev,1.0004697330912628e-15,false,NaN,false,theta=pi/2

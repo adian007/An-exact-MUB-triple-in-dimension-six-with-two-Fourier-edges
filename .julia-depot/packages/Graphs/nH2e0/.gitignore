@@ -1,0 +1,14 @@
+.DS_Store
+*.jl.cov
+*.jl.mem
+.vscode
+docs/build/
+docs/site/
+benchmark/.results/*
+benchmark/.tune.jld
+.benchmarkci
+*.cov
+Manifest.toml
+/docs/src/index.md
+/docs/src/contributing.md
+/docs/src/license.md

@@ -1,0 +1,9 @@
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+docs/build
+docs/site
+test/benchmarks.json
+Manifest.toml
+TODO.md
+default.profraw

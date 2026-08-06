@@ -1,0 +1,266 @@
+## Description #############################################################################
+#
+# Functions to align strings.
+#
+############################################################################################
+
+export align_string, align_string_per_line, padding_for_string_alignment
+
+"""
+    align_string(
+        str::AbstractString,
+        field_width::Int,
+        alignment::Symbol;
+        kwargs...
+    ) -> String
+
+Align the string `str` in the field with width `field_width` using `alignment`, which can
+be:
+
+- `:l`: Align the string to the left;
+- `:c`: Align the string in the center;
+- `:r`: Align the string to the right.
+
+!!! note
+
+    If the printable width of `str` is higher than or equal to `field_width`, nothing
+    will be changed.
+
+!!! note
+
+    This function treats `\\n` as normal characters. To align every line, use
+    the function [`align_string_per_line`](@ref).
+
+# Keywords
+
+- `fill::Bool`: If `true`, the string will be filled with spaces to the right so that the
+    resulting string has printable width `field_width` if the initial string's printable
+    width is lower than it.
+    (**Default** = `false`)
+- `printable_string_width::Int`: Provide the printable string width to reduce the
+    computational burden. If this parameter is lower than 0, the printable width is computed
+    internally.
+    (**Default** = -1)
+
+# Extended Help
+
+## Examples
+
+```julia-repl
+julia> align_string("My String", 92, :c) |> println
+                                         My String
+
+julia> align_string("My String", 92, :l) |> println
+My String
+
+julia> align_string("My String", 92, :r) |> println
+                                                                                   My String
+```
+"""
+function align_string(
+    str::AbstractString,
+    field_width::Int,
+    alignment::Symbol;
+    fill::Bool = false,
+    printable_string_width::Int = -1,
+)
+    padding = padding_for_string_alignment(
+        str, field_width, alignment; fill, printable_string_width
+    )
+
+    isnothing(padding) && return String(str)
+
+    lpad, rpad = padding
+
+    return " "^lpad * str * " "^rpad
+end
+
+"""
+    _write_padding(buf::IOBuffer, num_spaces::Int) -> Nothing
+
+Write `num_spaces` spaces to `buf`, doing nothing if it is not positive.
+"""
+function _write_padding(buf::IOBuffer, num_spaces::Int)
+    remaining = num_spaces
+
+    # Writing the spaces in chunks from a constant lets each `write` be a bulk copy instead
+    # of one call per space, and it does not allocate the padding string.
+    while remaining > 0
+        num_written = min(remaining, ncodeunits(_SPACES))
+        write(buf, SubString(_SPACES, 1, num_written))
+        remaining -= num_written
+    end
+
+    return nothing
+end
+
+"""
+    align_string_per_line(
+        str::AbstractString,
+        field_width::Int,
+        alignment::Symbol;
+        kwargs...
+    ) -> String
+
+Align each line of the string `str` in the field with width `field_width` using `alignment`,
+which can be:
+
+- `:l`: Align the string to the left;
+- `:c`: Align the string in the center;
+- `:r`: Align the string to the right.
+
+!!! note
+
+    If the printable width of `str` is higher than or equal to `field_width`, nothing
+    will be changed.
+
+# Keywords
+
+- `fill::Bool`: If `true`, the string will be filled with spaces to the right so that the
+    resulting string has printable width `field_width` if the initial string's printable
+    width is lower than it.
+    (**Default** = `false`)
+
+# Extended Help
+
+## Examples
+
+```julia-repl
+julia> align_string_per_line(\"\"\"
+       This is a string
+       with multiple
+       lines.\"\"\", 92, :c) |> println
+                                      This is a string
+                                       with multiple
+                                           lines.
+
+julia> align_string_per_line(\"\"\"
+       This is a string
+       with multiple
+       lines.\"\"\", 92, :l) |> println
+This is a string
+with multiple
+lines.
+
+julia> align_string_per_line(\"\"\"
+       This is a string
+       with multiple
+       lines.\"\"\", 92, :r) |> println
+                                                                            This is a string
+                                                                               with multiple
+                                                                                      lines.
+```
+"""
+function align_string_per_line(
+    str::AbstractString, field_width::Int, alignment::Symbol; fill::Bool = false
+)
+    (field_width ≤ 0) && return String(str)
+
+    # Align each line without materializing the collection of lines. The padding is written
+    # directly to the buffer instead of calling `align_string`, which would allocate an
+    # aligned string per line only to copy it here.
+    buf = IOBuffer(; sizehint = sizeof(str) + field_width)
+    first_line = true
+
+    for line in eachsplit(str, '\n'; keepempty = true)
+        first_line || write(buf, '\n')
+
+        padding = padding_for_string_alignment(line, field_width, alignment; fill)
+
+        if isnothing(padding)
+            write(buf, line)
+        else
+            lpad, rpad = padding
+            _write_padding(buf, lpad)
+            write(buf, line)
+            _write_padding(buf, rpad)
+        end
+
+        first_line = false
+    end
+
+    return String(take!(buf))
+end
+
+"""
+    padding_for_string_alignment(
+        str::AbstractString,
+        field_width::Int,
+        alignment::Symbol;
+        kwargs...
+    ) -> Union{Nothing, NTuple{2, Int}}
+
+Return the left and right padding required to align the string `str` in a field with width
+`field_width` using the `alignment`, which can be:
+
+- `:l`: Align the string to the left;
+- `:c`: Align the string in the center;
+- `:r`: Align the string to the right.
+
+This function can return `nothing` in the following conditions:
+
+1. The string does not need to be modified;
+2. The alignment symbol is unknown; or
+3. The printable width of `str` is longer than `field_width`.
+
+!!! note
+
+    This function treats `\\n` as normal characters.
+
+# Keywords
+
+- `fill::Bool`: If `true`, the string will be filled with spaces to the right so that the
+    resulting string has printable width `field_width` if the initial string's printable
+    width is lower than it.
+    (**Default** = `false`)
+- `printable_string_width::Int`: Provide the printable string width to reduce the
+    computational burden. If this parameter is lower than 0, the printable width is computed
+    internally.
+    (**Default** = -1)
+
+# Extended Help
+
+## Examples
+
+```julia-repl
+julia> padding_for_string_alignment("My string", 92, :c)
+(41, 0)
+
+julia> padding_for_string_alignment("My string", 92, :l)
+
+julia> padding_for_string_alignment("My string", 92, :r)
+(83, 0)
+```
+"""
+function padding_for_string_alignment(
+    str::AbstractString,
+    field_width::Int,
+    alignment::Symbol;
+    fill::Bool = false,
+    printable_string_width::Int = -1,
+)
+    str_width = if printable_string_width < 0
+        printable_textwidth(str)
+    else
+        printable_string_width
+    end
+
+    (field_width ≤ str_width) && return nothing
+
+    # Compute the padding given the alignment type.
+    if (alignment == :l) && fill
+        rpad = field_width - str_width
+        return 0, rpad
+
+    elseif alignment == :c
+        lpad = div(field_width - str_width, 2)
+        rpad = fill ? (field_width - str_width - lpad) : 0
+        return lpad, rpad
+
+    elseif alignment == :r
+        lpad = field_width - str_width
+        return lpad, 0
+    end
+
+    return nothing
+end

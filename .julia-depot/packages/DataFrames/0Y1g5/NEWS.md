@@ -1,0 +1,847 @@
+# DataFrames.jl v1.8.2 Release Notes
+
+## Bug fixes
+
+* Fix a column selection bug when transforming `SubDataFrame` with `copycols=false` ([#3503](https://github.com/JuliaData/DataFrames.jl/pull/3522))
+
+# DataFrames.jl v1.8.0 Release Notes
+
+## Ecosystem compatibility changes
+
+* Make DataFrames.jl hashing consistent with Julia 1.13 and take into account column names when hashing `AbstractDataFrame`
+  ([#3507](https://github.com/JuliaData/DataFrames.jl/issues/3507))
+* Require Julia 1.10 and add PrettyTables.jl v3 support
+  ([#3510](https://github.com/JuliaData/DataFrames.jl/issues/3510))
+
+# DataFrames.jl v1.7.1 Release Notes
+
+## Julia compatibility change
+
+* Make DataFrames.jl support DataStructures.jl version 0.19
+  ([#3503](https://github.com/JuliaData/DataFrames.jl/issues/3503))
+
+# DataFrames.jl v1.7.0 Release Notes
+
+## New functionalities
+
+* Allow passing multiple values to add in `push!`, `pushfirst!`,
+  `append!`, and `prepend!`
+  ([#3372](https://github.com/JuliaData/DataFrames.jl/pull/3372))
+* `rename` and `rename!` now allow to apply a function transforming
+  column names only to a subset of the columns specified by the `cols`
+  keyword argument
+  ([#3380](https://github.com/JuliaData/DataFrames.jl/pull/3380))
+* `mapcols` and `mapcols!` now allow to apply a function transforming
+  columns only to a subset of the columns specified by the `cols`
+  keyword argument
+  ([#3386](https://github.com/JuliaData/DataFrames.jl/pull/3386))
+
+## Bug fixes
+
+* Correctly throw an error if negative number of rows is passed
+  to `first` or `last`
+  ([#3402](https://github.com/JuliaData/DataFrames.jl/pull/3402))
+* Always use the default thread pool for multithreaded operations,
+  instead of using the interactive thread pool when Julia was started
+  with `-tM,N` with N > 0
+  ([#3385](https://github.com/JuliaData/DataFrames.jl/pull/3385))
+* Correctly return `Bool[]` in the `nonunique` function applied to a data frame
+  with a pulled column that has zero levels in the pool
+  ([#3393](https://github.com/JuliaData/DataFrames.jl/pull/3393))
+* Correctly index `eachrow` and `eachcol` with `CartesianIndex`
+  ([#3413](https://github.com/JuliaData/DataFrames.jl/issues/3413))
+* Correctly handle non-standard integers when converting them to `BigInt`
+  ([#3419](https://github.com/JuliaData/DataFrames.jl/issues/3419))
+
+## Removed deprecations
+
+* The `by` and `aggregate` functions that were deprecated before 1.0
+  release are now removed.
+  ([#3422](https://github.com/JuliaData/DataFrames.jl/issues/3422))
+
+## Julia compatibility change
+
+* Ensure that `allunique(::AbstractDataFrame, ::Any)` always gets
+  interpreted as test for uniqueness of rows in the first positional argument
+  ([#3434](https://github.com/JuliaData/DataFrames.jl/issues/3434))
+* Make sure that an empty vector of `Any` or of `AbstractVector` is treated as having
+  no columns when a data frame is being processed with `combine`/`select`/`transform`.
+  ([#3435](https://github.com/JuliaData/DataFrames.jl/issues/3435))
+
+# DataFrames.jl v1.6.1 Release Notes
+
+## Bug fixes
+
+* Fix error in specification of dependency on DataStructures.jl
+  ([#3359](https://github.com/JuliaData/DataFrames.jl/pull/3359))
+
+## Minor improvements
+
+* Improved error messages in `only`, and `push!`, `append!` and related functions
+  ([#3356](https://github.com/JuliaData/DataFrames.jl/pull/3356),
+   [#3357](https://github.com/JuliaData/DataFrames.jl/pull/3357))
+
+# DataFrames.jl v1.6 Release Notes
+
+## Breaking changes
+
+* Objects inheriting from `Tables.AbstractRow` are now treated in the same way as
+  `DataFrameRow` by `select`/`transform`/`combine` functions.
+  In previous versions they were treated as a scalar, but this was
+  inconsistent with the intention of `Tables.AbstractRow` definition
+  ([#3348](https://github.com/JuliaData/DataFrames.jl/pull/3348))
+
+## New functionalities
+
+* Add `Iterators.partition` support for `DataFrameRows`
+  ([#3299](https://github.com/JuliaData/DataFrames.jl/pull/3299))
+* Add support for `renamecols` keyword argument in `crossjoin`
+  ([#3314](https://github.com/JuliaData/DataFrames.jl/pull/3314))
+* `DataFrameRows` and `DataFrameColumns` now support
+  `nrow`, `ncol`, and `Tables.subset`
+  ([#3311](https://github.com/JuliaData/DataFrames.jl/pull/3311))
+* `Not` allows passing multiple positional arguments that are
+  treated as if they were wrapped in `Cols` and does not throw an error
+  when a vector of duplicate indices is passed when doing column selection
+  ([#3302](https://github.com/JuliaData/DataFrames.jl/pull/3302))
+* Added the kwarg `checkunique` to sorting related functions (`issorted`,
+  `sort`, `sort!` and `sortperm`) that throws an error when duplicate elements
+  make multiple sort orders valid
+  ([#3312](https://github.com/JuliaData/DataFrames.jl/pull/3312))
+* `reduce` performing `vcat` on a collection of data frames
+  now accepts `init` keyword argument
+  ([#3310](https://github.com/JuliaData/DataFrames.jl/pull/3310))
+* Allow to pass column names in `DataFrame` constructor that replace
+  the names generated by default
+  ([#3320](https://github.com/JuliaData/DataFrames.jl/pull/3320))
+* `describe` now has `:sum` available as a descriptive statistic.
+  ([#3303](https://github.com/JuliaData/DataFrames.jl/pull/3303))
+
+## Bug fixes
+
+* `deleteat!` correctly handles the situation when vector of rows to be dropped
+  from a data frame is its column or might alias with some of its columns
+  ([#3304](https://github.com/JuliaData/DataFrames.jl/pull/3304))
+
+# DataFrames.jl v1.5 Release Notes
+
+## New functionalities
+
+* Add `Iterators.partition` support
+  ([#3212](https://github.com/JuliaData/DataFrames.jl/pull/3212))
+* Add `allunique` and allow transformations in `cols` argument of `describe`
+  and `nonunique` when working with `SubDataFrame`
+  ([3232](https://github.com/JuliaData/DataFrames.jl/pull/3232))
+* Add support for `Tables.AbstractRow` for `push!`, `pushfirst!`, and `insert!`
+   ([#3245](https://github.com/JuliaData/DataFrames.jl/pull/3245))
+* Add support for `operator` keyword argument in `Cols`
+  to take a set operation to apply to passed selectors (`union` by default)
+  ([3224](https://github.com/JuliaData/DataFrames.jl/pull/3224))
+* Allow to pass multiple predicates in `Cols` and mix them with
+  other selectors
+  ([3279](https://github.com/JuliaData/DataFrames.jl/pull/3279))
+* Improve support for setting group order in `groupby`
+  ([3253](https://github.com/JuliaData/DataFrames.jl/pull/3253))
+* Joining functions now support `order` keyword argument allowing the user
+  to specify the order of the rows in the produced table
+  ([#3233](https://github.com/JuliaData/DataFrames.jl/pull/3233))
+* Add `keep` keyword argument to `nonunique`, `unique`, and `unique!`
+  allowing to specify which duplicate rows should be kept
+  ([#3260](https://github.com/JuliaData/DataFrames.jl/pull/3260))
+* Add `haskey` and `get` methods to `DataFrameColumns`
+  to make it support dictionary interface more completely
+  ([#3282](https://github.com/JuliaData/DataFrames.jl/pull/3282))
+* Allow passing `scalar` keyword argument in `flatten`
+  ([#3283](https://github.com/JuliaData/DataFrames.jl/pull/3283))
+
+## Bug fixes
+
+* passing very many data frames to `innerjoin` and `outerjoin`
+  does not lead to stack overflow
+  ([#3233](https://github.com/JuliaData/DataFrames.jl/pull/3233))
+* fixed incorrect handling of passing no conditions in `subset` and `subset!`
+  ([#3264](https://github.com/JuliaData/DataFrames.jl/pull/3264))
+* fixed error in fast aggregation in `sum` and `mean` of columns only having
+  `missing` values
+  ([#3268](https://github.com/JuliaData/DataFrames.jl/pull/3268))
+* fixed error in indexing of `SubDataFrame` that has no columns selected from
+  its parent
+  ([#3273](https://github.com/JuliaData/DataFrames.jl/pull/3273))
+
+## Performance improvements
+
+* `dropmissing` creates new columns in a single pass if `disallowmissing=true`
+  ([#3256](https://github.com/JuliaData/DataFrames.jl/pull/3256))
+
+# DataFrames.jl v1.4.4 Patch Release Notes
+
+## Bug fixes
+
+* Fix bug in `select` and `transform` with `copycols=false` on `SubDataFrame`
+  that incorrectly allowed passing transformations
+  ([#3231](https://github.com/JuliaData/DataFrames.jl/pull/3231))
+
+# DataFrames.jl v1.4.3 Patch Release Notes
+
+## Bug fixes
+
+* Fix incorrect handling of column metadata in `insertcols!` and `insertcols`
+  ([#3220](https://github.com/JuliaData/DataFrames.jl/pull/3220))
+* Correctly handle `GroupedDataFrame` with no groups in multi-column
+  operation specification syntax
+  ([#3122](https://github.com/JuliaData/DataFrames.jl/issues/3122))
+
+## Display improvements
+
+* Improve printing of grouping keys when displaying `GroupedDataFrame`
+  ([#3213](https://github.com/JuliaData/DataFrames.jl/pull/3213))
+
+## Integration changes
+
+* Support updates of metadata API introduced in DataAPI.jl 1.13.0
+  ([3216](https://github.com/JuliaData/DataFrames.jl/pull/3216))
+
+# DataFrames.jl v1.4.2 Patch Release Notes
+
+## Bug fixes
+
+* Make sure `flatten` works correctly on a data frame with zero rows
+  ([#3198](https://github.com/JuliaData/DataFrames.jl/issues/3198))
+
+# DataFrames.jl v1.4.1 Patch Release Notes
+
+## Bug fixes
+
+* Make sure we always copy the indexing value when calling `getindex` on
+  `DataFrameRows` object
+  ([#3192](https://github.com/JuliaData/DataFrames.jl/issues/3192))
+
+# DataFrames.jl v1.4 Release Notes
+
+## Julia compatibility change
+
+* DataFrames.jl 1.4 requires Julia 1.6
+  ([#3145](https://github.com/JuliaData/DataFrames.jl/pull/3145))
+
+## New functionalities
+
+* `subset` and `subset!` now allow passing zero column selectors
+   ([#3025](https://github.com/JuliaData/DataFrames.jl/pull/3025))
+* `subset` and `subset!` processing `GroupedDataFrame` allow using a scalar as
+  a subsetting condition (this will result in including/excluding a whole group);
+  for `AbstractDataFrame` processing only `AbstractVector` subsetting condition is
+  allowed as accepting scalars can lead to hard to catch bugs in users' code
+  ([#3032](https://github.com/JuliaData/DataFrames.jl/pull/3032))
+* `permutedims` now supports a `strict` keyword argument that allows
+  for a more flexible handling of values stored in a column that will
+  become a new header
+  ([#3004](https://github.com/JuliaData/DataFrames.jl/issues/3004))
+* `unstack` now allows passing a function in `combine` keyword argument;
+  this allows for a convenient creation of two dimensional pivot tables
+  ([#2998](https://github.com/JuliaData/DataFrames.jl/issues/2998),
+   [#3185](https://github.com/JuliaData/DataFrames.jl/pull/3185))
+* `filter` for `GroupedDataFrame` now accepts `ungroup` keyword argument
+  ([#3021](https://github.com/JuliaData/DataFrames.jl/issues/3021))
+* Add special syntax for `eachindex`, `groupindices`, and `proprow`
+  to transformation mini-language
+  ([#3001](https://github.com/JuliaData/DataFrames.jl/pull/3001)).
+* Add support for `reverse!`, `permute!`, `invpermute!`, `shuffle`,
+  and `shuffle!` functions. Improve functionality of `reverse`.
+  ([#3010](https://github.com/JuliaData/DataFrames.jl/pull/3010)).
+* `first` and `last` for `GroupedDataFrame` now support passing number of elements to get
+  ([#3006](https://github.com/JuliaData/DataFrames.jl/issues/3006))
+* Add `insertcols`, which is a version of `insertcols!` that creates a new data frame
+  ([#3020](https://github.com/JuliaData/DataFrames.jl/issues/3020))
+* Add `fillcombinations` function that generates all combinations of
+  levels of selected columns of a data frame
+  ([#3012](https://github.com/JuliaData/DataFrames.jl/issues/3012))
+* Guarantee that `permute!` and `invpermute!` throw on invalid input
+  ([#3035](https://github.com/JuliaData/DataFrames.jl/pull/3035))
+* Add `allcombinations` function that returns a data frame created
+  from all combinations of the passed vectors
+  ([#3031](https://github.com/JuliaData/DataFrames.jl/pull/3031))
+* Add `resize!`, `keepat!`, `pop!`, `popfirst!`, and `popat!`,
+  make `deleteat!` signature more precise
+   ([#3047](https://github.com/JuliaData/DataFrames.jl/pull/3047))
+* Add `pushfirst!` and `insert!`
+   ([#3072](https://github.com/JuliaData/DataFrames.jl/pull/3072))
+* New `threads` argument allows disabling multithreading in
+  `combine`, `select`, `select!`, `transform`, `transform!`, `subset` and `subset!`
+  ([#3030](https://github.com/JuliaData/DataFrames.jl/pull/3030))
+* Add support for table-level and column-level metadata using
+  DataAPI.jl interface
+  ([#3055](https://github.com/JuliaData/DataFrames.jl/pull/3055))
+* `completecases` and `nonunique` no longer throw an error when data frame
+  with no columns is passed
+  ([#3055](https://github.com/JuliaData/DataFrames.jl/pull/3055))
+* `describe` now accepts two predefined arguments: `:nnonmissing` and `:nuniqueall`
+  ([#3146](https://github.com/JuliaData/DataFrames.jl/pull/3146))
+
+## Previously announced breaking changes
+
+* On Julia 1.7 or newer broadcasting assignment
+  into an existing column of a data frame replaces it. Under Julia 1.6
+  or older it is an in place operation.
+  ([#3022](https://github.com/JuliaData/DataFrames.jl/pull/3022))
+
+# Deprecations
+
+* `allowduplicates` keyword argument in `unstack` is deprecated,
+  `combine` keyword argument should be used instead
+  ([#3185](https://github.com/JuliaData/DataFrames.jl/pull/3185))
+
+## Internal changes
+
+* `DataFrame` is now a `mutable struct` and has three new fields
+  `metadata`, `colmetadata`, and `allnotemetadata`;
+  this change makes `DataFrame` objects serialized under
+  earlier versions of DataFrames.jl incompatible with version 1.4
+  ([#3055](https://github.com/JuliaData/DataFrames.jl/pull/3055))
+
+## Bug fixes
+
+* fix dispatch ambiguity in `rename` and `rename!` when only
+  source data frame is passed
+  ([#3055](https://github.com/JuliaData/DataFrames.jl/pull/3055))
+* Make sure that `AsTable` accepts only valid argument
+  ([#3064](https://github.com/JuliaData/DataFrames.jl/pull/3064))
+* Make sure we avoid aliasing when repeating the same column
+  in `select[!]` and `transform[!]` on `GroupedDataFrame`
+  ([#3070](https://github.com/JuliaData/DataFrames.jl/pull/3070))
+* Make `vcat` correctly handle `cols` keyword argument if only
+  data frames having no columns are passed
+  ([#3081](https://github.com/JuliaData/DataFrames.jl/pull/3081))
+* Make `subset` preserves group ordering when `ungroup=false` like `subset!` already does
+  ([#3094](https://github.com/JuliaData/DataFrames.jl/pull/3094))
+* Fix incorrect behavior of `GroupDataFrame` indexing in corner cases
+  ([#3179](https://github.com/JuliaData/DataFrames.jl/pull/3179))
+* Fix errors in `insertcols!` when no columns to add are passed
+  ([#3179](https://github.com/JuliaData/DataFrames.jl/pull/3179))
+* Fix errors in `minimum` and `maximum` aggregates
+  when processing `GroupedDataFrame` with `combine` in corner cases
+  ([#3179](https://github.com/JuliaData/DataFrames.jl/pull/3179))
+
+## Performance
+
+* Speed up `permute!` and `invpermute!` (and therefore sorting) 2x-8x
+  for large tables by using cycle notation
+  ([#3035](https://github.com/JuliaData/DataFrames.jl/pull/3035))
+* Make one-dimensional multi-element indexing of `DataFrameRows` return
+  `DataFrameRows`
+  ([#3037](https://github.com/JuliaData/DataFrames.jl/pull/3037))
+* Make `transform!` on `SubDataFrame` faster
+  ([#3070](https://github.com/JuliaData/DataFrames.jl/pull/3070))
+
+## Integration changes
+
+* Support `Tables.subset` and move `ByRow` definition to Tables.jl
+  ([#3158](https://github.com/JuliaData/DataFrames.jl/pull/3158))
+
+# DataFrames.jl v1.3.6 Patch Release Notes
+
+## Bug fixes
+
+* Fix overly restrictive type assertion in `filter` and `filter!`
+  ([#3155](https://github.com/JuliaData/DataFrames.jl/pull/3155))
+
+# DataFrames.jl v1.3.5 Patch Release Notes
+
+## Integration change
+
+* Allow version 4 of Compat.jl
+
+# DataFrames.jl v1.3.4 Patch Release Notes
+
+## Bug fixes
+
+* Fix handling of `variable_eltype` in `stack`
+  ([#3043](https://github.com/JuliaData/DataFrames.jl/issues/3043))
+
+# DataFrames.jl v1.3.3 Patch Release Notes
+
+## Bug fixes
+
+* Fix handling of `matchmissing` keyword argument in joins
+  ([#3040](https://github.com/JuliaData/DataFrames.jl/issues/3040))
+
+# DataFrames.jl v1.3.2 Patch Release Notes
+
+## Bug fixes
+
+* Make sure that `select!`/`transform!` and `select`/`transform`
+  (with `copycols=false`) do not produce aliases of the same source column
+  consistently (currently only `transform[!]` ensured it for an unwrapped
+  column renaming operation)
+  ([#2983](https://github.com/JuliaData/DataFrames.jl/issues/2983))
+* Fix aliasing detection in `sort!` (now only identical columns passing `===`
+  test are considered aliases)
+  ([#2981](https://github.com/JuliaData/DataFrames.jl/issues/2981))
+* Make sure `ByRow` calls wrapped function exactly once for each element
+  in all cases
+  ([#2982](https://github.com/JuliaData/DataFrames.jl/issues/2982))
+
+# DataFrames.jl v1.3.1 Patch Release Notes
+
+## Bug fixes
+
+* Fix `getindex` that incorrectly allowed vectors of `Pair`s
+  ([#2970](https://github.com/JuliaData/DataFrames.jl/issues/2970))
+
+# DataFrames.jl v1.3 Release Notes
+
+## New functionalities
+
+* Improve `sort` keyword argument in `groupby`
+  ([#2812](https://github.com/JuliaData/DataFrames.jl/pull/2812)).
+
+  In the `groupby` function the `sort` keyword argument now allows three values:
+  - `nothing` (the default) leaves the order of groups undefined and allows
+    `groupby` to pick the fastest available grouping algorithm;
+  - `true` sorts groups by key columns;
+  - `false` creates groups in the order of their appearance in the parent data
+    frame;
+
+  In previous versions, the `sort` keyword argument allowed only `Bool` values
+  and `false` (which was the default) corresponded to the new
+  behavior when `nothing` is passed. Therefore only the user visible change
+  affecting existing code is when `sort=false` is passed explicitly.
+  The order of groups was undefined in that case, but in practice
+  groups were already created in their order of appearance, *except*
+  when grouping columns implemented the `DataAPI.refpool` API
+  (notably `PooledArray` and `CategoricalArray`) or when they contained only
+  integers in a small range.
+  ([#2812](https://github.com/JuliaData/DataFrames.jl/pull/2812))
+* the `unstack` function receives new keyword argument `fill`
+  (with `missing` default) that is used to fill combinations of not encountered
+  rows and columns. This feature allows to distinguish between missings in
+  value column and just missing row/column combinations and to easily fill
+  with zeros non existing combinations in case of counting.
+  ([#2828](https://github.com/JuliaData/DataFrames.jl/pull/2828))
+
+* Allow adding new columns to a `SubDataFrame` created with `:` as column selector
+  ([#2794](https://github.com/JuliaData/DataFrames.jl/pull/2794)).
+
+  If `sdf` is a `SubDataFrame` created with `:` as a column selector then
+  `insertcols!`, `setindex!`, and broadcasted assignment allow for creation
+  of new columns, automatically filling filtered-out rows with `missing` values;
+
+* Allow replacing existing columns in a `SubDataFrame` with `!` as row selector
+  in assignment and broadcasted assignment
+  ([#2794](https://github.com/JuliaData/DataFrames.jl/pull/2794)).
+
+  Assignment to existing columns allocates a new column.
+  Values already stored in filtered-out rows are copied.
+
+* Allow `SubDataFrame` to be passed as an argument to `select!` and `transform!`
+  (also on `GroupedDataFrame` created from a `SubDataFrame`)
+  ([#2794](https://github.com/JuliaData/DataFrames.jl/pull/2794)).
+
+  Assignment to existing columns allocates a new column.
+  Values already stored in filtered-out rows are copied.
+  In case of creation of new columns, filtered-out rows are automatically
+  filled with `missing` values.
+  If `SubDataFrame` was not created with `:` as column selector the resulting operation
+  must produce the same column names as stored in the source `SubDataFrame` or an error is thrown.
+
+* `Tables.materializer` when passed the following types or their subtypes:
+  `AbstractDataFrame`, `DataFrameRows`, `DataFrameColumns` returns `DataFrame`.
+  ([#2839](https://github.com/JuliaData/DataFrames.jl/pull/2839))
+* the `insertcols!` function receives new keyword argument `after`
+  (with `false` default) that specifies if columns should be inserted after
+  or before `col`.
+  ([#2829](https://github.com/JuliaData/DataFrames.jl/pull/2829))
+* Added support for `deleteat!`
+  ([#2854](https://github.com/JuliaData/DataFrames.jl/issues/2854))
+* `leftjoin!` performing a left join of two data frame objects by updating the
+  left data frame with the joined columns from right data frame.
+  ([#2843](https://github.com/JuliaData/DataFrames.jl/pull/2843))
+* the `DataFrame` constructor when column names are passed to it as a second
+  argument now determines if a passed vector of column names is valid based on
+  its contents and not element type
+  ([#2859](https://github.com/JuliaData/DataFrames.jl/pull/2859))
+* the `DataFrame` constructor when matrix is passed to it as a first
+  argument now allows `copycols` keyword argument
+  ([#2859](https://github.com/JuliaData/DataFrames.jl/pull/2859))
+* `Cols` now accepts a predicate accepting column names as strings.
+  ([#2881](https://github.com/JuliaData/DataFrames.jl/pull/2881))
+* In `source => transformation => destination` transformation specification
+  minilanguage now `destination` can be also a `Function` generating
+  target column names and taking column names specified by `source`
+  as an argument.
+  ([#2897](https://github.com/JuliaData/DataFrames.jl/pull/2897))
+* `subset` and `subset!` now allow passing multiple column selectors and
+  vectors or matrices of `Pair`s as specifications of selection conditions
+  ([#2926](https://github.com/JuliaData/DataFrames.jl/pull/2926))
+* When using broadcasting in `source .=> transformation .=> destination`
+  transformation specification minilanguage now `All`, `Cols`, `Between`, and
+  `Not` selectors when used as `source` or `destination` are properly expanded
+  to selected column names within the call data frame scope.
+  ([#2918](https://github.com/JuliaData/DataFrames.jl/pull/2918))
+* `describe` now accepts `:detailed` as the `stats` argument
+  to compute standard deviation and quartiles
+  in addition to statistics that are reported by default.
+  ([#2459](https://github.com/JuliaData/DataFrames.jl/pull/2459))
+* `sort!` now supports general `AbstractDataFrame`
+  ([#2946](https://github.com/JuliaData/DataFrames.jl/pull/2946))
+* `filter` now supports `view` keyword argument
+  ([#2951](https://github.com/JuliaData/DataFrames.jl/pull/2951))
+
+## Bug fixes
+
+* fix a problem with `unstack` on empty data frame
+  ([#2842](https://github.com/JuliaData/DataFrames.jl/issues/2842))
+* fix a problem with not specialized `Pair` arguments passed as transformations
+  ([#2889](https://github.com/JuliaData/DataFrames.jl/issues/2889))
+* sorting related functions now more carefully check passed arguments for
+  correctness. Now all keyword arguments are correctly checked to be either
+  scalars of vectors of scalars.
+  ([#2946](https://github.com/JuliaData/DataFrames.jl/pull/2946))
+
+## Performance improvements
+
+* for selected common transformation specifications like e.g.
+  `AsTable(...) => ByRow(sum)` use a custom implementations that
+  lead to lower compilation latency and faster computation
+  ([#2869](https://github.com/JuliaData/DataFrames.jl/pull/2869)),
+  ([#2919](https://github.com/JuliaData/DataFrames.jl/pull/2919))
+
+## Deprecations
+
+* `delete!` is deprecated in favor of `deleteat!`
+  ([#2854](https://github.com/JuliaData/DataFrames.jl/issues/2854))
+* In `sort`, `sort!`, `issorted` and `sortperm` it is now documented
+  that the result of passing an empty column selector uses lexicographic
+  ordering of all columns, but this behavior is deprecated.
+  ([#2941](https://github.com/JuliaData/DataFrames.jl/issues/2941))
+
+## Planned changes
+
+* In DataFrames.jl 1.4 release on Julia 1.7 or newer broadcasting assignment
+  into an existing column of a data frame will replace it. Under Julia 1.6
+  or older it will be an in place operation.
+  ([#2937](https://github.com/JuliaData/DataFrames.jl/pull/2937)
+
+# DataFrames.jl v1.2.2 Patch Release Notes
+
+## Bug fixes
+
+* fix a bug in `crossjoin` if the first argument is `SubDataFrame` and
+  `makeunique=true`
+  ([#2826](https://github.com/JuliaData/DataFrames.jl/issues/2826))
+
+# DataFrames.jl v1.2.1 Patch Release Notes
+
+## Bug fixes
+
+* Add workaround for `deleteat!` bug in Julia Base in `delete!` function
+  ([#2820](https://github.com/JuliaData/DataFrames.jl/issues/2820))
+
+# DataFrames.jl v1.2 Release Notes
+
+## New functionalities
+
+* add option `matchmissing=:notequal` in joins;
+  in `leftjoin`, `semijoin` and `antijoin` missings are dropped in right data frame,
+  but preserved in left; in `rightjoin` missings are dropped in left data frame,
+  but preserved in right; in `innerjoin` missings are dropped in both data frames;
+  in `outerjoin` this value of keyword argument is not supported
+  ([#2724](https://github.com/JuliaData/DataFrames.jl/pull/2724))
+* correctly handle selectors of the form `:col => AsTable` and `:col => cols`
+  by expanding a single column into multiple columns
+  ([#2780](https://github.com/JuliaData/DataFrames.jl/pull/2780))
+* if `subset!` is passed a `GroupedDataFrame` the grouping in the passed object
+  gets updated to reflect rows removed from the parent data frame
+  ([#2809](https://github.com/JuliaData/DataFrames.jl/pull/2809))
+
+## Bug fixes
+
+* fix bug in how `groupby` handles grouping of float columns;
+  now `-0.0` is treated as *not integer* when deciding on which
+  grouping algorithm should be used
+  ([#2791](https://github.com/JuliaData/DataFrames.jl/pull/2791))
+* fix bug in how `issorted` handles custom orderings and improve performance
+  of sorting when complex custom orderings are passed
+  ([#2746](https://github.com/JuliaData/DataFrames.jl/pull/2746))
+* fix bug in `combine`, `select`, `select!`, `transform`, and `transform!`
+  that incorrectly disallowed matrices of `Pair`s in `GroupedDataFrame` processing
+  ([#2782](https://github.com/JuliaData/DataFrames.jl/pull/2782))
+* fix location of summary in `text/html` output
+  ([#2801](https://github.com/JuliaData/DataFrames.jl/pull/2801))
+
+## Performance improvements
+
+* `SubDataFrame`, `filter!`, `unique!`, `getindex`, `delete!`, `leftjoin`,
+  `rightjoin`, and `outerjoin` are now more efficient if rows selected
+  in internal operations form a continuous block
+  ([#2727](https://github.com/JuliaData/DataFrames.jl/pull/2727),
+   [#2769](https://github.com/JuliaData/DataFrames.jl/pull/2769))
+
+## Deprecated
+
+* `hcat` of a data frame with a vector is now deprecated to allow consistent
+  handling of horizontal concatenation of data frame with Tables.jl tables
+  in the future
+  ([#2777](https://github.com/JuliaData/DataFrames.jl/pull/2777))
+
+## Other changes
+
+* `text/plain` rendering of columns containing complex numbers is now improved
+  ([#2756](https://github.com/JuliaData/DataFrames.jl/pull/2756))
+* in `text/html` display of a data frame show full type information when
+  hovering over the shortened type with a mouse
+  ([#2774](https://github.com/JuliaData/DataFrames.jl/pull/2774))
+
+# DataFrames.jl v1.1.1 Patch Release Notes
+
+## Performance improvements
+
+* fix performance issue when aggregation function produces multiple rows
+  in split-apply-combine
+  ([2749](https://github.com/JuliaData/DataFrames.jl/pull/2749))
+* `completecases` is now optimized and only processes columns that
+  can contain missing values; additionally it is now type stable and
+  always returns a `BitVector`
+  ([#2726](https://github.com/JuliaData/DataFrames.jl/pull/2726))
+* fix performance bottleneck when displaying wide tables
+  ([#2750](https://github.com/JuliaData/DataFrames.jl/pull/2750))
+
+# DataFrames.jl v1.1 Release Notes
+
+## Functionality changes
+
+* make sure `subset` checks if the passed condition function
+  returns a vector of values (in the 1.0 release also returning scalar `true`,
+  `false`, or `missing` was allowed which was unintended and error prone)
+  ([#2744](https://github.com/JuliaData/DataFrames.jl/pull/2744))
+
+
+# DataFrames.jl v1.0.2 Patch Release Notes
+
+## Performance improvements
+
+* fix of performance issue of `groupby` when using multi-threading
+  ([#2736](https://github.com/JuliaData/DataFrames.jl/pull/2736))
+* fix of performance issue of `groupby` when using `PooledVector`
+  ([2733](https://github.com/JuliaData/DataFrames.jl/pull/2733))
+
+# DataFrames.jl v1.0 Release Notes
+
+## Breaking changes
+
+* No breaking changes are planned for v1.0 release
+
+## Bug fixes
+
+* DataFrames.jl now checks that passed columns are 1-based as this is a current
+  design assumption ([#2594](https://github.com/JuliaData/DataFrames.jl/pull/2594))
+* `mapcols!` makes sure not to create columns being `AbstractRange` consistently
+  with other methods that add columns to a `DataFrame`
+  ([#2594](https://github.com/JuliaData/DataFrames.jl/pull/2594))
+* `transform` and `transform!` always copy columns when column renaming transformation
+  is passed. If similar issues are identified after 1.0 release (i.e. that a
+  copy of data is not made in scenarios where it normally should be made these
+  will be considered bugs and fixed as non-breaking changes)
+  ([#2721](https://github.com/JuliaData/DataFrames.jl/pull/2721))
+
+## New functionalities
+
+* `firstindex`, `lastindex`, `size`, `ndims`, and `axes` are now consistently defined
+  and documented in the manual for `AbstractDataFrame`, `DataFrameRow`,
+  `DataFrameRows`, `DataFrameColumns`, `GroupedDataFrame`, `GroupKeys`, and `GroupKey`
+  ([#2573](https://github.com/JuliaData/DataFrames.jl/pull/2573))
+* add `subset` and `subset!` functions that allow to subset rows
+  ([#2496](https://github.com/JuliaData/DataFrames.jl/pull/2496))
+* `names` now allows passing a predicate as a column selector
+  ([#2417](https://github.com/JuliaData/DataFrames.jl/pull/2417))
+* `vcat` now allows a `source` keyword argument that specifies the
+  additional column to be added in the last position in the resulting data frame
+  that will identify the source data frame.
+  ([#2649](https://github.com/JuliaData/DataFrames.jl/pull/2649))
+* `GroupKey` and `DataFrameRow` are consistently behaving like `NamedTuple`
+  in comparisons and they now implement: `hash`, `==`, `isequal`, `<`, `isless`
+  ([#2669](https://github.com/JuliaData/DataFrames.jl/pull/2669)])
+* since Julia 1.7 using broadcasting assignment on a `DataFrame` column
+  selected as a property (e.g. `df.col .= 1`) is allowed when column does not
+  exist and it allocates a fresh column
+  ([#2655](https://github.com/JuliaData/DataFrames.jl/pull/2655))
+* `delete!` now correctly handles the case when columns of a data frame are aliased
+  ([#2690](https://github.com/JuliaData/DataFrames.jl/pull/2690))
+
+## Deprecated
+
+* in `leftjoin`, `rightjoin`, and `outerjoin` the `indicator` keyword argument
+  is deprecated in favor of `source` keyword argument; `indicator` will be removed
+  in 2.0 release ([2649](https://github.com/JuliaData/DataFrames.jl/pull/2649))
+* Using broadcasting assignment on a `SubDataFrames` column selected as a property
+  (e.g. `sdf.col .= 1`) is deprecated; it will be disallowed in the future.
+  ([#2655](https://github.com/JuliaData/DataFrames.jl/pull/2655))
+* Broadcasting assignment to an existing column of a `DataFrame`
+  selected as a property (e.g. `df.col .= 1`) being an in-place
+  operation is deprecated. It will allocate a fresh column in the future
+  ([#2655](https://github.com/JuliaData/DataFrames.jl/pull/2655))
+* all deprecations present in 0.22 release now throw an error
+  ([#2554](https://github.com/JuliaData/DataFrames.jl/pull/2554));
+  in particular `convert` methods, `map` on `GroupedDataFrame`
+  that were deprecated in 0.22.6 release now throw an error
+  ([#2679](https://github.com/JuliaData/DataFrames.jl/pull/2679))
+
+## Other relevant changes
+
+* `innerjoin`, `leftjoin`, `rightjoin`, `outerjoin`, `semijoin`, and `antijoin`
+  are now much faster and check if passed data frames are sorted by the `on`
+  columns and take into account if shorter data frame that is joined has unique
+  values in `on` columns. These aspects of input data frames might affect the
+  order of rows produced in the output
+  ([#2612](https://github.com/JuliaData/DataFrames.jl/pull/2612),
+   [#2622](https://github.com/JuliaData/DataFrames.jl/pull/2622))
+* `DataFrame` constructor, `copy`, `getindex`, `select`, `select!`, `transform`,
+  `transform!`, `combine`, `sort`, and join functions now use multiple threads
+  in selected operations
+  ([#2647](https://github.com/JuliaData/DataFrames.jl/pull/2647),
+   [#2588](https://github.com/JuliaData/DataFrames.jl/pull/2588),
+   [#2574](https://github.com/JuliaData/DataFrames.jl/pull/2574),
+   [#2664](https://github.com/JuliaData/DataFrames.jl/pull/2664))
+
+# DataFrames.jl v0.22.7 Release notes
+
+* `convert` methods from `AbstractDataFrame`, `DataFrameRow` and `GroupKey`
+  to `Array`, `Matrix`, `Vector` and `Tuple`, as well as from `AbstractDict` to
+  `DataFrame`, are now deprecated: use corresponding
+  constructors instead. The only conversions that are
+  retained are `convert(::Type{NamedTuple}, dfr::DataFrameRow)`,
+  `convert(::Type{NamedTuple}, key::GroupKey)`, and
+  `convert(::Type{DataFrame}, sdf::SubDataFrame)`; the deprecated methods will be
+  removed in 1.0 release
+* as a bug fix `eltype` of vector returned by `eachrow` is now `DataFrameRow`
+  ([#2662](https://github.com/JuliaData/DataFrames.jl/pull/2662))
+* applying `map` to `GroupedDataFrame` is now deprecated. It will
+  be an error in 1.0 release.
+  ([#2662](https://github.com/JuliaData/DataFrames.jl/pull/2662))
+* `copycols` keyword argument is now respected when building a `DataFrame` from
+  `Tables.CopiedColumns`
+  ([#2656](https://github.com/JuliaData/DataFrames.jl/pull/2656))
+
+# DataFrames.jl v0.22 Release Notes
+
+## Breaking changes
+
+* the rules for transformations passed to `select`/`select!`, `transform`/`transform!`,
+  and `combine` have been made more flexible; in particular now it is allowed to
+  return multiple columns from a transformation function
+  ([#2461](https://github.com/JuliaData/DataFrames.jl/pull/2461) and
+  [#2481](https://github.com/JuliaData/DataFrames.jl/pull/2481))
+* CategoricalArrays.jl is no longer reexported: call `using CategoricalArrays`
+  to use it [#2404]((https://github.com/JuliaData/DataFrames.jl/pull/2404)).
+  In the same vein, the `categorical` and `categorical!` functions
+  have been deprecated in favor of
+  `transform(df, cols .=> categorical .=> cols)` and similar syntaxes
+  [#2394]((https://github.com/JuliaData/DataFrames.jl/pull/2394)).
+  `stack` now creates a `PooledVector{String}` variable column rather than
+  a `CategoricalVector{String}` column by default;
+  pass `variable_eltype=CategoricalValue{String}` to get the previous behavior
+  ([#2391](https://github.com/JuliaData/DataFrames.jl/pull/2391))
+* `isless` for `DataFrameRow`s now checks column names
+([#2292](https://github.com/JuliaData/DataFrames.jl/pull/2292))
+* `DataFrameColumns` is now not a subtype of `AbstractVector`
+  ([#2291](https://github.com/JuliaData/DataFrames.jl/pull/2291))
+* `nunique` is not reported now by `describe` by default
+  ([#2339](https://github.com/JuliaData/DataFrames.jl/pull/2339))
+* stop reordering columns of the parent in `transform` and `transform!`;
+  always generate columns that were specified to be computed even for
+  `GroupedDataFrame` with zero rows
+  ([#2324](https://github.com/JuliaData/DataFrames.jl/pull/2324))
+* improve the rule for automatically generated column names in
+  `combine`/`select(!)`/`transform(!)` with composed functions
+  ([#2274](https://github.com/JuliaData/DataFrames.jl/pull/2274))
+* `:nmissing` in `describe` now produces `0` if the column does not allow
+  missing values; earlier `nothing` was produced in this case
+  ([#2360](https://github.com/JuliaData/DataFrames.jl/pull/2360))
+* fast aggregation functions in for `GroupedDataFrame` now correctly
+  choose the fast path only when it is safe; this resolves inconsistencies
+  with what the same functions not using fast path produce
+  ([#2357](https://github.com/JuliaData/DataFrames.jl/pull/2357))
+* joins now return `PooledVector` not `CategoricalVector` in indicator column
+  ([#2505](https://github.com/JuliaData/DataFrames.jl/pull/2505))
+* `GroupKeys` now supports `in` for `GroupKey`, `Tuple`, `NamedTuple` and dictionaries
+  ([2392](https://github.com/JuliaData/DataFrames.jl/pull/2392))
+* in `describe` the specification of custom aggregation is now `function => name`;
+  old `name => function` order is now deprecated
+  ([#2401](https://github.com/JuliaData/DataFrames.jl/pull/2401))
+* in joins passing `NaN` or real or imaginary `-0.0` in `on` column now throws an
+  error; passing `missing` throws an error unless `matchmissing=:equal` keyword argument
+  is passed ([#2504](https://github.com/JuliaData/DataFrames.jl/pull/2504))
+* `unstack` now produces row and column keys in the order of their first appearance
+   and has two new keyword arguments `allowmissing` and `allowduplicates`
+  ([#2494](https://github.com/JuliaData/DataFrames.jl/pull/2494))
+* [PrettyTables.jl](https://github.com/ronisbr/PrettyTables.jl) is now the
+  default back-end to print DataFrames to text/plain; the print option
+  `splitcols` was removed and the output format was changed
+  ([#2429](https://github.com/JuliaData/DataFrames.jl/pull/2429))
+
+## New functionalities
+
+* add `filter` to `GroupedDataFrame` ([#2279](https://github.com/JuliaData/DataFrames.jl/pull/2279))
+* add `empty` and `empty!` function for `DataFrame` that remove all rows from it,
+  but keep columns ([#2262](https://github.com/JuliaData/DataFrames.jl/pull/2262))
+* make `indicator` keyword argument in joins allow passing a string
+  ([#2284](https://github.com/JuliaData/DataFrames.jl/pull/2284),
+   [#2296](https://github.com/JuliaData/DataFrames.jl/pull/2296))
+* add new functions to `GroupKey` API to make it more consistent with `DataFrameRow`
+  ([#2308](https://github.com/JuliaData/DataFrames.jl/pull/2308))
+* allow column renaming in joins
+  ([#2313](https://github.com/JuliaData/DataFrames.jl/pull/2313) and
+  ([#2398](https://github.com/JuliaData/DataFrames.jl/pull/2398))
+* add `rownumber` to `DataFrameRow` ([#2356](https://github.com/JuliaData/DataFrames.jl/pull/2356))
+* allow passing column name to specify the position where a new columns should be
+  inserted in `insertcols!` ([#2365](https://github.com/JuliaData/DataFrames.jl/pull/2365))
+* allow `GroupedDataFrame`s to be indexed using a dictionary, which can use `Symbol` or string keys and
+  are not dependent on the order of keys. ([#2281](https://github.com/JuliaData/DataFrames.jl/pull/2281))
+* add `isapprox` method to check for approximate equality between two dataframes
+  ([#2373](https://github.com/JuliaData/DataFrames.jl/pull/2373))
+* add `columnindex` for `DataFrameRow`
+  ([#2380](https://github.com/JuliaData/DataFrames.jl/pull/2380))
+* `names` now accepts `Type` as a column selector
+  ([#2400](https://github.com/JuliaData/DataFrames.jl/pull/2400))
+* `select`, `select!`, `transform`, `transform!` and `combine` now allow `renamecols`
+  keyword argument that makes it possible to avoid adding transformation function name
+  as a suffix in automatically generated column names
+  ([#2397](https://github.com/JuliaData/DataFrames.jl/pull/2397))
+* `filter`, `sort`, `dropmissing`, and `unique` now support a `view` keyword argument
+  which if set to `true` makes them return a `SubDataFrame` view into the passed
+  data frame.
+* add `only` method for `AbstractDataFrame` ([#2449](https://github.com/JuliaData/DataFrames.jl/pull/2449))
+* passing empty sets of columns in `filter`/`filter!` and in `select`/`transform`/`combine`
+  with `ByRow` is now accepted ([#2476](https://github.com/JuliaData/DataFrames.jl/pull/2476))
+* add `permutedims` method for `AbstractDataFrame` ([#2447](https://github.com/JuliaData/DataFrames.jl/pull/2447))
+* add support for `Cols` from DataAPI.jl ([#2495](https://github.com/JuliaData/DataFrames.jl/pull/2495))
+* add `reverse` function for `AbstractDataFrame` that reverses the rows
+  ([#2944](https://github.com/JuliaData/DataFrames.jl/pull/2944))
+
+## Deprecated
+
+* `DataFrame!` is now deprecated ([#2338](https://github.com/JuliaData/DataFrames.jl/pull/2338))
+* several in-standard `DataFrame` constructors are now deprecated
+  ([#2464](https://github.com/JuliaData/DataFrames.jl/pull/2464))
+* all old deprecations now throw an error
+  ([#2350](https://github.com/JuliaData/DataFrames.jl/pull/2350))
+
+## Dependency changes
+
+* Tables.jl version 1.2 is now required.
+* DataAPI.jl version 1.4 is now required. It implies that `All(args...)` is
+  deprecated and `Cols(args...)` is recommended instead. `All()` is still supported.
+
+## Other relevant changes
+
+* Documentation is now available also in *Dark* mode
+  ([#2315](https://github.com/JuliaData/DataFrames.jl/pull/2315))
+* add rich display support for Markdown cell entries in HTML and LaTeX
+  ([#2346](https://github.com/JuliaData/DataFrames.jl/pull/2346))
+* limit the maximal display width the output can use in `text/plain` before
+  being truncated (in the `textwidth` sense, excluding `…`) to `32` per column
+  by default and fix a corner case when no columns are printed in situations when
+  they are too wide ([#2403](https://github.com/JuliaData/DataFrames.jl/pull/2403))
+* Common methods are now precompiled to improve responsiveness the first time a method
+  is called in a Julia session. Precompilation takes up to 30 seconds
+  after installing the package
+  ([#2456](https://github.com/JuliaData/DataFrames.jl/pull/2456)).

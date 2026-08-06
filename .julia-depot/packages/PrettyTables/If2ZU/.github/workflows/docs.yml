@@ -1,0 +1,43 @@
+name: Documentation
+on:
+  push:
+    branches:
+      - master
+    tags: '*'
+  pull_request:
+
+jobs:
+  docs:
+    name: Documenter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Update apt-get
+        run: |
+          sudo apt-get update
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get install -y imagemagick
+      - name: Install ansitoimg
+        run: |
+          sudo apt-get install pipx
+          pipx ensurepath
+          pipx install ansitoimg
+      - name: Install Luatex
+        run: |
+          sudo apt-get install -y \
+            ghostscript \
+            texlive \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-luatex
+      - uses: julia-actions/setup-julia@v3
+        with:
+          version: '1'
+      - uses: julia-actions/cache@v3
+      - uses: julia-actions/julia-buildpkg@v1
+      - uses: julia-actions/julia-docdeploy@releases/v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}

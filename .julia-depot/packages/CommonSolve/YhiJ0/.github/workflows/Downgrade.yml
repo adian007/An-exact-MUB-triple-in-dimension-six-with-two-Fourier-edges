@@ -1,0 +1,25 @@
+name: Downgrade
+on:
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+jobs:
+  downgrade:
+    name: "Downgrade"
+    strategy:
+      fail-fast: false
+      matrix:
+        group:
+          - Core
+    uses: "SciML/.github/.github/workflows/downgrade.yml@v1"
+    with:
+      group: "${{ matrix.group }}"
+      julia-version: "lts"
+    secrets: "inherit"

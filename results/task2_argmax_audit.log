@@ -1,0 +1,415 @@
+﻿=== Task 2: argmax fix audit ===
+  mub_zauner_6d_liang_chen.jl mtime: 1.785751253378297e9
+  special_loci_run_log.txt mtime:    1.7857471292895725e9
+  Quick run (20 pt) predates argmax fix if log mtime < src mtime
+
+point                          cliq    3rd    4th   bug?   pool   timing
+julia.exe : 
+At C:\Users\adian\AppData\Local\Temp\ps-script-802b7369-d51a-48c7-8d74-6e7ad7645fb6.ps1:120 char:1
++ & "C:\Users\adian\AppData\Local\Programs\Julia-1.12.6\bin\julia.exe"  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[32mComputing mixed cells... 2    Time: 0:00:01[39m[K
+[34m   mixed_volume: 2[39m[K
+[A
+
+[K[A
+[32mComputing mixed cells... 189    Time: 0:00:02[39m[K
+[34m   mixed_volume: 252[39m[K
+
+[32mTracking 252 paths...   1%|Γûê                            |  ETA: 0:45:28[39m[K
+[34m                   # paths tracked: 2[39m[K
+[34m   # non-singular solutions (real): 2 (1)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 2 (1)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  25%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê                     |  ETA: 0:01:07[39m[K
+[34m                   # paths tracked: 63[39m[K
+[34m   # non-singular solutions (real): 45 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 45 (7)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  40%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê                 |  ETA: 0:00:34[39m[K
+[34m                   # paths tracked: 101[39m[K
+[34m   # non-singular solutions (real): 68 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 68 (8)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  56%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê            |  ETA: 0:00:18[39m[K
+[34m                   # paths tracked: 140[39m[K
+[34m   # non-singular solutions (real): 89 (13)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 89 (13)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  70%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê        |  ETA: 0:00:10[39m[K
+[34m                   # paths tracked: 177[39m[K
+[34m   # non-singular solutions (real): 110 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 110 (16)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  83%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê    |  ETA: 0:00:05[39m[K
+[34m                   # paths tracked: 210[39m[K
+[34m   # non-singular solutions (real): 128 (19)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 128 (19)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  99%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê|  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 249[39m[K
+[34m   # non-singular solutions (real): 153 (23)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 153 (23)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths... 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| Time: 0:00:23[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 156 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 156 (24)[39m[K
+F6 (Fourier)                      6   true  false     ok     48  pre-fix
+
+[32mTracking 252 paths...  40%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê                 |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 102[39m[K
+[34m   # non-singular solutions (real): 82 (13)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 82 (13)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  58%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê            |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 145[39m[K
+[34m   # non-singular solutions (real): 119 (16)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 119 (16)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  75%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê       |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 188[39m[K
+[34m   # non-singular solutions (real): 152 (17)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 152 (17)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  92%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê  |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 231[39m[K
+[34m   # non-singular solutions (real): 186 (21)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 186 (21)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths... 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 204 (24)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 204 (24)[39m[K
+F6_theta0 (╬╕=0 subfamily)         6   true  false  CRASH     48  pre-fix
+[33m[1mΓöî [22m[39m[33m[1mWarning: [22m[39mKarlsson z4^2 Mobius consistency violated
+[33m[1mΓöé [22m[39m  theta = 0.9553166181245092
+[33m[1mΓöé [22m[39m  phi = 0.7853981633974483
+[33m[1mΓöé [22m[39m  lambda_ = 0.4
+[33m[1mΓöé [22m[39m  z4_dev = 1.84212198800577
+[33m[1mΓöö [22m[39m[90m@ Main d:\IBM-Quantum\MUBs in 6-dimension\src\mub_zauner_6d_liang_chen.jl:103[39m
+
+[32mTracking 252 paths...  35%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê                  |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 87[39m[K
+[34m   # non-singular solutions (real): 82 (6)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 82 (6)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  49%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê              |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 123[39m[K
+[34m   # non-singular solutions (real): 118 (7)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 118 (7)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  64%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê          |  ETA: 0:00:01[39m[K
+[34m                   # paths tracked: 161[39m[K
+[34m   # non-singular solutions (real): 156 (8)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 156 (8)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  79%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê      |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 199[39m[K
+[34m   # non-singular solutions (real): 191 (9)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 191 (9)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths...  93%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê |  ETA: 0:00:00[39m[K
+[34m                   # paths tracked: 235[39m[K
+[34m   # non-singular solutions (real): 225 (11)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 225 (11)[39m[K
+[A
+[A
+[A
+[A
+
+
+
+
+[K[A
+[K[A
+[K[A
+[K[A
+[32mTracking 252 paths... 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| Time: 0:00:01[39m[K
+[34m                   # paths tracked: 252[39m[K
+[34m   # non-singular solutions (real): 240 (12)[39m[K
+[34m       # singular endpoints (real): 0 (0)[39m[K
+[34m          # total solutions (real): 240 (12)[39m[K
+Dita anchor                       6   true  false     ok     72  pre-fix
+[91m[1mERROR: [22m[39mLoadError: InexactError: Int64(NaN)
+Stacktrace:
+  [1] [0m[1mInt64[22m
+[90m    @[39m [90m.\[39m[90m[4mfloat.jl:923[24m[39m[90m [inlined][39m
+  [2] [0m[1mconvert[22m
+[90m    @[39m [90m.\[39m[90m[4mnumber.jl:7[24m[39m[90m [inlined][39m
+  [3] [0m[1mexp[22m[0m[1m([22m[90ma[39m::[0mHomotopyContinuation.DoubleDouble.DoubleF64[0m[1m)[22m
+[90m    @[39m [35mHomotopyContinuation.DoubleDouble[39m [90mD:\LearningHub\dependencies\julia\depot\packages\Homot
+opyContinuation\s3sko\src\[39m[90m[4mDoubleDouble.jl:676[24m[39m
+  [4] [0m[1m_broadcast_getindex_evalf[22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:699[24m[39m[90m [inlined][39m
+  [5] [0m[1m_broadcast_getindex[22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:672[24m[39m[90m [inlined][39m
+  [6] [0m[1m_getindex[22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:620[24m[39m[90m [inlined][39m
+  [7] [0m[1mgetindex[22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:616[24m[39m[90m [inlined][39m
+  [8] [0m[1mmacro expansion[22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:995[24m[39m[90m [inlined][39m
+  [9] [0m[1mmacro expansion[22m
+[90m    @[39m [90m.\[39m[90m[4msimdloop.jl:77[24m[39m[90m [inlined][39m
+ [10] [0m[1mcopyto![22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:994[24m[39m[90m [inlined][39m
+ [11] [0m[1mcopyto![22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:947[24m[39m[90m [inlined][39m
+ [12] [0m[1mmaterialize![22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:905[24m[39m[90m [inlined][39m
+ [13] [0m[1mmaterialize![22m
+[90m    @[39m [90m.\[39m[90m[4mbroadcast.jl:902[24m[39m[90m [inlined][39m
+ [14] [0m[1msolve![22m[0m[1m([22m[90mBSS[39m::[0mHomotopyContinuation.BinomialSystemSolver, 
+[90mH[39m::[0mMatrix[90m{Int64}[39m, [90mU[39m::[0mMatrix[90m{Int64}[39m[0m[1m)[22m
+[90m    @[39m [35mHomotopyContinuation[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuati
+on\s3sko\src\[39m[90m[4mbinomial_system.jl:256[24m[39m
+ [15] [0m[1msolve![22m[0m[1m([22m[90mBSS[39m::[0mHomotopyContinuation.BinomialSystemSolver[0m[1m)[22m
+[90m    @[39m [35mHomotopyContinuation[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuati
+on\s3sko\src\[39m[90m[4mbinomial_system.jl:174[24m[39m
+ [16] [0m[1msolve[22m
+[90m    @[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuation\s3sko\src\[39m[90m[4mbino
+mial_system.jl:162[24m[39m[90m [inlined][39m
+ [17] [0m[1miterate_start_solution[22m
+[90m    @[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuation\s3sko\src\[39m[90m[4mpoly
+hedral.jl:122[24m[39m[90m [inlined][39m
+ [18] [0m[1miterate[22m
+[90m    @[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuation\s3sko\src\[39m[90m[4mpoly
+hedral.jl:157[24m[39m[90m [inlined][39m
+ [19] [0m[1mcopyto![22m[0m[1m([22m[90mdest[39m::[0mVector[90m{Tuple{MixedSubdivisions.MixedCell, 
+Vector{ComplexF64}}}[39m, 
+[90msrc[39m::[0mPolyhedralStartSolutionsIterator[90m{Vector{MixedSubdivisions.MixedCell}}[39m[0m[1m)[22m
+[90m    @[39m [90mBase[39m [90m.\[39m[90m[4mabstractarray.jl:938[24m[39m
+ [20] [0m[1m_collect[22m
+[90m    @[39m [90m.\[39m[90m[4marray.jl:734[24m[39m[90m [inlined][39m
+ [21] [0m[1mcollect[22m
+[90m    @[39m [90m.\[39m[90m[4marray.jl:728[24m[39m[90m [inlined][39m
+ [22] [0m[1msolve[22m[0m[1m([22m[90mS[39m::[0mSolver[90m{PolyhedralTracker{HomotopyContinuation.ToricHomotopy
+{MixedSystem{(0x74a0beefca69170f, 1)}}, CoefficientHomotopy{MixedSystem{(0x74a0beefca69170f, 1)}}, 
+Matrix{ComplexF64}}}[39m, 
+[90mstarts[39m::[0mPolyhedralStartSolutionsIterator[90m{Vector{MixedSubdivisions.MixedCell}}[39m; 
+[90miterator_only[39m::[0mBool, [90mbitmask[39m::[0mNothing, [90mthreading[39m::[0mBool, 
+[90mkwargs[39m::[0m@Kwargs[90m{stop_early_cb::typeof(HomotopyContinuation.always_false), show_progress::Bool, 
+catch_interrupt::Bool}[39m[0m[1m)[22m
+[90m    @[39m [35mHomotopyContinuation[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuati
+on\s3sko\src\[39m[90m[4msolve.jl:551[24m[39m
+ [23] [0m[1msolve[22m[0m[1m([22m[90margs[39m::[0mSystem; [90mshow_progress[39m::[0mBool, 
+[90mthreading[39m::[0mBool, [90mcatch_interrupt[39m::[0mBool, [90mtarget_parameters[39m::[0mNothing, 
+[90mstop_early_cb[39m::[0mFunction, [90mtransform_result[39m::[0mNothing, 
+[90mtransform_parameters[39m::[0mtypeof(identity), [90mflatten[39m::[0mNothing, 
+[90mtarget_subspaces[39m::[0mNothing, [90miterator_only[39m::[0mBool, [90mbitmask[39m::[0mNothing, 
+[90mkwargs[39m::[0m@Kwargs[90m{}[39m[0m[1m)[22m
+[90m    @[39m [35mHomotopyContinuation[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuati
+on\s3sko\src\[39m[90m[4msolve.jl:524[24m[39m
+ [24] [0m[1msolve[22m
+[90m    @[39m [90mD:\LearningHub\dependencies\julia\depot\packages\HomotopyContinuation\s3sko\src\[39m[90m[4msolv
+e.jl:451[24m[39m[90m [inlined][39m
+ [25] [0m[1mgenerate_candidate_pool_fresh[22m[0m[1m([22m[90mH[39m::[0mMatrix[90m{ComplexF64}[39m; 
+[90mtol[39m::[0mFloat64, [90mverbose[39m::[0mBool[0m[1m)[22m
+[90m    @[39m [36mMain[39m [90md:\IBM-Quantum\MUBs in 
+6-dimension\src\[39m[90m[4mmub_zauner_6d_liang_chen.jl:266[24m[39m
+ [26] [0m[1mgenerate_candidate_pool_fresh[22m
+[90m    @[39m [90md:\IBM-Quantum\MUBs in 
+6-dimension\src\[39m[90m[4mmub_zauner_6d_liang_chen.jl:263[24m[39m[90m [inlined][39m
+ [27] [0m[1meval_point[22m[0m[1m([22m[90mpt[39m::[0m@NamedTuple[90m{label::String, theta::Float64, 
+phi::Float64, lambda::Float64, use_F6::Bool}[39m[0m[1m)[22m
+[90m    @[39m [36mMain[39m [90md:\IBM-Quantum\MUBs in 
+6-dimension\scripts\julia\[39m[90m[4maudit_argmax_task2.jl:60[24m[39m
+ [28] [0m[1mmain[22m[0m[1m([22m[0m[1m)[22m
+[90m    @[39m [36mMain[39m [90md:\IBM-Quantum\MUBs in 
+6-dimension\scripts\julia\[39m[90m[4maudit_argmax_task2.jl:81[24m[39m
+ [29] top-level scope
+[90m    @[39m [90md:\IBM-Quantum\MUBs in 6-dimension\scripts\julia\[39m[90m[4maudit_argmax_task2.jl:121[24m[39m
+ [30] [0m[1minclude[22m[0m[1m([22m[90mmod[39m::[0mModule, [90m_path[39m::[0mString[0m[1m)[22m
+[90m    @[39m [90mBase[39m [90m.\[39m[90m[4mBase.jl:306[24m[39m
+ [31] [0m[1mexec_options[22m[0m[1m([22m[90mopts[39m::[0mBase.JLOptions[0m[1m)[22m
+[90m    @[39m [90mBase[39m [90m.\[39m[90m[4mclient.jl:317[24m[39m
+ [32] [0m[1m_start[22m[0m[1m([22m[0m[1m)[22m
+[90m    @[39m [90mBase[39m [90m.\[39m[90m[4mclient.jl:550[24m[39m
+in expression starting at d:\IBM-Quantum\MUBs in 6-dimension\scripts\julia\audit_argmax_task2.jl:121
