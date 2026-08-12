@@ -1,28 +1,26 @@
-=== Phase 3: Macaulay2 / symbolic elimination (updated 2026-08-03) ===
+=== Phase 3: Macaulay2 / symbolic elimination (updated 2026-08-06, exact-arithmetic probe) ===
 
-Tooling:
-  - Docker: unlhcc/macaulay2:1.24.05
-  - Host mount: scripts/docker/run_m2.ps1 (bind D:\IBM-Quantum\MUBs in 6-dimension -> /work)
-  - Oscar.jl: NOT installed
+Step 1 diagnosis (fourth_mub_reduced_Dita.m2):
+  A. Ring: R = CC[z1_1,z1_2,z1_3,z1_4,z1_5,z2_1,z2_2,z2_3,z2_4,z2_5,w1_1,w1_2,w1_3,w1_4,w1_5,w2_1,w2_2,w2_3,w2_4,w2_5];
+  B. No eliminate(): only "dim witness" on the unreduced ideal (35 eqs in 20 vars).
 
-Real exports (symbolic_elimination.jl):
-  - symbolic_export/pool_F6.m2 — 10 equations, numeric F6 coefficients (REAL)
-  - symbolic_export/pool_Dita.m2 — 10 equations, Dita H substituted (REAL)
-  - symbolic_export/pool_F6_theta0.m2 — 10 equations (REAL)
-  - fourth_mub_w_elimination_F6.m2 — 125 witness equations, 50 vars (REAL)
-  - fourth_mub_w_elimination_Dita.m2 — 125 witness equations (REAL)
-  - fourth_mub_w_elimination_theta0.m2 — 125 witness equations (REAL)
-  - theta0_fourth_mub_witness.m2, mobius_degeneracy_locus.m2 — still header-only stubs
+Step 2 reruns:
+  CC direct (unchanged): #generators = 35 dim = -1 degree = 0 (+ inexact-field warning)
+  CC + eliminate(w1_1..w2_5) in fourth_mub_reduced_Dita_elim.m2 (~2.5 s):
+    direct: #gens = 35 dim = -1 degree = 0
+    elim w: #gens = 1 dim = -1 degree = 0
+  Exact cyclotomic-6 smoke (fourth_mub_reduced_Dita_exact_smoke.m2): OK, dim I = 7 on toy ideal.
+  Full witness exact lift NOT attempted: Dita anchor lambda=0.4 => exp(i*lambda) transcendental;
+  third-clique B3 entries are numerical homotopy pool approximations (max |.| dev from 6th roots ~0.52 on H, ~0.67 on B3).
 
-Docker M2 run on pool_F6.m2:
-  - Command: .\scripts\docker\run_m2.ps1 pool_F6.m2
-  - Exit code: 0
-  - Output: #generators = 10  dim I = -1  degree I = 0
-  - Log: results/track_c_elimination/m2_pool_F6.log
-  - Note: dim=-1 over CC is M2 convention for positive-dimensional; witness elimination NOT run
+Step 3 verdict (2026-08-06 coefficient audit):
+  T3 stays numerical claim. Exact certificate blocked upstream of any Groebner engine.
+  - lambda=0.4 is export/validation anchor only; T3 claim is 628/628 full circle.
+  - Algebraic lambda (pi/6, 0, pi/3) does NOT make H cyclotomic-6 (H_dev ~0.52 at all tested).
+  - B3 from homotopy pool, not closed form; B3_dev ~0.67 from 6th roots; BW2009 Groebner route not implemented.
+  - Oscar/msolve NOT recommended until B3 exact reconstruction or exact pool algebraic export exists.
 
-RESULT:
-  - Per-H pool ideals: REAL and runnable in M2
-  - Fourth-MUB witness ideals: REAL equations exported; elimination not attempted
-  - No empty-ideal certificate for fourth-MUB obstruction yet
-  - Groebner on full witness system (50 vars) remains open
+Logs:
+  results/track_c_elimination/m2_fourth_mub_reduced_Dita.log
+  results/track_c_elimination/m2_fourth_mub_reduced_Dita_elim.log
+  results/track_c_elimination/m2_fourth_mub_reduced_Dita_exact_smoke.log

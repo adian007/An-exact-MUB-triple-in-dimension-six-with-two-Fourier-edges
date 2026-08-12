@@ -122,7 +122,11 @@ function build_karlsson_family(theta, phi, lambda_)
 end
 
 function build_liang_chen_family(params...)
-    error("Insert the exact Liang/Chen family formulas here and return a 6x6 CHM.")
+    # BLOCKED: no Liang/Chen parametric CHM family PDF in repo.
+    # Primary sources (Liang et al. 2019–2024) classify 6x6 CHMs / MUB trios;
+    # they do not publish a three-parameter family analogous to Karlsson K_6^(3).
+    # Add exact matrix formula here once a citable parametric family is identified.
+    error("build_liang_chen_family: source PDF not in repo; see Phase C note in README.")
 end
 
 function build_family_matrix(family::Symbol, params...)

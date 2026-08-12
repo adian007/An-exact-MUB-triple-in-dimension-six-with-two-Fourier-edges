@@ -1,7 +1,6 @@
 -- Per-H MU pool ideal: 10 equations, 10 variables (z1..z5, w1..w5)
--- Anchor: Dita_exact  L7 certificate
--- HC: 240 certified roots at Dita; mixed_volume=252 (witness_decomposition.jl)
--- Generated 2026-08-05 (theorem path Phase 3)
+-- Anchor: Dita_exact  generated 2026-08-06T14:41:27.267
+-- L7 certificate: HC reports 240 certified roots; mixed_volume=252
 R = CC[z1,z2,z3,z4,z5,w1,w2,w3,w4,w5];
 I = ideal(
   z1 * w1 - 1,
@@ -15,4 +14,4 @@ I = ideal(
   (1 + (-0.9210609940028851+0.38941834230865052*ii)*z1 + -ii*z2 + (0.9210609940028851-0.38941834230865052*ii)*z3 + -1*z4 + ii*z5)*(1 + (-0.9210609940028851-0.38941834230865052*ii)*w1 + ii*w2 + (0.9210609940028851+0.38941834230865052*ii)*w3 + -1*w4 + -ii*w5) - 6,
   (1 + -ii*z1 + ii*z2 + -1*z3 + (-0.9210609940028851-0.38941834230865052*ii)*z4 + (0.92106099400288488+0.38941834230865052*ii)*z5)*(1 + ii*w1 + -ii*w2 + -1*w3 + (-0.9210609940028851+0.38941834230865052*ii)*w4 + (0.92106099400288488-0.38941834230865052*ii)*w5) - 6
 );
-print "#generators = "; print numgens I; print " dim I = "; print dim I; print " degree I = "; print degree I; println ""
+print("#generators = " | toString numgens I | " dim I = " | toString dim I | " degree I = " | toString degree I | newline)

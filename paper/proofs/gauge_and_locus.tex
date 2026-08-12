@@ -125,12 +125,12 @@ hence a clique of size $k$ at the limit cannot appear from smaller cliques witho
 Formalization uses the certified defect bounds from \texttt{verify\_clique\_hp} (400-bit).
 \end{proof}
 
-\begin{proposition}[One-dimensional third-MUB locus at Dita]
+\begin{proposition}[One-dimensional third-MUB locus at Dita (HP-supported)]
 \label{prop:L5}
 Let $\theta_D=\arccos(1/\sqrt3)$.
 If $\kappa(H(\theta_D,\phi,\lambda))\ge6$, then $\phi=\pi/4$ (exact).
-Moreover, for $\phi=\pi/4$ fixed, $\kappa(H(\theta_D,\pi/4,\lambda))\ge6$ for all $\lambda\in\mathbb{R}$
-(HP-verified on $126/126$ samples on $[0,2\pi]$ and $628/628$ dense probes; see \texttt{lambda\_periodicity\_dita.jl}).
+Moreover, for $\phi=\pi/4$ fixed, at each tested $\lambda$ on the Dita circle ($126/126$ periodicity samples on $[0,2\pi]$ and $628/628$ dense probes), $\kappa(H(\theta_D,\pi/4,\lambda))\ge6$.
+By $2\pi$-periodicity in $\lambda$ (Lemma~\ref{lem:L2}), the same conclusion is inferred for all $\lambda\in\mathbb{R}$; that extension is not a closed-form or purely analytic proof (see \texttt{lambda\_periodicity\_dita.jl}).
 \end{proposition}
 
 \begin{proof}[Proof outline]

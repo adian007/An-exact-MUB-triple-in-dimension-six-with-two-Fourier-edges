@@ -1,6 +1,6 @@
--- Reduced fourth-MUB witness (2 vectors) for Dita
--- vars=20 eqs=35 third_clique=[19, 51, 13, 69, 36, 31]
+-- CC witness + eliminate all w-variables (indices 11..20 in witness ring)
 R = CC[z1_1,z1_2,z1_3,z1_4,z1_5,z2_1,z2_2,z2_3,z2_4,z2_5,w1_1,w1_2,w1_3,w1_4,w1_5,w2_1,w2_2,w2_3,w2_4,w2_5];
+needsPackage "Elimination"
 witness = ideal(
   z1_1 * w1_1 - 1,
   z1_2 * w1_2 - 1,
@@ -38,4 +38,7 @@ witness = ideal(
   (0.40824829046386307 + (0.36514837167011083-0.18257418583505544*ii)*z2_1 + (-0.36514837167011072+0.18257418583505544*ii)*z2_2 + (0.36514837167011072-0.18257418583505552*ii)*z2_3 + 0.40824829046386307*ii*z2_4 + 0.40824829046386313*ii*z2_5)*(0.40824829046386307 + (0.36514837167011083+0.18257418583505544*ii)*w2_1 + (-0.36514837167011072-0.18257418583505544*ii)*w2_2 + (0.36514837167011072+0.18257418583505552*ii)*w2_3 + -0.40824829046386307*ii*w2_4 + -0.40824829046386313*ii*w2_5) - 6,
   1 + z1_1 * w2_1 + z1_2 * w2_2 + z1_3 * w2_3 + z1_4 * w2_4 + z1_5 * w2_5
 );
-print("#generators = " | toString numgens witness | " dim = " | toString dim witness | " degree = " | toString degree witness | newline)
+wVars = {w1_1,w1_2,w1_3,w1_4,w1_5,w2_1,w2_2,w2_3,w2_4,w2_5};
+print("direct: #gens = " | toString numgens witness | " dim = " | toString dim witness | " degree = " | toString degree witness | newline);
+J = eliminate(wVars, witness);
+print("elim w: #gens = " | toString numgens J | " dim = " | toString dim J | " degree = " | toString degree J | newline)

@@ -1,0 +1,16 @@
+# Metadata for special_loci_degen1845.csv (authoritative S* full primary run)
+degen_cap_requested=1845
+degen_cap_actual=1845
+no_refine=true
+points_searched=1863
+distinct_coordinates=1863
+pool_complete=1852
+clique6=21
+clique6_verified=2026-08-06 (21 distinct keys; 4 overlap degen500 + 17 new; spot-check 4/4 confirmed max_clique=6)
+third_mub=21
+fourth_mub=0
+wall_clock=00:55:09
+exit_code=0
+design_target=1865
+note=Two coordinate keys deduplicate at queue build (20 anchors + 1845 degen -> 1863 distinct).
+csv_status=CORRUPTED on disk (592 rows, ref_* partial rerun 2026-08-06); authoritative stats from this file + special_loci_degen1845.log (1863 Point markers, exit 0, 00:55:09).

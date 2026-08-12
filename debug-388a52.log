@@ -1,0 +1,1 @@
+{"sessionId": "388a52", "runId": "audit", "hypothesisId": "summary", "location": "audit_latex_warnings.py:main", "message": "warning counts", "data": {"hyperref_pdf_string": 0, "float_h_to_ht": 0, "underfull_hbox": 0}, "timestamp": 1786042042251}

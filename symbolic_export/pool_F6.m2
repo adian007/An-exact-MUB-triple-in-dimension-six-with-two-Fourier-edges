@@ -1,5 +1,5 @@
 -- Per-H MU pool ideal: 10 equations, 10 variables (z1..z5, w1..w5)
--- Anchor: F6  generated 2026-08-03T15:36:35.900
+-- Anchor: F6  generated 2026-08-06T14:41:27.104
 -- F6 Fourier matrix (regression anchor)
 R = CC[z1,z2,z3,z4,z5,w1,w2,w3,w4,w5];
 I = ideal(

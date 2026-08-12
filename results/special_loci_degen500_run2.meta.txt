@@ -1,0 +1,11 @@
+# Metadata for special_loci_degen500_run2.csv
+# Originally mislabeled special_loci_degen1845.csv (parse_degen_cap clamped at 500).
+degen_cap_requested=1845
+degen_cap_actual=500
+no_refine=true
+rows=519
+pool_complete=517
+clique6=4
+fourth_mub=0
+identical_to=special_loci_degen500.csv
+note=Duplicate run; keep for audit trail only. Use special_loci_degen500.csv for stats.

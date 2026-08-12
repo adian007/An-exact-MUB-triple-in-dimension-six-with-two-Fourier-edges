@@ -106,7 +106,6 @@ function build_fourth_mub_witness_equations(H::AbstractMatrix{ComplexF64}, cliqu
     pool = deduplicate_pool(pool)
     length(clique_indices) < 6 && error("clique_indices must have length >= 6")
     B3 = hcat([pool[i] for i in clique_indices[1:6]]...)
-    I6 = Matrix{ComplexF64}(I, 6, 6)
 
     eqs = String[]
     for v in 1:n_wit
@@ -131,9 +130,10 @@ function build_fourth_mub_witness_equations(H::AbstractMatrix{ComplexF64}, cliqu
         return local_eqs
     end
 
+    # Computational MU to I is already z_i*w_i=1 above; do not encode I6 as a column basis
+    # (that incorrectly yields (1)*(1)-6 = -5 and trivially empties the ideal).
     for v in 1:n_wit
         pz, pw = "z$(v)_", "w$(v)_"
-        append!(eqs, mu_eqs_for_basis(I6, pz, pw))
         append!(eqs, mu_eqs_for_basis(H, pz, pw))
         append!(eqs, mu_eqs_for_basis(B3, pz, pw))
     end
@@ -177,7 +177,7 @@ function export_reduced_witness_m2(H_name, H)
             println(io, "  $eq$sep")
         end
         println(io, ");")
-        println(io, "print(\"#generators = \" | toString numgens witness | \" dim = \" | toString dim witness | newline)")
+        println(io, "print(\"#generators = \" | toString numgens witness | \" dim = \" | toString dim witness | \" degree = \" | toString degree witness | newline)")
     end
     return path, length(vars), length(eqs)
 end

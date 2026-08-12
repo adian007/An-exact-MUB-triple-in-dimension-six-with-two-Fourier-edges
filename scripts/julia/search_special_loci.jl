@@ -111,7 +111,7 @@ function parse_degen_cap()
         i !== nothing && length(args) >= i + 1 && (cap = parse(Int, args[i + 1]))
     end
     haskey(ENV, "DEGEN_CAP") && (cap = parse(Int, ENV["DEGEN_CAP"]))
-    return clamp(cap, 1, 500)
+    return clamp(cap, 1, 1845)
 end
 
 """Small neighborhoods around an anchor."""

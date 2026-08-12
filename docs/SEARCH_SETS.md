@@ -78,7 +78,21 @@ Use `--no-refine` for bulk primary-only passes (skip \(5^3\) spawn).
 | Anchors + capped degen + ref | `special_loci_search.csv` | Partial (\(\mathcal{S}_{588}\) incomplete) |
 | Dita \(\lambda\)-circle | `lambda_periodicity_dita.jl`, `dita_lambda_fourth_dense.jl` | 126/126 + dense probe |
 | F6 \(\theta=0\) \(\lambda\)-arc | `f6_boundary_reverify.jl` | Width \(\approx 0.118\) rad |
-| Full degen \(\mathcal{S}^\*\) | `search_special_loci.jl --degen-cap 500 --no-refine` | Phased |
+| Full degen \(\mathcal{S}^\*\) | `search_special_loci.jl --degen-cap 1845 --no-refine` | **1863/1865** primary complete; see coverage table |
+
+**Coverage (2026-08-06, no-refine primary queue):**
+
+| Artifact | `degen_cap` requested | `degen_cap` actual | Rows | Distinct \((\theta,\phi,\lambda)\) | Pool-complete | Clique-6 | Fourth MUB |
+|----------|----------------------|-------------------|------|-------------------------------------|---------------|----------|------------|
+| `special_loci_degen200.csv` | 200 | 200 | 219 | 219 (subset of degen500) | 217 | 4 | 0 |
+| `special_loci_degen500.csv` | 500 | 500 | 519 | 519 (subset of degen1845) | 517 | 4 | 0 |
+| `special_loci_degen500_run2.csv` | 1845 | **500** (mislabeled) | 519 | identical to degen500 | 517 | 4 | 0 |
+| `special_loci_degen1845.meta.txt` | 1845 | **1845** | 1863 | **1863** (authoritative; log-backed) | 1852 | 21 loci | 0 |
+| `special_loci_degen1845_CORRUPTED592.csv` | — | — | 592 | partial accidental rerun | — | — | do not cite |
+
+Caps are **cumulative by severity sort** (top-\(N\) degen + 20 anchors), not disjoint partitions. Do not add row counts across batches. The design target is \(20 + 1845 = 1865\); two coordinate keys deduplicate at queue build (1863 distinct).
+
+**Clique-6 / third-MUB count (verified 2026-08-06):** summary and CSV field `found_third` both mean `max_clique ≥ 6` at that candidate \((\theta,\phi,\lambda)\) via `check_four_mub_extension` (one hit per queue point, not per distinct third-basis solution). The degen1845 run reports **21** hits: all **21** distinct coordinate keys; **4** overlap the degen500 set (identical `max_clique`/`found_third` on all 519 shared keys); **17** are new at \(\theta=0\) `degen_circulant_match` points. Both runs used `--no-refine`. Independent re-evaluation of 4 spot coordinates confirmed `max_clique=6`.
 
 **Track C theorem skeleton (honest scope):**
 

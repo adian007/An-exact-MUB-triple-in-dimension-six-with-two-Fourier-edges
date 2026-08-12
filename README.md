@@ -48,7 +48,9 @@ Reproducible research on mutually unbiased bases (MUBs) arising from Karlsson's 
 | Artifact | Rows | Fourth MUB | Notes |
 |----------|------|------------|-------|
 | [`results/special_loci_search.csv`](results/special_loci_search.csv) | 928 (899 pool-complete) | 0 | Design target \(\mathcal{S}_{588}\); extended refinement superset |
-| [`results/special_loci_degen200.csv`](results/special_loci_degen200.csv) | 219 | 0 | \(\mathcal{S}^*\) batch 1 (top 200 degen, no-refine) |
+| [`results/special_loci_degen200.csv`](results/special_loci_degen200.csv) | 219 | 0 | \(\mathcal{S}^*\) batch 1 (top 200 degen; subset of degen500) |
+| [`results/special_loci_degen500.csv`](results/special_loci_degen500.csv) | 519 | 0 | \(\mathcal{S}^*\) batch 2 (top 500 degen; subset of degen1845) |
+| [`results/special_loci_degen1845.meta.txt`](results/special_loci_degen1845.meta.txt) | — | 0 | \(\mathcal{S}^*\) full primary stats (**1863/1865**; CSV quarantined) |
 | [`results/dita_lambda_fourth_dense.csv`](results/dita_lambda_fourth_dense.csv) | 628 | 0 | Dense Dita \(\lambda\) circle |
 
 ---
@@ -58,7 +60,8 @@ Reproducible research on mutually unbiased bases (MUBs) arising from Karlsson's 
 | Item | Status |
 |------|--------|
 | Fourth-MUB absence on full region \(\mathcal{R}\) | Open Problem (strong numerics only) |
-| Full \(\mathcal{S}^*\) (1845 degeneracy candidates) | Batch 1 done; remainder phased |
+| Full \(\mathcal{S}^*\) (1845 degeneracy candidates) | **1863/1865** primary complete (log/meta); regenerate `special_loci_degen1845.csv` |
+| Phase C (Liang/Chen cross-family) | **Blocked** — no source PDF; parametric family not confirmed in cited papers |
 | Macaulay2 Groebner witness elimination | Pool ideals exported; elimination incomplete |
 | No fourth MUB in all of \(K_6^{(3)}\) | Not claimed |
 | \(N(6)=3\) globally | Not addressed |
