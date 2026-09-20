@@ -1,0 +1,22 @@
+# Julia depot (909 MB; must not be tracked — Manifest.toml is the contract).
+# Kept on disk for the Windows Application-Control workaround; regenerated
+# via `julia --project=. -e "using Pkg; Pkg.instantiate()"`.
+.julia-depot/
+
+# Julia artifacts
+*.ji
+*.jl.mem
+*.jl.cov
+*.jl.*.cov
+Manifest.toml.bak
+
+# Python
+__pycache__/
+*.pyc
+
+# Scratch / logs not part of the record
+debug-*.log
+
+# OS
+Thumbs.db
+.DS_Store

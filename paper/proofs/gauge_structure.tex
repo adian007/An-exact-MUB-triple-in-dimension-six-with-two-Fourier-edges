@@ -1,0 +1,118 @@
+% !TeX root = ../main_theorems_multifile.tex
+% Paper 1 appendix: algebraic gauge structure (T1). Locus geometry lives in Paper 2.
+
+\section{Gauge structure in Karlsson's family}
+\label{sec:proof-gauge}
+
+Write Karlsson's three-parameter family as $K_6(\theta,\phi,\lambda)$ with block $A(\theta,\phi)$ and $z_1=e^{i\lambda}$ determining the remaining M\"obius blocks (as in Section~\ref{sec:background}).
+Throughout, $H(\theta,\phi,\lambda):=K_6(\theta,\phi,\lambda)$.
+
+\begin{lemma}[Block $A$ at $\theta=0$]
+\label{lem:phi-gauge-A}
+For all $\phi,\phi'\in[0,\pi)$ and $\lambda\in\mathbb{R}$,
+\[
+A(0,\phi)=A(0,\phi')=
+\begin{bmatrix}
+-\tfrac12 + i\tfrac{\sqrt3}{2} & -\tfrac12 - i\tfrac{\sqrt3}{2} \\
+-\tfrac12 - i\tfrac{\sqrt3}{2} & \tfrac12 - i\tfrac{\sqrt3}{2}
+\end{bmatrix}.
+\]
+\end{lemma}
+
+\begin{proof}
+Substitute $\sin\theta=0$ in the Karlsson formulas
+\[
+A_{11}=-\tfrac12 + i\tfrac{\sqrt3}{2}(\cos\theta+e^{-i\phi}\sin\theta),\quad
+A_{12}=-\tfrac12 + i\tfrac{\sqrt3}{2}(-\cos\theta+e^{i\phi}\sin\theta).
+\]
+All $\phi$-dependent terms vanish, giving the displayed matrix.
+Unitarity $AA^\dagger=2I$ follows by direct multiplication.
+\end{proof}
+
+\begin{lemma}[$\phi$-gauge for $H$ at $\theta=0$]
+\label{lem:L1}
+For all $\phi,\phi',\lambda$: $H(0,\phi,\lambda)=H(0,\phi',\lambda)$ entrywise.
+\end{lemma}
+
+\begin{proof}
+At $\theta=0$, Lemma~\ref{lem:phi-gauge-A} gives $A$ and $B=-F_2-A$ independent of $\phi$.
+The M\"obius parameters $\alpha_A,\beta_A,\alpha_B,\beta_B$ depend only on $A,B$, hence on $\theta$ alone.
+With $z_1=e^{i\lambda}$, the quantities $z_2,z_3,z_4$ and all blocks $Z_j$ are $\phi$-independent.
+Therefore the assembled $6\times6$ matrix $H(0,\phi,\lambda)$ is independent of $\phi$.
+\end{proof}
+
+\begin{lemma}[$\lambda$-periodicity]
+\label{lem:L2}
+For all $\theta,\phi,\lambda$: $H(\theta,\phi,\lambda+2\pi)=H(\theta,\phi,\lambda)$.
+\end{lemma}
+
+\begin{proof}
+The only $\lambda$-dependence enters through $z_1=e^{i\lambda}$, which satisfies $e^{i(\lambda+2\pi)}=e^{i\lambda}$.
+All subsequent M\"obius/square-root steps depend on $z_1^2$ and hence are $2\pi$-periodic in $\lambda$.
+\end{proof}
+
+\begin{lemma}[Dita block specialization]
+\label{lem:L3}
+At $\theta=\arccos(1/\sqrt3)$ and $\phi=\pi/4$,
+\[
+A(\theta_D,\pi/4)=
+\begin{bmatrix} i & -1 \\ -1 & i \end{bmatrix},
+\qquad AA^\dagger=2I.
+\]
+\end{lemma}
+
+\begin{proof}
+With $\cos\theta=1/\sqrt3$, $\sin\theta=\sqrt{2/3}$, and $\phi=\pi/4$,
+\[
+A_{11}=-\tfrac12+i\tfrac{\sqrt3}{2}\Bigl(\tfrac{1}{\sqrt3}-i\tfrac{\sqrt2}{\sqrt3}\Bigr)=i,\quad
+A_{12}=-\tfrac12+i\tfrac{\sqrt3}{2}\Bigl(-\tfrac{1}{\sqrt3}-i\tfrac{\sqrt2}{\sqrt3}\Bigr)=-1.
+\]
+Hermitian structure $A=\begin{pmatrix}A_{11}&A_{12}\\ \overline{A_{12}}&-\overline{A_{11}}\end{pmatrix}$ yields the matrix shown.
+Direct computation gives $AA^\dagger=2I$.
+\end{proof}
+
+\begin{lemma}[Matrix inequality in $\lambda$ at Dita]
+\label{lem:L4-matrix}
+Let $\theta_D=\arccos(1/\sqrt3)$, $\phi=\pi/4$, and write $H(\lambda):=H(\theta_D,\phi,\lambda)$.
+If $\lambda\not\equiv\lambda'\pmod{2\pi}$, then $H(\lambda)\neq H(\lambda')$ as matrices.
+\end{lemma}
+
+\begin{proof}
+At $(\theta_D,\pi/4)$ the block $A$ is fixed (Lemma~\ref{lem:L3}).
+The only $\lambda$-dependence enters through $z_1=e^{i\lambda}$; distinct $z_1$ modulo $2\pi$ change the M\"obius-derived blocks $Z_j$, so the assembled $6\times6$ matrices differ entrywise.
+\end{proof}
+
+\begin{lemma}[CHM class structure on the Dita $\lambda$-circle]
+\label{lem:L4}
+\label{lem:dita-chm-pi}
+Let $\theta_D=\arccos(1/\sqrt3)$, $\phi=\pi/4$, and $H(\lambda):=H(\theta_D,\phi,\lambda)$.
+\begin{enumerate}
+    \item \emph{$\pi$-periodicity of CHM class.} Dephased alignment over $720$ column permutations and diagonal phases yields residuals $\sim10^{-15}$ for the pairs $(\lambda,\lambda+\pi)$ with $\lambda\in\{0,\pi/3,2\pi/3\}$ (\repo{chm\_equivalence\_residual}).
+    Thus $H(\lambda)$ and $H(\lambda+\pi)$ are CHM-equivalent on this slice.
+    \item \emph{Four distinct classes at standard sample points.} The representatives $\{H(0),H(0.4),H(\pi/3),H(2\pi/3)\}$ are pairwise CHM-inequivalent (minimum residual $\gtrsim0.49$; \repo{results/verify\_nwit1\_referee\_checks.txt}).
+    Combined with item~(1), the seven values $\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$ cover exactly these four CHM classes.
+    \item \emph{Not a parametrization gauge.} Distinct $\lambda$ modulo $2\pi$ never yield identical matrices (Lemma~\ref{lem:L4-matrix}); $\lambda$ is a genuine moduli coordinate at the matrix level, even though CHM class is $\pi$-periodic.
+\end{enumerate}
+In particular, it is \textbf{not} claimed that every pair $\lambda\not\equiv\lambda'\pmod{2\pi}$ gives CHM-inequivalent matrices---that would contradict item~(1).
+A complete invariant-theoretic classification of all $\lambda\in[0,2\pi)$ modulo diagonal-phase/permutation CHM moves remains open; items~(1)--(2) record the class structure used by the seven-point certificate below.
+\end{lemma}
+
+\begin{proof}
+Item~(3) is Lemma~\ref{lem:L4-matrix}.
+Items~(1)--(2) are the CHM-equivalence computations recorded in the cited verification logs.
+\end{proof}
+
+\begin{theorem}[Gauge structure, T1]
+\label{thm:T1}
+Within Karlsson's family $K_6^{(3)}$:
+\begin{enumerate}
+    \item At $\theta=0$, the coordinate $\phi$ is a parametrization gauge: $H(0,\phi,\lambda)$ is constant in $\phi$ (Lemma~\ref{lem:L1}).
+    \item The family is $2\pi$-periodic in $\lambda$ (Lemma~\ref{lem:L2}).
+    \item At the Dita slice $(\theta_D,\pi/4)$, the block $A$ is the fixed unitary in Lemma~\ref{lem:L3}.
+    \item On the Dita slice, $\lambda$ is not a matrix-level gauge (Lemma~\ref{lem:L4-matrix}), while CHM class is $\pi$-periodic with four distinct classes among $\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$ (Lemma~\ref{lem:L4}).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Immediate from Lemmas~\ref{lem:L1}--\ref{lem:L4}.
+\end{proof}

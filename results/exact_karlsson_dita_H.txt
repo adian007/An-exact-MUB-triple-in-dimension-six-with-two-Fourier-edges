@@ -1,0 +1,49 @@
+=== E1: exact Karlsson H at Dita λ=0 and λ=π/3 (Nemo) ===
+Date: 2026-09-17T22:02:29
+Number field: Q(ζ_12) = Q(i, √3), degree 4
+i = ζ12^3;  √3 = ζ12 + ζ12^11
+Conjugation: ζ12 ↦ ζ12^11 (complex conjugation).
+Square-root branch: the root in Q(ζ_12) closest to Julia's
+  principal sqrt of the complex image (matches build_karlsson_family).
+This is NOT a Groebner certificate. H only — not B3 / W1.
+MU vectors at D0 live in the larger field Q(ζ_24, √5); do not
+confuse that with the Hadamard field used here.
+
+--- lambda=0 ---
+  z1 = 1
+  z2^2 = -1
+  z3^2 = -1
+  z4^2 = 1
+  matched branches: z2=ζ12^3  z3=-1*ζ12^3  z4=1
+  n_roots in Q(ζ_12): z2=2 z3=2 z4=2
+  |H_exact - H_float| max = 3.331e-16  (branch match to build_karlsson_family)
+  CHM check on complex image: unitary_err=2.147e-15  modulus_err=0.000e+00
+  H (exact, matched branches, rows):
+    [1,  1,  1,  1,  1,  1]
+    [1,  -1,  1,  -1,  ζ12^3,  -1*ζ12^3]
+    [1,  -1*ζ12^3,  ζ12^3,  ζ12^3,  -1*ζ12^3,  -1]
+    [1,  ζ12^3,  -1,  1,  -1,  -1*ζ12^3]
+    [1,  1,  -1*ζ12^3,  -1,  -1,  ζ12^3]
+    [1,  -1,  -1,  -1*ζ12^3,  1,  ζ12^3]
+
+--- lambda=pi/3 ---
+  z1 = ζ12^2
+  z2^2 = -1
+  z3^2 = -1
+  z4^2 = -1*ζ12^2
+  matched branches: z2=ζ12^3  z3=-1*ζ12^3  z4=1 + -1*ζ12^2
+  n_roots in Q(ζ_12): z2=2 z3=2 z4=2
+  |H_exact - H_float| max = 4.041e-16  (branch match to build_karlsson_family)
+  CHM check on complex image: unitary_err=2.747e-15  modulus_err=1.110e-16
+  H (exact, matched branches, rows):
+    [1,  1,  1,  1,  1,  1]
+    [1,  -1,  ζ12^2,  -1*ζ12^2,  ζ12^3,  -1*ζ12^3]
+    [1,  -1*ζ12^3,  ζ12^3,  ζ12^3,  -1*ζ12^3,  -1]
+    [1,  ζ12^3,  -1*ζ12^2,  ζ12^2,  -1,  -1*ζ12^3]
+    [1,  1 + -1*ζ12^2,  -1*ζ12^3,  -1,  -1 + ζ12^2,  ζ12^3]
+    [1,  -1 + ζ12^2,  -1,  -1*ζ12^3,  1 + -1*ζ12^2,  ζ12^3]
+
+Field diagnosis vs A1 LLL: repo A1 fitted B3(λ=0.4) in Q(i,√2,√3).
+That field contains this H(λ=0) and H(λ=π/3), but not the D0 MU
+vectors (need √5 and ζ_24). Do not widen A1 at λ=0.4.
+No Groebner run. No claim that dim I = -1 over CC.

@@ -1,0 +1,29 @@
+=== n_wit=1 follow-up (CHM λ+π, all-cliques at 0.4, certify λ=0) ===
+timestamp = 2026-08-13T21:18:06.178
+
+--- (a) CHM residual H(λ) vs H(λ+π) ---
+  λ=0.000000 vs λ+π: residual=4.574334e-16 equiv=true variant=H
+  λ=0.400000 vs λ+π: residual=1.223110e-15 equiv=true variant=H
+  λ=1.047198 vs λ+π: residual=1.430483e-15 equiv=true variant=H
+  λ=2.094395 vs λ+π: residual=2.152325e-15 equiv=true variant=H
+  λ=1.570796 vs λ+π: residual=4.711830e-16 equiv=true variant=H
+Proposed CHM-class representatives: {0, 0.4, π/3, 2π/3}
+  rep 0.0000 vs 0.4000: residual=1.579950e+00 equiv=false
+  rep 0.0000 vs 1.0472: residual=2.049581e+00 equiv=false
+  rep 0.0000 vs 2.0944: residual=3.839157e+00 equiv=false
+  rep 0.4000 vs 1.0472: residual=4.938010e-01 equiv=false
+  rep 0.4000 vs 2.0944: residual=4.893459e+00 equiv=false
+  rep 1.0472 vs 2.0944: residual=5.063496e+00 equiv=false
+PASS: four representatives pairwise inequivalent (min_res=4.938e-01)
+
+--- (b) W1 certify on EVERY size-6 clique at λ=0.4 ---
+pool_size=72  n_distinct_6cliques=4
+  clique 1 [30, 4, 21, 52, 24, 62]: mv=252 tracked=252 cert=252 fullpass=0 verdict=EMPTY_SQUARE_252
+  clique 2 [19, 34, 65, 45, 28, 53]: mv=252 tracked=252 cert=252 fullpass=0 verdict=EMPTY_SQUARE_252
+  clique 3 [3, 29, 43, 12, 46, 8]: mv=252 tracked=252 cert=252 fullpass=0 verdict=EMPTY_SQUARE_252
+  clique 4 [49, 36, 68, 31, 71, 17]: mv=252 tracked=252 cert=252 fullpass=0 verdict=EMPTY_SQUARE_252
+PASS: W1 empty for all 4 distinct 6-cliques at λ=0.4
+
+--- (c) Certify n_wit=1 at λ=0 (fresh B3) ---
+  clique=[5, 78, 4, 13, 77, 46] mv=252 tracked=252 cert=252 fullpass=0 verdict=EMPTY_SQUARE_252 found4=false
+PASS: λ=0 empty

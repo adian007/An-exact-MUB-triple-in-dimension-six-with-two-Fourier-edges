@@ -1,0 +1,34 @@
+=== E4: exact-enumeration probe at D0 (BW style, not Groebner) ===
+Date: 2026-08-15T14:33:28
+Phases: |φ_D| = 26  (24th roots + ±α, tan α = 2).
+Certificate style: enumerate pool, form 6-cliques, test pairwise MU.
+Groebner is NOT run.
+
+--- Seeded exact third basis F_D for {I, D_bc} (Bengtsson eq. 78) ---
+  F_D          CHM=true  MU-to-H=2.498e-16  col-ortho=1.935e-16  MU-to-I=5.551e-17  ok=true
+  D_bc CHM ok=true
+
+--- (A1) φ_D pool vs textbook D0 = D(0) ---
+  tested = 308915776
+  MU pool size = 40  (BW reports 120)
+  orthogonality edges = 180
+  6-cliques (distinct sets) = 0
+  pairs of distinct third bases = 0
+  pairs that are pairwise MU = 0
+
+--- (A2) φ_D pool vs D_bc (block-circulant ≈ D0) ---
+  MU pool size after seeding F_D columns = 60
+  orthogonality edges = 396
+  6-cliques (distinct sets) = 4
+  pairs of distinct third bases = 6
+  pairs that are pairwise MU = 0
+  F_D column indices in pool = [60, 14, 25, 53, 15, 26]
+  F_D recovered as a 6-clique among pool = true
+
+=== VERDICT ===
+Exact third basis exists: F_D is MU to {I, D_bc} (pipeline check PASS).
+Among 4 third bases from the D_bc φ_D+seed pool, none are pairwise MU.
+Counts (60 vectors, 4 cliques) differ from BW 120/10;
+not claimed complete. Groebner was NOT run.
+elapsed = 9.3 s
+No claim on Zauner, all of K6^(3), or dim I=-1 over CC.

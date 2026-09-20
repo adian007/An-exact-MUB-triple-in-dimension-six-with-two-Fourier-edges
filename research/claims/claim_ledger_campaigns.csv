@@ -1,0 +1,12 @@
+Claim,Parameter scope,Quantifiers,Evidence,Status,Limitations
+Valid four-parameter model exists,UNASSESSED,UNASSESSED,Campaign 0 environment audit only,NOT_RUN,Requires verified literature or derivation
+Candidate matrices are CHMs,UNASSESSED,UNASSESSED,Campaign 0 environment audit only,NOT_RUN,No matrix calculation run
+Candidate triple is a valid MUB triple,UNASSESSED,UNASSESSED,Campaign 0 environment audit only,NOT_RUN,No basis-level calculation run
+Fixed-anchor W1 is empty,UNASSESSED,UNASSESSED,Pre-existing artifacts not rerun in Campaign 0,NOT_RUN,Requires Campaign 1 independent reproduction
+Selected-orbit W1 is empty,UNASSESSED,UNASSESSED,Campaign 0 environment audit only,NOT_RUN,No orbit selected
+All exceptional fibers are covered,UNASSESSED,UNASSESSED,Campaign 0 environment audit only,NOT_RUN,No parameterized proof
+All third bases are covered,UNASSESSED,UNASSESSED,Campaign 0 environment audit only,NOT_RUN,No universal quantifier discharged
+All Karlsson matrices are covered,Karlsson K6^(3),UNASSESSED,Campaign 0 environment audit only,NOT_RUN,No family-wide theorem
+All order-six CHM sectors are covered,Order-six CHMs,UNASSESSED,Campaign 0 environment audit only,NOT_RUN,Classification audit pending
+No fourth MUB exists in C^6,C^6,Universal,Campaign 0 environment audit only,OPEN,Global problem remains open
+Zauner's conjecture is proved,C^6,Universal,Campaign 0 environment audit only,OPEN,No global proof claimed

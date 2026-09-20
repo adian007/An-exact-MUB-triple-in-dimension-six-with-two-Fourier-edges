@@ -1,0 +1,55 @@
+start=2026-09-17T18:30:52.042 Julia=1.12.6
+module_loaded=2026-09-17T18:30:57.470
+H_defect=1.7763568394002505e-15
+Tracking 252 paths...   1%|▎                            |  ETA: 0:26:50[K
+                   # paths tracked: 2[K
+   # non-singular solutions (real): 2 (0)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 2 (0)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths...  41%|███████████▉                 |  ETA: 0:00:19[K
+                   # paths tracked: 103[K
+   # non-singular solutions (real): 97 (8)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 97 (8)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths...  68%|███████████████████▋         |  ETA: 0:00:06[K
+                   # paths tracked: 171[K
+   # non-singular solutions (real): 161 (9)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 161 (9)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths...  95%|███████████████████████████▌ |  ETA: 0:00:01[K
+                   # paths tracked: 239[K
+   # non-singular solutions (real): 228 (12)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 228 (12)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths... 100%|█████████████████████████████| Time: 0:00:13[K
+                   # paths tracked: 252[K
+   # non-singular solutions (real): 240 (12)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 240 (12)[K
+Certifying 240 solutions...   1%|▎                      |  ETA: 0:00:48[K
+          # processed: 2[K
+   # certified (real): 2 (0)[K
+    # distinct (real): 2 (0)[K[A[A[A
+
+
+[K[A[K[A[K[ACertifying 240 solutions... 100%|███████████████████████| Time: 0:00:00[K
+          # processed: 240[K
+   # certified (real): 240 (0)[K
+    # distinct (real): 240 (0)[K
+audit=PoolAudit(mv=252, attempted=252, solutions=240, certified=240, conjugate_locus=72, valid_mu=72, dedup=72); worst_MU_defect=9.159339953157541e-16
+tol=1.0e-8 third_bases=4 raw=4
+tol=1.0e-12 third_bases=4 raw=4
+tol=1.0e-14 third_bases=4 raw=4
+complete=2026-09-17T18:32:51.778; numerical recovered-pool test only

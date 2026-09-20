@@ -1,2 +1,0 @@
-This folder contains example implementations of the different abstract types defined in `StarAlgebras`.
-These examples are used in the tests but are stored here outside the `test` folder to increase their visibility.

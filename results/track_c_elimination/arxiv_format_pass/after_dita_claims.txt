@@ -1,0 +1,10 @@
+﻿=== finding ===
+\begin{finding}[Third MUB on sampled Dita-$\lambda$]
+\label{thm:T2}
+Let $\theta_D=\arccos(1/\sqrt3)$ and $\phi=\pi/4$.
+Write $H(\lambda):=H(\theta_D,\phi,\lambda)$.
+At each tested $\lambda$ on the Dita circle ($126/126$ periodicity samples on $[0,2\pi]$ and $628/628$ dense probes), the pair $\{\mathbf{I},H(\lambda)\}$ admits a third mutually unbiased basis obtained by certified pool extraction.
+By $2\pi$-periodicity (Theorem~\ref{thm:T1}, L2) this construction is $2\pi$-periodic in $\lambda$.
+An informal continuity argument (Route~B below) suggests the same for all $\lambda\in\mathbb{R}$; that extension is \textbf{not} a theorem.
+\end{finding}
+

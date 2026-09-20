@@ -1,0 +1,8 @@
+Mathematica exact W1 D0 run
+equations = 17
+variables = 10
+groebner_basis_length = 0
+unit_ideal = not-computed
+groebner_computed = False
+field = Q(zeta24, sqrt(5))
+scope = fixed D0-equivalent (H,B3); not a lambda-region certificate

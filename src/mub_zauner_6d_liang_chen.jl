@@ -90,22 +90,58 @@ function build_karlsson_family(theta, phi, lambda_)
 
     z1 = exp(im * lambda_)
     z1sq = z1^2
-    z3sq = mobius(z1sq, alpha_A, beta_A)
-    z4sq = mobius(z1sq, alpha_B, beta_B)
 
-    num = beta_B - z3sq * conj(alpha_B)
-    den = alpha_B - z3sq * conj(beta_B)
-    z2sq = num / den
+    # Fourier-seam branch (audit 2026-09-14). At theta = 0 exactly:
+    #   A12 = conj(A11)  =>  alpha_A = conj(beta_A)  (bitwise in floats),
+    #   B11 = conj(A11), B12 = A11  =>  beta_B = alpha_A, alpha_B = beta_A,
+    # so num(z) = alpha_X z - beta_X equals den(z) = conj(beta_X) z - conj(alpha_X)
+    # IDENTICALLY in z: M_A and M_B are the constant map 1, and the z2^2
+    # inversion num2/den2 = [alpha_A (1 - z3^2)]/[beta_A (1 - z3^2)]
+    # simplifies exactly to alpha_A / beta_A. Historically this 0/0 was
+    # evaluated through 1-ulp division noise, which coherently produced
+    # these same values — but returned NaN at some lambda (e.g. (0,0.5,0.7)
+    # pre-fix) and was not portable. Resolving the seam explicitly makes all
+    # F6_theta0 anchor matrices deterministic and backward-compatible to
+    # ~1e-16. Note: the theta -> 0+ LIMIT of z2^2 is a different,
+    # (phi,lambda)-dependent value (diagnose_theta0_limit.jl); the seam
+    # matrices are the exact algebraic theta=0 slice, not that limit.
+    if theta == 0.0
+        z3sq = one(ComplexF64)
+        z4sq = one(ComplexF64)
+        z2sq = alpha_A / beta_A
+    else
+        z3sq = mobius(z1sq, alpha_A, beta_A)
+        z4sq = mobius(z1sq, alpha_B, beta_B)
 
-    z4sq_check = mobius(z2sq, alpha_A, beta_A)
-    z4_dev = abs(z4sq - z4sq_check)
-    if !isnan(z4_dev) && z4_dev > 1e-6
-        @warn "Karlsson z4^2 Mobius consistency violated" theta phi lambda_ z4_dev
+        num = beta_B - z3sq * conj(alpha_B)
+        den = alpha_B - z3sq * conj(beta_B)
+        z2sq = num / den
+
+        # Legacy consistency check, in DENOMINATOR-CLEARED form (audit fix
+        # 2026-09-14): the divided form is an indeterminate 0/0 at the Dita
+        # anchor (|A11|=|A12|=1), where it reported a spurious z4_dev ≈ 1.84.
+        # Cleared identity: z4²·(conj(β_A)z2² − conj(α_A)) = α_A·z2² − β_A.
+        z4_dev = abs(alpha_A * z2sq - beta_A - z4sq * (conj(beta_A) * z2sq - conj(alpha_A)))
+        if !isnan(z4_dev) && z4_dev > 1e-6
+            @warn "Karlsson z4^2 Mobius consistency violated (cleared form)" theta phi lambda_ z4_dev
+        end
     end
 
     z2 = sqrt(z2sq)
     z3 = sqrt(z3sq)
     z4 = sqrt(z4sq)
+
+    # Fail fast on genuinely singular Möbius branches (poles off the Fourier
+    # seam): a pole in the z2²/z3²/z4² maps yields NaN entries that would
+    # otherwise propagate silently into H. The seam (theta = 0) is resolved
+    # above, so reaching this guard means a real degeneracy — diagnose with
+    # karlsson_mobius_audit. Callers catch this (search_special_loci records
+    # status=:not_hadamard).
+    if any(!isfinite, (z2, z3, z4))
+        error("Karlsson construction hit a singular/degenerate Möbius branch at " *
+              "(theta,phi,lambda)=($theta,$phi,$lambda_): non-finite z_i. " *
+              "The point is degenerate; see karlsson_mobius_audit.")
+    end
 
     Zleft(z) = [1 1; z -z]
     Zright(z) = [1 z; 1 -z]
@@ -122,11 +158,11 @@ function build_karlsson_family(theta, phi, lambda_)
 end
 
 function build_liang_chen_family(params...)
-    # BLOCKED: no Liang/Chen parametric CHM family PDF in repo.
-    # Primary sources (Liang et al. 2019–2024) classify 6x6 CHMs / MUB trios;
-    # they do not publish a three-parameter family analogous to Karlsson K_6^(3).
-    # Add exact matrix formula here once a citable parametric family is identified.
-    error("build_liang_chen_family: source PDF not in repo; see Phase C note in README.")
+    # Path C closed (2026-08-13): Liang/Chen/Long–Qiu papers classify special 6×6 CHMs
+    # and H2-reducible types; they do not publish a Karlsson-style three-parameter family.
+    # See docs/LIANG_CHEN_FAMILY_ASSESSMENT.md and McNulty–Weigert Sec. 7.1 (K6^(3) only).
+    error("build_liang_chen_family: no parametric Liang/Chen family in cited sources; " *
+          "see docs/LIANG_CHEN_FAMILY_ASSESSMENT.md")
 end
 
 function build_family_matrix(family::Symbol, params...)
@@ -621,6 +657,203 @@ function verify_mu_to_basis_hp(v, B; bits=256, mu_tol=1e-12)
     end
 end
 
+# ---------------------------------------------------------------------------
+# Fourth-MUB witness polynomial system (reduced: n_wit MU vectors to I, H, B3)
+# Matches build_fourth_mub_witness_equations in symbolic_elimination.jl.
+# ---------------------------------------------------------------------------
+
+"""MU constraints for witness vector (z0=w0=1) unbiased to columns of basis B.
+
+Auto-detects normalization: RHS=1 if B is unitary (B'B≈I), RHS=6 if B is
+unnormalized Hadamard (B*B'≈6I)."""
+function _witness_mu_to_basis(B::AbstractMatrix, z, w)
+    z_full = [1.0 + 0im; [z[i] for i in 1:5]]
+    w_full = [1.0 + 0im; [w[i] for i in 1:5]]
+    # Auto-detect normalization convention
+    b_gram = B' * B
+    unitary_err = maximum(abs.(b_gram - I(6)))
+    hadamard_err = maximum(abs.(b_gram - 6.0 * I(6)))
+    rhs_val = unitary_err < hadamard_err ? 1.0 : 6.0
+    eqs = Any[]
+    for k in 1:6
+        lhs = sum(conj(B[j, k]) * z_full[j] for j in 1:6)
+        rhs = sum(B[j, k] * w_full[j] for j in 1:6)
+        push!(eqs, lhs * rhs - rhs_val)
+    end
+    return eqs
+end
+
+"""
+Build numeric HC system for the reduced fourth-MUB witness at fixed H and third ONB B3.
+
+- `n_wit=1`: one vector MU to I, H, and B3 (10 vars, 17 eqs).
+  Emptiness ⇒ no fourth MUB at this (H,B3): a fourth MUB would supply six
+  solutions of this system. (Converse false: candidates may exist without a 6-ONB.)
+- `n_wit=2`: two orthogonal such vectors (20 vars, 35 eqs) — matches
+  `fourth_mub_reduced_*.m2`. Emptiness is closer to no fourth ONB, but mv≃1.2×10⁵.
+"""
+function build_numeric_fourth_mub_witness_system(H::AbstractMatrix{ComplexF64},
+                                                   B3::AbstractMatrix{ComplexF64};
+                                                   n_wit::Int=2)
+    if n_wit == 1
+        @var z1[1:5] w1[1:5]
+        eqs = Any[]
+        for i in 1:5
+            push!(eqs, z1[i] * w1[i] - 1.0)
+        end
+        append!(eqs, _witness_mu_to_basis(H, [z1[i] for i in 1:5], [w1[i] for i in 1:5]))
+        append!(eqs, _witness_mu_to_basis(B3, [z1[i] for i in 1:5], [w1[i] for i in 1:5]))
+        return System(eqs; variables=vcat(z1, w1))
+    elseif n_wit == 2
+        @var z1[1:5] w1[1:5] z2[1:5] w2[1:5]
+        z_blocks = [[z1[i] for i in 1:5], [z2[i] for i in 1:5]]
+        w_blocks = [[w1[i] for i in 1:5], [w2[i] for i in 1:5]]
+        eqs = Any[]
+        for v in 1:n_wit
+            for i in 1:5
+                push!(eqs, z_blocks[v][i] * w_blocks[v][i] - 1.0)
+            end
+        end
+        for v in 1:n_wit
+            append!(eqs, _witness_mu_to_basis(H, z_blocks[v], w_blocks[v]))
+            append!(eqs, _witness_mu_to_basis(B3, z_blocks[v], w_blocks[v]))
+        end
+        for a in 1:n_wit, b in (a + 1):n_wit
+            ortho = 1.0
+            for j in 1:5
+                ortho += z_blocks[a][j] * w_blocks[b][j]
+            end
+            push!(eqs, ortho)
+        end
+        return System(eqs; variables=vcat(z1, z2, w1, w2))
+    else
+        error("build_numeric_fourth_mub_witness_system: n_wit=$n_wit not implemented (use 1 or 2)")
+    end
+end
+
+"""
+Solve and certify the reduced fourth-MUB witness system at fixed H.
+Returns solve/certify counts plus clique indices used for B3.
+"""
+function probe_fourth_mub_witness_mv(H::AbstractMatrix{ComplexF64}, B3::AbstractMatrix{ComplexF64};
+                                     n_wit::Int=2)
+    system = build_numeric_fourth_mub_witness_system(H, B3; n_wit=n_wit)
+    n_eqs = length(system)
+    n_vars = nvariables(system)
+    mv = mixed_volume(system)
+    return (n_eqs=n_eqs, n_vars=n_vars, mixed_volume=mv, system=system)
+end
+
+function certify_fourth_mub_witness_at_H(H::AbstractMatrix{ComplexF64};
+                                         n_wit::Int=2,
+                                         clique_indices::Union{Nothing,Vector{Int}}=nothing,
+                                         B3::Union{Nothing,AbstractMatrix{ComplexF64}}=nothing,
+                                         verbose::Bool=false)
+    ext_found_fourth = false
+    if B3 !== nothing
+        clique_indices === nothing && error("B3 provided without clique_indices")
+    else
+        pool, = generate_candidate_pool_fresh(H; verbose=verbose)
+        pool = deduplicate_pool(pool)
+        ext = check_four_mub_extension(pool, H; ortho_tol=1e-8, mu_tol=1e-8)
+        ext.max_clique < 6 && error("No third MUB clique at this H (max_clique=$(ext.max_clique))")
+        ext_found_fourth = ext.found_fourth
+
+        if clique_indices === nothing
+            g = _orthogonality_graph(pool; ortho_tol=1e-8)
+            cliques = [c for c in maximal_cliques(g) if length(c) >= 6]
+            isempty(cliques) && error("No 6-clique in pool despite max_clique=$(ext.max_clique)")
+            c = argmax(cl -> length(cl), cliques)
+            clique_indices = c[1:6]
+        end
+        length(clique_indices) >= 6 || error("clique_indices must have length >= 6")
+        B3 = hcat([pool[i] for i in clique_indices[1:6]]...)
+    end
+
+    system = build_numeric_fourth_mub_witness_system(H, B3; n_wit=n_wit)
+    n_eqs = length(system)
+    n_vars = nvariables(system)
+    mv_full = mixed_volume(system)
+
+    # HC certify() requires a square system. For overdetermined witnesses (n_wit=1:
+    # 17 eqs / 10 vars), form a generic square by random linear combinations of the
+    # equations (Bertini / HC pattern), solve+certify THAT system, then residual-check
+    # every original equation. Solving the overdetermined system first is wrong:
+    # polyhedral tracking reports all paths as "excess" and returns 0 solutions.
+    squared_for_certify = n_eqs != n_vars
+    solve_system = system
+    if squared_for_certify
+        eqs = expressions(system)
+        vars = variables(system)
+        Random.seed!(20260813 + n_wit)
+        R = randn(ComplexF64, n_vars, n_eqs)
+        squared_eqs = [sum(R[i, j] * eqs[j] for j in 1:n_eqs) for i in 1:n_vars]
+        solve_system = System(squared_eqs; variables=vars)
+    end
+    mv = mixed_volume(solve_system)
+
+    if mv > WITNESS_MV_SOLVE_CAP
+        return (
+            H=H, B3=B3, clique_indices=clique_indices, n_wit=n_wit,
+            n_eqs=n_eqs, n_vars=n_vars, mixed_volume=mv, mixed_volume_full=mv_full,
+            n_tracked=0, n_certified=0, n_distinct_certified=0, n_real_certified=0,
+            n_certified_pass_full_residual=0,
+            found_fourth_combinatorial=ext_found_fourth,
+            skipped_solve=true, skip_reason="mixed_volume=$mv exceeds cap $WITNESS_MV_SOLVE_CAP",
+            squared_for_certify=squared_for_certify, result=nothing, certification=nothing,
+            system=system, solve_system=solve_system,
+        )
+    end
+
+    res = solve(solve_system; show_progress=verbose)
+    raw = solutions(res)
+    n_tracked = length(raw)
+
+    cert = certify(solve_system, res; show_progress=verbose, threading=false)
+    n_cert = ncertified(cert)
+    n_distinct = ndistinct_certified(cert)
+    n_real = nreal_certified(cert)
+
+    # Full-system residual gate: only count square-roots that satisfy ALL original eqs.
+    n_pass_full = 0
+    if n_tracked > 0
+        for sol in raw
+            rmax = 0.0
+            try
+                vals = system(sol)
+                rmax = maximum(abs, vals)
+            catch
+                rmax = Inf
+            end
+            rmax < 1e-8 && (n_pass_full += 1)
+        end
+    end
+
+    return (
+        H=H,
+        B3=B3,
+        clique_indices=clique_indices,
+        n_wit=n_wit,
+        n_eqs=n_eqs,
+        n_vars=n_vars,
+        mixed_volume=mv,
+        mixed_volume_full=mv_full,
+        n_tracked=n_tracked,
+        n_certified=n_cert,
+        n_distinct_certified=n_distinct,
+        n_real_certified=n_real,
+        n_certified_pass_full_residual=n_pass_full,
+        found_fourth_combinatorial=ext_found_fourth,
+        skipped_solve=false,
+        skip_reason="",
+        squared_for_certify=squared_for_certify,
+        result=res,
+        certification=cert,
+        system=system,
+        solve_system=solve_system,
+    )
+end
+
 """
 End-to-end search for one Karlsson (or other) family member:
   1. Build H
@@ -640,6 +873,8 @@ function run_search(family::Symbol, params...;
     ext = check_four_mub_extension(pool, H; ortho_tol=ortho_tol, mu_tol=mu_tol)
     return (H=H, pool=pool, pool_stats=pool_stats, meta=meta, ext...)
 end
+
+const WITNESS_MV_SOLVE_CAP = 5000
 
 # Legacy name for the deprecated {I,F6} fixed pool (regression tests only).
 generate_candidate_pool_legacy_f6 = generate_candidate_pool_f6

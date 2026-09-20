@@ -1,10 +1,33 @@
+name = "MubSearch"
+uuid = "b7c1e4a2-6f8d-4e9a-9b3f-1a2c5d7e8f90"
+authors = ["adian007"]
+version = "0.2.0"
+
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
 HomotopyContinuation = "f213a82b-91d6-5c5d-acf7-10f1c761b327"
+Nemo = "2edaba10-b0f1-5616-af89-8c11ac63239a"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
-# Oscar.jl (optional, for symbolic_elimination.jl Groebner probes):
-#   ] add Oscar
-# Fallback: Macaulay2 scripts in symbolic_export/
+[compat]
+HomotopyContinuation = "2.22"
+Graphs = "1.14"
+Nemo = "0.56"
+CSV = "0.10"
+DataFrames = "1.8"
+StaticArrays = "1"
+julia = "1.12"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

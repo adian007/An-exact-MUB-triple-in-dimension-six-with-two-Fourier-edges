@@ -1,0 +1,41 @@
+=== All-clique n_wit=1 at four CHM-class representatives ===
+timestamp = 2026-08-13T21:37:50.111
+reps = {0, 0.4, π/3, 2π/3}
+
+--- λ=0.0000000000  pool=120  n_6cliques=10 ---
+  clique 1 [32, 52, 51, 59, 31, 17]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 2 [12, 92, 2, 27, 26, 23]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 3 [55, 78, 64, 16, 58, 9]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 4 [1, 117, 86, 38, 88, 118]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 5 [111, 61, 95, 44, 72, 37]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 6 [11, 77, 105, 90, 85, 76]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 7 [110, 81, 6, 108, 112, 96]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 8 [45, 24, 70, 18, 103, 40]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 9 [30, 83, 13, 15, 63, 107]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 10 [68, 36, 94, 21, 80, 48]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  λ summary: empty=10/10
+
+--- λ=0.4000000000  pool=72  n_6cliques=4 ---
+  clique 1 [5, 56, 41, 36, 60, 12]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 2 [44, 13, 15, 54, 26, 23]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 3 [2, 7, 35, 27, 58, 42]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 4 [32, 16, 31, 71, 14, 48]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  λ summary: empty=4/4
+
+--- λ=1.0471975512  pool=72  n_6cliques=4 ---
+  clique 1 [9, 51, 12, 24, 42, 66]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 2 [64, 32, 4, 68, 71, 23]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 3 [20, 65, 11, 72, 14, 53]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 4 [3, 49, 21, 43, 69, 30]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  λ summary: empty=4/4
+
+--- λ=2.0943951024  pool=72  n_6cliques=4 ---
+  clique 1 [21, 41, 7, 69, 44, 42]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 2 [5, 34, 59, 55, 54, 10]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 3 [2, 22, 43, 26, 46, 17]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 4 [20, 61, 70, 58, 72, 71]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  λ summary: empty=4/4
+
+=== GLOBAL ===
+total_cliques=22 total_empty=22 all_pass=true
+PASS: W1 empty for every size-6 clique at every CHM-class representative.

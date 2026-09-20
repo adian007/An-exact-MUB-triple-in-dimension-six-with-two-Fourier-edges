@@ -1,11 +1,11 @@
 === Project finish audit ===
-Date: 2026-08-06T18:30:40Z
+Date: 2026-09-17T15:11:07Z
 
 --- CSV summaries ---
 special_loci_search.csv: rows=928 ok=899 clique6=45 fourth=0 pool_complete=899
 special_loci_degen200.csv: rows=219 ok=217 clique6=4 fourth=0 pool_complete=217
 special_loci_degen500.csv: rows=519 ok=517 clique6=4 fourth=0 pool_complete=517
-special_loci_degen1845.csv: rows=0 ok=0 clique6=0 fourth=0 pool_complete=0
+special_loci_degen1845.csv: rows=1863 ok=1852 clique6=21 fourth=0 pool_complete=1852
 dita_lambda_fourth_dense.csv: rows=628 ok=628 clique6=628 fourth=0 pool_complete=0
 
 --- S588 primary clique-6 (exclude ref_ref) ---
@@ -18,8 +18,6 @@ degen500 rows=519 fourth=0 clique6=4 pool_complete=517
 degen500_run2: mislabeled duplicate (requested 1845, actual cap 500); see special_loci_degen500_run2.meta.txt
 degen200 subset of degen500: overlap=219/219 (cumulative caps, not disjoint batches)
 S* distinct coverage (best batch): 1863/1865 (99.9%) clique6_loci=21 fourth=0
-WARNING: special_loci_degen1845.csv missing or corrupted; S* stats above taken from special_loci_degen1845.meta.txt + run log (1863-point no-refine run).
-ACTION: regenerate with search_special_loci.jl --degen-cap 1845 --no-refine before submission.
 
 --- Track A dense Dita ---
 628_target=628 fourth=0
@@ -33,4 +31,4 @@ Track C Open Problem: no fourth on all audited points; Groebner witness eliminat
 Julia HC: requires JULIA_DEPOT_PATH at project .julia-depot after path move
 Macaulay2: requires Docker Desktop running (scripts/docker/run_m2.ps1)
 
-VERDICT: Paper-scope claims reconciled; T3 numerical only; S* primary 1863/1865 (log/meta); exact Groebner witness remains future work. CSV artifact MUST be regenerated before submission.
+VERDICT: Paper-scope claims reconciled; T3 numerical only; S* primary 1863/1865 (log/meta); exact Groebner witness remains future work.

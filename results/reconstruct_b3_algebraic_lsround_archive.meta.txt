@@ -1,0 +1,10 @@
+fit_ok=6
+fit_total=36
+basis_degree=6
+bits=400
+lambda=0.4
+verdict=NO_SMALL_BASIS_FIT
+tol=1.0e-10
+method=both
+gauge=col1
+scale=sqrt6

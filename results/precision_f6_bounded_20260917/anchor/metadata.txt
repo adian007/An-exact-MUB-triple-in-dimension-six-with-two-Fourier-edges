@@ -1,0 +1,6 @@
+date=2026-09-17T17:32:38.736 julia=1.12.6 HC=2.22.1 seed=20260917
+lambda_decimal=0.3 theta=0 phi=0.5; current resolved seam; principal square roots
+Float64 HC seeds; independent fixed-H BigFloat phase Newton at 256 and 512 bits; NO HP PATH TRACKING
+source_sha256=648792e9875b616431710efa11a10a3e0b0489ba5bdcff68c6ddc8aefd77dddd
+script_sha256=dac4a04a04963a62474db1a60522b7138d4f616f307b1a49f01f6e9845e9639f
+HC_source=/home/adian/mub-depot/packages/HomotopyContinuation/s3sko/src/HomotopyContinuation.jl

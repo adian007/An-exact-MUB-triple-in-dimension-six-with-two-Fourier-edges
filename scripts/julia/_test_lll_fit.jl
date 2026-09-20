@@ -1,0 +1,5 @@
+include(joinpath(@__DIR__, "reconstruct_b3_algebraic.jl"))
+r = fit_entry_lll(ComplexF64(1 / sqrt(6)); bound=8, bits=256, tol=1e-12)
+println("1/sqrt6 fit: ", r)
+r2 = fit_entry_lll(ComplexF64(0.5, sqrt(3)/2); bound=8, bits=256, tol=1e-12)
+println("cis(pi/3) fit: ", r2)

@@ -6,6 +6,8 @@ Two 6x6 CHMs H1, H2 are equivalent if
 for diagonal unitary D_r, D_c and column permutation perm.
 
 Also tests H.T, conj(H), conj(H).T variants (4 total per pair).
+
+Dita D0 vs Karlsson (theta_D, pi/4, lambda): scripts/python/identify_d0_in_karlsson.py
 """
 
 import itertools
@@ -69,7 +71,7 @@ def chm_equivalence_residual(H1, H2, tol=TOL_EQUIV):
     Minimum Frobenius residual over 720 column permutations and 4 matrix variants.
     Returns dict with best residual and transform info.
     """
-    best = {"residual": np.inf, "variant": None, "perm": None}
+    best = {"residual": np.inf, "variant": None, "perm": None, "row_perm": None}
 
     def variants(H):
         return [
@@ -89,8 +91,50 @@ def chm_equivalence_residual(H1, H2, tol=TOL_EQUIV):
                     "residual": res,
                     "variant": vname,
                     "perm": p,
+                    "row_perm": tuple(range(N)),
                     "equivalent": res < tol,
                 }
+    return best
+
+
+def chm_equivalence_residual_full(H1, H2, tol=TOL_EQUIV):
+    """
+    Full monomial CHM equivalence: row perm + column perm + diagonal phases + variants.
+    Used to check D0 ≈ D_bc (literature: block-circulant form of D(0)).
+    """
+    best = {
+        "residual": np.inf,
+        "variant": None,
+        "perm": None,
+        "row_perm": None,
+        "equivalent": False,
+    }
+
+    def variants(H):
+        return [
+            ("H", H),
+            ("H.T", H.T),
+            ("conj(H)", np.conj(H)),
+            ("conj(H).T", np.conj(H).T),
+        ]
+
+    D1 = dephase(H1)
+    for vname, H2v in variants(H2):
+        for row_perm in itertools.permutations(range(N)):
+            H2r = H2v[np.array(row_perm), :]
+            D2 = dephase(H2r)
+            for col_perm in itertools.permutations(range(N)):
+                res, p, _, _ = residual_for_perm(D1, D2, col_perm)
+                if res < best["residual"]:
+                    best = {
+                        "residual": res,
+                        "variant": vname,
+                        "perm": p,
+                        "row_perm": row_perm,
+                        "equivalent": res < tol,
+                    }
+                    if res < tol:
+                        return best
     return best
 
 

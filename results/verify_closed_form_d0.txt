@@ -1,0 +1,45 @@
+=== E2: closed-form D0 / Bengtsson block verification ===
+Date: 2026-08-15T14:34:55
+Sources: BW arXiv:0901.4051; Bengtsson quant-ph/0610161 §7
+No Groebner. Homotopy clique match: skipped (default)
+
+--- CHM checks ---
+  D0 = D(0)                    CHM ok=true  unitary=0.000e+00  modulus=0.000e+00
+  D_bc (eqs. 79-80)            CHM ok=true  unitary=5.695e-15  modulus=2.220e-16
+  F_D (eqs. 78, 61)            CHM ok=true  unitary=4.232e-15  modulus=1.110e-16
+  F_D (eq. 62, D(1/8))         CHM ok=true  unitary=4.036e-15  modulus=1.110e-16
+  eq68 H1 ~ D(1/8)             CHM ok=true  unitary=3.168e-15  modulus=0.000e+00
+  eq68 H2 ~ D(1/8)             CHM ok=true  unitary=3.244e-15  modulus=0.000e+00
+  eq68 H3 ~ D(1/8)             CHM ok=true  unitary=3.380e-15  modulus=0.000e+00
+  eq68 H4 ~ D(1/8)             CHM ok=true  unitary=3.155e-15  modulus=0.000e+00
+
+--- MU to I (unimodular entries) ---
+  D0                           MU-to-I (unimodular) defect=0.000e+00  ok=true
+  D_bc                         MU-to-I (unimodular) defect=2.220e-16  ok=true
+  F_D                          MU-to-I (unimodular) defect=1.110e-16  ok=true
+
+--- MU between transcribed bases ---
+  F_D vs D_bc (eq. 78 triplet) MU defect=2.498e-16  ok=true
+  F_D vs D0 (raw)              MU defect=6.627e-01  (D0 not necessarily aligned with D_bc)
+  F(1/6,1/12) vs F_D(eq.62) MU defect (affine vs twisted; perm-gauge): 8.333e-01
+  eq68 H1                      MU defect vs F_D(eq.62)=2.498e-16  ok=true
+  eq68 H2                      MU defect vs F_D(eq.62)=2.776e-16  ok=true
+  eq68 H3                      MU defect vs F_D(eq.62)=1.943e-16  ok=true
+  eq68 H4                      MU defect vs F_D(eq.62)=1.388e-16  ok=true
+
+--- D0 vs D_bc dephased distance (row/col perm not exhausted) ---
+  ||dephase(D0)-dephase(D_bc)||_F = 6.928203e+00
+  min_perm ||dephase(D0)-dephase(D_bc)[:,p]||_F = 5.291503e+00  perm=[1, 6, 4, 2, 3, 5]
+
+--- Phase set φ_D ---
+  |φ_D| = 26  (24-th roots + ±α, tan α = 2)
+  e^{iα} = (1+2i)/√5 = 0.4472135954999579 + 0.8944271909999159im
+  b2 = (1-2i)/√5 = 0.4472135954999579 - 0.8944271909999159im
+
+--- Homotopy clique match ---
+  SKIPPED (pass --try-hc to attempt). Application Control may block HC.
+
+VERDICT: D0, D_bc, F_D are CHMs; {I, F_D, D_bc} is an MU triplet (eq. 78).
+Not a Groebner certificate. Not a claim that Zauner holds or that
+all of K6^(3) is settled. D(1/8) eq.68 blocks are third MUBs for
+{I, F_D} in the twisted-product gauge, not a B3 at D0.

@@ -1,0 +1,34 @@
+=== Native all-clique n_wit=1 at λ+π partners ===
+timestamp = 2026-08-14T16:14:07.142
+lambdas = {π, 4π/3, 5π/3}
+
+--- λ=3.1415926536  pool=120  n_6cliques=10 ---
+  clique 1 [60, 56, 79, 43, 36, 46]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 2 [54, 12, 33, 63, 40, 96]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 3 [32, 28, 7, 62, 17, 76]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 4 [64, 24, 34, 70, 10, 18]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 5 [86, 29, 92, 120, 119, 106]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 6 [104, 94, 44, 72, 107, 26]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 7 [6, 19, 45, 68, 38, 112]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 8 [90, 37, 71, 85, 14, 101]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 9 [1, 30, 93, 4, 91, 74]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 10 [58, 109, 20, 75, 115, 100]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  λ summary: empty=10/10
+
+--- λ=4.1887902048  pool=72  n_6cliques=4 ---
+  clique 1 [20, 63, 68, 52, 71, 57]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 2 [60, 7, 25, 31, 24, 62]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 3 [6, 16, 56, 9, 72, 14]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 4 [67, 49, 61, 54, 46, 53]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  λ summary: empty=4/4
+
+--- λ=5.2359877560  pool=72  n_6cliques=4 ---
+  clique 1 [9, 20, 10, 68, 71, 66]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 2 [70, 7, 33, 11, 8, 17]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 3 [1, 59, 13, 47, 12, 28]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  clique 4 [67, 4, 49, 63, 25, 48]: mv=252 tracked=252 cert=252 fullpass=0 found4=false verdict=EMPTY_SQUARE_252
+  λ summary: empty=4/4
+
+=== GLOBAL ===
+total_cliques=18 total_empty=18 all_pass=true
+PASS: W1 empty for every native size-6 clique at π, 4π/3, 5π/3.

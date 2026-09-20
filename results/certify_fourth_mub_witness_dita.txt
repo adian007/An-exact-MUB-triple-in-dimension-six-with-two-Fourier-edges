@@ -1,0 +1,29 @@
+Fourth-MUB witness certification (Path A3)
+timestamp = 2026-08-13T20:17:04.823
+lambda = 0.4
+theta_D = 0.9553166181245092
+phi = 0.7853981633974483
+clique_indices = [55, 48, 13, 49, 26, 30]
+n_wit = 2
+n_eqs = 35
+n_vars = 20
+mixed_volume = 119210
+skipped_solve = true
+skip_reason = mixed_volume=119210 exceeds cap 5000
+n_paths = 0
+n_finite_success = 0
+n_tracked_solutions = 0
+n_certified = 0
+n_distinct_certified = 0
+n_real_certified = 0
+found_fourth_combinatorial = false
+elapsed_s = 99.29
+verdict = SKIPPED_MV_119210
+
+INTERPRETATION:
+  Mixed volume 119210 exceeds tractable homotopy cap.
+  certify() was NEVER CALLED — the solve was skipped before tracking.
+  This is NOT an interval-arithmetic non-existence certificate.
+  HC certify proves existence of roots near found solutions;
+  it does NOT certify ideal emptiness. Interval exclusion remains open.
+  Status fields: skipped_solve=true, n_certified=0, n_paths=0.

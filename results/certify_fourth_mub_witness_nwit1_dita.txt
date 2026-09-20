@@ -1,0 +1,40 @@
+Fourth-MUB n_wit=1 necessary-condition witness (Path A3 staged)
+timestamp = 2026-08-13T20:48:29.273
+lambda = 0.4
+theta_D = 0.9553166181245092
+phi = 0.7853981633974483
+clique_indices = [55, 48, 13, 49, 26, 30]
+n_wit = 1
+n_eqs = 17
+n_vars = 10
+mixed_volume = 252
+solve_cap = 5000
+skipped_solve = false
+certify_called = true
+squared_for_certify = true
+n_paths_BKK = 252
+n_tracked_solutions = 252
+n_certified = 252
+n_distinct_certified = 252
+n_real_certified = 0
+n_pass_full_residual = 0
+found_fourth_combinatorial = false
+elapsed_s = 102.63
+verdict = EMPTY_FULL_RESIDUAL_AFTER_CERTIFY_SQUARE_252
+
+SCOPE:
+  System asks for ONE unit vector v = z/√6 with |z_i|=1 (MU to I),
+  MU to all columns of H, and MU to all columns of B3.
+  Necessary for a fourth MUB; not sufficient (need 6 mutually orthogonal).
+
+INTERPRETATION:
+  Method: generic square (10 random linear combinations of 17 eqs),
+  polyhedral homotopy (mv=252), certify() on all
+  252 nonsingular roots, then residual-check full system.
+  Result: 252/252 certified square-roots;
+  0 pass the full 17-equation residual (tol 1e-8).
+  Scoped claim: at λ=0.4 with this B3 clique, no isolated complex
+  solution of the n_wit=1 witness exists (no single vector MU to I,
+  H(λ), and all columns of B3). Interval-arithmetic emptiness of
+  the overdetermined ideal via Bertini squaring + HC certify.
+  NOT a full-circle T3 theorem; NOT "no fourth MUB" (needs 6 ONB vectors).

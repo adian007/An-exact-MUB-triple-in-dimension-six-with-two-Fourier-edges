@@ -1,0 +1,7 @@
+Phi_24 = x^8 - x^4 + 1
+Phi_24 irreducible over Q: true
+[Q(zeta_24):Q] = 8
+Phi_24 factor degrees mod 73: [1, 1, 1, 1, 1, 1, 1, 1]  (all 1 => p splits completely)
+5 is a square mod 73: false
+=> 5 is NOT a square in Q(zeta_24); t^2 - 5 is irreducible over it.
+[Q(zeta_24, sqrt5):Q] = 16

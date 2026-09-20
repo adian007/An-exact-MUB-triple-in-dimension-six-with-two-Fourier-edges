@@ -1,0 +1,43 @@
+Fourth-MUB n_wit=1 multi-λ certification (Path A3)
+timestamp = 2026-08-13T21:09:52.625
+theta_D = 0.9553166181245092
+phi = 0.7853981633974483
+n_wit = 1
+solve_cap = 5000
+n_lambda = 6
+n_empty = 6
+n_satisfiable = 0
+n_skipped = 0
+n_other = 0
+
+LOGIC:
+  A fourth MUB at (H,B3) is six orthonormal vectors each MU to
+  {I, H, B3}. Each such vector is a solution of the n_wit=1 system.
+  Therefore: n_wit=1 emptiness ⇒ no fourth MUB at that point.
+  (Converse false in general: candidate vectors may exist without
+  forming a 6-ONB. Emptiness is strictly stronger than minimal T3.)
+
+PER-λ RESULTS:
+lambda=0.4000000000  mv=252  tracked=252  certified=252  fullpass=0  verdict=EMPTY_FULL_RESIDUAL_AFTER_CERTIFY_SQUARE_252
+  B3_source=cache  clique=[55, 48, 13, 49, 26, 30]
+  certify_called=true  squared=true  found_fourth_comb=false  elapsed_s=116.31
+lambda=1.0471975512  mv=252  tracked=252  certified=252  fullpass=0  verdict=EMPTY_FULL_RESIDUAL_AFTER_CERTIFY_SQUARE_252
+  B3_source=fresh_pool  clique=[20, 65, 11, 72, 14, 53]
+  certify_called=true  squared=true  found_fourth_comb=false  elapsed_s=16.62
+lambda=2.0943951024  mv=252  tracked=252  certified=252  fullpass=0  verdict=EMPTY_FULL_RESIDUAL_AFTER_CERTIFY_SQUARE_252
+  B3_source=fresh_pool  clique=[5, 34, 59, 55, 54, 10]
+  certify_called=true  squared=true  found_fourth_comb=false  elapsed_s=3.71
+lambda=3.1415926536  mv=252  tracked=252  certified=252  fullpass=0  verdict=EMPTY_FULL_RESIDUAL_AFTER_CERTIFY_SQUARE_252
+  B3_source=fresh_pool  clique=[5, 19, 61, 15, 91, 48]
+  certify_called=true  squared=true  found_fourth_comb=false  elapsed_s=3.67
+lambda=4.1887902048  mv=252  tracked=252  certified=252  fullpass=0  verdict=EMPTY_FULL_RESIDUAL_AFTER_CERTIFY_SQUARE_252
+  B3_source=fresh_pool  clique=[20, 63, 68, 52, 71, 57]
+  certify_called=true  squared=true  found_fourth_comb=false  elapsed_s=3.55
+lambda=5.2359877560  mv=252  tracked=252  certified=252  fullpass=0  verdict=EMPTY_FULL_RESIDUAL_AFTER_CERTIFY_SQUARE_252
+  B3_source=fresh_pool  clique=[67, 4, 49, 63, 25, 48]
+  certify_called=true  squared=true  found_fourth_comb=false  elapsed_s=3.86
+
+SUMMARY:
+  All 6 λ values: certified empty (full residual 0).
+  T3 upgrade: certified non-existence at 6 independent Dita-λ points + existing 628/628 numerical density.
+  Still NOT a symbolic proof for all λ; λ-invariance remains optional.

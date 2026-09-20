@@ -1,0 +1,48 @@
+﻿.env
+1809.07442.pdf
+2110.12206.pdf
+2110.12206.txt
+2110.12206_full.txt
+2503.14752
+3488559.pdf
+78-files-data-ec5decca5ed3d6b8079e2e7e7bacc9f2-127.pdf
+A concise guide to complex Hadamard matrices.pdf
+beauchamp_nicoara_2006.pdf
+bell_inequalities_mub.pdf
+brierley_weigert_grobner.pdf
+butterley_hall_numerical.pdf
+Extension of the Set of Complex Hadamard Matrices of Size 8.pdf
+fetchbuild.py
+four_most_distant_bases.pdf
+g3.py
+grepnode.py
+grepparse.py
+grepparse2.py
+jaming_matolcsi_mora_mub6.pdf
+karlsson_hadamards_mub6.pdf
+list-models.py
+matolcsi_triplets_mub.pdf
+mconnell_zauner_evidence.pdf
+model_report.txt
+mub_composite_dims_review.pdf
+MUTUALLY UNBIASED BASES AND.pdf
+Mutually Unbiased Bases in Composite Dimensions -- A Review.pdf
+parse_dump.py
+probe.py
+probe2.py
+probe3.py
+probe_models.py
+probe_writer.py
+PRXQuantum.3.010101.pdf
+THREE-PARAMETER COMPLEX HADAMARD.pdf
+_all_model_ids.txt
+_analyze_tmp.py
+_build_page_nvidia__ai-classification-ocr-2.html
+_build_page_nvidia__htc-ocr-2.html
+_build_page_nvidia__llava-3.2-8b-vit.html
+_build_page_nvidia__mumu-0.5-8b.html
+_build_page_nvidia__nemotron-parse-2.0.html
+_build_page_nvidia__phi-3.5-vision-instruct.html
+_probe_results.txt
+_showids.py
+_top_files.txt

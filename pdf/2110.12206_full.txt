@@ -1,0 +1,861 @@
+arXiv:2110.12206v1  [math-ph]  23 Oct 2021Some special complex Hadamard matrices of order six
+Mengfan Liang,1,∗Lin Chen,1,2,†Fengyue Long,1,‡and Xinyu Qiu1,§
+1LMIB(Beihang University), Ministry of Education,
+and School of Mathematical Sciences,
+Beihang University, Beijing 100191, China
+2International Research Institute for Multidisciplinary S cience,
+Beihang University, Beijing 100191, China
+(Dated: October 26, 2021)
+Abstract
+The complete classiﬁcation of 6 ×6 complex Hadamard matrices (CHMs) is a long-standing
+open problem. In this paper we investigate a series of CHMs, s uch as the CHMs containing a 2 ×3
+submatrix with rank one, the CHMs containing exactly three d istinct elements and all elements of
+theﬁrstrowbeingone, the H2-reduciblematrices containing exactly threedistinctmat rix elements,
+and the CHMs containing a 3 ×3 Hadamard submatrix. We characterize all forms of these CHM s.
+Our results are the latest progress on the complete classiﬁc ation of CHMs.
+∗lmf2021@buaa.edu.cn
+†linchen@buaa.edu.cn (corresponding author)
+‡lfy2021@buaa.edu.cn (corresponding author)
+§xinyuqiu@buaa.edu.cn (corresponding author)
+1\nContents
+I. Introduction 3
+II. Preliminaries 3
+A. Linear algebra 4
+B. CHM 4
+C.H2-reducible matrices 10
+III.H2-reducible matrices with three distinct elements 11
+IV. CHMs containg a 3×3Hadamard submatrix 15
+V. Conclusions 23
+References 23
+2\nI. INTRODUCTION
+For describing observables in quantum physics, Schwinger deﬁned t he MUBs [ 1] in 1960.
+It is known that two quantum states in Cdare mutually unbiased (MU) when their inner
+product has modulus1√
+d. Two orthogonal bases in Cdare MU when their elements are
+all MU. We refer to the complete MUBs as d+ 1 orthogonal bases in Cdand any two of
+them are MU. Ref.[ 2] found that the complete MUBs in dimension dexist ifdis a prime
+power. So the ﬁrst unknown case occurs at d= 6. People have studied this case by many
+methods, such asthe average distance between four bases in dime nsion six [ 3], Fourier family
+of Hadamard matrices [ 4], computer program [ 5], noise robustness [ 6], product basis [ 7–10]
+and so on [ 11–17]. This case is also a long-standing open problem.
+We refer to the complex Hadamard matrix (CHM) H as an n×nmatrix with elements of
+modulus one, and1√nH is a unitary matrix. For convenience, we ignore the coeﬃcient1√n
+of the CHM when we discuss four mutually unbiased bases (MUBs) con taining the identity
+matrix in the following content. In this paper we investigate some 6 ×6 CHMs. We prove
+that allH2-reducible matrices deﬁned by Karlsson in [ 18] containing exactly three distinct
+matrix elements are complex equivalent to the speciﬁc matrix M2in (14). This is presented
+in Lemma 8. We ﬁnd a new family of CHMs and we obtain that all 6 ×6 CHMs containing
+a 3×3 Hadamard submatrix are complex equivalent to the matrices from t he new CHM
+family. They are the latest results on 6 ×6 CHMs and they might lead to the complete
+classiﬁcation of 6 ×6 CHMs. TO BE CONTINUED .
+Therest ofthispaperisstructured asfollows. InSec. IIweintroducesome linearalgebra,
+some properties of CHMs, as well as the parametrization of H2-reducible matrices. In Sec.
+IIIandIVwe introduce the two main results of this paper. We have a complete c lassiﬁcation
+with the H2-reducible matrices containing exactly three distinct matrix element s and the
+CHMs containing a 3 ×3 Hadamard submatrix. We conclude in Sec. V.
+II. PRELIMINARIES
+In this section we introduce the fundamental notations and facts used in this paper. We
+review some linear algebra in Sec. IIA. Then we introduce a series of lemmas on CHMs in
+Sec.IIBfrom Lemma 2to4. They will be used in the proof from Lemmas 8to11. In Sec.
+3\nIIC, we review the deﬁnition and some properties of the H2-reducible matrix.
+A. Linear algebra
+In this section we introduce some facts in linear algebra.
+Lemma 1 (i) Suppose a+b+c= 0with complex numbers a,b,cof modulus one. Then
+(a,b,c)∝(1,ω,ω2)or(1,ω2,ω)whereω=e2πi
+3.
+(ii) Suppose a+b+c+d= 0with complex numbers a,b,c,dof modulus one. Then
+a=−b,−cor−d.
+(iii) Suppose g1+g2+g3+k(g4+g5+g6) = 0with complex numbers g1,g2,...,g6of modulus
+one and g1,g2,...,g6∈ {1,ω,ω2}whereω=e2πi
+3. If two of g1,g2,g3are not identical and
+g1+g2+g3∝ne}a⊔ionslash= 0, thenk∈ {1,ω,ω2,−1,−ω,−ω2}.
+Proof. Assertion ( i) and (ii) are from the Lemma 2 .5 of [19]. So we only prove ( iii).
+Without loss of generality, we assume that g1∝ne}a⊔ionslash=g2. Theng1+g2∈ {−1,−ω,−ω2}. If
+g4=g5=g6, then we have
+(g1+g2)+g3+3kg4= 0 =⇒0 = (kg4)∗(g1+g2)+(kg4)∗g3+3≥3−1−1 = 1.
+It is a contradiction. So two of g4,g5,g6are not identical. Without loss of generality, we
+assumethat g4∝ne}a⊔ionslash=g5. Theng4+g5∈ {−1,−ω,−ω2}. Hence( g1+g2)+g3+k(g4+g5)+kg6= 0.
+Using (ii) we get g3=−k(g4+g5) org3=−kg6. Sok∈ {1,ω,ω2,−1,−ω,−ω2}and we
+complete this proof. ⊓ ⊔
+B. CHM
+To ﬁnd out the relation between diﬀerent CHMs, we deﬁne the comple x equivalence. We
+refer to the monomial unitary matrix as a unitary matrix each of whose rows and columns
+has exactly one nonzero entry. We say that two matrices UandVare complex equivalent
+whenU=PVQwhereP,Qare monomial unitary matrices. Specially when P,Qare
+both permutation matrices, we say that UandVare equivalent. When P,Qare both real
+monomial unitary matrices, we say that UandVare real equivalent. One can easily verify
+that ifUandVare equivalent or real equivalent then UandVare complex equivalent.
+4\nThe Tao matrix
+S(0)
+6=
+1 1 1 1 s s
+1 1ω ω ω2ω2
+1ω1ω2ω2ω
+1ω ω21ω ω2
+1ω2ω2ω1ω
+1ω2ω ω2ω1
+(1)
+is a special CHM, and it is deﬁned by Terence Tao in [20], it plays an important role in the
+investigation of spectral sets. As far as we know, the Tao matrix is the only CHM in 6 ×6
+CHMs which does not belongs to the H2-reducible matrices.
+Next we are going to introduce two lemmas on CHMs.
+Lemma 2 If a CHM Xcontains a 2×3submatrix with rank one, then Xis complex
+equivalent to the matrix from the following two-parameter f amily
+H(α,β) =
+1 1 1 1 1 1
+1 1 1 −1−1−1
+1ω ω2α αω αω2
+1ω ω2−α−αω−αω2
+1ω2ω β βω2βω
+1ω2ω−β−βω2−βω
+, (2)
+whereω=e2πi
+3and the parameters αandβare both complex numbers of modulus one.
+Proof. Suppose Xcontains a 2 ×3 submatrix with rank one, then Xis complex equivalent
+to
+X′=
+1 1 1 1 1 1
+1 1 1 r1r2r3
+1a1a2a3a4a5
+1b1b2b3b4b5
+1c1c2c3c4c5
+1d1d2d3d4d5
+, (3)
+where all elements in X′are complex numbers of modulus one. From ( 3) we have
+1+1+1+ r1+r2+r3= 0 =⇒r1=r2=r3=−1. (4)
+5\nSo by the orthogonality of the ﬁrst three row vectors of X′we have
+
+
+1+a1+a2+a3+a4+a5= 0
+1+a1+a2−a3−a4−a5= 0(5)
+Then we could solve ( 5) and get
+1+a1+a2=a3+a4+a5= 0. (6)
+UsingLemma 1(i)weobtainthat {a1,a2}={ω,ω2}and(a3,a4,a5)∝(1,ω,ω2)or(1,ω2,ω).
+Similarly we could get
+{b1,b2}={ω,ω2},
+{c1,c2}={ω,ω2},
+{d1,d2}={ω,ω2},
+and
+(b3,b4,b5)∝(1,ω,ω2)or(1,ω2,ω),
+(c3,c4,c5)∝(1,ω,ω2)or(1,ω2,ω),
+(d3,d4,d5)∝(1,ω,ω2)or(1,ω2,ω).
+Obviously the CHM containing a 3 ×3 submatrix with rank one does not exist. So it is easy
+to show that X′is complex equivalent to
+X′′=
+1 1 1 1 1 1
+1 1 1 −1−1−1
+1ω ω2α αω αω2
+1ω ω2f1f2f3
+1ω2ω f4f5f6
+1ω2ω f7f8f9
+, (7)
+whereallelements in X′′arecomplexnumbers ofmodulusone. Thenusingtheorthogonality
+of the third and fourth row vectors of X′′we could obtain that
+1+ωω∗+ω2(ω2)∗+αf∗
+1+αωf∗
+2+αω2f∗
+3= 0. (8)
+6\nThen
+X′′=
+1 1 1 1 1 1
+1 1 1 −1−1−1
+1ω ω2α αω αω2
+1ω ω2−α−αω−αω2
+1ω2ω f4f5f6
+1ω2ω f7f8f9
+. (9)
+Using the orthogonality of the ﬁrst, third and ﬁfth row vectors of X′′we could obtain that
+
+
+1+ω+ω2+f4+f5+f6= 0
+1+ω(ω2)∗+ω2ω∗+αf∗
+4+αωf∗
+5+αω2f∗
+6= 0(10)
+Then
+X′′=
+1 1 1 1 1 1
+1 1 1 −1−1−1
+1ω ω2α αω αω2
+1ω ω2−α−αω−αω2
+1ω2ω β βω2βω
+1ω2ω f7f8f9
+. (11)
+Using the orthogonality of the ﬁfth and sixth row vectors of X′′we could obtain that
+1+ω2(ω2)∗+ωω∗+βf∗
+7+βωf∗
+8+βω2f∗
+9= 0. (12)
+Then
+X′′=H(α,β) =
+1 1 1 1 1 1
+1 1 1 −1−1−1
+1ω ω2α αω αω2
+1ω ω2−α−αω−αω2
+1ω2ω β βω2βω
+1ω2ω−β−βω2−βω
+, (13)
+whereω=e2πi
+3and the parameters αandβare both complex numbers of modulus one. So
+we complete this proof. ⊓ ⊔
+In fact, one can show that the two-paramrter family H(α,β) in (2) is an aﬃne family.
+7\nLemma 3 Any6×6CHM which contains no more than 12 imaginary elements is real
+equivalent to the following matrix M1, or complex equivalent to the following symmetric
+matrixM2.
+M1=
+ω ω 1 1 1 1
+ω−ω−1 1−1 1
+1 1ω ω1 1
+1−1−ω ω−1 1
+1 1 1 1 ω ω
+−1 1 1 −1ω−ω
+,M2=
+i1 1 1 1 1
+1i1 1−1−1
+1 1i−1 1−1
+1 1−1i−1 1
+1−1 1−1i1
+1−1−1 1 1 i
+. (14)
+It’s the main result of [ 21]. One can show that if a CHM His real equivalent to M1then
+Hcontains exactly four distinct elements 1 ,−1,ωand−ω. This property and Lemma 3will
+be used in the proof of Lemma 8.
+The following lemma is about the CHM containing exactly two distinct elem ents. It is
+the ﬁrst step in the studying of the CHM containing exactly speciﬁc d istinct elements.
+Lemma 4 The CHM containing exactly two distinct elements does not ex ist.
+Proof. Suppose Bis a 6×6 CHM which contains exactly two distinct elements. Up to
+complex equivalence, we assume that the distinct elements are 1 and s. Obviously s∝ne}a⊔ionslash=−1.
+Now we discuss this problem with two cases.
+Case 1.sis a pure imaginary number. Without loss of generality, we assume tha ts=i.
+Soppose there is a 2 ×6 submatrix B′ofBsuch that there are two elements iofB′on the
+same column. Then by the orthogonality of row vectors of B′we have
+1+x1+x2+x3+x4+x5= 0 (15)
+wherexk∈ {1,i,−i}(k= 1,2,...,5). One can show it is impossible. Similarly there is not a
+6×2 submatrix B′′ofBsuch that therearetwo elements iofB′′onthesame row. Hence the
+number of iinBis at most six. It makes Bno longer a CHM. So we have a contradiction.
+Case 2. sis not a pure imaginary number. We have s+s∗∝ne}a⊔ionslash= 0. There is a diagonal
+unitary matrix
+M= diag(m 1,m2,m3,m4,m5,m6) (16)
+8\nsuch that B1=BMand elements of the ﬁrst row of B1are one, where mk= 1or s∗(k=
+1,2,...,6). So the elements of B1are 1,sors∗. Suppose some row of B1other than the
+ﬁrst row contains at least three s. By the orthogonality of this row vector and the ﬁrst row
+vector of B1we have
+s+s+s+y1+y2+y3= 0 =⇒1+1+1+ s∗y1+s∗y2+s∗y3= 0, (17)
+wherey1,y2,y3∈ {1,s,s∗}. It lead to s∗y1=s∗y2=s∗y3=−1, and it is a contradiction by
+sis not a pure imaginary number. So any row of B1other than the ﬁrst row has at most
+twos. Similarly we can show that any row of B1other than the ﬁrst row has at most two
+s∗or 1.
+So any row of B1other than the ﬁrst row contains exactly two s, twos∗and two 1. Up
+to equivalent, we can assume that
+B1=
+1 1 1 1 1 1
+1 1s s s∗s∗
+a0a1a2a3a4a5
+b0b1b2b3b4b5
+c0c1c2c3c4c5
+d0d1d2d3d4d5
+, (18)
+wheretm∈ {1,s,s∗}(m= 0,1,...,5, t=a,b,c,d). If the ﬁrst column of B1contains s∗, then
+m1=s∗. Other elements of the ﬁrst column of B1ares∗or 1. Similarly if the ﬁrst column
+ofB1contains s, thenm1= 1. So any column of B1does not contain sands∗at the same
+time. Hence there is a monomial unitary matrix Ps.t.
+B1P=
+1 1 1 1 s s
+1 1s s1 1
+a0a1a2a3sa4sa5
+b0b1b2b3sb4sb5
+c0c1c2c3sc4sc5
+d0d1d2d3sd4sd5
+(19)
+wheretm∈ {1,s,s∗}(m= 0,1, t=a,b,c,d),tn∈ {1,s}(n= 2,3, t=a,b,c,d),stn∈
+{1,s}(n= 4,5, t=a,b,c,d)
+9\nIfa2=a3, then by the orthogonality of the third and fourth column vectors ofB1Pwe
+have
+0 = 1+ss∗+a2a∗
+3+b2b∗
+3+c2c∗
+3+d2d∗
+3= 1+1+1+ b2b∗
+3+c2c∗
+3+d2d∗
+3,(20)
+whereb2,b3,c2,c3,d2,d3are 1 or s. It leads to b2b∗
+3=c2c∗
+3=d2d∗
+3=−1, and it is a
+contradiction by sis not a pure imaginary number. Hence a2∝ne}a⊔ionslash=a3. Similarly we have
+sa4∝ne}a⊔ionslash=sa5. Up to equivalence, we assume that a2=sa4=s,a3=sa5= 1. By the
+orthogonality of the ﬁrst three row vectors of B1P, we obtain that
+
+
+1+1+s+s+s∗+s∗= 0
+a0+a1+1+s∗+1+s= 0(21)
+One can work out a0=s,a1=s∗ora0=s∗,a1=s. Similarly we have
+b0=s,b1=s∗or b0=s∗,b1=s,
+c0=s,c1=s∗or c0=s∗,c1=s,
+d0=s,d1=s∗or d0=s∗,d1=s.
+Uptoequivalence, weassumethat a0=s,a1=s∗. Sowehave b0=s,b1=s∗,c0=s,c1=s∗,
+d0=s,d1=s∗. Then by the orthogonality of the ﬁrst and second column vectors ofB1P
+we have 1+1+ s(s∗)∗+s(s∗)∗+s(s∗)∗+s(s∗)∗= 0. Namely 2+4 s2= 0. Hence |s| ∝ne}a⊔ionslash= 1. It
+is a contradiction. So we complete this proof. ⊓ ⊔
+C.H2-reducible matrices
+In this section we review Theorem 11 of the paper [ 18]. It characterizes a special family
+of CHMs, namely the H2-reducible matrices.
+Deﬁnition 5 AnH2-reducible matrix is deﬁned as a 6×6CHM containing a 2×2Hadamard
+submatrix.
+Lemma 6 TheH2-reducible CHM is equivalent to the CHM Hin [18, Theorem 11], namely
+H=
+F2Z1Z2
+Z31
+2Z3AZ11
+2Z3BZ2
+Z41
+2Z4BZ11
+2Z4AZ2
+(22)
+10\nwhere
+F2=
+1 1
+1−1
+, Z1=
+1 1
+z1−z1
+, Z2=
+1 1
+z2−z2
+, (23)
+Z3=
+1z3
+1−z3
+, Z4=
+1z4
+1−z4
+, (24)
+A=
+A11A12
+A∗
+12−A∗
+11
+, B=
+−1−A11−1−A12
+−1−A∗
+121+A∗
+11
+, (25)
+and
+A11=−1
+2+i√
+3
+2(cosθ+e−iφsinθ), (26)
+A12=−1
+2+i√
+3
+2(−cosθ+eiφsinθ), (27)
+θ,φ∈[0,π),|zj|= 1. (28)
+⊓ ⊔
+III.H2-REDUCIBLE MATRICES WITH THREE DISTINCT ELEMENTS
+In this section, we investigate the H2-reducible matrices with three distinct elements. For
+convenience, let aibe the number of imaginary elements in the i′th row of a CHM M. We
+refer to the array im(M) := [a1,a2,a3,a4,a5,a6] as the imaginary array of M. It was ﬁrst
+used in paper [ 19] and will simplify our proof. As a result, the sum of ai(i= 1,2,3,4,5,6) is
+the number of imaginaryelements of M. We start theproofof Theorem 8with a preliminary
+lemma.
+Lemma 7 If anH2-reducible matrix Hcontains exactly three distinct matrix elements 1,
+−1andx, then the numbers of xof all rows of Hare all odd or His complex equivalent to
+theM2in (14).
+Proof. Suppose Hcontains a 2 ×6 submatrix Swhich contains odd x. According to the
+orthogonality of row vectors of S, we obtain that ax+bx∗+c= 0 where a+bis odd and
+a,b,c∈Z. Because xis an imaginary number and a+bis odd,ax+bx∗is an imaginary
+number. We have ax+bx∗+c∝ne}a⊔ionslash= 0, that is a contradiction. Hence all 2 ×6 submatrices of
+11\nHcontains even x. It leads to that the numbers of xof all rows of Hare all odd or are all
+even.
+Letim(H) = [a1,a2,a3,a4,a5,a6], whereHis anH2-reducible matrix containing exactly
+threedistinct matrixelements 1 ,−1andx. Using Lemma 6,Hcontainsnine2 ×2Hadamard
+submatrices. Obviously every one of the submatrices contains no m ore than two x. Then
+the number of xofHis at most 9 ×2 = 18. That is a1+a2+a3+a4+a5+a6≤18.
+Suppose a1,a2,...,a6are all even, we know that an∈ {0,2,4,6}(n= 1,2,...,6). Ifam≥4
+for some m∈ {1,2,...,6}, then let all elements of the m′th row of Hmultiply by x∗. We get
+the new matrix H′which is complex equivalent to H, andim(H′)≤2×6 = 12.
+Whenx∝ne}a⊔ionslash=±i,H′might contain 1 ,−1,x,x∗or−x∗. Lemma 3shows that H′is real
+equivalent to M1in (14) or complex equivalent to M2in (14). IfH′is real equivalent to
+M1, thenH′contains exactly four distinct elements 1 ,−1,ωand−ω. Because x∝ne}a⊔ionslash=±i,
+x∝ne}a⊔ionslash=−x∗andx∝ne}a⊔ionslash=−(−x∗). Hence H′contains exactly four distinct elements 1 ,−1,x∗and
+−x∗. One canshow that Hcontains exactly four distinct elements 1 ,−1,xand−x. However
+Hcontains exactly three distinct matrix elements 1 ,−1 andx. That is a contradiction. So
+H′is complex equivalent to M2in (14) and so is H.
+Whenx=±i,H′might contain 1 ,−1,x,x∗. Lemma 3shows that H′is real equivalent
+toM1in (14) or complex equivalent to M2in (14). Because x=±i,H′is not real equivalent
+toM1in (14). Hence His complex equivalent to the M2in (14).
+So we complete this proof. ⊓ ⊔
+Theorem 8 If anH2-reducible matrix Hcontains exactly three distinct matrix elements,
+thenHis complex equivalent to the M2in (14).
+Proof. Suppose the three distinct matrix elements of Hare 1,kandt. There are
+two diagonal unitary matrices D1,D2such that all elements of the ﬁrst row and column of
+D1HD2are one. The 5 ×5 submatrix of the lower right corner of D1HD2contains 7 distinct
+matrix elements, they are 1 ,k,t,k∗,t∗,kt∗,tk∗. Because His anH2-reducible matrix, we
+obtain−1∈ {1,k,t,k∗,t∗,kt∗,tk∗}. Iftk∗=−1, thenk∗Hcontains exactly three distinct
+matrix elements 1, −1 andk∗. Ifk∗=−1, thenk=k∗=−1. Up to equivalence, one can
+get similar conclusion for kt∗=−1 andt∗=−1. So we can assume that Hcontains exactly
+three distinct matrix elements 1 ,−1 andk.
+Now we proceed with two cases in terms of whether k=±i.
+12\nCase 1.k∝ne}a⊔ionslash=±i.
+Letim(H) = [a1,a2,a3,a4,a5,a6], whereHis anH2-reducible matrix containing exactly
+threedistinct matrixelements 1 ,−1andk. Using Lemma 6,Hcontains nine2 ×2Hadamard
+submatrices. Obviously every one of these submatrices contains n o more than two k. Then
+the number of kofHis at most 9 ×2 = 18. That is a1+a2+a3+a4+a5+a6≤18. Using
+Lemma7,a1,a2,...,a6are all odd or His complex equivalent to the M2in (14).
+Suppose a1,a2,...,a6are all odd, we know that an∈ {1,3,5}(n= 1,2,...,6).
+IfHcontains the following submatrices
+
+k k k d 1d2d3
+k k k d 4d5d6
+, (29)
+wheredn(n= 1,2,...,6) are 1 or −1. Then using Lemma 2we obtain that Hcontains more
+than three elements. It is a contradiction.
+IfHcontains the following submatrices
+
+k k k d 1d2d3
+d4d5d6k k k
+, (30)
+wheredn(n= 1,2,...,6) are 1 or −1. Then by the orthogonality we have k∗(d4+d5+d6)+
+k(d1+d2+d3)∗= 0. Because k=±ianddn(n= 1,2,...,6) are 1 or −1, one can show that
+k∗(d4+d5+d6)+k(d1+d2+d3)∗∝ne}a⊔ionslash= 0. It is a contradiction.
+IfHcontains the following submatrices
+
+k k k d 1d2d3
+d4k k k d 5d6
+, (31)
+wheredn(n= 1,2,...,6) are 1 or −1. Then by the orthogonality we have k∗d4+2+kd∗
+1+
+d∗
+2d5+d∗
+3d6= 0. Because k=±ianddn(n= 1,2,...,6) are 1 or −1, one can show that
+k∗d4+2+kd∗
+1+d∗
+2d5+d∗
+3d6∝ne}a⊔ionslash= 0. It is a contradiction.
+Suppose the number of 3 in {a1,a2,a3,a4,a5,a6}is more than 4. Because Hdoes not
+contain these submatrices in ( 29), (30) and (31),Hcontains the submatrix
+
+k k k d 1d2d3
+d4d5k k k d 6
+d7k d8k d9k
+k d10d11d12k k
+(32)
+13\nup to complex equvalence, where dn(n= 1,2,...,12) are 1 or -1. Then by the pigeonhole
+principle, the remaining row of Hcontaining three kleads to a contradiction with ( 29), (30)
+and (31). Hence the number of 3 in {a1,a2,a3,a4,a5,a6}is at most 4.
+Suppose the number of 3 in {a1,a2,a3,a4,a5,a6}is less than 4. If an≥5 for some n,
+let all elements of the n′th row of Hmultiply by k∗. We get the new matrix H′′which is
+complex equivalent to H, andim(H′′)≤3×3+1+1+1 = 12. Lemma 3shows that His
+complex equivalent to M2in (14).
+Hence the only unsloved case is that the number of 3 in {a1,a2,a3,a4,a5,a6}is four. One
+can show that Hcontains the submatrix in ( 32) up to complex equvalence.
+Suppose 5 ∈ {a1,a2,a3,a4,a5,a6}, By the pigeonhole principle and ( 32) we know that
+there is a row of Hcontaining ﬁve kandkk∗+kk∗+kk∗+k(dx+dy)∗+rd∗
+z= 0, where
+dx,dy,dz,rare 1 or -1. By k∝ne}a⊔ionslash=±i, one can show that kk∗+kk∗+kk∗+k(dx+dy)∗+rd∗
+z=
+3+k(dx+dy)∗+rdzj∝ne}a⊔ionslash= 0. It is a contradiction.
+Suppose 1 ∈ {a1,a2,a3,a4,a5,a6}, By the pigeonhole principle and ( 32) we know that
+there is a row of Hcontaining one kandk(dx+dy+dz)∗+k∗du+r∗
+1dv+r∗
+2dw= 0, where
+dx,dy,dz.du,dv,dw,r1,r2are 1 or -1. By k∝ne}a⊔ionslash=±i, one can show that k(dx+dy+dz)∗+k∗du+
+r∗
+1dv+r∗
+2dw∝ne}a⊔ionslash= 0. It is a contradiction.
+Hence the number of 3 in {a1,a2,a3,a4,a5,a6}is not four and we complete this proof of
+Case 1.
+Case 2.k=±i. Without loss of generality we assume k=i.
+There is a diagonal unitary matrix Dsuch that all elements of the ﬁrst row of HD
+are one. So all elements of HDare 1,−1,iand−i. Letim(HD) = [0,a1,a2,a3,a4,a5],
+one can show that an(n= 1,2,...,5)∝ne}a⊔ionslash= 1,3,5, soan(n= 1,2,...,5)∈ {0,2,4}. Ifan= 4
+for some n, let all elements of the n′th row of HDmultiply by i. Then we get a new
+matrixHiandim(HD) = [0,d1,d2,d3,d4,d5], where dn(n= 1,2,...,5)∈ {0,2}. Hence
+0 +d1+d2+d3+d4+d5≤0 + 2×5 = 10<12. Lemma 3shows that His complex
+equivalent to M2in (14).
+By Case 1 and Case 2 we complete this proof.
+⊓ ⊔
+Lemma8is the ﬁrst main result of this paper. It shows that an H2-reducible matrix
+containing exactly three distinct elements is complex equivalent to th eM2in (14). In fact,
+wehopetoﬁndalloftheCHMswhichcontainexactlythreedistinctele ments. Weconjecture
+14\nthe CHMs with exactly three distinct elements are complex equivalent toM2in (14) or the
+Tao matrix. TO BE CONTINUED .
+IV. CHMS CONTAING A 3×3HADAMARD SUBMATRIX
+In this section, we investigate the CHM which contains a 3 ×3 Hadamard submatrix.
+First we introduce a useful lemma.
+Lemma 9 IfSis a CHM containing exactly three distinct elements and the ﬁ rst row of S
+are one. Then Sis complex equivalent to the Tao matrix.
+Proof. Suppose three distinct elements of Sare 1,a,b, and
+S=
+1 1 1 1 1 1
+a0a1a2a3a4a5
+b0b1b2b3b4b5
+c0c1c2c3c4c5
+d0d1d2d3d4d5
+f0f1f2f3f4f5
+(33)
+where all elements of Sare complex numbers of modulus one. If a0=a1=a2=a, then
+a3=a4=a5=−a. Hence by the orthogonality of the ﬁrst three row vectors of Swe have
+
+
+b0+b1+b2+b3+b4+b5= 0
+a∗(b0+b1+b2)−a∗(b3+b4+b5) = 0(34)
+Sob0+b1+b2= 0. Using Lemma 1(i),bi∝ne}a⊔ionslash=bjandbi+bj∝ne}a⊔ionslash= 0 (i,j= 1,2,3,i∝ne}a⊔ionslash=j). So there
+are at least four numbers in {b0,b1,b2,a,−a}which are diﬀerent from each other. This is a
+contradiction. Similarly any row of Sother than the ﬁrst row not contains more than three
+1 orb. Hence any row of Sother than the ﬁrst row contains exactly two 1, two aand two
+b. Then by orthogonality of the ﬁrst two row vectors of Swe have 1+1+ a+a+b+b= 0.
+Using Lemma 1(i),a=ω,b=ω2ora=ω2,b=ωwhereω=e2πi
+3. Hence Sis complex
+15\nequivalent to
+S′=
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1x11x2x3x4
+1y1y21y3y4
+1z1z2z31z4
+1u1u2u3u41
+(35)
+wherevk∈ {ω,ω2}(v=x,y,z,u, k = 1,2,...,4). Any row of S′other than the ﬁrst row
+contains exactly two 1, two ωand twoω2. Up to complex equivalence, we have the following
+steps
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1x11x2x3x4
+1y1y21y3y4
+1z1z2z31z4
+1u1u2u3u41
+
+⇓(x3∝ne}a⊔ionslash=x4)
+
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1x11x2ω ω2
+1y1y21y3y4
+1z1z2z31z4
+1u1u2u3u41
+
+⇓(Lemma2)
+
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1x11x2ω ω2
+1y1y21ω2ω
+1z1z2z31z4
+1u1u2u3u41
+
+⇓(Lemma2)
+16\n
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1ω1ω2ω ω2
+1y1y21ω2ω
+1z1z2z31z4
+1u1u2u3u41
+
+⇓(Lemma2)
+
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1ω1ω2ω ω2
+1ω ω21ω2ω
+1z1z2z31z4
+1u1u2u3u41
+
+⇓(u2∝ne}a⊔ionslash=u3, z2∝ne}a⊔ionslash=z3)
+
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1ω1ω2ω ω2
+1ω ω21ω2ω
+1z1ω2ω1z4
+1u1ω ω2u41
+or
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1ω1ω2ω ω2
+1ω ω21ω2ω
+1z1ω ω21z4
+1u1ω2ω u41
+
+⇓(Lemma2)
+
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1ω1ω2ω ω2
+1ω ω21ω2ω
+1ω2ω2ω1ω
+1ω2ω ω2ω1
+or
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1ω1ω2ω ω2
+1ω ω21ω2ω
+1ω2ω ω21ω
+1ω2ω2ω ω1
+
+⇓(Lemma2)
+17\nS′′=
+1 1 1 1 1 1
+1 1ω ω ω2ω2
+1ω1ω2ω ω2
+1ω ω21ω2ω
+1ω2ω ω21ω
+1ω2ω2ω ω1
+
+It is easy to check that S′′is complex eqiuvalent to Tao matrix. So we complete this proof.
+⊓ ⊔
+Then we introduce a inference of Lemma 9.
+Lemma 10 IfM1is a CHM containing exactly three distinct elements 1,ω,ω2whereω=
+e2πi
+3. ThenM1is complex equivalent to the Tao matrix.
+Proof. There is a CHM M2s.t.M2is complex equivalent to M1and the ﬁrst row of M2
+are one. It is easy to obtain that M2also contains exactly three distinct matrix elements
+1,ω,ω2whereω=e2πi
+3. Using Lemma 9we complete this inference. ⊓ ⊔
+Lemma 11 Any CHM containing a 3×3Hadamard submatrix is complex equivalent to the
+Tao matrix or the matrix from the two-parameter family H(α,β)in Lemma 2.
+Proof. Suppose Uis a 3×3 Hadamard matrix, and Uis a submatrix of a CHM H.U
+is complex equivalent to U0=
+1 1 1
+1ω ω2
+1ω2ω
+whereω=e2πi
+3. By Lemma 1(i) we have His
+complex equivalent to
+A1=
+1 1 1 1 1 1
+1ω ω2a aω aω2
+1ω2ω b bω2bω
+1c d x 1y1x2y1x3y1
+1cω dω2x1y2x2y2ω x3y2ω2
+1cω2dω x1y3x2y3ω2x3y3ω
+(36)
+18\nor
+A2=
+1 1 1 1 1 1
+1ω ω2a aω aω2
+1ω2ω b bω2bω
+1c d x 1y1x2y1x3y1
+1cω dω2x1y2x2y2ω2x3y2ω
+1cω2dω x1y3x2y3ω x3y3ω2
+(37)
+whereω=e2πi
+3anda,b,c,d,s n(s=x,y,z, n = 1,2,3) are complex numbers of modulus
+one.
+Case 1.His complex equivalent to A1. By the orthogonality of all columns of A1, we
+have
+
+
+1+a+b+x1(y1+y2+y3) = 0
+1+a+b+c∗x2(y1+y2+y3) = 0
+1+a+b+d∗x3(y1+y2+y3) = 0(38)
+and
+
+
+1+c+d+y1(x1+x2+x3) = 0
+1+c+d+a∗y2(x1+x2+x3) = 0
+1+c+d+b∗y3(x1+x2+x3) = 0(39)
+Ify1+y2+y3= 0, then we have 1+ a+b= 0. Using Lemma 1(i) we know that a=ω,b=ω2
+ora=ω2,b=ω. Using Lemma 2,His complex equivalent to the matrix from the two-
+parameter family H(α,β) in Lemma 2. So we only consider 1+ a+b∝ne}a⊔ionslash= 0. By ( 38) we know
+x1=c∗x2=d∗x3. Similarly we have y1=a∗y2=b∗y3. Hence
+A1=
+1 1 1 1 1 1
+1ω ω2a aω aω2
+1ω2ω b bω2bω
+1c d x 1y1cx1y1dx1y1
+1cω dω2ax1y1acx1y1ω adx 1y1ω2
+1cω2dω bx 1y1bcx1y1ω2bdx1y1ω
+. (40)
+19\nFromthe ﬁrst column andthefourthcolumn we have (1+ a+b)(1+x1y1) = 0. So x1y1=−1,
+and
+A1=
+1 1 1 1 1 1
+1ω ω2a aω aω2
+1ω2ω b bω2bω
+1c d−1−c−d
+1cω dω2−a−acω−adω2
+1cω2dω−b−bcω2−bdω
+. (41)
+Fromtheﬁrstcolumnandtheﬁfthcolumnwehave(1+ aω+bω2)(1−c) = 0. If1+ aω+bω2=
+0, then using Lemma 1(i) we know that a= 1,b= 1 ora=ω,b=ω2. Using Lemma 2,
+His complex equivalent to the matrix from the two-parameter family H(α,β) in Lemma 2.
+So we only consider 1+ aω+bω2∝ne}a⊔ionslash= 0 and it means c= 1. Similarly we have d=a=b= 1.
+ThenHis complex equivalent to
+
+1 1 1 1 1 1
+1ω ω21ω ω2
+1ω2ω1ω2ω
+1 1 1 −1−1−1
+1ω ω2−1−ω−ω2
+1ω2ω−1−ω2−ω
+(42)
+and it is from the two-parameter family H(α,β) in Lemma 2.
+Case 2.His complex equivalent to A2. By the orthogonality of all columns of A2, we
+have
+
+
+1+a+b+x1(y1+y2+y3) = 0
+1+a+b+c∗x2(y1+y2ω+y3ω2) = 0
+1+a+b+d∗x3(y1+y2ω2+y3ω) = 0(43)
+
+
+1+aω+bω2+x2(y1+y2w2+y3w) = 0
+1+aω+bω2+d∗x1(y1+y2w+y3w2) = 0
+1+aω+bω2+c∗x3(y1+y2+y3) = 0(44)
+20\n
+
+1+aω2+bω+x3(y1+y2ω+y3ω2) = 0
+1+aω2+bω+c∗x1(y1+y2ω2+y3ω) = 0
+1+aω2+bω+d∗x2(y1+y2+y3) = 0(45)
+If 1 +a+b= 0, using Lemma 1(i) we know that a=ω,b=ω2ora=ω2,b=ω. Using
+Lemma2,His complex equivalent to the matrix from the two-parameter family H(α,β) in
+Lemma2. Similarly we only consider
+
+
+1+a+b∝ne}a⊔ionslash= 0
+1+aω2+bω∝ne}a⊔ionslash= 0
+1+aω+bω2∝ne}a⊔ionslash= 0(46)
+From (43)(44)(45) and (46) we obtain that
+
+
+x1(y1+y2+y3) =c∗x2(y1+y2ω+y3ω2) =d∗x3(y1+y2ω2+y3ω)
+c∗x3(y1+y2+y3) =d∗x1(y1+y2ω+y3ω2) =x2(y1+y2ω2+y3ω)
+d∗x2(y1+y2+y3) =x3(y1+y2ω+y3ω2) =c∗x1(y1+y2ω2+y3ω)(47)
+Then we could work out
+
+
+c3=d3= 1
+x3
+1=x3
+2=x3
+3(48)
+Similarly we have
+
+
+a3=b3= 1
+y3
+1=y3
+2=y3
+3(49)
+Next we analysis the equation c3=d3= 1 by cases.
+Subcase 1. {c= 1,d= 1},{c=ω,d=ω2}or{c=ω2,d=ω}. At this time there is
+a 2×3 submatrix with rank one of A2. Using Lemma 2,His complex equivalent to the
+matrix from the two-parameter family H(α,β) in Lemma 2.
+Subcase 2. c=d=ω. Then 1+ cω+dω2= 1+cω2+dω. By the orthogonality of rows
+ofA2, we have
+
+
+1+c+d+a∗y2(x1+x2ω+x3ω2) = 0
+1+c+d+b∗y3(x1+x2ω2+x3ω) = 0
+1+c+d+y1(x1+x2+x3) = 0(50)
+21\n
+
+1+cω2+dω+a∗y1(x1+x2ω2+x3ω) = 0
+1+cω2+dω+b∗y2(x1+x2+x3) = 0
+1+cω2+dω+y3(x1+x2ω+x3ω2) = 0(51)
+
+
+1+cω+dω2+a∗y3(x1+x2+x3) = 0
+1+cω+dω2+b∗y1(x1+x2ω+x3ω2) = 0
+1+cω+dω2+y2(x1+x2ω2+x3ω) = 0(52)
+If 1 +c+d= 0, using Lemma 1(i) we know that c=ω,d=ω2orc=ω2,d=ω. Using
+Lemma2,His complex equivalent to the matrix from the two-parameter family H(α,β) in
+Lemma2. Similarly we only consider
+
+
+1+c+d∝ne}a⊔ionslash= 0
+1+cω2+dω∝ne}a⊔ionslash= 0
+1+cω+dω2∝ne}a⊔ionslash= 0(53)
+From (51)(52) and (53) we have
+
+
+a∗y3(x1+x2+x3) =b∗y2(x1+x2+x3)
+b∗y1(x1+x2ω+x3ω2) =y3(x1+x2ω+x3ω2)
+y2(x1+x2ω2+x3ω) =a∗y1(x1+x2ω2+x3ω)(54)
+By (50)(53) and (54) we have
+y1=by3=ay2. (55)
+Hence from ( 43) and (55) we obtain that
+1+a+b+x1y1(1+a∗+b∗) = 0. (56)
+By (43)(56) and Lemma 1(iii) we have x1y1∈ {1,ω,ω2,−1,−ω,−ω2}.
+Ifx1y1∈ {−1,−ω,−ω2}, then by ( 56) we have
+−x1y1=1+a+b
+1+a∗+b∗∈ {1,ω,ω2}. (57)
+By (49) and (46) we have
+22\nIfa=b=ω, then1+a+b
+1+a∗+b∗=1+2ω
+1+2ω2/∈ {1,ω,ω2},
+Ifa=b=ω2, then1+a+b
+1+a∗+b∗=1+2ω2
+1+2ω/∈ {1,ω,ω2},
+Ifa= 1,b=ωora=ω,b= 1, then1+a+b
+1+a∗+b∗=2+ω
+2+ω2/∈ {1,ω,ω2},
+Ifa= 1,b=ω2ora=ω2,b= 1, then1+a+b
+1+a∗+b∗=2+ω2
+2+ω/∈ {1,ω,ω2}.
+Hencex1y1∈ {1,ω,ω2}. Similarly we have x2y1∈ {1,ω,ω2}andx3y1∈ {1,ω,ω2}. So all
+elements of A2are 1,ωorω2. Using Lemma 9,A2is complex equivalent to the Tao matrix.
+Subcase 3. Using the method of Subcase 2, we could show that what everc,dfrom (48)
+and (53) areA2is complex equivalent to Tao matrix or the matrix from the two-param eter
+familyH(α,β) in Lemma 2.
+From now we have proven this proof. ⊓ ⊔
+The content of this section is the uppermost result in this paper. We have proven that
+the CHMs containing a 3 ×3 Hadamard submatrix is complex equivalent to the Tao matrix
+or the matrix from the two-parameter family H(α,β) in Lemma 2. It might be a new way
+to think about the Tao matrix.
+V. CONCLUSIONS
+In this paper, we investigate a series of special CHMs and we have a s peciﬁc classiﬁcation
+for these CHMs. The next target for us is to ﬁnd more non- H2-reducible matrices like the
+Tao matrix. We believe more non- H2-reducible matrices will lead to the solution of the
+famous MUB problem in dimension six.
+[1] Julian Schwinger. Unitary operator bases. Proceedings of the National Academy of Sciences
+of the United States of America , 46(4):pp. 570–579, 1960.
+[2] William K Wootters and Brian D Fields. Optimal state-det ermination by mutually unbiased
+measurements. Annals of Physics , 191(2):363 – 381, 1989.
+[3] Philippe Raynal, Xin L¨ u, and Berthold-Georg Englert. M utually unbiased bases in six dimen-
+sions: The four most distant bases. Phys. Rev. A , 83:062303, Jun 2011.
+23\n[4] Philippe Jaming, M´ at´ e Matolcsi, P´ eter M´ ora, Ferenc Sz¨ oll¨ osi, and Mih´ aly Weiner. A general-
+ized pauli problem and an inﬁnite family of mub-triplets in d imension 6. Journal of Physics
+A: Mathematical and Theoretical , 42(24):245305, 2009.
+[5] Stephen Brierley and Stefan Weigert. Constructing mutu ally unbiased bases in dimension six.
+Phys. Rev. A , 79:052316, May 2009.
+[6] S´ ebastien Designolle, Paul Skrzypczyk, Florian Fr¨ ow is, and Nicolas Brunner. Quantifying
+measurement incompatibility of mutually unbiased bases. 2 018.
+[7] Daniel McNulty and Stefan Weigert. All mutually unbiase d product bases in dimension 6.
+Journal of Physics A: Mathematical and Theoretical , 45(13):135307, 2012.
+[8] Daniel McNulty and Stefan Weigert. The limited role of mu tually unbiased product bases in
+dimension 6. Journal of Physics A: Mathematical and Theoretical , 45(10):102001, 2012.
+[9] Daniel McNulty, Bogdan Pammer, and Stefan Weigert. Mutu ally unbiased product bases for
+multiple qudits. Journal of Mathematical Physics , 57(3), 2016.
+[10] Lin Chen and Li Yu. Mutually unbiased bases in dimension six containing a product-vector
+basis.Quantum Information Processing , 17(8):198, 2018.
+[11] P. O. Boykin, M. Sitharam, P. H. Tiep, and P. Wocjan. Mutu ally Unbiased Bases and Or-
+thogonal Decompositions of Lie Algebras, June 2005.
+[12] Stephen Brierley and Stefan Weigert. Maximal sets of mu tually unbiased quantum states in
+dimension 6. Phys. Rev. A , 78:042312, Oct 2008.
+[13] Stephen Brierley and Stefan Weigert. Mutually Unbiase d Bases and Semi-deﬁnite Program-
+ming.Journal of Physics: Conference Series , 254:012008, June 2010.
+[14] T. Durt, B.-G. Englert, I. Bengtsson, and K. Zyczkowski . On mutually unbiased bases. Int.
+J. Quantum Information , 8(4):535–640, 2010.
+[15] M Wiesniak, T Paterek, and A Zeilinger. Entanglement in mutually unbiased bases. New
+Journal of Physics , 13(5):053047, 2011.
+[16] DANIEL MCNULTY and STEFAN WEIGERT. On the impossibilit y to extend triples of
+mutually unbiased product bases in dimension six. International Journal of Quantum Infor-
+mation, 10(05):1250056, 2012.
+[17] LinChenandLi Yu. Productstates andschmidtrankof mut ually unbiasedbasesin dimension
+six.Journal of Physics A Mathematical General , 50(47):475304, 2017.
+[18] Bengt R. Karlsson. Three-parameter complex hadamard m atrices of order 6. Linear Algebra
+24\nand its Applications , 434(1):247 – 258, 2011.
+[19] Mengfan Liang, Mengyao Hu, Yize Sun, Lin Chen, and Xiaoy u Chen. Real entries of complex
+hadamard matrices and mutually unbiased bases in dimension six.Linear and Multilinear
+Algebra, 0(0):1–18, 2019.
+[20] Terence Tao. Fuglede’s conjecture is false in 5 and high er dimensions. Mathematical Research
+Letters, 11(2):251–258, 2004.
+[21] Mengfan Liang, Mengyao Hu, Lin Chen, andXiaoyu Chen. Th e$$h2$$h2-reducible matrix in
+four six-dimensional mutually unbiased bases. Quantum Information Processing , 18(11):352,
+Oct 2019.
+25\n

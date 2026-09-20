@@ -1,0 +1,36 @@
+% !TeX root = ../methods_audit_multifile.tex
+% Paper 2 appendix: locus geometry (HP findings). Gauge algebra (T1) is in the companion theorems paper.
+% Note: former Lemma ``Upper semicontinuity of kappa'' (lem:L5-semicont) was removed ---
+% hard-threshold clique membership is discontinuous; see Findings prop:L5--prop:L6 for HP boundaries.
+
+\section{Locus geometry}
+\label{sec:proof-locus}
+
+Define the \emph{clique number} $\kappa(H)$ as the maximum clique size in the orthogonality graph on the
+deduplicated MU-pool of vectors unbiased to $\{\mathbf{I},H\}$ (certified per-$H$ solve).
+
+\begin{finding}[One-dimensional third-MUB locus at Dita (HP)]
+\label{prop:L5}
+Let $\theta_D=\arccos(1/\sqrt3)$.
+On the probes below, $\kappa(H(\theta_D,\phi,\lambda))\ge6$ occurs at $\phi=\pi/4$ and not at $|\Delta\phi|\ge10^{-3}$.
+For $\phi=\pi/4$, $\kappa\ge6$ at each tested $\lambda$ on the Dita circle ($126/126$ and $628/628$).
+The all-$\lambda$ inference uses $2\pi$-periodicity from the companion gauge theorem (Paper~1) and is not a closed-form proof.
+\end{finding}
+
+\paragraph{Computational support.}
+Off $\phi=\pi/4$, HP axis probes show $\kappa\le2$ for $|\Delta\phi|\ge10^{-3}$ at nine test $\lambda$
+(\texttt{locus\_phi\_sweep\_full\_circle.jl}).
+A $20\times20$ grid in $(\phi,\lambda)$ at fixed $\theta_D$ finds $0/400$ clique-6 hits because grid points miss $\phi=\pi/4$ by $\ge2.6\times10^{-3}$---the same class of miss as the $512$-point coarse grid.
+On $\phi=\pi/4$, full-circle $\lambda$ persistence is an HP re-verification (\texttt{lambda\_periodicity\_dita.txt}).
+
+\begin{finding}[Bounded $\lambda$-arc at $\theta=0$ (HP)]
+\label{prop:L6}
+At $\theta=0$, $\phi$ is a parametrization gauge (Paper~1), and $\kappa(H(0,\phi,\lambda))\ge6$ only for
+$\lambda$ in a bounded interval of width $\approx0.118$ rad about $\lambda_0=0.3$
+(HP boundaries at $|{\Delta\lambda}|=0.055044803035$ and $0.0625984193874$; \texttt{f6\_boundary\_reverify.txt}).
+\end{finding}
+
+\paragraph{Computational support.}
+Gauge independence of $\phi$ at $\theta=0$ (Paper~1) reduces $\phi$-dependence.
+Binary search on $\lambda$ at 400-bit precision locates clique-6 drop boundaries; interior points on the arc retain clique-6 by HP audit.
+This is a numerical boundary location, not an algebraic characterization of the arc.

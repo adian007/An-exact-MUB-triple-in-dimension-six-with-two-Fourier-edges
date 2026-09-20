@@ -1,0 +1,83 @@
+﻿=== theorem ===
+\begin{theorem}[Gauge structure, T1]
+\label{thm:T1}
+Within Karlsson's family $K_6^{(3)}$:
+\begin{enumerate}
+    \item At $\theta=0$, the coordinate $\phi$ is a parametrization gauge: $H(0,\phi,\lambda)$ is constant in $\phi$ (Lemma~\ref{lem:L1}).
+    \item The family is $2\pi$-periodic in $\lambda$ (Lemma~\ref{lem:L2}).
+    \item At the Dita slice $(\theta_D,\pi/4)$, the block $A$ is the fixed unitary in Lemma~\ref{lem:L3}.
+    \item On the Dita slice, distinct $\lambda$ modulo $2\pi$ yield pairwise CHM-inequivalent matrices (Lemma~\ref{lem:L4}).
+\end{enumerate}
+\end{theorem}
+
+=== finding ===
+\begin{finding}[One-dimensional third-MUB locus at Dita (HP)]
+\label{prop:L5}
+Let $\theta_D=\arccos(1/\sqrt3)$.
+On the probes below, $\kappa(H(\theta_D,\phi,\lambda))\ge6$ occurs at $\phi=\pi/4$ and not at $|\Delta\phi|\ge10^{-3}$.
+For $\phi=\pi/4$, $\kappa\ge6$ at each tested $\lambda$ on the Dita circle ($126/126$ and $628/628$).
+The all-$\lambda$ inference uses $2\pi$-periodicity (Lemma~\ref{lem:L2}) and is not a closed-form proof.
+\end{finding}
+
+=== finding ===
+\begin{finding}[Bounded $\lambda$-arc at $\theta=0$ (HP)]
+\label{prop:L6}
+At $\theta=0$, $\phi$ is gauge (Theorem~\ref{thm:T1}), and $\kappa(H(0,\phi,\lambda))\ge6$ only for
+$\lambda$ in a bounded interval of width $\approx0.118$ rad about $\lambda_0=0.3$
+(HP boundaries at $|{\Delta\lambda}|=0.055044803035$ and $0.0625984193874$; \texttt{f6\_boundary\_reverify.txt}).
+\end{finding}
+
+=== lemma ===
+\begin{lemma}[Block $A$ at $\theta=0$]
+\label{lem:phi-gauge-A}
+For all $\phi,\phi'\in[0,\pi)$ and $\lambda\in\mathbb{R}$,
+\[
+A(0,\phi)=A(0,\phi')=
+\begin{bmatrix}
+-\tfrac12 + i\tfrac{\sqrt3}{2} & -\tfrac12 - i\tfrac{\sqrt3}{2} \\
+-\tfrac12 - i\tfrac{\sqrt3}{2} & \tfrac12 - i\tfrac{\sqrt3}{2}
+\end{bmatrix}.
+\]
+\end{lemma}
+
+=== lemma ===
+\begin{lemma}[$\phi$-gauge for $H$ at $\theta=0$]
+\label{lem:L1}
+For all $\phi,\phi',\lambda$: $H(0,\phi,\lambda)=H(0,\phi',\lambda)$ entrywise.
+\end{lemma}
+
+=== lemma ===
+\begin{lemma}[$\lambda$-periodicity]
+\label{lem:L2}
+For all $\theta,\phi,\lambda$: $H(\theta,\phi,\lambda+2\pi)=H(\theta,\phi,\lambda)$.
+\end{lemma}
+
+=== lemma ===
+\begin{lemma}[Dita block specialization]
+\label{lem:L3}
+At $\theta=\arccos(1/\sqrt3)$ and $\phi=\pi/4$,
+\[
+A(\theta_D,\pi/4)=
+\begin{bmatrix} i & -1 \\ -1 & i \end{bmatrix},
+\qquad AA^\dagger=2I.
+\]
+\end{lemma}
+
+=== lemma ===
+\begin{lemma}[$\lambda$ is not a CHM gauge at Dita]
+\label{lem:L4}
+Let $\theta_D=\arccos(1/\sqrt3)$, $\phi=\pi/4$, and $\lambda\neq\lambda'$ with $\lambda,\lambda'\in[0,2\pi)$.
+Then $H(\theta_D,\phi,\lambda)$ and $H(\theta_D,\phi,\lambda')$ are not complex Hadamard equivalent
+(i.e.\ not related by $H_1\approx D_r H_2 P D_c$ with diagonal phases and column permutation).
+\end{lemma}
+
+=== lemma ===
+\begin{lemma}[Upper semicontinuity of $\kappa$]
+\label{lem:L5-semicont}
+Fix a parameter point $(\theta_0,\phi_0,\lambda_0)$ with \texttt{pool\_complete\_flag=true}.
+For any sequence $(\theta_n,\phi_n,\lambda_n)\to(\theta_0,\phi_0,\lambda_0)$ with complete pools along the sequence,
+\[
+\limsup_{n\to\infty}\kappa(H(\theta_n,\phi_n,\lambda_n))\le \kappa(H(\theta_0,\phi_0,\lambda_0)).
+\]
+\end{lemma}
+

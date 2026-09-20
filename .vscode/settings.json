@@ -1,7 +1,26 @@
 {
-  "latex-workshop.latex.rootFile": "paper/mub6_karlsson_ieee.tex",
   "latex-workshop.latex.outDir": "%DIR%",
   "latex-workshop.latex.option.useFileDir": true,
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.search.rootFiles.include": [
+    "paper/main_theorems_multifile.tex",
+    "paper/methods_audit_multifile.tex",
+    "paper/main_theorems.tex",
+    "paper/methods_audit.tex"
+  ],
+  "latex-workshop.latex.search.rootFiles.exclude": [
+    "**/mub6_karlsson_ieee.tex",
+    "**/main_standalone.tex",
+    "**/dita_third_mub.tex",
+    "**/fourth_mub_obstruction.tex",
+    "**/gauge_and_locus.tex"
+  ],
+  "files.exclude": {
+    "**/mub6_karlsson_ieee.tex": true,
+    "**/dita_third_mub.tex": true,
+    "**/fourth_mub_obstruction.tex": true,
+    "**/gauge_and_locus.tex": true
+  },
   "latex-workshop.latex.recipes": [
     {
       "name": "pdflatex (paper) ×2",
@@ -20,5 +39,6 @@
         "%DOCFILE%"
       ]
     }
-  ]
+  ],
+  "texlab.rootDirectory": null
 }

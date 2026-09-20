@@ -1,0 +1,43 @@
+% !TeX root = ../methods_audit_multifile.tex
+% Paper 2: Finding T2 (computational). Gauge facts cited from companion theorems paper.
+
+\section{Third MUB on the Dita \texorpdfstring{$\lambda$}{lambda}-circle (Finding T2)}
+\label{sec:proof-t2}
+
+\begin{finding}[Third MUB on sampled Dita-$\lambda$]
+\label{thm:T2}
+Let $\theta_D=\arccos(1/\sqrt3)$ and $\phi=\pi/4$.
+Write $H(\lambda):=H(\theta_D,\phi,\lambda)$.
+At each tested $\lambda$ on the Dita circle ($126/126$ periodicity samples on $[0,2\pi]$ and $628/628$ dense probes), the pair $\{\mathbf{I},H(\lambda)\}$ admits a third mutually unbiased basis obtained by certified pool extraction.
+By $2\pi$-periodicity (Paper~1) this construction is $2\pi$-periodic in $\lambda$.
+An informal continuity argument (Route~B below) suggests the same for all $\lambda\in\mathbb{R}$; that extension is \textbf{not} a theorem.
+\end{finding}
+
+\paragraph{Computational support.}
+Fix $\lambda$.
+Solve the per-$H$ MU-pool polynomial system (10 equations, 10 variables) at $H(\lambda)$
+via certified homotopy continuation (\texttt{generate\_candidate\_pool\_fresh}).
+Let $\mathcal{P}(\lambda)$ be the deduplicated pool of MU vectors.
+If the orthogonality graph on $\mathcal{P}(\lambda)$ contains a $6$-clique $C$, the columns of $B_3=[v_{c_1},\ldots,v_{c_6}]$ form a third ONB.
+
+\textbf{Anchor.} At $\lambda_0=0.4$, Brierley and Weigert (2009) established third MUB existence at Dita-type parameters; the pipeline recovers \texttt{max\_clique}$=6$.
+
+\textbf{Sampled persistence.} Periodicity $H(\lambda+2\pi)=H(\lambda)$ (Paper~1). High-precision verification
+(\texttt{verify\_dita\_construction.jl}, \texttt{lambda\_periodicity\_dita.jl}):
+\begin{itemize}
+    \item $126/126$ samples on $[0,2\pi]$ with clique $\ge6$;
+    \item $628/628$ dense $\lambda$ probes with \texttt{found\_fourth=false} (numerical; the certified seven-point obstruction is in Paper~1);
+    \item HP re-verification (256--400 bit) of clique orthogonality at spot checks.
+\end{itemize}
+CHM-inequivalence of distinct $H(\lambda)$ on the Dita slice (Paper~1) shows this is not a single-matrix artifact.
+
+\textbf{Informal extension (Route B).}
+On intervals between $\lambda$-values where pool completeness holds, the clique template varies continuously when roots are certified.
+Combined with $2\pi$-periodicity and the full-circle HP audit, this \emph{suggests} third MUB existence for all $\lambda\in\mathbb{R}$.
+The continuity step is not an analytic proof; a closed-form $B_3(\lambda)$ remains open.
+
+\begin{finding}[Per-$H$ pool zero-dimensionality at Dita, L7]
+\label{lem:L7}
+For $H=H(\theta_D,\pi/4,0.4)$, HomotopyContinuation certifies $240$ distinct isolated roots of the MU-pool system
+(mixed volume $252$; \texttt{witness\_decomposition.jl}, \texttt{pool\_Dita\_exact.m2}).
+\end{finding}

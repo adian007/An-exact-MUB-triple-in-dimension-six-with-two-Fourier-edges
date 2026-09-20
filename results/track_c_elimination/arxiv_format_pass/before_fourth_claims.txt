@@ -1,0 +1,101 @@
+﻿=== theorem ===
+\begin{theorem}[No fourth MUB at certified Dita-$\lambda$ points]
+
+\label{thm:T3}
+
+\label{claim:T3}
+
+Let $\theta_D=\arccos(1/\sqrt{3})$, $\phi=\pi/4$, and
+
+\[
+
+\Lambda_{\mathrm{cert}}:=\Bigl\{0,\ 0.4,\ \tfrac{\pi}{3},\ \tfrac{2\pi}{3},\ \pi,\ \tfrac{4\pi}{3},\ \tfrac{5\pi}{3}\Bigr\}.
+
+\]
+
+Write $H(\lambda)=H(\theta_D,\phi,\lambda)$.
+
+For every $\lambda\in\Lambda_{\mathrm{cert}}$ and every third MUB $B_3$ arising as a size-$6$ clique in the recovered MU pool of $\{\mathbf{I},H(\lambda)\}$ (\S\ref{sec:methods}), the triple $\{\mathbf{I},H(\lambda),B_3\}$ does \emph{not} extend to a fourth mutually unbiased basis.
+
+\end{theorem}
+
+=== theorem ===
+\begin{theorem}[Exact-coefficient $W_1$ emptiness at the $D_0$-equivalent pair (T4)]
+
+\label{thm:T4}
+
+Let $D_{\mathrm{bc}}$ be the block-circulant representative of the Di\c{t}a matrix $D_0$ and $F_D$ the closed-form third MUB for $\{\mathbf{I},D_{\mathrm{bc}}\}$ (Bengtsson--Bruzda--Ericsson--Larsson--Tadej--\.Zyczkowski~\cite{BengtssonMUH2007}, eqs.~(79)--(80) and (78),(61)), both with entries in $\mathbb{Q}(\zeta_{24},\sqrt{5})$.
+
+Then the single-vector witness ideal of $W_1(D_{\mathrm{bc}},F_D)$ --- seventeen generators (five unimodular relations $z_iw_i=1$ and twelve mutual-unbiasedness products) in $\mathbb{Q}(\zeta_{24},\sqrt5)[z_1,\ldots,z_5,w_1,\ldots,w_5]$; \repo{symbolic\_export/w1\_D0\_exact.m2} --- is the \emph{unit ideal}.
+
+Consequently no flat vector is mutually unbiased to $\mathbf{I}$, $D_{\mathrm{bc}}$, and $F_D$ simultaneously: the MUB triple $\{\mathbf{I},D_{\mathrm{bc}},F_D\}$ does not extend by even a single vector of a fourth MUB.
+
+\end{theorem}
+
+=== finding ===
+\begin{finding}[Per-$H$ pool zero-dimensionality at Dita, L7]
+\label{lem:L7}
+For $H=H(\theta_D,\pi/4,0.4)$, HomotopyContinuation certifies $240$ distinct isolated roots of the MU-pool system
+(mixed volume $252$; \texttt{witness\_decomposition.jl}, \texttt{pool\_Dita\_exact.m2}).
+\end{finding}
+
+=== lemma ===
+\begin{lemma}[CHM equivalence transfers $W_1$-emptiness]\label{lem:chm-w1}
+
+Suppose $H_1,H_2\in K_6^{(3)}$ are CHM-equivalent via diagonal unitaries $D_r,D_c$ and a column permutation $P$, in the sense that after the standard dephasing gauge
+
+\[
+
+\mathrm{dephase}(H_1)=D_r\,\mathrm{dephase}(H_2)\,P\,D_c.
+
+\]
+
+Let $B_3$ be an orthonormal $6\times6$ matrix whose columns are mutually unbiased to $\mathbf{I}$ and to the columns of $H_2$, and set $B_3':=D_r B_3$ (columnwise, then renormalized).
+
+Then:
+
+\begin{enumerate}
+
+    \item the columns of $B_3'$ are orthonormal and mutually unbiased to $\mathbf{I}$ and to the columns of $H_1$ (hence $B_3'$ is a third MUB for $\{\mathbf{I},H_1\}$);
+
+    \item a unit vector $v$ solves $W_1(H_2,B_3)$ if and only if $D_r v$ solves $W_1(H_1,B_3')$.
+
+\end{enumerate}
+
+In particular, $W_1(H_2,B_3)$ is empty if and only if $W_1(H_1,B_3')$ is empty.
+
+\end{lemma}
+
+=== remark ===
+\begin{remark}[Scope --- what is and is not claimed]
+
+Theorem~\ref{thm:T3} is a \emph{certified} non-existence result at seven explicit Dita-$\lambda$ values (four CHM classes), with native all-pool-clique coverage at every listed $\lambda$ ($40/40$).
+
+``Every size-$6$ clique'' means every such clique in the MU pool recovered by the per-$H$ homotopy at that run (pool sizes $120$ at $\lambda{=}0,\pi$ and $72$ elsewhere on this list); it does not by itself certify against hypothetical third MUBs missed by an incomplete root track.
+
+It is \textbf{not} a symbolic identity for all $\lambda\in[0,2\pi)$, not a theorem on the covering region $\mathcal{R}$, and not a statement about $N(6)$ or CHMs outside $K_6^{(3)}$.
+
+A separate dense probe finds no fourth MUB at $628/628$ samples on $[0,2\pi]$ (\repo{dita\_lambda\_fourth\_dense.csv}); that is numerical evidence consistent with a full-circle conjecture, and is \textbf{not} part of the certificate in Theorem~\ref{thm:T3}.
+
+\end{remark}
+
+=== remark ===
+\begin{remark}[Pointer to the central open obstacle]\label{rem:m2-inexact}
+The two-vector Macaulay2 run over \texttt{CC} ($\dim I=-1$ with an inexact-field warning) is \textbf{not} a certificate and is \textbf{not} confirmatory of T3.
+T3 uses $n_{\mathrm{wit}}=1$ (mixed volume $252$) instead.
+The failed exact-elimination attempt is the central obstacle to Open Problem~\ref{op:trackc}; see \S\ref{sec:symbolic}, not this remark, for the full account.
+\end{remark}
+
+=== remark ===
+\begin{remark}[Scope of Theorem~\ref{thm:T4} --- what is and is not claimed]
+
+\label{rem:T4-scope}
+
+(i) \emph{Point scope.} The exact statement is at the pair $(D_{\mathrm{bc}},F_D)$ itself. Its placement on the Karlsson Di\c{t}a circle at $\lambda\in\{\pi/2,\,3\pi/2\}$ (and nowhere else) rests on a \emph{numerical} CHM identification of $H(\theta_D,\pi/4,\lambda)$ with $D_0$/$D_{\mathrm{bc}}$ at those two $\lambda$ (dephased residual $\sim10^{-13}$; \repo{results/identify\_d0\_in\_karlsson.txt}). Neither point lies in $\Lambda_{\mathrm{cert}}$, so Theorems~\ref{thm:T3} and~\ref{thm:T4} cover disjoint point sets.
+
+(ii) \emph{Clique scope.} Coverage is the single third basis $F_D$; this is \textbf{not} the all-pool-clique exhaustion of Theorem~\ref{thm:T3}, and it is not a theorem on the Di\c{t}a circle, on $\mathcal{R}$, or on all of $K_6^{(3)}$.
+
+(iii) \emph{Object / method / result vs Brierley--Weigert~\cite{Brierley2009}.} Headline: Theorem~\ref{thm:T4} \emph{reproves} a fact BW already established, by an independent exact method; it does \textbf{not} extend BW. Asymmetry: T4 is \emph{weaker in coverage} (one third basis $F_D$ vs BW's full pool $N_v{=}120$, $N_t{=}10$) and \emph{stronger in one narrow sense} (exact symbolic unit-ideal certificate for the fixed-$(H,B_3)$ witness $W_1$ over $\mathbb{Q}(\zeta_{24},\sqrt5)$, versus BW's Groebner-on-pool construction plus combinatorial $N_p{=}0$). $D_{\mathrm{bc}}$ is CHM-equivalent to textbook $D_0$, and $F_D$ is Bengtsson's closed-form third MUB---neither object is new. BW's $N_p{=}0$ already implies $W_1(D_0,B_3)=\emptyset$ for every third basis from the pool, so the mathematical result at this point is corollary-grade; the value here is a machine-checkable cross-check on that instance via a different ideal. The same certificate at $\lambda=0$ or $\pi/3$ (points \emph{not} CHM-equivalent to $D_0$) remains open, blocked on an algebraic form of $B_3$ there.
+
+\end{remark}
+

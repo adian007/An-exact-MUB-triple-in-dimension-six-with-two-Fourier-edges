@@ -1,0 +1,38 @@
+=== Path B1: circulant_match θ=π/2 anomaly investigation ===
+Date: 2026-08-13 16:32
+
+--- Canonical false-positive points (CSV max_clique=6, HP fail) ---
+Point (θ,φ,λ) = (1.5707963268, 0.0500000000, 6.2331853072)
+  mixed_volume=252 n_tracked=192 mv_gap=60 pool_complete=true
+  n_pool=48 n_raw=192 max_clique=6 found_third=true
+  circulant_err=3.142e+00 hp_pass=false ortho_max=1.818e-11 mu_max=4.603e-17
+  ortho_tol sweep:
+    tol=1e-06  max_clique=6  found_third=true
+    tol=1e-08  max_clique=6  found_third=true
+    tol=1e-10  max_clique=6  found_third=true
+    tol=1e-12  max_clique=2  found_third=false
+
+Point (θ,φ,λ) = (1.5707963268, 3.0915926536, 0.0500000000)
+  mixed_volume=252 n_tracked=192 mv_gap=60 pool_complete=true
+  n_pool=48 n_raw=192 max_clique=6 found_third=true
+  circulant_err=3.142e+00 hp_pass=false ortho_max=1.055e-10 mu_max=4.603e-17
+  ortho_tol sweep:
+    tol=1e-06  max_clique=6  found_third=true
+    tol=1e-08  max_clique=6  found_third=true
+    tol=1e-10  max_clique=6  found_third=true
+    tol=1e-12  max_clique=2  found_third=false
+
+--- Control: genuine third-MUB anchors ---
+F6_theta0: mv=252 tracked=204 gap=48 max_clique=6 hp_pass=true n_pool=48
+Dita: mv=252 tracked=240 gap=12 max_clique=6 hp_pass=true n_pool=72
+
+--- Root-cause diagnosis ---
+VERDICT: TOLERANCE ARTIFACT (not a third structural locus).
+  Float pipeline (ortho_tol=1e-8) reports max_clique=6; tight tol=1e-12 → clique=2.
+  HP ortho_max=1.818e-11 > 1e-12 — fails validate_third_mub_candidates audit.
+  All θ=π/2 hits share n_tracked=192 (mv_gap=60): incomplete root recovery at this degeneracy.
+  circulant_err≈π: dephased H is NOT circulant here despite degeneracy_scan flag.
+  Mechanism: ortho_tol × truncated pool × near-degenerate θ=π/2 geometry.
+
+NOT a near-miss to Dita/F6: circulant_match flags dephased-circulant H structure,
+  not proximity to third-MUB loci (θ=0 arc or Dita circle).

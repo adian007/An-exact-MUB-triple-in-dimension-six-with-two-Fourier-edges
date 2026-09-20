@@ -13,4 +13,10 @@ wall_clock=00:55:09
 exit_code=0
 design_target=1865
 note=Two coordinate keys deduplicate at queue build (20 anchors + 1845 degen -> 1863 distinct).
-csv_status=CORRUPTED on disk (592 rows, ref_* partial rerun 2026-08-06); authoritative stats from this file + special_loci_degen1845.log (1863 Point markers, exit 0, 00:55:09).
+csv_status=REGENERATED 2026-08-13 (1863 rows from special_loci_degen1845_regen.csv; prior CORRUPTED592 archived).
+note=Two coordinate keys deduplicate at queue build (20 anchors + 1845 degen -> 1863 distinct).
+
+# Regeneration 2026-08-13 20:09
+csv_status=REGENERATED from special_loci_degen1845_regen.csv
+csv_rows=1863
+finish_audit=special_loci_degen1845.csv rows=1863 ok=1852 clique6=21 fourth=0 pool_complete=1852

@@ -1,0 +1,61 @@
+EXIT=0
+=== Benchmark A: Fourier {I, F6} ===
+Tracking 252 paths...   1%|▎                            |  ETA: 0:30:26[K
+                   # paths tracked: 2[K
+   # non-singular solutions (real): 2 (0)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 2 (0)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths...  37%|██████████▋                  |  ETA: 0:00:26[K
+                   # paths tracked: 92[K
+   # non-singular solutions (real): 63 (10)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 63 (10)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths...  57%|████████████████▋            |  ETA: 0:00:12[K
+                   # paths tracked: 144[K
+   # non-singular solutions (real): 92 (16)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 92 (16)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths...  75%|█████████████████████▊       |  ETA: 0:00:05[K
+                   # paths tracked: 189[K
+   # non-singular solutions (real): 121 (21)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 121 (21)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths...  96%|███████████████████████████▊ |  ETA: 0:00:01[K
+                   # paths tracked: 241[K
+   # non-singular solutions (real): 146 (23)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 146 (23)[K[A[A[A[A
+
+
+
+[K[A[K[A[K[A[K[ATracking 252 paths... 100%|█████████████████████████████| Time: 0:00:15[K
+                   # paths tracked: 252[K
+   # non-singular solutions (real): 156 (24)[K
+       # singular endpoints (real): 0 (0)[K
+          # total solutions (real): 156 (24)[K
+Certifying 156 solutions...  41%|█████████▍             |  ETA: 0:00:01[K
+          # processed: 64[K
+   # certified (real): 64 (0)[K
+    # distinct (real): 64 (0)[K[A[A[A
+
+
+[K[A[K[A[K[ACertifying 156 solutions... 100%|███████████████████████| Time: 0:00:00[K
+          # processed: 156[K
+   # certified (real): 156 (0)[K
+    # distinct (real): 156 (0)[K
+Tracking 252 paths...  62%|██████████████████           |  ETA: 0:00:00[K
+                   # paths tracked: 156[K
+   # non-singular solutions (real): 94 (13)[K
+       # singular endpoints (real): 0 (0)[K

@@ -1,0 +1,300 @@
+% Paper 1 (theorems): T1, T3 (lead), T4 (pipeline validation), C1.
+% Compile from paper/: pdflatex main_theorems.tex && pdflatex main_theorems.tex
+% TITLE: P1-B (author-approved 2026-08-16)
+
+\documentclass[onecolumn]{IEEEtran}
+\input{preamble_common}
+
+% Convention (this document): Theorem/Lemma/Proof for T1 (algebra), T3
+% (certified W_1 emptiness), and T4 (exact Groebner pipeline validation).
+% Computational locus audits live in the companion methods report~\cite{JaupiMethods2026}.
+
+\begin{document}
+
+\title{Gauge Structure and Certified Non-Extendability for Selected Karlsson Hadamards in Dimension Six}
+
+\author{%
+\IEEEauthorblockN{Adian Jaupi}%
+}
+
+\maketitle
+
+\begin{abstract}
+Within Karlsson's three-parameter family $K_6^{(3)}$ only, I prove a gauge-structure theorem, give a certified fourth-MUB obstruction at seven Dita-$\lambda$ points, independently re-verify one Brierley--Weigert instance by exact Gr\"obner methods, and correct a literature transcription of Karlsson's $A$-matrix.
+\textbf{(T1, Theorem~\ref{thm:T1}):} at $\theta{=}0$, $\phi$ is a parametrization gauge; on the Dita slice, $\lambda$ is not a matrix-level gauge, while CHM class is $\pi$-periodic (four classes among $\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$).
+\textbf{(T3, Theorem~\ref{thm:T3}; lead result):} at seven Dita-$\lambda$ points $\lambda\in\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$, HomotopyContinuation \texttt{certify()} yields a numerical-interval certificate that the single-vector witness $W_1$ is empty at every recovered-pool $6$-clique ($\mathbf{40/40}$), which implies no fourth MUB at those instances.
+\textbf{(T4, Theorem~\ref{thm:T4}; pipeline validation):} at the $D_0$-equivalent pair $(D_{\mathrm{bc}},F_D)$, an exact ideal-membership proof shows that the witness ideal $W_1$ is the unit ideal over $\mathbb{Q}(\zeta_{24},\sqrt5)$ (Gr\"obner basis $\{1\}$). This independently re-checks a fact already in Brierley--Weigert~\cite{Brierley2009}; it is not billed as a co-equal headline with T1/T3. A regression rerun of the pipeline (2026-09) additionally reproduces Brierley--Weigert's complete-pool counts at the CHM-equivalent point $\lambda{=}\pi/2$---$120$ vectors, $10$ third bases, no mutually unbiased pair among them, and all ten $W_1$ witnesses certified empty---so the exact certificate and the numerical pipeline now agree on the same instance. The closed-form third basis $F_D$ follows Bengtsson--Bruzda--Ericsson--Larsson--Tadej--\.Zyczkowski~\cite{BengtssonMUH2007}.
+\textbf{(C1)} The McNulty--Weigert printed $A$-matrix differs from Karlsson's by a leading-sign error and a broken conjugate structure; symbolically $A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger\neq2I$ on a Zariski-open set (corroborated by a $0/349$ numerical audit).
+Third-MUB locus identification, search-set audits, and reproducibility artifacts are documented in a companion computational report~\cite{JaupiMethods2026}.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Complex Hadamard matrices, Karlsson family, mutually unbiased bases, homotopy continuation, Gr\"obner bases, certified computation
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{sec:intro}
+
+Mutually unbiased bases (MUBs) in $\mathbb{C}^d$ are orthonormal bases $\mathcal{B}_0,\ldots,\mathcal{B}_{m-1}$ such that for all $a\neq b$ and all $|\psi\rangle\in\mathcal{B}_a$, $|\phi\rangle\in\mathcal{B}_b$,
+\begin{equation}
+    \label{eq:mu}
+    \bigl|\langle\psi|\phi\rangle\bigr|^2 = \frac{1}{d}.
+\end{equation}
+MUBs play a central role in quantum state tomography, cryptography, and the study of finite geometry~\cite{Bengtsson2007, Brierley2009}.
+For prime-power dimensions $d=p^n$, exactly $d+1$ MUBs exist~\cite{Ivanovic1981, Wootters1989}.
+For composite $d$, the maximum number $N(d)$ of MUBs is unknown in general; in dimension six, Zauner conjectured $N(6)=3$~\cite{Zauner1999, Scott2010}.
+
+A standard construction route passes through complex Hadamard matrices (CHMs): unimodular $d\times d$ matrices $H$ with $HH^\dagger=dI$.
+Karlsson~\cite{Karlsson2011} parametrized a three-dimensional family $K_6(\theta,\phi,\lambda)$ of $6\times6$ CHMs.
+Grassl~\cite{Grassl2004} showed that $\{\mathbf{I},F_6\}$ extends to at most three MUBs, so searches must be \emph{per} Hadamard matrix.
+Brierley--Weigert~\cite{Brierley2009} constructed all MU vectors at the Di\c{t}a matrix $D_0$ in closed form and showed that none of the ten third bases are pairwise MU.
+
+This paper is theorem-first within $K_6^{(3)}$ only.
+The lead result is a certified fourth-MUB obstruction at seven Dita-$\lambda$ points (T3).
+Supporting algebra is the gauge structure of Karlsson parameters (T1).
+An exact Gr\"obner re-verification at one $D_0$-equivalent pair (T4) validates the witness pipeline against Brierley--Weigert but does not extend that literature.
+A literature correction (C1) records that Karlsson's original $A$-matrix, not the McNulty--Weigert transcription, produces valid CHMs in numerical tests.
+The computational identification of third-MUB loci (Dita circle; $F_6$ $\theta{=}0$ arc), the covering region $\mathcal{R}$, and reproducibility audits appear in the companion methods report~\cite{JaupiMethods2026}; the loci used to instantiate $B_3$ in the T3 runs are documented there.
+
+\subsection{Contributions}
+\begin{enumerate}
+    \item[\textbf{T3}] \textbf{Lead:} certified $W_1$-emptiness (HomotopyContinuation \texttt{certify()}, tolerance-based) at seven Dita-$\lambda$ points, $40/40$ recovered-pool $6$-cliques (Theorem~\ref{thm:T3}).
+    \item[\textbf{T1}] Gauge structure: $\phi$-gauge at $\theta{=}0$; $\lambda$-periodicity; Dita block specialization; Dita $\lambda$ matrix moduli with $\pi$-periodic CHM class (Theorem~\ref{thm:T1}).
+    \item[\textbf{C1}] Literature correction: explicit algebraic discrepancy between Karlsson's $A$ and the McNulty--Weigert transcription (Section~\ref{sec:audit}).
+    \item[\textbf{T4}] Pipeline validation: exact unit-ideal certificate for $W_1$ at $(D_{\mathrm{bc}},F_D)$, subordinate to Brierley--Weigert~\cite{Brierley2009} (Theorem~\ref{thm:T4}).
+\end{enumerate}
+
+\section{Scope and Logical Status of Results}
+\label{sec:scope}
+
+All results concern Karlsson's family $K_6(\theta,\phi,\lambda)$ only; CHMs outside $K_6^{(3)}$ are not treated.
+\begin{itemize}
+    \item \textbf{Proved (algebra).} Theorem~\ref{thm:T1} (T1); symbolic non-unitarity of the printed McNulty--Weigert $A$-block (C1).
+    \item \textbf{Certified (numerical interval).} Theorem~\ref{thm:T3} (T3): \texttt{certify()} over a square subsystem of $W_1$ at seven listed points; not a certificate on the full $\lambda$-circle, on $\mathcal{R}$, or on $N(6)$.
+    \item \textbf{Exact ideal membership (one point).} Theorem~\ref{thm:T4} (T4): Gr\"obner basis $\{1\}$ over $\mathbb{Q}(\zeta_{24},\sqrt5)$ at $(D_{\mathrm{bc}},F_D)$; independent re-verification of a BW fact, not a new extendability theorem on the circle.
+    \item \textbf{Companion only (reproducibility).} Third-MUB locus identification, $\mathcal{S}^*$ sweeps, grid-miss narrative, pool-completeness tables, and the Open Problem on all of $\mathcal{R}$~\cite{JaupiMethods2026}. Theorem~\ref{thm:T3} does not logically depend on that Open Problem.
+\end{itemize}
+This paper does not prove Zauner's conjecture $N(6){=}3$ or fourth-MUB absence on all of $K_6^{(3)}$.
+
+\section*{Main Theorem}
+\label{sec:main-theorem}
+\noindent\textbf{Lead result (Theorem~\ref{thm:T3}).}
+For each
+\[
+\lambda\in\Lambda_{\mathrm{cert}}:=\Bigl\{0,\ 0.4,\ \tfrac{\pi}{3},\ \tfrac{2\pi}{3},\ \pi,\ \tfrac{4\pi}{3},\ \tfrac{5\pi}{3}\Bigr\}
+\]
+and every size-$6$ clique $B_3$ in the recovered MU pool of $\{\mathbf{I},H(\theta_D,\pi/4,\lambda)\}$ with $\theta_D=\arccos(1/\sqrt{3})$, the single-vector witness $W_1(H,B_3)$ is empty under HomotopyContinuation interval \texttt{certify()} of a generic square subsystem (mixed volume $252$), so $\{\mathbf{I},H,B_3\}$ admits no fourth MUB.
+
+\noindent
+\fbox{\parbox{0.92\linewidth}{\centering\vspace{4pt}
+$\displaystyle\mathbf{40/40}$ certified obstructions
+(native all-pool-clique exhaustion at the seven listed $\lambda$).\vspace{4pt}}}
+
+\noindent Certificate details---including the square-subsystem completeness bridge ($N_{\mathrm{expected}}=N_{\mathrm{tracked}}=N_{\mathrm{certified}}=252$, $N_{\mathrm{full\text{-}system}}=0$)---are in Appendix~\ref{sec:proof-t3}; they are not deferred to the companion report.
+
+\section{Background}
+\label{sec:background}
+
+\subsection{MUBs From Hadamard Matrices}
+Let $H$ be a $6\times6$ CHM with $|H_{ij}|=1$ and $HH^\dagger=6I$.
+The normalized columns $c_k=H_{:,k}/\sqrt{6}$ form an orthonormal basis $\mathcal{B}_H$ satisfying~\eqref{eq:mu} with the computational basis $\mathcal{B}_I=\{e_0,\ldots,e_5\}$.
+A third MUB requires six unit vectors pairwise orthogonal and unbiased to both $\mathcal{B}_I$ and $\mathcal{B}_H$; a fourth MUB requires a second disjoint six-vector set with the same property relative to that third basis.
+
+\subsection{Karlsson's Three-Parameter Family}
+Following Karlsson~\cite{Karlsson2011} and McNulty--Weigert~\cite{McNulty2026},
+\begin{equation}
+    K_6(\theta,\phi,\lambda)=
+    \begin{bmatrix}
+        F_2 & Z_1 & Z_2 \\
+        Z_3 & \tfrac{1}{2}Z_3 A Z_1 & \tfrac{1}{2}Z_3 B Z_2 \\
+        Z_4 & \tfrac{1}{2}Z_4 B Z_1 & \tfrac{1}{2}Z_4 A Z_2
+    \end{bmatrix},
+\end{equation}
+where $F_2=\begin{pmatrix}1&1\\1&-1\end{pmatrix}$, $B=-F_2-A$, and $Z_j$ are $2\times2$ blocks from unimodular parameters $z_1,\ldots,z_4$ with $z_1=e^{i\lambda}$.
+The block $A$ depends on $(\theta,\phi)$.
+Karlsson's original $A$-matrix formulas are used throughout; the McNulty--Weigert printed transcription is algebraically invalid as a CHM block (Section~\ref{sec:audit}; contribution C1).
+
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Per-$H$ MU pool and fourth-MUB witness}
+For fixed $H$, seek unit vectors unbiased to $\mathcal{B}_I$ and $\mathcal{B}_H$.
+With gauge $v_0=1$ and $z_i=v_i\sqrt{6}$, unbiasedness to the five independent columns of $H$ together with unimodular auxiliaries $z_iw_i=1$ yields a square $10\times10$ polynomial system depending on $H$.
+Solutions on the conjugate locus are mapped to unit vectors, verified at tolerance $10^{-8}$, and deduplicated modulo global phase by projective (Fubini--Study) clustering at $128$-bit precision; an independent re-seeded re-solve must agree on the physical count before a pool is accepted, and the resulting finite set is the recovered MU pool $\mathcal{P}$.
+A third basis $B_3$ is any orthonormal $6$-frame whose columns form a size-$6$ clique in the orthogonality graph on $\mathcal{P}$ (edge when $|\langle v,w\rangle|<\varepsilon_{\mathrm{ortho}}$).
+The single-vector witness $W_1(H,B_3)$ encodes existence of a unit vector unbiased to $\mathbf{I}$, $H$, and $B_3$ ($17$ equations in $10$ variables after unimodular auxiliaries; $n_{\mathrm{wit}}=1$).
+Emptiness of $W_1$ implies no fourth MUB at that $(H,B_3)$.
+(Full pipeline engineering, search sets, and reproducibility pins appear in~\cite{JaupiMethods2026}; they are not required to read the T3 certificate.)
+
+\subsection{T3 certificate (numerical interval)}
+At each listed $\lambda$, every recovered-pool $6$-clique is submitted to a generic square subsystem of $W_1$ (mixed volume $252$), HomotopyContinuation path tracking, interval-arithmetic \texttt{certify()}, and residual check against the full system (tolerance $10^{-8}$).
+Emptiness means $N_{\mathrm{expected}}=N_{\mathrm{tracked}}=N_{\mathrm{certified}}=252$ and $N_{\mathrm{full\text{-}system}}=0$ (Appendix~\ref{sec:proof-t3}).
+This is \emph{not} a Gr\"obner unit-ideal certificate.
+
+\subsection{T4 certificate (exact ideal membership)}
+At $(D_{\mathrm{bc}},F_D)$ with algebraic entries in $\mathbb{Q}(\zeta_{24},\sqrt5)$, Macaulay2 computes a Gr\"obner basis of the $W_1$ ideal equal to $\{1\}$ (Section~\ref{sec:proof-t3}).
+
+\subsection{Central open obstacle}
+\label{sec:symbolic}
+A theorem of fourth-MUB absence on all of a covering region $\mathcal{R}\subset K_6^{(3)}$ (defined in~\cite{JaupiMethods2026}) would require exact-coefficient elimination with $B_3$ in a genuine number field at points not CHM-equivalent to $D_0$.
+The reduced two-vector witness run over \texttt{CC} is inconclusive (inexact-field warning; Remark~\ref{rem:m2-inexact}).
+T4 works precisely because $B_3=F_D$ is closed-form at a $D_0$-equivalent point---corollary-grade relative to Brierley--Weigert as a mathematical result, valuable here as a machine-checkable cross-check.
+Theorem~\ref{thm:T3} does not depend on resolving that open obstacle.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Correction to the McNulty--Weigert \texorpdfstring{$A$}{A}-matrix transcription}
+\label{sec:audit}
+
+Karlsson~\cite{Karlsson2011} uses
+\[
+A_{11}=-\tfrac12+i\tfrac{\sqrt3}{2}\bigl(\cos\theta+e^{-i\phi}\sin\theta\bigr),\quad
+A_{12}=-\tfrac12+i\tfrac{\sqrt3}{2}\bigl(-\cos\theta+e^{i\phi}\sin\theta\bigr),
+\]
+with Hermitian block structure $A=\begin{pmatrix}A_{11}&A_{12}\\ \overline{A_{12}}&-\overline{A_{11}}\end{pmatrix}$.
+Eqs.~(7.3)--(7.5) of~\cite{McNulty2026}, as printed, instead take leading $+\tfrac12$ in $A_{11}$ and assemble $A=\begin{pmatrix}A_{11}&A_{12}\\ A_{12}&-A_{11}\end{pmatrix}$ (no conjugate on the off-diagonal).
+
+\begin{lemma}[Printed McNulty--Weigert $A$ is not unitary]
+\label{lem:C1-symbolic}
+Let $A_{\mathrm{MW}}(\theta,\phi)$ be the printed block above.
+Then
+\[
+\bigl(A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger-2I\bigr)_{11}
+=\sqrt3\,\sin\phi\,\sin\theta,
+\]
+which is not identically zero.
+Hence $A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger\neq2I$ on a Zariski-open subset of $(\theta,\phi)$, so the printed transcription cannot define a valid Karlsson CHM on that open set.
+Moreover $A_{11}^{\mathrm{(Karlsson)}}-A_{11}^{\mathrm{(MW)}}=-1$ identically (leading-sign discrepancy).
+\end{lemma}
+
+\begin{proof}
+Direct expansion of $A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger$ (computer algebra; reproducible from \repo{scripts/python/audit\_karlsson\_variants.py} formulas) yields the displayed $(1,1)$ entry.
+The leading-sign identity is immediate from $\pm\tfrac12$.
+\end{proof}
+
+\begin{table}[t]
+\caption{Correction summary for the $A$-matrix transcription.}
+\label{tab:audit-summary}
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & Karlsson 2011 & McNulty--Weigert (as printed) \\
+\midrule
+Symbolic $A$ formula & valid & leading $+1/2$; non-conjugate structure \\
+$AA^\dagger=2I$ & identity & fails: $(AA^\dagger-2I)_{11}=\sqrt3\sin\phi\sin\theta$ \\
+$349$-point numerical audit & $348/349$ pass & $0/349$ pass \\
+Identified error & --- & Eqs.~(7.3)--(7.5) as printed \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Numerical audit of $A$-matrix variants on $349$ parameter points (corroboration of Lemma~\ref{lem:C1-symbolic}). Pass criteria: $\|AA^\dagger-2I\|_\infty<10^{-8}$, $\|BB^\dagger-2I\|_\infty<10^{-8}$, valid CHM, M\"obius consistency $<10^{-6}$.}
+\label{tab:audit}
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Variant & Pass & Fail & Notes \\
+\midrule
+Karlsson 2011 (original) & 348 & 1 & One NaN at degenerate M\"obius point \\
+McNulty--Weigert (as printed) & 0 & 349 & $A$ not unitary; CHM invalid \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent
+The correction is also enforced as a regression test: the literal transcription fails $AA^\dagger=2I$ at $40/40$ random parameter points in the repository test suite, while Karlsson's original passes at every point where the family is defined.
+
+\subsection{Gauge Structure (T1)}
+Theorem~\ref{thm:T1} records that at $\theta{=}0$, $\phi$ does not enter $H$; the family is $2\pi$-periodic in $\lambda$; on the Dita slice $\lambda$ changes the matrix (Lemma~\ref{lem:L4-matrix}) while CHM class is $\pi$-periodic with four classes among the seven sample points of Lemma~\ref{lem:L4}.
+Proof: Appendix~\ref{sec:proofs}.
+
+\subsection{Certified Fourth-MUB Obstruction at Seven Dita Points (T3)}
+\label{sec:t3-results}
+Theorem~\ref{thm:T3} is the lead result (Section~\ref{sec:main-theorem}): at
+$\Lambda_{\mathrm{cert}}=\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$,
+\texttt{certify()} finds $W_1$ empty for all recovered-pool $6$-cliques ($\mathbf{40/40}$), covering four CHM classes (Lemma~\ref{lem:L4}).
+Full proof: Appendix~\ref{sec:proofs}.
+Confirmatory dense probes and search-set negatives outside these seven points are reproducibility material in~\cite{JaupiMethods2026}; they are not part of T3.
+
+\subsection{Pipeline Validation: Exact Re-Verification at the \texorpdfstring{$D_0$}{D0}-Equivalent Pair (T4)}
+\label{sec:t4-results}
+Theorem~\ref{thm:T4} establishes $W_1(D_{\mathrm{bc}},F_D)=\langle 1\rangle$ by Gr\"obner basis over $\mathbb{Q}(\zeta_{24},\sqrt5)$.
+Brierley--Weigert already proved the stronger complete-pool statement ($N_v{=}120$, $N_t{=}10$, $N_p{=}0$); T4 covers one third basis by a different exact method and is billed here as independent pipeline validation (Remark~\ref{rem:T4-scope}).
+After the methodology hardening documented in the companion report~\cite{JaupiMethods2026}, the same pipeline also \emph{reproduces} the complete-pool statement numerically at the CHM-equivalent point $\lambda{=}\pi/2$ on the Dita slice: a certified solve returns exactly $120$ physical MU vectors ($N_v$) forming $10$ independently verified third bases ($N_t$), with no mutually unbiased pair among all $45$ basis pairs ($N_p{=}0$; worst defect $0.015$), and the single-vector witness certified empty for all $10/10$ cliques---the four Brierley--Weigert counts, regenerated end-to-end by the audited pipeline rather than imported from the literature.
+
+\section{Discussion}
+\label{sec:discussion}
+
+T3 is a pointwise certified obstruction, not a theorem on $\mathcal{R}$ or $N(6)$.
+T4 does not extend Brierley--Weigert; it cross-checks one algebraic instance of the same witness ideal used numerically in T3.
+The September 2026 regression rerun (pool counts at $F_6$, the $D_0$-equivalent $\lambda{=}\pi/2$ point, and Tao's isolated order-$6$ matrix) is a pipeline-audit artifact documented with the companion report~\cite{JaupiMethods2026}; it changes no claim tier in this paper.
+C1 is an algebraic transcription correction (Lemma~\ref{lem:C1-symbolic}) and should be reported to the authors of~\cite{McNulty2026}.
+The companion report~\cite{JaupiMethods2026} documents search-set reproducibility and why dense-grid negatives alone cannot promote sweep results to theorems---reinforcing that T3 is the exception that does not rest on grid density.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Scoped to $K_6^{(3)}$ only, this paper delivers a gauge theorem (T1), a lead certified fourth-MUB obstruction at seven Dita-$\lambda$ points (T3), an algebraic literature correction (C1), and an exact pipeline-validation re-check at one $D_0$-equivalent pair (T4), subordinate to Brierley--Weigert.
+A post-audit regression run additionally reproduces Brierley--Weigert's complete-pool counts end-to-end ($120$ vectors, $10$ third bases, $N_p{=}0$, $W_1$ empty $10/10$) at the CHM-equivalent point, closing the loop between the exact certificate and the numerical pipeline.
+I do not claim fourth-MUB absence on all of $K_6^{(3)}$ or on $N(6)$.
+Closing the gap to a theorem on $\mathcal{R}$ requires algebraic $B_3$ at points not CHM-equivalent to $D_0$; see~\cite{JaupiMethods2026} for the reproducibility record of that open obstacle.
+
+\section*{Acknowledgment}
+I thank the open-source developers of HomotopyContinuation.jl and the maintainers of the Karlsson CHM literature surveys.
+
+\appendices
+\section{Proofs of T1, T3, and T4}
+\label{sec:proofs}
+Theorem and Proof are used for T1 (Lemmas~\ref{lem:L1}--\ref{lem:L4}), T3, and T4.
+\input{proofs/gauge_structure}
+\input{proofs/fourth_mub_theorems}
+
+\begin{thebibliography}{99}
+
+\bibitem{JaupiMethods2026}
+A.~Jaupi, ``Computational Identification and Audit of Third-MUB Loci Within Karlsson's Three-Parameter Family,'' companion methods manuscript to the present theorems note, 2026.
+
+\bibitem{Zauner1999}
+G.~Zauner, ``Quantendesigns---Grundz\"uge einer nichtkommutativen Designtheorie,'' Ph.D. dissertation, Univ.\ Wien, 1999.
+
+\bibitem{Scott2010}
+A.~J.~Scott and M.~Grassl, ``SIC-POVMs and MUBs from algebraic number theory,'' \emph{J.\ Math.\ Phys.}, vol.~51, no.~4, p.~042203, 2010.
+
+\bibitem{Bengtsson2007}
+I.~Bengtsson, W.~Tadej, and K.~\.Zyczkowski, ``Five qubit entangled states, positive maps, and matrix pencils,'' \emph{Phys.\ Rev.\ A}, vol.~75, no.~3, p.~032319, 2007.
+
+\bibitem{BengtssonMUH2007}
+I.~Bengtsson, W.~Bruzda, {\AA}.~Ericsson, J.-{\AA}.~Larsson, W.~Tadej, and K.~\.Zyczkowski, ``Mutually unbiased bases and Hadamard matrices of order six,'' \emph{J.\ Math.\ Phys.}, vol.~48, no.~5, p.~052106, 2007. [Online]. Available: \url{https://arxiv.org/abs/quant-ph/0610161}
+
+\bibitem{Brierley2009}
+S.~Brierley and S.~Weigert, ``Constructing mutually unbiased bases in dimension six,'' \emph{Phys.\ Rev.\ A}, vol.~79, no.~5, p.~052316, 2009. [Online]. Available: \url{https://arxiv.org/abs/0901.4051}
+
+\bibitem{Brierley2008}
+S.~Brierley and S.~Weigert, ``Maximal sets of mutually unbiased quantum states in dimension six,'' \emph{Phys.\ Rev.\ A}, vol.~78, no.~4, p.~042312, 2008.
+
+\bibitem{Grassl2004}
+M.~Grassl, ``On SIC-POVMs and MUBs in dimension six,'' arXiv:quant-ph/0405174, 2004.
+
+\bibitem{Ivanovic1981}
+I.~D.~Ivanovi\'c, ``Geometrical description of quantal state determination,'' \emph{J.\ Phys.\ A}, vol.~14, no.~12, pp.~3241--3245, 1981.
+
+\bibitem{Wootters1989}
+W.~K.~Wootters and B.~D.~Fields, ``Optimal state-determination by mutually unbiased measurements,'' \emph{Ann.\ Phys.}, vol.~191, no.~2, pp.~363--381, 1989.
+
+\bibitem{Karlsson2011}
+A.~Karlsson, ``Three-parameter families of complex Hadamard matrices of order 6,'' arXiv:1003.4177, 2011.
+
+\bibitem{Dita2009}
+P.~Dita, ``Some results on the parametrization of complex Hadamard matrices of order 6,'' \emph{J.\ Phys.\ A}, vol.~42, no.~46, p.~465305, 2009.
+
+\bibitem{McNulty2026}
+D.~McNulty and S.~Weigert, ``Mutually Unbiased Bases in Composite Dimensions -- A Review,'' \emph{Quantum}, vol.~10, p.~2051, 2026.
+
+\bibitem{HomotopyContinuation}
+P.~Breiding and S.~Timme, ``HomotopyContinuation.jl: A package for homotopy continuation in Julia,'' in \emph{Proc.\ ICMS}, 2018. [Software] Version 2.22.
+
+\end{thebibliography}
+
+\end{document}

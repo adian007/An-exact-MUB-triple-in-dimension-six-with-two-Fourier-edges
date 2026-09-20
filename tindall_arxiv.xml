@@ -1,0 +1,1262 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/mvbN8ekAy7W2bKA2vqpkiQSmA9o</id>
+  <title>arXiv Query: search_query=au:"Joseph Tindall"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-09-18T10:32:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:%22Joseph+Tindall%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>37</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2306.14887v3</id>
+    <title>Efficient tensor network simulation of IBM's Eagle kicked Ising experiment</title>
+    <updated>2024-01-26T16:16:56Z</updated>
+    <link href="https://arxiv.org/abs/2306.14887v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.14887v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We report an accurate and efficient classical simulation of a kicked Ising quantum system on the heavy-hexagon lattice. A simulation of this system was recently performed on a 127 qubit quantum processor using noise mitigation techniques to enhance accuracy (Nature volume 618, p.~500-505 (2023)). Here we show that, by adopting a tensor network approach that reflects the geometry of the lattice and is approximately contracted using belief propagation, we can perform a classical simulation that is significantly more accurate and precise than the results obtained from the quantum processor and many other classical methods. We quantify the tree-like correlations of the wavefunction in order to explain the accuracy of our belief propagation-based approach. We also show how our method allows us to perform simulations of the system to long times in the thermodynamic limit, corresponding to a quantum computer with an infinite number of qubits. Our tensor network approach has broader applications for simulating the dynamics of quantum systems with tree-like correlations.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-26T17:54:08Z</published>
+    <arxiv:comment>17 Pages. 11 Figures. Updated to reflect final publication version</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>PRX Quantum 5, 010308 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Matt Fishman</name>
+    </author>
+    <author>
+      <name>Miles Stoudenmire</name>
+    </author>
+    <author>
+      <name>Dries Sels</name>
+    </author>
+    <arxiv:doi>10.1103/PRXQuantum.5.010308</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PRXQuantum.5.010308" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.17837v5</id>
+    <title>Gauging tensor networks with belief propagation</title>
+    <updated>2025-02-28T16:47:01Z</updated>
+    <link href="https://arxiv.org/abs/2306.17837v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.17837v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Effectively compressing and optimizing tensor networks requires reliable methods for fixing the latent degrees of freedom of the tensors, known as the gauge. Here we introduce a new algorithm for gauging tensor networks using belief propagation, a method that was originally formulated for performing statistical inference on graphical models and has recently found applications in tensor network algorithms. We show that this method is closely related to known tensor network gauging methods. It has the practical advantage, however, that existing belief propagation implementations can be repurposed for tensor network gauging, and that belief propagation is a very simple algorithm based on just tensor contractions so it can be easier to implement, optimize, and generalize. We present numerical evidence and scaling arguments that this algorithm is faster than existing gauging algorithms, demonstrating its usage on structured, unstructured, and infinite tensor networks. Additionally, we apply this method to improve the accuracy of the widely used simple update gate evolution algorithm.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-30T17:56:15Z</published>
+    <arxiv:comment>45 Pages. 11 Figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>SciPost Phys. 15, 222 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Matthew T. Fishman</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.15.6.222</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.15.6.222" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.01558v2</id>
+    <title>Confinement in the Transverse Field Ising model on the Heavy Hex lattice</title>
+    <updated>2024-03-05T14:42:10Z</updated>
+    <link href="https://arxiv.org/abs/2402.01558v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.01558v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the emergence of confinement in the transverse field Ising model on a decorated hexagonal lattice. Using an infinite tensor network state optimised with belief propagation we show how a quench from a broken symmetry state leads to striking nonthermal behaviour underpinned by persistent oscillations and saturation of the entanglement entropy. We explain this phenomenon by constructing a minimal model based on the confinement of elementary excitations, which take the form of various flavors of hadronic quasiparticles due to the unique structure of the lattice. Our model is in excellent agreement with our numerical results. For quenches to larger values of the transverse field and/or from non-symmetry broken states, our numerical results displays the expected signatures of thermalisation: a linear growth of entanglement entropy in time, propagation of correlations and the saturation of observables to their thermal averages. These results provide a physical explanation for the unexpected simulability of a recent large scale quantum computation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-02T16:50:20Z</published>
+    <arxiv:comment>12 Pages, 7 Figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Dries Sels</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.05693v4</id>
+    <title>Dynamics of disordered quantum systems with two- and three-dimensional tensor networks</title>
+    <updated>2026-05-27T20:25:50Z</updated>
+    <link href="https://arxiv.org/abs/2503.05693v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.05693v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large scale quantum annealing dynamics of Ising spin glasses were recently implemented on D-Wave's Advantage$2$ system on a range of lattices. Following extensive comparison to existing numerical methods, these experiments were claimed to be beyond the reach of classical computation. Here, we simulate these spin glass models with lattice-specific tensor networks, using belief propagation (BP) to keep up with the entanglement generated during the time evolution and then extracting expectation values with more sophisticated variants of BP. We find that state-of-the-art accuracies can be achieved with modest computational resources. Moreover, our results are scalable in both two and three dimensions, which we leverage to verify universal Kibble-Zurek physics on systems involving hundreds of qubits.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-07T18:58:03Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Science 392, 868-872 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Antonio Mello</name>
+    </author>
+    <author>
+      <name>Matt Fishman</name>
+    </author>
+    <author>
+      <name>Miles Stoudenmire</name>
+    </author>
+    <author>
+      <name>Dries Sels</name>
+    </author>
+    <arxiv:doi>10.1126/science.adx2728</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1126/science.adx2728" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.06585v4</id>
+    <title>On the generality of symmetry breaking and dissipative freezing in quantum trajectories</title>
+    <updated>2022-09-22T16:42:08Z</updated>
+    <link href="https://arxiv.org/abs/2204.06585v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.06585v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, several studies involving open quantum systems which possess a strong symmetry have observed that every individual trajectory in the Monte Carlo unravelling of the master equation will dynamically select a specific symmetry sector to freeze into in the long-time limit. This phenomenon has been termed dissipative freezing, and in this paper we argue, by presenting several simple mathematical perspectives on the problem, that it is a general consequence of the presence of a strong symmetry in an open system with only a few exceptions. Using a number of example systems we illustrate these arguments, uncovering an explicit relationship between the spectral properties of the Liouvillian in off-diagonal symmetry sectors and the time it takes for freezing to occur. In the limiting case that eigenmodes with purely imaginary eigenvalues are manifest in these sectors, freezing fails to occur. Such modes indicate the preservation of information and coherences between symmetry sectors of the system and can lead to phenomena such as non-stationarity and synchronisation. The absence of freezing at the level of a single quantum trajectory provides a simple, computationally efficient way of identifying these traceless modes.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-13T18:02:06Z</published>
+    <arxiv:comment>Version 4 (mostly grammatical changes from previous version): 21 Pages, 4 Figures, 1 Table</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <author>
+      <name>Carlos Sánchez Muñoz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.04111v3</id>
+    <title>A Quantum Information Perspective on Many-Body Dispersive Forces</title>
+    <updated>2025-09-20T14:41:33Z</updated>
+    <link href="https://arxiv.org/abs/2407.04111v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.04111v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite its ubiquity, the quantum many-body properties of dispersion remain poorly understood. Here, we investigate the entanglement distribution in assemblies of quantum Drude oscillators, minimal models for dispersion-bound systems. We establish an analytic relationship between entanglement and correlation energy and show how entanglement monogamy determines whether many-body corrections to the pair potential are attractive, repulsive, or zero. These findings, demonstrated in trimers and extended lattices, apply in more general chemical environments where dispersion coexists with other cohesive forces.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-04T18:30:40Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Physical Review Letters 135.11 (2025): 110403</arxiv:journal_ref>
+    <author>
+      <name>Christopher Willby</name>
+    </author>
+    <author>
+      <name>Martin Kiffner</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Jason Crain</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <arxiv:doi>10.1103/f7yf-mxd5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/f7yf-mxd5" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.05749v2</id>
+    <title>Mott Transition and Volume Law Entanglement with Neural Quantum States</title>
+    <updated>2024-12-07T16:26:12Z</updated>
+    <link href="https://arxiv.org/abs/2311.05749v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.05749v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The interplay between delocalisation and repulsive interactions can cause electronic systems to undergo a Mott transition between a metal and an insulator. Here we use neural network hidden fermion determinantal states (HFDS) to uncover this transition in the disordered, fully-connected Hubbard model. Whilst dynamical mean-field theory (DMFT) provides exact solutions to physical observables of the model in the thermodynamic limit, our method allows us to directly access the wave function for finite system sizes well beyond the reach of exact diagonalisation. We demonstrate how HFDS are able to obtain more accurate results in the metallic regime and in the vicinity of the transition than calculations based on a Matrix Product State (MPS) ansatz, for which the volume law of entanglement exhibited by the system is prohibitive. We use the HFDS method to calculate the energy and double occupancy, the quasi-particle weight and the energy gap and, importantly, the amplitudes of the wave function which provide a novel insight into this model. Our work paves the way for the study of strongly correlated electron systems with neural quantum states.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-09T21:26:00Z</published>
+    <arxiv:comment>Main Text: 5 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 134, 076502 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Chloé Gauvin-Ndiaye</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Javier Robledo Moreno</name>
+    </author>
+    <author>
+      <name>Antoine Georges</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.134.076502</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.134.076502" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.04417v2</id>
+    <title>Analytical Solution for the Steady States of the Driven Hubbard model</title>
+    <updated>2021-01-28T16:40:42Z</updated>
+    <link href="https://arxiv.org/abs/2011.04417v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.04417v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Under the action of coherent periodic driving a generic quantum system will undergo Floquet heating and continously absorb energy until it reaches a featureless thermal state. The phase-space constraints induced by certain symmetries can, however, prevent this and allow the system to dynamically form robust steady states with off-diagonal long-range order. In this work, we take the Hubbard model on an arbitrary lattice with arbitrary filling and, by simultaneously diagonalising the two possible SU(2) symmetries of the system, we analytically construct the correlated steady states for different symmetry classes of driving. This construction allows us to make verifiable, quantitative predictions about the long-range particle-hole and spin-exchange correlations that these states can possess. In the case when both SU(2) symmetries are preserved in the thermodynamic limit we show how the driving can be used to form a unique condensate which simultaneously hosts particle-hole and spin-wave order.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-09T13:39:37Z</published>
+    <arxiv:comment>9 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 103, 035146 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Frank Schlawin</name>
+    </author>
+    <author>
+      <name>Michael A. Sentef</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.103.035146</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.103.035146" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.07924v2</id>
+    <title>Quantum Physics in Connected Worlds</title>
+    <updated>2022-12-02T20:30:18Z</updated>
+    <link href="https://arxiv.org/abs/2205.07924v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.07924v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Theoretical research into many-body quantum systems has mostly focused on regular structures which have a small, simple unit cell and where a vanishingly small number of pairs of the constituents directly interact. Motivated by advances in control over the pairwise interactions in many-body simulators, we determine the fate of spin systems on more general, arbitrary graphs. Placing the minimum possible constraints on the underlying graph, we prove how, with certainty in the thermodynamic limit, such systems behave like a single collective spin. We thus understand the emergence of complex many-body physics as dependent on `exceptional', geometrically constrained structures such as the low-dimensional, regular ones found in nature. Within the space of dense graphs we identify hitherto unknown exceptions via their inhomogeneity and observe how complexity is heralded in these systems by entanglement and highly non-uniform correlation functions. Our work paves the way for the discovery and exploitation of a whole class of geometries which can host uniquely complex phases of matter.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-16T18:18:48Z</published>
+    <arxiv:comment>Published Version</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum physics in connected worlds. Nat Commun 13, 7445 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Amy Searle</name>
+    </author>
+    <author>
+      <name>Abdulla Alhajri</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-022-35090-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-022-35090-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.06744v2</id>
+    <title>Non-stationary coherent quantum many-body dynamics through dissipation</title>
+    <updated>2019-03-28T18:08:05Z</updated>
+    <link href="https://arxiv.org/abs/1804.06744v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.06744v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The assumption that quantum systems relax to a stationary state in the long-time limit underpins statistical physics and much of our intuitive understanding of scientific phenomena. For isolated systems this follows from the eigenstate thermalization hypothesis. When an environment is present the expectation is that all of phase space is explored, eventually leading to stationarity. Notable exceptions are decoherence-free subspaces that have important implications for quantum technologies and have so far only been studied for systems with a few degrees of freedom. Here we identify simple and generic conditions for dissipation to prevent a quantum many-body system from ever reaching a stationary state. We go beyond dissipative quantum state engineering approaches towards controllable long-time non-stationarity typically associated with macroscopic complex systems. This coherent and oscillatory evolution constitutes a dissipative version of a quantum time-crystal. We discuss the possibility of engineering such complex dynamics with fermionic ultracold atoms in optical lattices.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-18T14:07:47Z</published>
+    <arxiv:comment>Main text in MS Word (10 pages, 4 figures) and Supplementary material in TeX (10 pages, 2 figures). Main text PDF embedded in TeX. Version as accepted by Nature Communications</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Nature Communications 10, 1730 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Berislav Buca</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-019-09757-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-019-09757-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.00731v2</id>
+    <title>The Thermodynamic Limit of Spin Systems on Random Graphs</title>
+    <updated>2024-01-16T15:25:19Z</updated>
+    <link href="https://arxiv.org/abs/2303.00731v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.00731v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We utilise the graphon--a continuous mathematical object which represents the limit of convergent sequences of dense graphs--to formulate a general, continuous description of quantum spin systems in thermal equilibrium when the average co-ordination number grows extensively in the system size. Specifically, we derive a closed set of coupled non-linear Fredholm integral equations which govern the properties of the system. The graphon forms the kernel of these equations and their solution yields exact expressions for the macroscopic observables in the system in the thermodynamic limit. We analyse these equations for both quantum and classical spin systems, recovering known results and providing novel analytical solutions for a range of more complex cases. We supplement this with controlled, finite-size numerical calculations using Monte-Carlo and Tensor Network methods, showing their convergence towards our analytical results with increasing system size.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-27T11:56:20Z</published>
+    <arxiv:comment>12 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. Res. 6 (1 Jan. 2024)</arxiv:journal_ref>
+    <author>
+      <name>Amy Searle</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevResearch.6.013011</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevResearch.6.013011" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.05080v2</id>
+    <title>Non-stationary dynamics and dissipative freezing in squeezed superradiance</title>
+    <updated>2019-09-02T14:59:32Z</updated>
+    <link href="https://arxiv.org/abs/1903.05080v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.05080v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we study the driven-dissipative dynamics of a coherently-driven spin ensemble with a squeezed, superradiant decay. This decay consists of a sum of both raising and lowering collective spin operators with a tunable weight. The model presents different critical non-equilibrium phases with a gapless Liouvillian that are associated to particular symmetries and that give rise to distinct kinds of non-ergodic dynamics. In Ref. [1] we focus on the case of a strong-symmetry and use this model to introduce and discuss the effect of dissipative freezing, where, regardless of the system size, stochastic quantum trajectories initialized in a superposition of different symmetry sectors always select a single one of them and remain there for the rest of the evolution. Here, we deepen this analysis and study in more detail the other type of non-ergodic physics present in the model, namely, the emergence of non-stationary dynamics in the thermodynamic limit. We complete our description of squeezed superradiance by analysing its metrological properties in terms of spin squeezing and by analysing the features that each of these critical phases imprint on the light emitted by the system.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-11T18:00:01Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Carlos Sánchez Muñoz</name>
+    </author>
+    <author>
+      <name>Berislav Buča</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Alejandro González-Tudela</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <author>
+      <name>Diego Porras</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.12185v1</id>
+    <title>Stationary State Degeneracy of Open Quantum Systems with Non-Abelian Symmetries</title>
+    <updated>2019-12-27T15:50:33Z</updated>
+    <link href="https://arxiv.org/abs/1912.12185v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.12185v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the null space degeneracy of open quantum systems with multiple non-Abelian, strong symmetries. By decomposing the Hilbert space representation of these symmetries into an irreducible representation involving the direct sum of multiple, commuting, invariant subspaces we derive a tight lower bound for the stationary state degeneracy. We apply these results within the context of open quantum many-body systems, presenting three illustrative examples: a fully-connected quantum network, the XXX Heisenberg model and the Hubbard model. We find that the derived bound, which scales at least cubically in the system size the $SU(2)$ symmetric cases, is often saturated. Moreover, our work provides a theory for the systematic block-decomposition of a Liouvillian with non-Abelian symmetries, reducing the computational difficulty involved in diagonalising these objects and exposing a natural, physical structure to the steady states - which we observe in our examples.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-27T15:50:33Z</published>
+    <arxiv:comment>19 pages, 3 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>J. Phys. A: Math. Theor. 53, 215304 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Zhao Zhang</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Jordi Mur-Petit</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <author>
+      <name>Berislav Buča</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/ab88e3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/ab88e3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.12837v2</id>
+    <title>Quantum Synchronisation Enabled by Dynamical Symmetries and Dissipation</title>
+    <updated>2020-01-29T11:43:34Z</updated>
+    <link href="https://arxiv.org/abs/1907.12837v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.12837v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In nature, instances of synchronisation abound across a diverse range of environments. In the quantum regime, however, synchronisation is typically observed by identifying an appropriate parameter regime in a specific system. In this work we show that this need not be the case, identifying conditions which, when satisfied, guarantee that the individual constituents of a generic open quantum system will undergo completely synchronous limit cycles which are, to first order, robust to symmetry-breaking perturbations. We then describe how these conditions can be satisfied by the interplay between several elements: interactions, local dephasing and the presence of a strong dynamical symmetry - an operator which guarantees long-time non-stationary dynamics. These elements cause the formation of entanglement and off-diagonal long-range order which drive the synchronised response of the system. To illustrate these ideas we present two central examples: a chain of quadratically dephased spin-1s and the many-body charge-dephased Hubbard model. In both cases perfect phase-locking occurs throughout the system, regardless of the specific microscopic parameters or initial states. Furthermore, when these systems are perturbed, their non-linear responses elicit long-lived signatures of both phase and frequency-locking.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.AO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-30T11:29:53Z</published>
+    <arxiv:comment>Main Text: 10 Pages, 8 Figures. Supplemental: 4 Pages, 2 Figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>New Journal of Physics Vol. 20, January 2020</arxiv:journal_ref>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Carlos Sánchez Muñoz</name>
+    </author>
+    <author>
+      <name>Berislav Buča</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <arxiv:doi>10.1088/1367-2630/ab60f5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1367-2630/ab60f5" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1902.05012v2</id>
+    <title>Heating-Induced Long-Range $η$-Pairing in the Hubbard Model</title>
+    <updated>2019-07-19T11:01:56Z</updated>
+    <link href="https://arxiv.org/abs/1902.05012v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1902.05012v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show how, upon heating the spin degrees of freedom of the Hubbard model to infinite temperature, the symmetries of the system allow the creation of steady-states with long-range correlations between $η$-pairs. With induce this heating with either dissipation or periodic driving and evolve the system towards a nonequilibrium steady state, a process which melts all spin order in the system. The steady state is identical in both cases and displays distance-invariant off-diagonal $η$-correlations. These correlations were first recognised in the superconducting eigenstates in Yang's seminal paper [Phys. Rev. Lett 63, 2144 (1989)], which are a subset of our steady states. We show that our results are a consequence of symmetry properties and entirely independent of the microscopic details of the model and the heating mechanism.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-02-13T17:10:57Z</published>
+    <arxiv:comment>Main Text: 6 Pages, 3 Figures. Supplemental Material: 4 Pages, 3 Figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 123, 030603 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Berislav Buca</name>
+    </author>
+    <author>
+      <name>Jonathan R. Coulthard</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.123.030603</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.123.030603" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.24760v1</id>
+    <title>Contracting Tensor Networks with Generalized Belief Propagation</title>
+    <updated>2026-04-27T17:59:03Z</updated>
+    <link href="https://arxiv.org/abs/2604.24760v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.24760v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent years have seen a growing interest in the use of belief propagation - an algorithm originally introduced for performing statistical inference on graphical models - for approximate, but highly efficient, tensor network contraction. Here, we detail how to apply generalized belief propagation (GBP) - where messages are passed within a hierarchy of overlapping regions of the tensor network - to approximately contract tensor networks and obtain accurate results. The original belief propagation algorithm is a corner case of this approach, corresponding to a particularly simple choice of regions of the tensor network. We implement the GBP algorithm for a number of different region choices on a range of two- and three-dimensional, infinite and finite tensor networks, solving the corresponding fixed point equations both numerically and, in certain tractable cases, analytically. Our examples include calculating the partition function of the fully frustrated Ising model, computing the ground state degeneracy of three-dimensional ice models, measuring observables on the deformed AKLT quantum state and evaluating the norm of randomly generated tensor network states.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-27T17:59:03Z</published>
+    <arxiv:comment>Main text: 13 pages, 5 figures. Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Grace M. Sommers</name>
+    </author>
+    <author>
+      <name>Hilbert Kappen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.03572v4</id>
+    <title>Compressing multivariate functions with tree tensor networks</title>
+    <updated>2026-08-17T13:40:49Z</updated>
+    <link href="https://arxiv.org/abs/2410.03572v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.03572v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tensor networks are a compressed format for multi-dimensional data. One dimensional tensor networks -- often referred to as tensor trains (TT) or matrix product states (MPS) -- are increasingly being used as a numerical ansatz for continuum functions by ``quantizing'' the inputs into discrete binary digits. Here we demonstrate the power of more general tree tensor networks (TTNs) for this purpose. We provide direct constructions of a number of elementary functions as generic tree tensor networks and interpolative constructions for more complicated functions via a generalization of the tensor cross interpolation algorithm. For a range of multi-dimensional functions we show how more structured tree tensor networks offer a significantly more efficient ansatz than the commonly used tensor train. Finally, we demonstrate how the methods introduced in this work can be used to realize a TTN-based solver for multi-dimensional, non-linear Fredholm equations.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-04T16:20:52Z</published>
+    <arxiv:comment>Revised Version</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>E. Miles Stoudenmire</name>
+    </author>
+    <author>
+      <name>Ryan Levy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.03228v1</id>
+    <title>Belief Propagation and Tensor Network Expansions for Many-Body Quantum Systems: Rigorous Results and Fundamental Limits</title>
+    <updated>2026-04-03T17:59:09Z</updated>
+    <link href="https://arxiv.org/abs/2604.03228v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.03228v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Belief propagation (BP) provides a scalable heuristic for contracting tensor networks on loopy graphs, but its success in quantum many-body settings has largely rested on empirical evidence. Developing upon a recently introduced cluster-expansion framework for tensor networks, we rigorously study the applicability of BP to many-body quantum systems. For a state represented as a PEPS satisfying a ``loop-decay" condition, we prove that BP supplemented by cluster corrections approximates local observables with exponentially small relative error, and we give explicit formulas expressing local expectation values as BP predictions dressed by connected clusters intersecting the observable region. This representation establishes a direct link between cluster corrections and physical correlation functions. As a result, we show that ``loop-decay" \emph{necessarily implies} exponential decay of connected correlations, yielding sharp, rigorous criteria for when BP can and cannot succeed, and ruling out its validity at critical points. Numerical simulations of the two- and three-dimensional transverse field Ising model at zero and finite temperature confirm our analytical predictions, demonstrating quantitative accuracy deep in gapped phases and systematic failure near criticality.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-03T17:59:09Z</published>
+    <arxiv:comment>13 pages main text + supplementary, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Siddhant Midha</name>
+    </author>
+    <author>
+      <name>Grace M. Sommers</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Dmitry A. Abanin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18053v2</id>
+    <title>A Complete Classification of Complex Hadamard Matrices of Order Six</title>
+    <updated>2026-08-28T15:28:30Z</updated>
+    <link href="https://arxiv.org/abs/2608.18053v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18053v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Complex Hadamard matrices encode perfectly balanced unitary transformations. Their classification is complete through order five, but order six -- the first dimension in which several continuous families coexist with an isolated solution -- has remained open for decades. Here, we give a complete and exact finite-incidence classification of order-six complex Hadamard matrices up to standard equivalence. We supply the global step missing from Szöllősi's dilation method, which allows us to prove an even stronger version of his conjecture: every complex Hadamard matrix of order six can be recovered algebraically from a suitable, dephased $3 \times 3$ corner defined by four initial phases. We then describe the geometry of the reconstruction from these phases and show that, except for Tao's isolated matrix and a single explicit Karlsson matrix, every class admits a representative obtained by solving one quadratic and one cubic equation in both the horizontal and vertical directions. Our work resolves the classification problem and provides a rigorous framework for further investigating order-six Hadamards, with applications to balanced six-mode interferometers and the study of mutually unbiased bases.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T17:46:58Z</published>
+    <arxiv:comment>Updated figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mateo Cárdenes Wuttig</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.04891v2</id>
+    <title>Dynamical quantum phase transitions on random networks</title>
+    <updated>2025-06-23T14:54:45Z</updated>
+    <link href="https://arxiv.org/abs/2503.04891v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.04891v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate two types of dynamical quantum phase transitions (DQPTs) in the transverse field Ising model on ensembles of Erdős-Rényi networks of size $N$. These networks consist of vertices connected randomly with probability $p$ ($0&lt;p\leq 1$). Using analytical derivations and numerical techniques, we compare the characteristics of the transitions for $p&lt;1$ against the fully connected network ($p=1$). We analytically show that the overlap between the wave function after a quench and the wave function of the fully connected network after the same quench deviates by at most $\mathcal{O}(N^{-1/2})$. For a DQPT defined by an order parameter, the critical point remains unchanged for all $p$. For a DQPT defined by the rate function of the Loschmidt echo, we find that the rate function deviates from the $p=1$ limit near vanishing points of the overlap with the initial state, while the critical point remains independent for all $p$. Our analysis suggests that this divergence arises from persistent non-trivial global many-body correlations absent in the $p=1$ limit.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-06T19:00:01Z</published>
+    <arxiv:comment>26 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>New J. Phys. 27 064506 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Tomohiro Hashizume</name>
+    </author>
+    <author>
+      <name>Felix Herbort</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <arxiv:doi>10.1088/1367-2630/ade07b</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1367-2630/ade07b" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11424v2</id>
+    <title>Simulating and Sampling from Quantum Circuits with 2D Tensor Networks</title>
+    <updated>2025-09-14T22:18:46Z</updated>
+    <link href="https://arxiv.org/abs/2507.11424v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.11424v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Classical simulations of quantum circuits play a vital role in the development of quantum computers and for taking the temperature of the field. Here, we classically simulate various physically-motivated circuits using 2D tensor network ansätze for the many-body wavefunction which match the geometry of the underlying quantum processor. We then employ a generalized version of the boundary Matrix Product State contraction algorithm to controllably generate samples from the resultant tensor network states. Our approach allows us to systematically converge both the quality of the final state and the samples drawn from it to the true distribution defined by the circuit, with GPU hardware providing us with significant speedups over CPU hardware. With these methods, we simulate the largest local unitary Jastrow ansatz circuit taken from recent IBM experiments to numerical precision. We also study a domain-wall quench in a two-dimensional discrete-time Heisenberg model on large heavy-hex and rotated square lattices, which reflect IBM's and Google's latest quantum processors respectively. We observe a rapid buildup of complex loop correlations on the Google Willow geometry which significantly impact the local properties of the system. Meanwhile, we find loop correlations build up extremely slowly on heavy-hex processors and have almost negligible impact on the local properties of the system, even at large circuit depths. Our results underscore the role the geometry of the quantum processor plays in classical simulability.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.other" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-15T15:50:02Z</published>
+    <arxiv:comment>13 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Manuel S. Rudolph</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.05224v2</id>
+    <title>Quantum-Inspired Algorithm for Classical Spin Hamiltonians Based on Matrix Product Operators</title>
+    <updated>2026-02-06T02:32:23Z</updated>
+    <link href="https://arxiv.org/abs/2602.05224v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.05224v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a tensor-network (TN) approach for solving classical optimization problems that is inspired by spectral filtering and sampling on quantum states. We first shift and scale an Ising Hamiltonian of the cost function so that all eigenvalues become non-negative and the ground states correspond to the the largest eigenvalues, which are then amplified by power iteration. We represent the transformed Hamiltonian as a matrix product operator (MPO) and form an immense power of this object via truncated MPO-MPO contractions, embedding the resulting operator into a matrix product state for sampling in the computational basis. In contrast to the density-matrix renormalization group, our approach provides a straightforward route to systematic improvement by increasing the bond dimension and is better at avoiding local minima. We also study the performance of this power method in the context of a higher-order Ising Hamiltonian on a heavy-hexagonal lattice, making a comparison with simulated annealing. These results highlight the potential of quantum-inspired algorithms for solving optimization problems and provide a baseline for assessing and developing quantum algorithms.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-05T02:29:37Z</published>
+    <arxiv:comment>15pages, 3 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ryo Watanabe</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Shohei Miyakoshi</name>
+    </author>
+    <author>
+      <name>Hiroshi Ueda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07609v1</id>
+    <title>Finite-temperature formation of magnetic plateaus and simplex liquid states on the frustrated ruby lattice</title>
+    <updated>2026-05-29T15:11:54Z</updated>
+    <link href="https://arxiv.org/abs/2606.07609v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07609v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Geometric frustration in quantum systems can stabilize unconventional phases of matter that avoid traditional magnetic ordering at low temperatures. Here, we observe this phenomenon while mapping out the finite temperature phase diagram of the spin-1/2 Heisenberg antiferromagnet on the ruby lattice with next-nearest-neighbor interactions. Using an infinite tensor network state (iTNS) optimized and measured with belief propagation (BP) and corrections to BP, we observe the low temperature formation of stable magnetic plateaus at various magnetic field strengths. We find these plateaus host a novel `simplex liquid state' -- a disordered phase involving strongly paired spin simplices that retains non-zero residual entropy due to an exponentially large subspace of crystalline configurations. We accurately quantify the energy gap associated with these states and show that, as the temperature of the system is lowered, it does not go through a phase transition to reach them: the heat capacity remains finite and continuous at all observed temperatures. Our work demonstrates how BP-based tensor network techniques provide a powerful route to understanding frustrated quantum magnets at finite temperature.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T15:11:54Z</published>
+    <arxiv:comment>Main text: 6 pages, 4 figures. Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>Antonio Francesco Mello</name>
+    </author>
+    <author>
+      <name>E. Miles Stoudenmire</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.25998v1</id>
+    <title>Observable Estimation in the Absence of Classical Verification</title>
+    <updated>2026-07-28T17:14:26Z</updated>
+    <link href="https://arxiv.org/abs/2607.25998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.25998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The predictive success of quantum mechanics underpins many areas of modern science, even as the exact simulation of large, interacting quantum systems remains beyond the reach of classical computation. This success has been enabled by the remarkable advancement of scalable numerical approximation methods, which often demonstrate practical accuracy despite the absence of formal guarantees. As quantum simulation pushes into regimes where these approximations struggle, a fundamental challenge arises: How can quantum outcomes be trusted when reliable classical benchmarks are unavailable? Here, we establish a framework for the independent validation of quantum estimates in this setting and present evidence that they provide the most credible result among several considered methods, in the absence of an immediately accessible ground-truth solution. We apply our framework to the semi-scrambling dynamics of a physical model that strains several leading classical simulation methods yet remains experimentally accessible, in part through our introduction of the \textit{operator Loschmidt echo}. We systematically design a series of experiments using quantum heuristics that, taken together, test the underlying assumptions and provide strong confidence in the observable estimates obtained from the quantum computer. We then show how this framework can be extended to place accuracy bounds on quantum estimates via careful characterization and manipulation of the device noise, transforming the problem of validating the observable estimation to validating the noise model. These results establish a route towards trusted quantum computation for scientific discovery, independent of classical verification.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T17:14:26Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Samantha V. Barron</name>
+    </author>
+    <author>
+      <name>Bradley Mitchell</name>
+    </author>
+    <author>
+      <name>Vinay Tripathi</name>
+    </author>
+    <author>
+      <name>Francesco Grieco</name>
+    </author>
+    <author>
+      <name>Ilan Rosen</name>
+    </author>
+    <author>
+      <name>Francesca Pietracaprina</name>
+    </author>
+    <author>
+      <name>Davide Materia</name>
+    </author>
+    <author>
+      <name>Alireza Seif</name>
+    </author>
+    <author>
+      <name>Darvin Wanisch</name>
+    </author>
+    <author>
+      <name>Ramón L. Panadés-Barrueta</name>
+    </author>
+    <author>
+      <name>Ewout van den Berg</name>
+    </author>
+    <author>
+      <name>Jay-U Chung</name>
+    </author>
+    <author>
+      <name>Andrew Eddins</name>
+    </author>
+    <author>
+      <name>Sam Ferracin</name>
+    </author>
+    <author>
+      <name>Guillermo García-Pérez</name>
+    </author>
+    <author>
+      <name>John Goold</name>
+    </author>
+    <author>
+      <name>Luke C. G. Govia</name>
+    </author>
+    <author>
+      <name>Holger Haas</name>
+    </author>
+    <author>
+      <name>Ian Hincks</name>
+    </author>
+    <author>
+      <name>Jesse C. Hoke</name>
+    </author>
+    <author>
+      <name>Zoë Holmes</name>
+    </author>
+    <author>
+      <name>Su-un Lee</name>
+    </author>
+    <author>
+      <name>Youngseok Kim</name>
+    </author>
+    <author>
+      <name>Swarnadeep Majumder</name>
+    </author>
+    <author>
+      <name>Sabrina Maniscalco</name>
+    </author>
+    <author>
+      <name>Simone Montangero</name>
+    </author>
+    <author>
+      <name>Daniel Puzzuoli</name>
+    </author>
+    <author>
+      <name>Tomaž Prosen</name>
+    </author>
+    <author>
+      <name>James Raftery</name>
+    </author>
+    <author>
+      <name>Ricardo Rivera Cardoso</name>
+    </author>
+    <author>
+      <name>Max Rossmannek</name>
+    </author>
+    <author>
+      <name>Manuel Rudolph</name>
+    </author>
+    <author>
+      <name>Brendan Saxberg</name>
+    </author>
+    <author>
+      <name>Liran Shirizly</name>
+    </author>
+    <author>
+      <name>Karthik Siva</name>
+    </author>
+    <author>
+      <name>Joshua Skanes-Norman</name>
+    </author>
+    <author>
+      <name>Ilaria Siloi</name>
+    </author>
+    <author>
+      <name>Kevin C Smith</name>
+    </author>
+    <author>
+      <name>Boris Sokolov</name>
+    </author>
+    <author>
+      <name>Maika Takita</name>
+    </author>
+    <author>
+      <name>Yanting Teng</name>
+    </author>
+    <author>
+      <name>Mao Tian Tan</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Zoltán Zimborás</name>
+    </author>
+    <author>
+      <name>Matteo A. C. Rossi</name>
+    </author>
+    <author>
+      <name>Minh C. Tran</name>
+    </author>
+    <author>
+      <name>Sergei N. Filippov</name>
+    </author>
+    <author>
+      <name>Abhinav Kandala</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1908.11862v1</id>
+    <title>Symmetries and Conservation Laws in Quantum Trajectories: Dissipative Freezing</title>
+    <updated>2019-08-30T17:45:05Z</updated>
+    <link href="https://arxiv.org/abs/1908.11862v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1908.11862v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In driven-dissipative systems, the presence of a strong symmetry guarantees the existence of several steady states belonging to different symmetry sectors. Here we show that, when a system with a strong symmetry is initialized in a quantum superposition involving several of these sectors, each individual stochastic trajectory will randomly select a single one of them and remain there for the rest of the evolution. Since a strong symmetry implies a conservation law for the corresponding symmetry operator on the ensemble level, this selection of a single sector from an initial superposition entails a breakdown of this conservation law at the level of individual realizations. Given that such a superposition is impossible in a classical, stochastic trajectory, this is a a purely quantum effect with no classical analogue. Our results show that a system with a closed Liouvillian gap may exhibit, when monitored over a single run of an experiment, a behaviour completely opposite to the usual notion of dynamical phase coexistence and intermittency, which are typically considered hallmarks of a dissipative phase transition. We discuss our results with a simple, realistic model of squeezed superradiance.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-08-30T17:45:05Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. A 100, 042113 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Carlos Sánchez Muñoz</name>
+    </author>
+    <author>
+      <name>Berislav Buca</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Alejandro González-Tudela</name>
+    </author>
+    <author>
+      <name>Dieter Jaksch</name>
+    </author>
+    <author>
+      <name>Diego Porras</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.100.042113</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.100.042113" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.19340v1</id>
+    <title>Simulating dynamics of the two-dimensional transverse-field Ising model: a comparative study of large-scale classical numerics</title>
+    <updated>2025-11-24T17:39:29Z</updated>
+    <link href="https://arxiv.org/abs/2511.19340v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.19340v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The quantum dynamics of many-qubit systems is an outstanding problem that has recently driven significant advances in both numerical methods and programmable quantum processing units. In this work, we employ a comprehensive toolbox of state-of-the-art numerical approaches to classically simulate the dynamics of the two-dimensional transverse field Ising model. Our methods include three different tensor network techniques -- matrix product states, tree-tensor networks, and two-dimensional tensor-networks under the belief propagation approximation -- as well as time-dependent variational Monte Carlo with Neural Quantum States. We focus on two paradigmatic dynamical protocols: (i) quantum annealing through a critical point and (ii) post-quench dynamics. Our extensive results show the quantitative predictions of various state-of-the-art numerical methods providing a benchmark for future numerical investigations and experimental studies with the aim to push the limitations on classical and QPUs. In particular, our work connects classical simulability to different regimes associated with quantum dynamics in Rydberg arrays - namely, quasi-adiabatic dynamics, the Kibble-Zurek mechanism, and quantum quenches.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-24T17:39:29Z</published>
+    <arxiv:comment>17 (+11) pages, 10 (+10) figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Research 8, 023311 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Joseph Vovrosh</name>
+    </author>
+    <author>
+      <name>Sergi Julià-Farré</name>
+    </author>
+    <author>
+      <name>Wladislaw Krinitsin</name>
+    </author>
+    <author>
+      <name>Michael Kaicher</name>
+    </author>
+    <author>
+      <name>Fergus Hayes</name>
+    </author>
+    <author>
+      <name>Emmanuel Gottlob</name>
+    </author>
+    <author>
+      <name>Augustine Kshetrimayum</name>
+    </author>
+    <author>
+      <name>Kemal Bidzhiev</name>
+    </author>
+    <author>
+      <name>Simon B. Jäger</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Constantin Dalyac</name>
+    </author>
+    <author>
+      <name>Tiago Mendes-Santos</name>
+    </author>
+    <author>
+      <name>Alexandre Dauphin</name>
+    </author>
+    <arxiv:doi>10.1103/x4gs-g63p</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/x4gs-g63p" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.05598v1</id>
+    <title>Matrix Product Belief Propagation</title>
+    <updated>2026-09-04T18:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2609.05598v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.05598v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce "matrix product belief propagation" (MP-BP) as a controlled method for the approximate contraction of two-dimensional tensor networks and graphical models, which generically leads to a quadratic reduction of errors relative to existing methods: at similar computational effort, the number of accurate digits is asymptotically doubled. For infinite systems, MP-BP can be understood as a practical implementation of Baxter's corner-transfer-matrix method; for reflection-symmetric networks, it further coincides with the boundary matrix-product-state and corner-transfer-matrix renormalization group algorithms as conventionally implemented. In the limit of unit matrix-product rank, MP-BP is equivalent to belief propagation, and more generally, can be understood as a generalization of BP in which the "messages" live on surfaces and are assumed to have a matrix-product factorization. We further extend the quadratic improvement to the computation of expectation values, and numerically demonstrate the qualitatively improved convergence for a variety of classical and quantum 2D tensor network problems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-04T18:00:00Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Gabriel Woolls</name>
+    </author>
+    <author>
+      <name>Shahin Jahanbani</name>
+    </author>
+    <author>
+      <name>Adarsh Pashikanti</name>
+    </author>
+    <author>
+      <name>Matthew T. Fishman</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Michael P. Zaletel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.09406v1</id>
+    <title>Melting and freeze-out conditions of hadrons in a thermal medium</title>
+    <updated>2017-10-25T18:16:58Z</updated>
+    <link href="https://arxiv.org/abs/1710.09406v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.09406v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe two independent frameworks which provide unambiguous determinations of the deconfinement and the decoupling conditions of a relativistic gas at finite temperature. First, we use the Polyakov-Nambu-Jona-Lasinio model to compute meson and baryon masses at finite temperature and determine their melting temperature as a function of their strangeness content. Second, we analyze a simple expanding gas within a Friedmann-Robertson-Walker metric, which admits a well-defined decoupling mechanism. We examine the decoupling time as a function of the particle mass and cross section. We find evidences of an inherent dependence of the hadronization and freeze-out conditions on flavor, and on mass and cross section, respectively.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-25T18:16:58Z</published>
+    <arxiv:comment>4 pages, 3 figures. Contribution to the proceedings of the 17th International Conference on Strangeness in Quark Matter (SQM2017), Utrecht, the Netherlands, 10-15 July 2017</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Juan M. Torres-Rincon</name>
+    </author>
+    <author>
+      <name>Joerg Aichelin</name>
+    </author>
+    <author>
+      <name>Hannah Petersen</name>
+    </author>
+    <author>
+      <name>Jean-Bernard Rose</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <arxiv:doi>10.1051/epjconf/201817114007</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1051/epjconf/201817114007" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.23419v1</id>
+    <title>Probabilistic Computing Optimization of Complex Spin-Glass Topologies</title>
+    <updated>2025-10-27T15:25:43Z</updated>
+    <link href="https://arxiv.org/abs/2510.23419v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.23419v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spin glass systems as lattices of disordered magnets with random interactions have important implications within the theory of magnetization and applications to a wide-range of hard combinatorial optimization problems. Nevertheless, despite sustained efforts, algorithms that attain both high accuracy and efficiency remain elusive. Due to their topologies being low-$k$-partite such systems are well suited to a probabilistic computing (PC) approach using probabilistic bits (P-bits). Here we present complex spin glass topologies solved on a simulated PC realization of an Ising machine. First, we considered a number of three dimensional Edwards-Anderson cubic spin-glasses randomly generated as well as found in the literature as a benchmark. Second, biclique topologies were identified as a likely candidate for a comparative advantage compared to other state-of-the-art techniques, with a range of sizes simulated. We find that the number of iterations necessary to find solutions of a given quality has constant scaling with system size past a saturation point if one assumes perfect parallelization of the hardware. Therefore a PC architecture can trade the computational depth of other methods for parallelized width by connecting a number of P-bits that scales linearly in system size. This constant scaling is shown to persist across a number of solution qualities, up to a certain limit beyond which resource constraints limited further investigation. The saturation point varies between topologies and qualities and becomes exponentially hard in the limit of finding the ground truth. Furthermore we demonstrate that our PC architecture can solve spin-glass topologies to the same quality as the most advanced quantum annealer in minutes, making modest assumptions about their implementation on hardware.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-27T15:25:43Z</published>
+    <arxiv:comment>16 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Fredrik Hasselgren</name>
+    </author>
+    <author>
+      <name>Max O. Al-Hasso</name>
+    </author>
+    <author>
+      <name>Amy Searle</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Marko von der Leyen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.10987v2</id>
+    <title>Microscopic mechanism for resonant light-enhanced pair correlations in K$_3$C$_{60}$</title>
+    <updated>2026-07-17T13:14:15Z</updated>
+    <link href="https://arxiv.org/abs/2604.10987v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.10987v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent experiments on K3C60 revealed a giant enhancement of the light-induced superconducting-like optical response for pump frequencies near 10 THz, with an efficiency roughly two orders of magnitude larger than for off resonant excitation. Here we show that a resonant enhancement of pair correlations arises naturally in a driven purely electronic model of K$_3$C$_{60}$ with ab initio parameters. The underlying mechanism is a symmetry constrained two-photon pathway: the first photon drives the system from the even-parity ground state to an intermediate odd-parity manifold, while the second photon induces a transition to an even-parity excited state with enhanced pair correlations. Larger-cluster calculations show that the corresponding resonance energy is strongly renormalized downward with system size and connectivity, reflecting the kinetic-energy gain of delocalized photo-excited doublon-holon configurations. A simplified single-orbital model reproduces this scaling trend and reaches a 14-site fcc cluster, where the resonant peak is pushed to 30 THz, with a trend compatible with a further reduction toward the experimental 10 THz scale in larger systems. Varying the Hubbard coupling strength, we find that the resonance is lowest and the pairing enhancement strongest near intermediate couplings, where doublon-holon excitations are both well defined and mobile. Our results establish a purely electronic mechanism for resonant light-enhanced pair correlations in K$_3$C$_{60}$ and support the interpretation of the experimental 10 THz resonance as optical access to a paired many-body excited state rather than improved metallicity. More broadly, they suggest that related resonant pathways may arise in other intermediate-coupling Hubbard materials.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-13T04:45:08Z</published>
+    <arxiv:comment>18 pages, 10 figures including Supplement</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>Juan I. Aranzadi</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Paul Fadler</name>
+    </author>
+    <author>
+      <name>Michael A. Sentef</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.00651v2</id>
+    <title>Nonperturbative decay of bipartite discrete time crystals</title>
+    <updated>2025-03-21T19:28:49Z</updated>
+    <link href="https://arxiv.org/abs/2411.00651v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.00651v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study prethermal time-crystalline order in periodically driven quantum Ising models on disorder-free decorated lattices. Using a tensor network ansatz for the state which reflects the geometry of a unit cell of the lattice, we show through finite entanglement scaling that the system has an exponentially long-lived subharmonic response in the thermodynamic limit, which decays nonperturbatively in deviations from a perfect periodic drive. The resulting prethermal discrete time crystal is not only stable to imperfections in the transverse field, but also exhibits a bipartite rigidity to generic perturbations in the longitudinal field. We call this state a bipartite discrete time crystal and reveal a rich prethermal phase diagram, including multiple regions of bipartite time-crystalline order, uniform time-crystalline order and thermalization, with boundaries depending delicately on the topology of the decorated lattice. Our results thus uncover a variety of time crystals which may be realized on current digital quantum processors and analog quantum simulators.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-01T15:13:43Z</published>
+    <arxiv:comment>Accepted version, 10 pages including Supplemental Material</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. B 111, L100304 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Lennart Fernandes</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Dries Sels</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.111.L100304</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.111.L100304" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.20180v1</id>
+    <title>Tensor network surrogate models for variational quantum computation</title>
+    <updated>2026-04-22T04:53:39Z</updated>
+    <link href="https://arxiv.org/abs/2604.20180v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.20180v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We adopt a two-dimensional tensor-network (TN) ansatz to simulate variational quantum algorithms on two-dimensional qubit architectures, demonstrating its capability to accurately simulate deep circuits through the Quantum Approximate Optimization Algorithm (QAOA) applied to Ising spin-glass problems on heavy-hexagonal and square lattices. For heavy-hexagonal problems with up to three-body interactions, parameters trained on small instances and transferred to systems an order of magnitude larger improve the sampled energy distribution only up to intermediate depths, indicating a fundamental limit of parameter concentration as a transfer strategy. By extending the training itself with TN simulations on larger system sizes, we avoid local minima and obtain lower-energy samples. Analyses of entanglement growth and importance sampling show that the simulation remains classically feasible with moderate bond dimension. We find that parameter concentration also persists on square lattices, albeit at substantially higher computational cost to perform reliable sampling. Overall, our TN framework not only provides an efficient and controlled framework for benchmarking variational quantum algorithms on two-dimensional lattices, but also serves as an effective surrogate model for training variational algorithms.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-22T04:53:39Z</published>
+    <arxiv:comment>12 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ryo Watanabe</name>
+    </author>
+    <author>
+      <name>Dries Sels</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.12019v2</id>
+    <title>Learning interactions between Rydberg atoms</title>
+    <updated>2025-08-08T17:02:32Z</updated>
+    <link href="https://arxiv.org/abs/2412.12019v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.12019v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum simulators have the potential to solve quantum many-body problems that are beyond the reach of classical computers, especially when they feature long-range entanglement. To fulfill their prospects, quantum simulators must be fully controllable, allowing for precise tuning of the microscopic physical parameters that define their implementation. We consider Rydberg-atom arrays, a promising platform for quantum simulations. Experimental control of such arrays is limited by the imprecision on the optical tweezers positions when assembling the array, hence introducing uncertainties in the simulated Hamiltonian. In this work, we introduce a scalable approach to Hamiltonian learning using graph neural networks (GNNs). We employ the Density Matrix Renormalization Group (DMRG) to generate ground-state snapshots of the transverse field Ising model realized by the array, for many realizations of the Hamiltonian parameters. Correlation functions reconstructed from these snapshots serve as input data to carry out the training. We demonstrate that our GNN model has a remarkable capacity to extrapolate beyond its training domain, both regarding the size and the shape of the system, yielding an accurate determination of the Hamiltonian parameters with a minimal set of measurements. We prove a theorem establishing a bijective correspondence between the correlation functions and the interaction parameters in the Hamiltonian, which provides a theoretical foundation to our learning algorithm. Our work could open the road to feedback control of the positions of the optical tweezers, hence providing a decisive improvement of analog quantum simulators.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-16T17:45:30Z</published>
+    <arxiv:comment>20 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>PRX Quantum 6, 030324 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Olivier Simard</name>
+    </author>
+    <author>
+      <name>Anna Dawid</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Michel Ferrero</name>
+    </author>
+    <author>
+      <name>Anirvan M. Sengupta</name>
+    </author>
+    <author>
+      <name>Antoine Georges</name>
+    </author>
+    <arxiv:doi>10.1103/f58h-zxs3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/f58h-zxs3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07178v1</id>
+    <title>Exploring the Relaxation Landscape of a 2D Quantum Magnet on a 256-Qubit Processor</title>
+    <updated>2026-08-07T12:48:43Z</updated>
+    <link href="https://arxiv.org/abs/2608.07178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>How quantum matter relaxes far from equilibrium is a central open problem in many-body physics, and one for which analog quantum simulators are well positioned to move from confirming theory to discovering new physics. Here, we use a two-dimensional Rydberg atom array of 256 qubits to map the relaxation landscape of the two-dimensional transverse-field Ising model across its phase diagram. Beyond the expected rapid thermalization, we identify two further regimes. The first is a prethermal regime whose dynamics are governed by an effective XY model. The second, and most unexpected, is a crossover regime characterized by a slowdown in relaxation. This slowdown occurs precisely where state-of-the-art classical tensor-network methods lose control at late times, whereas the quantum simulation remains consistent across system sizes. These results establish Rydberg atom arrays as a platform for scientific discovery in nonequilibrium quantum many-body dynamics.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T12:48:43Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Tiago Mendes-Santos</name>
+    </author>
+    <author>
+      <name>Joseph Vovrosh</name>
+    </author>
+    <author>
+      <name>Sergi Julià-Farré</name>
+    </author>
+    <author>
+      <name>Dorian Claveau</name>
+    </author>
+    <author>
+      <name>Guillaume Villaret</name>
+    </author>
+    <author>
+      <name>Lucas Béguin</name>
+    </author>
+    <author>
+      <name>Lucas Leclerc</name>
+    </author>
+    <author>
+      <name>Laurin Brunner</name>
+    </author>
+    <author>
+      <name>Wladislaw Krinitsin</name>
+    </author>
+    <author>
+      <name>Matthias Hecker</name>
+    </author>
+    <author>
+      <name>Fergus Hayes</name>
+    </author>
+    <author>
+      <name>Boris Albrecht</name>
+    </author>
+    <author>
+      <name>Lilian Bourachot</name>
+    </author>
+    <author>
+      <name>Clémence Briosne-Frejaville</name>
+    </author>
+    <author>
+      <name>Antoine Cornillot</name>
+    </author>
+    <author>
+      <name>Julius de Hond</name>
+    </author>
+    <author>
+      <name>Djibril Diallo</name>
+    </author>
+    <author>
+      <name>Clément Dupays</name>
+    </author>
+    <author>
+      <name>Robin Dupont</name>
+    </author>
+    <author>
+      <name>Thomas Eritzpokhoff</name>
+    </author>
+    <author>
+      <name>Loïc Henriet</name>
+    </author>
+    <author>
+      <name>Lucas Lassablière</name>
+    </author>
+    <author>
+      <name>Arvid Lindberg</name>
+    </author>
+    <author>
+      <name>Yohann Machu</name>
+    </author>
+    <author>
+      <name>Hadriel Mamann</name>
+    </author>
+    <author>
+      <name>Thomas Pansiot</name>
+    </author>
+    <author>
+      <name>Julien Ripoll</name>
+    </author>
+    <author>
+      <name>Bruno Ximenez</name>
+    </author>
+    <author>
+      <name>Henrique Silvério</name>
+    </author>
+    <author>
+      <name>Joseph Tindall</name>
+    </author>
+    <author>
+      <name>Markus Schmitt</name>
+    </author>
+    <author>
+      <name>Markus Heyl</name>
+    </author>
+    <author>
+      <name>Adrien Signoles</name>
+    </author>
+    <author>
+      <name>Constantin Dalyac</name>
+    </author>
+    <author>
+      <name>Antoine Browaeys</name>
+    </author>
+    <author>
+      <name>Alexandre Dauphin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.09073v2</id>
+    <title>Dynamical order and superconductivity in a frustrated many-body system</title>
+    <updated>2020-09-22T15:18:30Z</updated>
+    <link href="https://arxiv.org/abs/2005.09073v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.09073v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In triangular lattice structures, spatial anisotropy and frustration can lead to rich equilibrium phase diagrams with regions containing complex, highly entangled states of matter. In this work we study the driven two-rung triangular Hubbard model and evolve these states out of equilibrium, observing how the interplay between the driving and the initial state unexpectedly shuts down the particle-hole excitation pathway. This restriction, which symmetry arguments fail to predict, dictates the transient dynamics of the system, causing the available particle-hole degrees of freedom to manifest uniform long-range order. We discuss implications of our results for a recent experiment on photo-induced superconductivity in ${\rm κ- (BEDT-TTF)_{2}Cu[N(CN)_{2}]Br}$ molecules.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-14T15:17:52Z</published>
+    <arxiv:comment>Main Text: 7 Pages, 4 Figures, Supplementary: 4 Pages, 3 Figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 125, 137001 (2020)</arxiv:journal_ref>
+    <author>
+      <name>J. Tindall</name>
+    </author>
+    <author>
+      <name>F. Schlawin</name>
+    </author>
+    <author>
+      <name>M. Buzzi</name>
+    </author>
+    <author>
+      <name>D. Nicoletti</name>
+    </author>
+    <author>
+      <name>J. R. Coulthard</name>
+    </author>
+    <author>
+      <name>H. Gao</name>
+    </author>
+    <author>
+      <name>A. Cavalleri</name>
+    </author>
+    <author>
+      <name>M. A. Sentef</name>
+    </author>
+    <author>
+      <name>D. Jaksch</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.125.137001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.125.137001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.04687v3</id>
+    <title>Lieb's Theorem and Maximum Entropy Condensates</title>
+    <updated>2021-12-17T10:33:07Z</updated>
+    <link href="https://arxiv.org/abs/2103.04687v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.04687v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coherent driving has established itself as a powerful tool for guiding a many-body quantum system into a desirable, coherent non-equilibrium state. A thermodynamically large system will, however, almost always saturate to a featureless infinite temperature state under continuous driving and so the optical manipulation of many-body systems is considered feasible only if a transient, prethermal regime exists, where heating is suppressed. Here we show that, counterintuitively, in a broad class of lattices Floquet heating can actually be an advantageous effect. Specifically, we prove that the maximum entropy steady states which form upon driving the ground state of the Hubbard model on unbalanced bi-partite lattices possess uniform off-diagonal long-range order which remains finite even in the thermodynamic limit. This creation of a `hot' condensate can occur on \textit{any} driven unbalanced lattice and provides an understanding of how heating can, at the macroscopic level, expose and alter the order in a quantum system. We discuss implications for recent experiments observing emergent superconductivity in photoexcited materials.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-08T11:51:08Z</published>
+    <arxiv:comment>10 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Quantum 5, 610 (2021)</arxiv:journal_ref>
+    <author>
+      <name>J. Tindall</name>
+    </author>
+    <author>
+      <name>F. Schlawin</name>
+    </author>
+    <author>
+      <name>M. Sentef</name>
+    </author>
+    <author>
+      <name>D. Jaksch</name>
+    </author>
+    <arxiv:doi>10.22331/q-2021-12-23-610</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2021-12-23-610" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1612.06436v2</id>
+    <title>Equilibration and freeze-out of an expanding gas in a transport approach in a Friedmann-Robertson-Walker metric</title>
+    <updated>2017-06-01T12:48:34Z</updated>
+    <link href="https://arxiv.org/abs/1612.06436v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1612.06436v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by a recent finding of an exact solution of the relativistic Boltzmann equation in a Friedmann-Robertson-Walker spacetime, we implement this metric into the newly developed transport approach Simulating Many Accelerated Strongly-interacting Hadrons (SMASH). We study the numerical solution of the transport equation and compare it to this exact solution for massless particles. We also compare a different initial condition, for which the transport equation can be independently solved numerically. Very nice agreement is observed in both cases. Having passed these checks for the SMASH code, we study a gas of massive particles within the same spacetime, where the particle decoupling is forced by the Hubble expansion. In this simple scenario we present an analysis of the freeze-out times, as function of the masses and cross sections of the particles. The results might be of interest for their potential application to relativistic heavy-ion collisions, for the characterization of the freeze-out process in terms of hadron properties.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-12-19T22:06:18Z</published>
+    <arxiv:comment>v2: 9 pages, 7 figures. Added discussion on the numerical relation between the Hubble and scattering rates at the end of Sec. 3. Updated references. This version matches the accepted manuscript by Phys.Lett.B journal</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Phys.Lett. B770 (2017) 532-538</arxiv:journal_ref>
+    <author>
+      <name>J. Tindall</name>
+    </author>
+    <author>
+      <name>J. M. Torres-Rincon</name>
+    </author>
+    <author>
+      <name>J. B. Rose</name>
+    </author>
+    <author>
+      <name>H. Petersen</name>
+    </author>
+    <arxiv:doi>10.1016/j.physletb.2017.04.080</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physletb.2017.04.080" title="doi"/>
+  </entry>
+</feed>

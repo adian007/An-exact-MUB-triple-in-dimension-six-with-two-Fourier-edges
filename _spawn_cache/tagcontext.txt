@@ -1,0 +1,10 @@
+﻿import re, io
+src = io.open("_spawn_cache/paper_2110.12206.html", encoding="utf-8").read()
+# locate the section containing eq (46) and (47); print raw html slice around them
+i = src.find('>(46)</span>')
+print("IDX46", i)
+# find all occurrences of "(46)" tag
+for m in re.finditer(r'\(4[0-9]\)</span>', src):
+    s = max(0, m.start()-160); e = min(len(src), m.end()+40)
+    print("======")
+    print(src[s:e].replace("\n"," "))

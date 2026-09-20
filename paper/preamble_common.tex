@@ -1,0 +1,37 @@
+% Shared preamble fragments for the Karlsson MUB split papers.
+% Usage: after \documentclass{...}, \input{preamble_common}
+% Does not open \begin{document}.
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{amsthm}
+\usepackage[strings]{underscore}
+\usepackage{hyperref}
+
+% Allow line breaks in long repository paths and script names
+\newcommand{\repo}[1]{{\ttfamily\nolinkurl{#1}}}
+\emergencystretch=2.5em
+\sloppy
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{finding}{Finding}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{remark}{Remark}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue
+}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}

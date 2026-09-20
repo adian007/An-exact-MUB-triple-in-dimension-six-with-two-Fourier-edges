@@ -1,0 +1,5 @@
+Exact D0-equivalent W1 witness
+Field: Q(zeta_24, Sqrt[5])
+Generators: 17; variables: 10
+CHM defects: True, True
+RUN_MODE: fixed-anchor W1 only

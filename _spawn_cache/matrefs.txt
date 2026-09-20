@@ -1,0 +1,8 @@
+﻿import re, io
+src = io.open("_spawn_cache/paper_2110.12206.html", encoding="utf-8").read()
+for pat in ["A_{1}","A_{2}","A_1","A_2","A_1}","A_2}","A_6","A_7","A_8","A_9","A_{10}"]:
+    for m in list(re.finditer(re.escape(pat), src))[:6]:
+        s = max(0, m.start()-220); e = min(len(src), m.end()+60)
+        print("### PAT", pat, "at", m.start())
+        print(src[s:e].replace("\n"," "))
+        print()

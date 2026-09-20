@@ -1,0 +1,7 @@
+system,ring,variables,physical_locus,quantifiers,emptiness_proves,does_not_prove
+pair,"K[z1..z5,w1..w5]","z_i,w_i; z0=w0=1","w_i=conj(z_i)","fixed valid H","no physical MU vector for fixed pair","claim for other H or physicality of complex roots"
+w1,"K[z1..z5,w1..w5]","z_i,w_i; z0=w0=1","w_i=conj(z_i); valid unnormalized H,T","fixed valid (I,H,T)","no fourth-MU vector and no fourth ONB for fixed triple","all T or global C6 claim"
+fourth_onb,"K[z[a,i],w[a,i]]","60 gauge-fixed variables","w[a,i]=conj(z[a,i])","fixed valid (I,H,T)","no fourth ONB for fixed triple","W1 empty or other triples"
+all_third,"real ring preferred; complexified K[t,s,z,w]","T,S and witness variables","S=conj(T);w=conj(z)","forall valid T for fixed H","all third bases for fixed H nonextendable","other H or all CHM sectors"
+selected_orbit,"K[p,z,w] localized at Delta","p,z,w","physical p domain and w=conj(z)","forall p in stated D on proved orbit","selected orbit after exceptional fibers","all B3 absent orbit completeness"
+

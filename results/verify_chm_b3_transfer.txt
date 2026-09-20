@@ -1,0 +1,42 @@
+=== CHM-equivalence B3 transfer check (λ ↔ λ+π) ===
+timestamp = 2026-08-13T22:48:10.855
+Map: dephase(H_tgt) ≈ D_r · dephase(variant(H_src))[:,P] · D_c
+B3' columns := normalize(D_r .* B3[:,j])
+
+--- λ_src=0.000000 → λ_tgt=3.141593 ---
+  CHM map: residual=2.660e-16 equiv=true variant=H perm=[1, 2, 4, 3, 5, 6]
+  dephase fit residual=2.660e-16
+  src pool=120 n_6cliques=10 (checking all)
+  clique 1: ortho=3.16e-16 muI=1.11e-16 muH=1.39e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 2: ortho=3.48e-16 muI=1.39e-16 muH=2.50e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 3: ortho=4.85e-16 muI=1.11e-16 muH=1.39e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 4: ortho=5.72e-16 muI=1.94e-16 muH=1.94e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 5: ortho=4.44e-16 muI=1.39e-16 muH=1.94e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 6: ortho=4.44e-16 muI=1.39e-16 muH=1.94e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 7: ortho=4.44e-16 muI=1.39e-16 muH=1.94e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 8: ortho=4.44e-16 muI=2.50e-16 muH=1.94e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 9: ortho=2.46e-16 muI=1.39e-16 muH=1.94e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 10: ortho=2.61e-16 muI=1.39e-16 muH=1.39e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  pair summary: 10/10 transferred cliques OK
+
+--- λ_src=1.047198 → λ_tgt=4.188790 ---
+  CHM map: residual=8.218e-16 equiv=true variant=H perm=[1, 2, 4, 3, 5, 6]
+  dephase fit residual=8.218e-16
+  src pool=72 n_6cliques=4 (checking all)
+  clique 1: ortho=7.79e-16 muI=1.39e-16 muH=1.94e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 2: ortho=1.14e-15 muI=2.50e-16 muH=2.50e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 3: ortho=2.09e-15 muI=2.50e-16 muH=2.78e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 4: ortho=1.28e-15 muI=3.61e-16 muH=3.89e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  pair summary: 4/4 transferred cliques OK
+
+--- λ_src=2.094395 → λ_tgt=5.235988 ---
+  CHM map: residual=9.974e-16 equiv=true variant=H perm=[1, 2, 4, 3, 5, 6]
+  dephase fit residual=9.974e-16
+  src pool=72 n_6cliques=4 (checking all)
+  clique 1: ortho=9.36e-16 muI=4.16e-16 muH=3.89e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 2: ortho=6.96e-16 muI=1.94e-16 muH=2.78e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 3: ortho=1.43e-15 muI=1.94e-16 muH=2.50e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  clique 4: ortho=6.18e-16 muI=3.61e-16 muH=3.61e-16 struct=true W1_empty=true (cert=252 fullpass=0)
+  pair summary: 4/4 transferred cliques OK
+
+PASS: for all three λ↔λ+π pairs, every transformed B3' is a third MUB for H(λ+π) and W1 is empty.

@@ -1,0 +1,12 @@
+fit_ok=6
+fit_total=36
+basis_degree=32
+bits=512
+lambda=0.4
+verdict=NO_SMALL_BASIS_FIT
+tol=1.0e-10
+method=lll
+engine=Nemo.lll
+gauge=col1
+scale=raw
+search_quality=nemo_flint_lll

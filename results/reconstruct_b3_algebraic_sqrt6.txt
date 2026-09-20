@@ -1,0 +1,66 @@
+B3 algebraic reconstruction (Nemo LLL)
+timestamp = 2026-08-13T20:28:06.501
+lambda = 0.4
+bits = 512
+basis_degree = 8
+tol = 1.0e-10
+gauge = col1
+scale = sqrt6
+method = lll
+gamma_exp = nothing
+engine = Nemo.lll (flint)
+basis = 1, sqrt2, sqrt3, sqrt6, i, i*sqrt2, i*sqrt3, i*sqrt6
+hp_ortho_ok = true hp_mu_ok = true
+clique_indices = [55, 48, 13, 49, 26, 30]
+
+PRIOR_NOTE: earlier ls-round/brute runs are weak baselines only;
+  this file supersedes them for claim-ledger purposes when method=lll.
+
+entry_ij | ok | err | method | expression | numeric
+------------------------------------------------------------------------
+1,1 | true | 0.000000e+00 | nemo-lll | 1 | 1.0 + 0.0im
+1,2 | true | 0.000000e+00 | nemo-lll | 1 | 1.0 + 0.0im
+1,3 | true | 0.000000e+00 | nemo-lll | 1 | 1.0 + 0.0im
+1,4 | true | 0.000000e+00 | nemo-lll | 1 | 1.0 + 0.0im
+1,5 | true | 0.000000e+00 | nemo-lll | 1 | 1.0 + 0.0im
+1,6 | true | 0.000000e+00 | nemo-lll | 1 | 1.0 + 0.0im
+2,1 | false | Inf | none | — | -0.6106903603521274 + 0.7918694865778011im
+2,2 | false | Inf | none | — | 0.9911242720341793 + 0.13293862262231393im
+2,3 | false | Inf | none | — | -0.380433911682053 - 0.9248081092001149im
+2,4 | false | Inf | none | — | -0.6106903603521269 + 0.7918694865778005im
+2,5 | false | Inf | none | — | -0.38043391168205315 - 0.9248081092001149im
+2,6 | false | Inf | none | — | 0.9911242720341794 + 0.13293862262231404im
+3,1 | false | Inf | none | — | -0.12255756656760627 + 0.9924614062405799im
+3,2 | false | Inf | none | — | 0.9785782436909598 - 0.20587525585828997im
+3,3 | false | Inf | none | — | -0.9880451862699894 + 0.15416455457952083im
+3,4 | false | Inf | none | — | 0.1225575665676051 - 0.9924614062405789im
+3,5 | false | Inf | none | — | 0.9880451862699895 - 0.15416455457952105im
+3,6 | false | Inf | none | — | -0.9785782436909598 + 0.20587525585829003im
+4,1 | false | Inf | none | — | -0.7031362111267511 + 0.7110551797169595im
+4,2 | false | Inf | none | — | -0.07395711924795882 - 0.9972614223525059im
+4,3 | false | Inf | none | — | 0.8551027759772158 - 0.518458525357679im
+4,4 | false | Inf | none | — | 0.7031362111267511 - 0.7110551797169591im
+4,5 | false | Inf | none | — | -0.8551027759772157 + 0.5184585253576797im
+4,6 | false | Inf | none | — | 0.07395711924795888 + 0.9972614223525059im
+5,1 | false | Inf | none | — | 0.6106903603521265 + 0.7918694865778013im
+5,2 | false | Inf | none | — | -0.9911242720341792 + 0.13293862262231412im
+5,3 | false | Inf | none | — | 0.3804339116820536 - 0.9248081092001144im
+5,4 | false | Inf | none | — | 0.6106903603521262 + 0.7918694865778008im
+5,5 | false | Inf | none | — | 0.380433911682053 - 0.9248081092001151im
+5,6 | false | Inf | none | — | -0.9911242720341794 + 0.1329386226223141im
+6,1 | false | Inf | none | — | -0.5090370164985234 - 0.860744628699059im
+6,2 | false | Inf | none | — | -0.3341388069368377 - 0.9425238764608708im
+6,3 | false | Inf | none | — | -0.9724016250600325 - 0.23331326490495033im
+6,4 | false | Inf | none | — | 0.509037016498523 + 0.8607446286990598im
+6,5 | false | Inf | none | — | 0.9724016250600328 + 0.23331326490495025im
+6,6 | false | Inf | none | — | 0.3341388069368374 + 0.9425238764608708im
+
+========================================
+FIT_RATE = 6 / 36
+elapsed_s = 3.59
+verdict = NO_SMALL_BASIS_FIT
+
+SEARCH_QUALITY: Nemo flint LLL integer-relation lattice;
+  coeff bound=8, bits=512, tol=1.0e-10.
+  Null result under THIS search — may still miss if true
+  representation needs larger coeffs or a bigger field.

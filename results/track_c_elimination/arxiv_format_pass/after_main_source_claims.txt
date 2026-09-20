@@ -1,0 +1,40 @@
+﻿=== finding ===
+\begin{finding}[Third-MUB loci in certified search]
+\label{thm:trackd}
+Within the certified search CSV ($928$ rows), HP re-verification of clique-$6$ candidates, and Track~D clustering, the only reproducing third-MUB loci found are, up to parametrization gauge:
+\begin{enumerate}
+    \item the $F_6$ $\theta{=}0$ bounded $\lambda$-arc (width $\approx0.118$ rad), and
+    \item the Dita full $\lambda$-circle at $\phi=\pi/4$ (CHM-inequivalent $\lambda$ family).
+\end{enumerate}
+Nine $\theta=\pi/2$ \texttt{circulant\_match} CSV rows are non-reproducing under HP.
+\end{finding}
+
+=== conjecture ===
+\begin{conjecture}[Open problem: fourth-MUB absence on $\mathcal{R}$]
+\label{op:trackc}
+For all $(\theta,\phi,\lambda)\in\mathcal{R}$ with \texttt{pool\_complete\_flag}=\texttt{true}, no fourth MUB exists extending $\{\mathbf{I},H(\theta,\phi,\lambda)\}$.
+\end{conjecture}
+
+=== abstract ===
+\begin{abstract}
+Within Karlsson's three-parameter family $K_6^{(3)}$ only---not all CHMs in $\mathbb{C}^6$---I report three theorems (T1, T3, T4), computational findings on third-MUB loci, and a literature correction.
+\textbf{(T1, Theorem~\ref{thm:T1}):} at $\theta{=}0$, $\phi$ is a parametrization gauge; on the Dita slice ($\theta{=}\arccos(1/\sqrt3)$, $\phi{=}\pi/4$), distinct $\lambda$ yield CHM-inequivalent matrices.
+\textbf{(T3, Theorem~\ref{thm:T3}):} at \emph{seven} Dita-$\lambda$ points $\lambda\in\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$, HomotopyContinuation \texttt{certify()} finds the single-vector witness $W_1$ empty at every recovered-pool $6$-clique ($\mathbf{40/40}$), which implies no fourth MUB at those instances. This is \emph{not} a certificate on the full $\lambda$-circle or on $\mathcal{R}$.
+\textbf{(T4, Theorem~\ref{thm:T4}):} independent exact re-verification of a fact already in Brierley--Weigert~\cite{Brierley2009}: at the $D_0$-equivalent pair $(D_{\mathrm{bc}},F_D)$, the single-vector witness ideal $W_1$ is the unit ideal over $\mathbb{Q}(\zeta_{24},\sqrt5)$ (Gr\"obner basis $\{1\}$, no inexact-field caveat). BW already proved the stronger complete-pool statement ($N_v{=}120$, $N_t{=}10$, $N_p{=}0$); T4 covers only one third basis by a different method (fixed-$(H,B_3)$ exact GB). Scope: $\lambda\in\{\pi/2,3\pi/2\}$ via numerical CHM match only; \emph{not} a new theorem on the $\lambda$-circle or on $\mathcal{R}$.
+\textbf{(Finding T2):} at $126/126$ periodicity samples and $628/628$ dense probes, $\{\mathbf{I},H(\lambda)\}$ admits a third MUB via certified pool extraction; all-$\lambda$ extension uses $2\pi$-periodicity and an informal continuity argument (\S\ref{sec:proof-t2}).
+\textbf{(C1)} Karlsson's original $A$-matrix passes $348/349$ tests; the McNulty--Weigert transcription fails $349/349$.
+\textbf{(C2)} HP audit of the certified search set ($928$ rows, $899$ pool-complete) finds two reproducing third-MUB loci (F6 $\theta{=}0$ arc; Dita circle)---a computational classification, not a theorem (\S\ref{sec:trackd}).
+\textbf{($\mathcal{S}^*$)} $1863/1865$ candidate points checked with no fourth MUB found; grid/pool negatives are confirmatory only (\S\ref{sec:trackc}).
+This report does not prove Zauner's conjecture $N(6){=}3$, fourth-MUB absence on all of $K_6^{(3)}$, or an exact Gr\"obner certificate on $\mathcal{R}$ (Open Problem~\ref{op:trackc}; \S\ref{sec:symbolic}).
+\end{abstract}
+
+=== contributions-enumerate ===
+\subsection{Contributions Within \texorpdfstring{$K_6^{(3)}$}{K6(3)}}
+This technical report documents:
+\begin{enumerate}
+    \item[\textbf{C1}] A \textbf{literature correction}: Karlsson's original $A$-matrix vs.\ the McNulty--Weigert transcription (Table~\ref{tab:audit}).
+    \item[\textbf{C2}] Two HP-verified third-MUB loci---F6 $\theta{=}0$ bounded $\lambda$-arc and Dita full $\lambda$-circle---with CHM-inequivalence and contrasting topology (Finding~\ref{thm:trackd}; not a theorem).
+    \item[\textbf{C3}] \textbf{Certified fourth-MUB obstruction (T3) at seven Dita-$\lambda$ points} (four CHM classes), plus confirmatory negative numerics on larger audited sets; not a theorem on all of $\mathcal{R}$ or $N(6)$.
+    \item[\textbf{C4}] A reproducible per-$H$ pipeline, including a documented $512$-point coarse-grid miss of all three known third-MUB loci (Appendix~\ref{app:reproduce}).
+\end{enumerate}
+

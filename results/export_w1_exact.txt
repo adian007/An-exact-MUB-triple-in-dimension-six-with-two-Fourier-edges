@@ -1,0 +1,15 @@
+=== E3: exact n_wit=1 export at D0, never CC ===
+Date: 2026-08-15T14:48:49
+Field: Q(ζ_24, √5) represented as (a,b) ↦ a+b√5, a,b ∈ Q(ζ_24)
+Nemo cyclotomic_field(24) only; no Oscar; no relative number_field.
+H  = D_bc (Bengtsson eqs. 79-80)
+B3 = F_D  (eqs. 78, 61), b2 = (1-2i)√5 / 5
+n_wit=1 only (17 eqs). n_wit=2 not started. Ring is not CC.
+No Groebner computation is performed.
+
+exported generators = 17 (5 unimodular + 6 MU-H + 6 MU-B3)
+Wrote D:\MUBs in 6-dimension\symbolic_export\w1_D0_exact.m2  (3283 bytes)
+Contains 'R = CC'? false
+Contains 'toField'? true
+First generator: z1 * w1 - 1
+VERDICT: exact n_wit=1 export exists over Q(ζ_24, √5). No solver run.

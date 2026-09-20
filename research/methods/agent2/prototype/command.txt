@@ -1,0 +1,1 @@
+julia --project=. research/methods/agent2/prototype/mub_h2_w1.jl

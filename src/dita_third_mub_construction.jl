@@ -1,7 +1,7 @@
 # Explicit third-MUB construction on the Dita lambda-circle.
 # Route A: extract certified 6-clique from MU-pool; verify parametric persistence.
 #
-# Brierley-Weigert (Phys. Rev. A 79, 062316, 2009) established third MUBs at
+# Brierley-Weigert (Phys. Rev. A 79, 052316, 2009; arXiv:0901.4051) established third MUBs at
 # Dita-type Karlsson parameters. This module operationalizes a constructive
 # certificate: at each lambda, the pool orthogonality graph yields a 6-clique
 # forming a third ONB unbiased to {I, H(lambda)}.

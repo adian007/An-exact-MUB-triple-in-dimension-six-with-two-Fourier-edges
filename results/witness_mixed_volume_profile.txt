@@ -1,0 +1,19 @@
+=== A3 witness mixed-volume profile ===
+Date: 2026-08-13T20:24:25.582
+lambda = 0.4
+clique_indices = [55, 48, 13, 49, 26, 30]
+
+NOTE: build_numeric_fourth_mub_witness_system only implements n_wit=2
+  (20 vars, 35 eqs) — same size as symbolic_export/fourth_mub_reduced_Dita.m2.
+  There is NO 5-vector (50-var) formulation in the current pipeline.
+
+n_wit=2 reduced witness: n_eqs=35 n_vars=20 mixed_volume=119210
+  WITNESS_MV_SOLVE_CAP = 5000
+  tractable for HC solve+certify under current cap? NO
+
+CONCLUSION:
+  The ALREADY-REDUCED 2-vector witness has mv=119210.
+  A3 is not blocked by using a larger 5-vector system — we are already
+  on the reduced formulation matching fourth_mub_reduced_Dita.m2.
+  Salvage options are reformulation (different equations / gauges),
+  not further n_wit reduction in the current API.

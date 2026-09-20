@@ -1,0 +1,63 @@
+=== n_wit=1 referee checks (CHM + clique determinism) ===
+timestamp = 2026-08-13T21:14:55.906
+
+--- (1) CHM equivalence among five π/3-multiple H(λ) ---
+  λ=1.047198 vs λ=2.094395: residual=5.063496e+00  equiv=false  variant=conj(H).T
+  λ=1.047198 vs λ=3.141593: residual=2.049581e+00  equiv=false  variant=conj(H)
+  λ=1.047198 vs λ=4.188790: residual=1.430483e-15  equiv=true  variant=H
+  λ=1.047198 vs λ=5.235988: residual=5.121969e+00  equiv=false  variant=H.T
+  λ=2.094395 vs λ=3.141593: residual=3.839157e+00  equiv=false  variant=H
+  λ=2.094395 vs λ=4.188790: residual=3.157144e+00  equiv=false  variant=H.T
+  λ=2.094395 vs λ=5.235988: residual=1.596843e-15  equiv=true  variant=H
+  λ=3.141593 vs λ=4.188790: residual=2.049581e+00  equiv=false  variant=conj(H)
+  λ=3.141593 vs λ=5.235988: residual=3.839157e+00  equiv=false  variant=H
+  λ=4.188790 vs λ=5.235988: residual=5.121969e+00  equiv=false  variant=H.T
+  vs anchor λ=0.4:
+  λ=0.4 vs λ=1.047198: residual=4.938010e-01  equiv=false  variant=conj(H)
+  λ=0.4 vs λ=2.094395: residual=4.893459e+00  equiv=false  variant=H
+  λ=0.4 vs λ=3.141593: residual=1.579950e+00  equiv=false  variant=H
+  λ=0.4 vs λ=4.188790: residual=4.938010e-01  equiv=false  variant=conj(H)
+  λ=0.4 vs λ=5.235988: residual=4.893459e+00  equiv=false  variant=H
+CHM summary: min_residual=1.430483e-15 max_residual=5.121969e+00 any_equivalent=true
+FAIL: some certified λ are CHM-equivalent — certificates are not independent.
+
+--- (2) Clique-selection determinism (rule: argmax length among maximal 6-cliques) ---
+Re-run select_b3_clique 3× per λ with fixed HC seed path (fresh pool each time).
+  λ=0.400000: n_cliques_ge6=[4, 4, 4]  pool=[72, 72, 72]
+    run1=[2, 32, 37, 50, 53, 69]
+    run2=[5, 31, 39, 42, 60, 61]
+    run3=[8, 9, 11, 34, 47, 55]
+    NONDETERMINISTIC: clique set varies (set-equality of indices)
+  λ=1.047198: n_cliques_ge6=[4, 4, 4]  pool=[72, 72, 72]
+    run1=[3, 37, 56, 58, 64, 67]
+    run2=[5, 9, 14, 46, 52, 67]
+    run3=[9, 10, 15, 28, 39, 56]
+    NONDETERMINISTIC: clique set varies (set-equality of indices)
+  λ=2.094395: n_cliques_ge6=[4, 4, 4]  pool=[72, 72, 72]
+    run1=[6, 14, 20, 30, 62, 70]
+    run2=[6, 8, 12, 25, 31, 59]
+    run3=[5, 8, 21, 41, 42, 61]
+    NONDETERMINISTIC: clique set varies (set-equality of indices)
+  λ=3.141593: n_cliques_ge6=[10, 10, 10]  pool=[120, 120, 120]
+    run1=[32, 42, 57, 60, 72, 86]
+    run2=[3, 4, 5, 48, 52, 75]
+    run3=[15, 22, 55, 82, 93, 120]
+    NONDETERMINISTIC: clique set varies (set-equality of indices)
+  λ=4.188790: n_cliques_ge6=[4, 4, 4]  pool=[72, 72, 72]
+    run1=[12, 14, 30, 32, 35, 49]
+    run2=[5, 22, 26, 29, 32, 59]
+    run3=[8, 20, 35, 58, 59, 71]
+    NONDETERMINISTIC: clique set varies (set-equality of indices)
+  λ=5.235988: n_cliques_ge6=[4, 4, 4]  pool=[72, 72, 72]
+    run1=[5, 15, 16, 44, 54, 66]
+    run2=[5, 21, 36, 39, 52, 53]
+    run3=[15, 16, 25, 36, 43, 61]
+    NONDETERMINISTIC: clique set varies (set-equality of indices)
+
+WARN: clique indices vary across runs — certificate is still valid for each chosen B3, but report must state the selection rule and that emptiness is relative to the selected B3 (combinatorial found_fourth already scans all third cliques).
+
+Selection rule (code): among maximal_cliques of the ortho graph with |C|≥6,
+  take argmax(|C|), then columns pool[C[1:6]].
+Note: emptiness of W1(H,B3) proves no fourth MUB extending {I,H,B3};
+  check_four_mub_extension already requires found_fourth=false over all third 6-cliques
+  in the pool (combinatorial), which the multi-λ batch recorded as false.

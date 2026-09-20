@@ -20,8 +20,8 @@ println("clique: ", c)
 println("max |H| dev from 6th roots: ", maximum(root_dev(x) for x in H))
 println("max |B3| dev from 6th roots: ", maximum(root_dev(x) for x in B3))
 println("1/sqrt(6) ≈ ", 1 / sqrt(6))
-println("unique rounded |H|: ", sort(unique(round.(abs.(H[:]), sigdigits=8)))
-println("unique rounded |B3|: ", sort(unique(round.(abs.(B3[:]), sigdigits=8)))
+println("unique rounded |H|: ", sort(unique(round.(abs.(H[:]), sigdigits=8))))
+println("unique rounded |B3|: ", sort(unique(round.(abs.(B3[:]), sigdigits=8))))
 
 # Check if entries match simple algebraic templates
 templates = Dict(

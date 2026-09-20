@@ -1,0 +1,39 @@
+=== E0: identify textbook Dita D0 inside Karlsson Dita slice ===
+theta_D = arccos(1/sqrt(3)), phi = pi/4
+D0 = Bengtsson quant-ph/0610161 eq. (11) at x=0 (unnormalised)
+CHM residual: dephase + 720 column perms + {H, H.T, conj, conj.T}
+equivalence tolerance = 1e-08
+
+D0 is_hadamard=True  D_bc is_hadamard=True
+D0 vs D_bc (col-only): residual=3.496128e+00  variant=H  perm=(1 0 5 4 3 2)  equiv=False
+D0 vs D_bc (row+col): residual=2.302791e-15  variant=H  row_perm=(0 1 3 2 5 4)  col_perm=(0 1 3 2 5 4)  equiv=True
+
+--- residual(Karlsson(theta_D, pi/4, lambda), D0) ---
+  lambda=0  residual=3.496128e+00  variant=conj(H)  perm=(0 1 5 4 3 2)  equiv=False  LAMBDA_CERT
+  lambda=0.4  residual=4.078954e+00  variant=H  perm=(2 1 5 4 3 0)  equiv=False  LAMBDA_CERT
+  lambda=1.0471975512  residual=3.397478e+00  variant=conj(H)  perm=(1 0 2 3 4 5)  equiv=False  LAMBDA_CERT
+  lambda=1.5707963268  residual=2.388188e-13  variant=conj(H)  perm=(0 1 4 5 3 2)  equiv=True
+  lambda=2.09439510239  residual=3.903013e+00  variant=H  perm=(5 4 1 0 3 2)  equiv=False  LAMBDA_CERT
+  lambda=3.14159265359  residual=3.496128e+00  variant=conj(H)  perm=(0 1 4 5 3 2)  equiv=False  LAMBDA_CERT
+  lambda=4.18879020479  residual=4.134051e+00  variant=conj(H)  perm=(0 3 5 4 1 2)  equiv=False  LAMBDA_CERT
+  lambda=4.71238898038  residual=7.154307e-13  variant=conj(H)  perm=(0 1 5 4 3 2)  equiv=True
+  lambda=5.23598775598  residual=3.903013e+00  variant=H  perm=(5 4 0 1 3 2)  equiv=False  LAMBDA_CERT
+
+=== Best match ===
+lambda=1.5707963268  residual=2.388188e-13  variant=conj(H)  perm=(0 1 4 5 3 2)  equiv=True
+n_matches (residual < 1e-08): 2
+  match lambda=1.5707963268  variant=conj(H)  perm=(0 1 4 5 3 2)
+  match lambda=4.71238898038  variant=conj(H)  perm=(0 1 5 4 3 2)
+
+=== T3 Lambda_cert vs D0 ===
+  lambda=0  residual=3.496128e+00  equiv=False
+  lambda=0.4  residual=4.078954e+00  equiv=False
+  lambda=1.0471975512  residual=3.397478e+00  equiv=False
+  lambda=2.09439510239  residual=3.903013e+00  equiv=False
+  lambda=3.14159265359  residual=3.496128e+00  equiv=False
+  lambda=4.18879020479  residual=4.134051e+00  equiv=False
+  lambda=5.23598775598  residual=3.903013e+00  equiv=False
+
+VERDICT: no Lambda_cert point matched D0 at the stated tolerance. T3 is not identified as a BW 2009 corollary via this CHM test.
+
+dephased D0 first row (should be 1s): [(1+0j), (1+0j), (1+0j), (1+0j), (1+0j), (1+0j)]

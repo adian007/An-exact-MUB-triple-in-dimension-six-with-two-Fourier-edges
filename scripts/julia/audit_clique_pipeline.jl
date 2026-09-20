@@ -229,6 +229,23 @@ function audit_512_null_result()
     end
 end
 
+function test_drop_detection_homotopy()
+    println("\n=== [T8] Homotopy drop-detection stress test ===")
+    H = build_karlsson_family(0.3, 0.5, 0.2)
+    tracker = init_parametric_pool_tracker(verbose=false)
+    pool_h, stats_h, meta_h = generate_candidate_pool(H; tracker=tracker, cross_check=true, verbose=true)
+    pool_f, stats_f = generate_candidate_pool_fresh(H; verbose=false)
+    pool_f = deduplicate_pool(pool_f)
+    drop = get(meta_h, :drop_suspected, false)
+    check("homotopy reports drop_suspected at generic K6 point", drop,
+          "tracked=$(meta_h.n_tracked)/$(meta_h.n_expected) homotopy=$(length(pool_h)) fresh=$(length(pool_f))")
+    if drop && length(pool_f) >= length(pool_h)
+        check("fallback uses fresh pool when drop detected", length(pool_h) >= 1,
+              "final pool size=$(length(pool_h))")
+    end
+    return drop
+end
+
 function main()
     println("=== Clique pipeline audit ===")
     ok1 = test_planted_clique()
@@ -248,9 +265,10 @@ function main()
 
     audit_512_from_csv()
     audit_512_null_result()
+    ok_drop = test_drop_detection_homotopy()
 
     println("\n=== Verdict ===")
-    if ok1 && ok2
+    if ok1 && ok2 && ok_drop
         println("  Planted-clique tests PASSED — clique finder works on synthetic and F6 pools.")
         println("  F6 pool completeness: distinct_cert=$(pc.n_distinct_certified) dedup=$(pc.n_dedup_pool) flag=$(pc.pool_complete_flag)")
         println("  If real pools still show max_clique=2 at generic points, that is structural, not a bug.")

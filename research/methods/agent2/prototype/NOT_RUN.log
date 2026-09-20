@@ -1,0 +1,4 @@
+status=NOT_RUN
+reason=Campaign 0 and Agent 2 remit prohibit executing mathematics benchmarks before merged review.
+command=julia --project=. research/methods/agent2/prototype/mub_h2_w1.jl
+date=2026-09-17

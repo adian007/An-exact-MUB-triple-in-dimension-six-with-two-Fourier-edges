@@ -1,6 +1,8 @@
 # Step 4 / Phase 3: Symbolic elimination — real per-H pool export + fourth-MUB witness skeleton.
 # Oscar.jl preferred; Macaulay2 .m2 export as fallback.
 #
+# Exact n_wit=1 over a named number field (never CC): scripts/julia/export_w1_exact.jl
+#
 # Usage: julia --project=. scripts/julia/symbolic_elimination.jl
 #        julia --project=. scripts/julia/symbolic_elimination.jl --anchors
 #        julia --project=. scripts/julia/symbolic_elimination.jl --export-pools
