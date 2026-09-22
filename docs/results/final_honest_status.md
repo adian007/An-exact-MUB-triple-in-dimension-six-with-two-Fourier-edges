@@ -1,6 +1,6 @@
 # Final Honest Status — Claim ledger (2026-08-05)
 
-Search-set definitions: [`docs/SEARCH_SETS.md`](../docs/SEARCH_SETS.md). Reproduction: [`REPRODUCE.md`](../REPRODUCE.md). Finish audit: [`project_finish_audit.txt`](project_finish_audit.txt).
+Search-set definitions and reproduction: [`../overview/REPRODUCE.md`](../overview/REPRODUCE.md). Scientific interpretation: [`../SCIENTIFIC_STATUS.md`](../SCIENTIFIC_STATUS.md). Finish audit: [`../../results/project_finish_audit.txt`](../../results/project_finish_audit.txt).
 
 ## Ledger key
 
@@ -18,7 +18,7 @@ Search-set definitions: [`docs/SEARCH_SETS.md`](../docs/SEARCH_SETS.md). Reprodu
 | Claim | Ledger | Evidence |
 |-------|--------|----------|
 | Planted-clique pipeline recovers 6-cliques | **HP-verified** | `audit_clique_pipeline.jl`, T1/T2 tests |
-| **T1 Gauge structure (L1–L4)** | **Proved** | `paper/proofs/gauge_and_locus.tex`, `formalize_gauge_lemmas.jl` (2026-08-05 ALL PASS) |
+| **T1 Gauge structure (L1–L4)** | **Proved** | `docs/paper/proofs/gauge_structure.tex`, `scripts/julia/formalize_gauge_lemmas.jl` (2026-08-05 ALL PASS) |
 | **T2 Third MUB on sampled Dita λ** | **Finding (HP 126/126, 628/628); not a theorem** | `dita_third_mub.tex`; all-λ extension informal |
 | **T3 No fourth MUB at seven Dita-λ points** | **Certified (2026-08-14)** — native all-clique W₁ empty **40/40** at Λ_cert; Bertini square + HC certify(); see `fourth_mub_obstruction.tex`, `certify_nwit1_all_cliques_*.txt` |
 | **T4 Exact W₁ unit ideal at D₀-equivalent pair** | **Proved (exact Groebner, 2026-08-15)** — independent re-verification of BW 2009 (not an extension): GB={1} for single pair (D_bc, F_D); BW already had stronger complete-pool Np=0 (Nv=120, Nt=10); T4 weaker in coverage, stronger only as exact W₁ certificate form; λ∈{π/2,3π/2} via E0 numerical match; `track_c_elimination/w1_D0_groebner.log`, FINDINGS §17 |
@@ -112,4 +112,4 @@ Audit and fixes: [`docs/METHODOLOGY_AUDIT.md`](../docs/METHODOLOGY_AUDIT.md) (ca
 | Dedup stability under tolerance sweep 1e-6…1e-12 | **HP-verified** | `dedup_tolerance_diagnostics`: counts 48/120/72/90 invariant at all four benchmark points |
 | Claim-tier vocabulary + provenance on all new artifacts | **Enforced** | `Certification.jl` tiers; `write_result` stamps git commit/seed/tolerances |
 
-Environment note (F4): Windows Smart App Control (On since ~2026-09) blocks unsigned Julia core DLLs; all Julia computation now runs in WSL2 Ubuntu (documented in `REPRODUCE.md`). No security policy was modified.
+Environment note (F4): Windows Smart App Control (On since ~2026-09) blocks unsigned Julia core DLLs; all Julia computation now runs in WSL2 Ubuntu (documented in `../overview/REPRODUCE.md`). No security policy was modified.

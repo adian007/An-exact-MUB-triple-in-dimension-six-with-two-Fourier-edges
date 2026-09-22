@@ -2,7 +2,7 @@
 
 ## Paper 1 (theorems)
 
-Upload **`paper/main_theorems.tex`** as Overleaf `main.tex` (self-contained).
+Upload **`docs/paper/main_theorems.tex`** as Overleaf `main.tex` (self-contained).
 
 Edit locally: `main_theorems_multifile.tex` + `preamble_common.tex` + `proofs/gauge_structure.tex` + `proofs/fourth_mub_theorems.tex`, then:
 

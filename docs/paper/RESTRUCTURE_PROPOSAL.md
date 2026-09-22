@@ -1,6 +1,6 @@
 # Step 0 — Restructuring Proposal (no LaTeX changes yet)
 
-**Source of truth for edits (once approved):** `paper/mub6_karlsson_ieee.tex` + `paper/proofs/*.tex`.  
+**Source of truth for edits (once approved):** `docs/paper/main_theorems.tex` + `docs/paper/proofs/*.tex`.
 `main.tex` / `main_standalone.tex` are bundled regenerations — update the multifile sources, then rebundle.
 
 **Current architecture (compressed):**
@@ -38,7 +38,7 @@
 - Reproducibility appendices, CSV/JSON inventory, pipeline-overview figure as primary artifact
 - Open Problem on all of R (can stay as one sentence in Paper 1 pointing to Paper 2)
 
-**Gained:** Referee-proof focus; T3 as the negative certificate headline; C1 as clean side result; T4 demoted by design.  
+**Gained:** Referee-proof focus; T3 as the negative certificate headline; C1 as clean side result; T4 demoted by design.
 **Lost:** Single citable object; Paper 1 cannot “own” the affirmative third-MUB loci discovery without cross-cite; some narrative glue (why Dita matters for T3) must be summarized, not proved computationally in-place. Risk: Paper 2 looks like an appendix that escaped.
 
 **Suggested Paper 1 section map:**
@@ -62,7 +62,7 @@
 - Pool completeness; reproducibility; symbolic-elimination failure log (central obstacle context)
 - Cross-reference Paper 1 for T3 certificate and T1 gauge facts used in locus geometry
 
-**Gained:** Honest home for audit trail; “classification → identification” language fits without competing with theorems.  
+**Gained:** Honest home for audit trail; “classification → identification” language fits without competing with theorems.
 **Lost:** Methods paper without T3 may feel incomplete unless Paper 1 is cited early; duplicate Background/Methods boilerplate.
 
 ---
@@ -94,7 +94,7 @@
 - Discussion caveats list → absorb into Scope section; Discussion focuses on interpretation
 - Appendices proofs unchanged in mathematical content; Lemma `lem:L5-semicont` flagged only (item 4)
 
-**Gained:** One arXiv object; loci discovery stays visible; epistemic hedges centralized; audit trail stop competing with T3.  
+**Gained:** One arXiv object; loci discovery stays visible; epistemic hedges centralized; audit trail stop competing with T3.
 **Lost:** Still longer than a pure theorem note; referee may still want a split later; discipline required so Audit appendix does not leak into the abstract again.
 
 ---
@@ -121,7 +121,7 @@
 ---
 
 ## Recommendation (non-binding)
-- Choose **(A)** if the primary goal is a sharp theorem note for a theory-leaning venue and a separate citable methods artifact.  
+- Choose **(A)** if the primary goal is a sharp theorem note for a theory-leaning venue and a separate citable methods artifact.
 - Choose **(B)** if you want one arXiv preprint that still foregrounds the Dita/F6 loci discovery alongside T3.
 
 **STOP — awaiting your choice: A or B** (and optionally a preferred title from §5, or “defer title”).

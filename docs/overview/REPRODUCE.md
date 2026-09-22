@@ -1,6 +1,6 @@
 # Reproduction guide (Phase 0 baseline)
 
-One-command instructions to regenerate key tables and audit artifacts for the Karlsson \(K_6^{(3)}\) MUB search. Search-set definitions: [`docs/SEARCH_SETS.md`](docs/SEARCH_SETS.md). Claim ledger: [`results/final_honest_status.md`](results/final_honest_status.md). Pipeline bugs: [`docs/ENGINEERING.md`](docs/ENGINEERING.md).
+One-command instructions to regenerate key tables and audit artifacts for the Karlsson \(K_6^{(3)}\) MUB search. Search-set definitions: [`REPRODUCE.md`](REPRODUCE.md). Claim ledger: [`../results/final_honest_status.md`](../results/final_honest_status.md). Pipeline bugs: [`docs/ENGINEERING.md`](docs/ENGINEERING.md).
 
 ---
 
@@ -137,7 +137,7 @@ $env:JULIA_DEPOT_PATH = "d:\MUBs in 6-dimension\.julia-depot"
 python scripts/python/finish_project_audit.py
 ```
 
-Proofs: `paper/proofs/gauge_and_locus.tex`, `dita_third_mub.tex`, `fourth_mub_obstruction.tex` (included in `paper/mub6_karlsson_ieee.tex` appendix).
+Proofs: `../paper/proofs/gauge_and_locus.tex`, `dita_third_mub.tex`, `fourth_mub_obstruction.tex` (included in `../paper/main_theorems.tex` appendix).
 
 ---
 
@@ -174,17 +174,17 @@ julia --project=. scripts/julia/validate_third_mub_candidates.jl --csv results/s
 | `csv_reconciliation.txt` | `csv_reconciliation.jl` | \(\mathcal{S}_{588}\) gap analysis |
 | `locus_classification.json` | `locus_classification.jl` | Track D component catalog |
 | `dita_lambda_fourth_dense.txt` | `dita_lambda_fourth_dense.jl` | Track A dense λ circle |
-| `docs/SEARCH_SETS.md` | manual | \(\mathcal{S}_{588}\), \(\mathcal{S}^*\), \(\mathcal{R}\) |
+| `REPRODUCE.md` | manual | \(\mathcal{S}_{588}\), \(\mathcal{S}^*\), \(\mathcal{R}\) |
 
 ---
 
 ## arXiv v1 readiness checklist
 
-Use before submitting [`paper/mub6_karlsson_ieee.tex`](paper/mub6_karlsson_ieee.tex) to arXiv (`quant-ph`).
+Use before submitting [`../paper/main_theorems.tex`](../paper/main_theorems.tex) to arXiv (`quant-ph`).
 
 - [ ] Replace placeholder `\author{...}` block with real name, affiliation, email
 - [ ] Confirm abstract scope: **negative heuristic evidence only**; no global \(N(6)=3\) or full-family impossibility claim
-- [ ] Cite reproducibility: point readers to this file and `results/final_honest_status.md`
+- [ ] Cite reproducibility: point readers to this file and `../results/final_honest_status.md`
 - [ ] Verify key numbers against regenerated artifacts (928-row CSV, 36/45 HP clique-6, 219/219 degen200, 126/126 + 628/628 Dita)
 - [ ] Run `pdflatex` + `bibtex` cycle (see header comment in `.tex`)
 - [ ] Optional: upload `results/` CSV subset or Zenodo archive with commit hash
@@ -201,7 +201,7 @@ Paper already uses first-person singular and documents honest scope in the abstr
 | `julia` not found | Run `. .\setup_julia_env.ps1` or edit Julia path in that script |
 | `libsymengine` / HC InitError after moving project | Set `JULIA_DEPOT_PATH` to `<project-root>\.julia-depot`, delete `.julia-depot\compiled`, run `julia --project=. -e "using Pkg; Pkg.precompile()"` |
 | Precompile / depot errors | Ensure `JULIA_DEPOT_PATH` points at project `.julia-depot`, not a removed LearningHub tree |
-| Rounded Dita coords give `max_clique=2` | Use full-precision `acos(1/sqrt(3))`, `pi/4`, exact \(\lambda\); see `docs/FINDINGS.md` §3b |
+| Rounded Dita coords give `max_clique=2` | Use full-precision `acos(1/sqrt(3))`, `pi/4`, exact \(\lambda\); see `FINDINGS.md` §3b |
 | `--verify-only` fails at 588 | CSV incomplete; run `--resume` or accept current 491-row baseline |
 | Docker Macaulay2 | Start Docker Desktop, then run `.\scripts\docker\run_m2.ps1 pool_F6.m2`; see `results/track_c_elimination/` |
 

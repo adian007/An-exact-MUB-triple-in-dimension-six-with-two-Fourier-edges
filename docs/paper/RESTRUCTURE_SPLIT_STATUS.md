@@ -41,12 +41,12 @@ Reply with e.g. `P1-A + P2-B` (or a free-form title) before any PDF build.
 | File | Role |
 |------|------|
 | `paper/preamble_common.tex` | Shared packages, theorems, `\repo` |
-| `paper/main_theorems.tex` | **Paper 1** body |
+| `docs/paper/main_theorems.tex` | **Paper 1** body |
 | `paper/methods_audit.tex` | **Paper 2** body |
-| `paper/proofs/gauge_structure.tex` | T1 lemmas + theorem (from old `gauge_and_locus` algebraic half) |
-| `paper/proofs/fourth_mub_theorems.tex` | T3 + T4 + remarks (from old `fourth_mub_obstruction`; L7 removed) |
-| `paper/proofs/locus_geometry.tex` | `lem:L5-semicont` + Findings L5/L6 + **FLAG comment** |
-| `paper/proofs/dita_third_mub_methods.tex` | Finding T2 + Finding L7; companion cites for gauge facts |
+| `docs/paper/proofs/gauge_structure.tex` | T1 lemmas + theorem (from old `gauge_and_locus` algebraic half) |
+| `docs/paper/proofs/fourth_mub_theorems.tex` | T3 + T4 + remarks (from old `fourth_mub_obstruction`; L7 removed) |
+| `docs/paper/proofs/locus_geometry.tex` | `lem:L5-semicont` + Findings L5/L6 + **FLAG comment** |
+| `docs/paper/proofs/dita_third_mub_methods.tex` | Finding T2 + Finding L7; companion cites for gauge facts |
 | `paper/RESTRUCTURE_SPLIT_STATUS.md` | This checklist |
 
 ### Content map
