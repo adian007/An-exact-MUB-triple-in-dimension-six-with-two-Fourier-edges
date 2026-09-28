@@ -2,12 +2,10 @@
 
 ## Objective
 
-Test, and ultimately prove algebraically, whether the relevant third-MUB
-transitions satisfy Theorem 1 of Matszangosz–Szöllősi: in a normalized
-order-six complex Hadamard matrix, three distinct columns each contain at
-least one \(-1\), characterizing the transposed Fourier family or the
-2-circulant family. The theorem does not characterize Fourier membership
-alone.
+Test, and ultimately prove algebraically, whether every relevant third-MUB
+component in the Diţă slice of Karlsson's `K_6^(3)` family has a transition
+matrix in the Fourier family, its transpose, or the stronger `X/F/F^T`
+Hadamard-cube structure.
 
 This campaign consumes complete, gauge-reconciled B3 cliques. It is a
 parallel structural route to the existing fourth-vector (`W1`) obstruction;
@@ -28,12 +26,9 @@ it does not replace direct W1 certification.
    the displayed `H_D(z)` representative.
 3. Form `T = B3^* H_D` for each clique, alongside the other two transitions
    of the triplet.
-4. Search all 36 pivot-row/pivot-column dephasing charts for three distinct
-   columns, each with an entry equal to -1; apply Theorem 1 to the transpose
-   for the inferred row formulation.
-5. Record flatness/unitarity checks, numerical residuals, applicability, and
-   the exact chart. Do not report the legacy single-column pattern as family
-   membership.
+4. Search pivot-row/pivot-column/target-column dephasing charts for a column
+   containing three -1 entries; apply the analogous row test to the transpose.
+5. Record flatness/unitarity checks, numerical residuals, and the exact chart.
 6. Export exact incidence equations for detected charts; pursue elimination
    only after the numerical chart audit is complete.
 

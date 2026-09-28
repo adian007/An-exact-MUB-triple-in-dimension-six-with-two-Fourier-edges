@@ -1,10 +1,9 @@
-"""Audit B3 cliques and transition-matrix -1 incidence conditions.
+"""Audit B3 cliques and Fourier-family transition charts.
 
 This is the diagnostic stage of the k3_fourier_structure campaign. It consumes
 the archived pool format (V has shape n x 6 and row norm sqrt(6)) and writes
-machine-readable evidence. The single-column diagnostic is not Theorem 1.
-Theorem 1 tests three distinct columns and concludes transposed Fourier or
-2-circulant family membership; floating-point detections remain candidates.
+machine-readable evidence. It does not certify pool completeness or prove
+Fourier-family containment.
 """
 
 from __future__ import annotations
@@ -63,7 +62,7 @@ def six_cliques(vectors: np.ndarray, tolerance: float = 1e-7) -> list[tuple[int,
 def three_minus_one_test(
     matrix: np.ndarray, tolerance: float = 1e-8
 ) -> dict[str, object]:
-    """Measure the one-column/three-row pattern; this is not Theorem 1.
+    """Test the three-minus-one criterion over all dephasing charts.
 
     Row and column permutations followed by dephasing are represented by
     choosing a pivot row, pivot column, and target column. The dephased entry
@@ -76,11 +75,10 @@ def three_minus_one_test(
 
     flatness_error = float(np.max(np.abs(np.sqrt(6) * np.abs(matrix) - 1)))
     unitarity_error = float(np.max(np.abs(matrix.conj().T @ matrix - np.eye(6))))
-    is_hadamard = flatness_error <= tolerance and unitarity_error <= tolerance
     witnesses: list[dict[str, object]] = []
     best_count = 0
 
-    for pivot_row in range(6) if is_hadamard else ():
+    for pivot_row in range(6):
         other_rows = [row for row in range(6) if row != pivot_row]
         for pivot_column in range(6):
             for target_column in range(6):
@@ -120,132 +118,18 @@ def three_minus_one_test(
             if witnesses:
                 break
 
+    is_hadamard = flatness_error <= tolerance and unitarity_error <= tolerance
     return {
-        "criterion": "single dephased column has three rows near -1; not Theorem 1",
+        "criterion": "dephased column contains at least three entries equal to -1",
         "flatness_error": flatness_error,
         "unitarity_error": unitarity_error,
         "criterion_applicable": is_hadamard,
-        "witness_found": is_hadamard and bool(witnesses),
+        "witness_found": bool(witnesses),
         "witness": witnesses[0] if witnesses else None,
         "max_minus_one_count": best_count,
         "tolerance": tolerance,
-        "status": (
-            "single_column_pattern_detected"
-            if is_hadamard and witnesses
-            else "single_column_pattern_not_detected"
-            if is_hadamard
-            else "not_verified_hadamard"
-        ),
-    }
-
-
-def three_distinct_columns_theorem_test(
-    matrix: np.ndarray, tolerance: float = 1e-8
-) -> dict[str, object]:
-    """Test Theorem 1's three-distinct-columns condition on a 6x6 CHM.
-
-    The theorem assumes a normalized order-six complex Hadamard matrix. For
-    every pivot row and column, its dephased entry (i,j) is
-    M[i,j]*M[r,c]/(M[i,c]*M[r,j]). The result records the three distinct
-    columns whose best -1 residuals minimize the worst-of-three residual.
-    """
-    if matrix.shape != (6, 6):
-        raise ValueError(f"Expected a 6x6 transition matrix, got {matrix.shape}")
-
-    flatness_error = float(np.max(np.abs(np.sqrt(6) * np.abs(matrix) - 1)))
-    unitarity_error = float(np.max(np.abs(matrix.conj().T @ matrix - np.eye(6))))
-    applicable = flatness_error <= tolerance and unitarity_error <= tolerance
-    best: dict[str, object] | None = None
-    pivot_chart_results: list[dict[str, object]] = []
-
-    if applicable:
-        for pivot_row in range(6):
-            other_rows = [row for row in range(6) if row != pivot_row]
-            for pivot_column in range(6):
-                per_column: list[tuple[float, int, int]] = []
-                pivot = matrix[pivot_row, pivot_column]
-                for column in range(6):
-                    if column == pivot_column:
-                        continue
-                    candidates = []
-                    for row in other_rows:
-                        denominator = matrix[row, pivot_column] * matrix[pivot_row, column]
-                        residual = (
-                            matrix[row, column] * pivot
-                            + denominator
-                        ) / denominator
-                        candidates.append((float(abs(residual)), row, column))
-                    per_column.append(min(candidates))
-
-                selected = sorted(per_column)[:3]
-                worst = max(item[0] for item in selected)
-                candidate = {
-                    "pivot_row": pivot_row,
-                    "pivot_column": pivot_column,
-                    "columns": [
-                        {"column": item[2], "row": item[1], "residual": item[0]}
-                        for item in sorted(selected, key=lambda item: item[2])
-                    ],
-                    "worst_of_three_residual": worst,
-                }
-                pivot_chart_results.append(
-                    {
-                        "pivot_row": pivot_row,
-                        "pivot_column": pivot_column,
-                        "witness_found": worst <= tolerance,
-                        "criterion_applicable": applicable,
-                        "minimum_worst_of_three_residual": worst,
-                        "columns_achieving_minimum": candidate["columns"],
-                    }
-                )
-                if best is None or worst < best["worst_of_three_residual"]:
-                    best = candidate
-
-    witness_found = bool(
-        applicable
-        and best is not None
-        and best["worst_of_three_residual"] <= tolerance
-    )
-    return {
-        "criterion": "three distinct columns each contain at least one -1",
-        "flatness_error": flatness_error,
-        "unitarity_error": unitarity_error,
-        "criterion_applicable": applicable,
-        "witness_found": witness_found,
-        "verdict": (
-            "condition_satisfied"
-            if witness_found
-            else "condition_not_detected"
-            if applicable
-            else None
-        ),
-        "minimum_worst_of_three_residual": (
-            best["worst_of_three_residual"] if applicable and best is not None else None
-        ),
-        "pivot_choice": (
-            {"row": best["pivot_row"], "column": best["pivot_column"]}
-            if applicable and best is not None
-            else None
-        ),
-        "columns_achieving_minimum": best["columns"] if applicable and best is not None else [],
-        "pivot_chart_results": pivot_chart_results,
-        "tolerance": tolerance,
-        "status": "numerical_candidate" if witness_found else (
-            "condition_not_detected" if applicable else "not_verified_hadamard"
-        ),
-    }
-
-
-def theorem1_both_orientations(
-    matrix: np.ndarray, tolerance: float = 1e-8
-) -> dict[str, object]:
-    """Apply Theorem 1 to M and infer its row analogue by applying it to M.T."""
-    return {
-        "theorem1_column_application_to_matrix": three_distinct_columns_theorem_test(
-            matrix, tolerance
-        ),
-        "theorem1_row_application_inferred_via_transpose": three_distinct_columns_theorem_test(
-            matrix.T, tolerance
+        "status": "numerical_candidate" if is_hadamard and witnesses else (
+            "not_detected_numerically" if is_hadamard else "input_not_verified_hadamard"
         ),
     }
 
@@ -271,13 +155,12 @@ def analyze_pool(path: Path, lam: float, tolerance: float) -> dict[str, object]:
                             [[float(value.real), float(value.imag)] for value in row]
                             for row in matrix
                         ],
-                        "single_column_three_row_diagnostic": three_minus_one_test(
+                        "Fourier_family_column_test": three_minus_one_test(
                             matrix, tolerance
                         ),
-                        "transpose_single_column_three_row_diagnostic": three_minus_one_test(
+                        "transposed_Fourier_family_row_test": three_minus_one_test(
                             matrix.T, tolerance
                         ),
-                        **theorem1_both_orientations(matrix, tolerance),
                     }
                     for name, matrix in transitions.items()
                 },
@@ -303,9 +186,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path(
-            "results/campaigns/k3_fourier_structure/diagnostic_2026-09-28.json"
-        ),
+        default=Path("results/campaigns/k3_fourier_structure/diagnostic.json"),
     )
     parser.add_argument("--pool", choices=sorted(LAMBDAS))
     parser.add_argument("--tolerance", type=float, default=1e-8)
@@ -319,8 +200,6 @@ def main() -> None:
             raise FileNotFoundError(f"Missing pool input: {path}")
         results.append(analyze_pool(path, LAMBDAS[stem], args.tolerance))
 
-    if args.output.exists():
-        raise FileExistsError(f"Refusing to overwrite existing result: {args.output}")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps({"campaign_id": "k3_fourier_structure", "runs": results}, indent=2))
     print(f"Wrote {args.output}")

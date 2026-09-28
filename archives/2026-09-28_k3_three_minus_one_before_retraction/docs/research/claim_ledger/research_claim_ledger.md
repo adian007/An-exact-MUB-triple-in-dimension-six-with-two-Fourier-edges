@@ -12,8 +12,7 @@
 | `N(6)=3` globally | Open and outside project scope | Argument covering all CHM classes, not only Karlsson |
 | 96 roots at the supplied fold parameter | Numerical/certified for the supplied campaign data | Reconcile the canonical gauge and quantify pool completeness |
 | 24 fold candidates split into two 12-element A4 orbits | Certified for the supplied augmented-root computation; generic group completeness remains open | Prove generic stabilizer completeness and component scope |
-| Theorem 1 three-distinct-columns condition on supplied K3 transition samples | Numerical sample predicate only; its conclusion is transposed Fourier or 2-circulant, not Fourier alone | Verify exact chart membership and establish pool completeness/component scope |
-| RETRACTED 2026-09-28: legacy single-column three-minus-one outputs were Fourier / transposed-Fourier family evidence | Retracted: implementation checked three entries in one dephased column, not three distinct columns; it cannot support the named family claim | No upgrade; replace with the correct Theorem 1 predicate and retain old JSON only as retracted raw diagnostics |
+| At the three archived parameters, the 12 supplied B3 cliques have Fourier / transposed-Fourier three-minus-one witnesses | Numerical sample evidence; exact chart systems exported but not eliminated | Certify exact branch membership, establish pool completeness, and prove component containment |
 | Every relevant K3 third-MUB component has Fourier/X/F^T structure | Open structural theorem target | Exact elimination or certified continuation over every component |
 
 ## Rule

@@ -1,7 +1,8 @@
-"""Export exact B3 incidence and Theorem 1 three-distinct-column charts.
+"""Export exact B3 incidence and three-minus-one chart equations.
 
-The output is an exact polynomial-system input for each numerical chart. It
-does not classify the resulting matrix or prove component containment.
+The output is an exact polynomial-system input for each numerical witness
+chart. It is not an elimination result: symbolic branch containment still has
+to be proved.
 """
 
 from __future__ import annotations
@@ -65,10 +66,10 @@ def build_b3_system(chart: dict[str, object], transpose_view: bool) -> dict[str,
     ]
     pivot_row = int(chart["pivot_row"])
     pivot_column = int(chart["pivot_column"])
+    target_column = int(chart["target_column"])
     incidence_equations = []
-    for incidence in chart["columns"]:
-        row = int(incidence["row"])
-        target_column = int(incidence["column"])
+    for row in chart["minus_one_rows"]:
+        row = int(row)
         incidence_equations.append(
             sp.expand(
                 entry(row, target_column) * entry(pivot_row, pivot_column)
@@ -86,7 +87,7 @@ def build_b3_system(chart: dict[str, object], transpose_view: bool) -> dict[str,
             "parameter_and_torus": 31,
             "mutual_unbiasedness": 36,
             "basis_orthogonality": 30,
-            "theorem1_three_distinct_columns": 3,
+            "three_minus_one_chart": 3,
             "total": len(equations),
         },
         "equations": [str(sp.expand(equation)) for equation in equations],
@@ -98,16 +99,12 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path(
-            "results/campaigns/k3_fourier_structure/diagnostic_2026-09-28.json"
-        ),
+        default=Path("results/campaigns/k3_fourier_structure/diagnostic.json"),
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path(
-            "results/campaigns/k3_fourier_structure/exact_chart_equations_2026-09-28.json"
-        ),
+        default=Path("results/campaigns/k3_fourier_structure/exact_chart_equations.json"),
     )
     args = parser.parse_args()
 
@@ -116,43 +113,35 @@ def main() -> None:
     for run in diagnostic["runs"]:
         for clique_index, clique in enumerate(run["cliques"]):
             target = clique["transitions"]["B3_dagger_H_D"]
-            for application_key, is_transpose in (
-                ("theorem1_column_application_to_matrix", False),
-                ("theorem1_row_application_inferred_via_transpose", True),
+            for family_test, is_transpose in (
+                ("Fourier_family_column_test", False),
+                ("transposed_Fourier_family_row_test", True),
             ):
-                result = target[application_key]
-                if not result["criterion_applicable"] or not result["witness_found"]:
+                result = target[family_test]
+                if not result["witness_found"]:
                     continue
-                witness = {
-                    "pivot_row": result["pivot_choice"]["row"],
-                    "pivot_column": result["pivot_choice"]["column"],
-                    "columns": result["columns_achieving_minimum"],
-                }
+                witness = result["witness"]
                 chart_id = (
                     f"lambda_{run['lambda']:.12f}_clique_{clique_index}_"
-                    f"{'theorem1_transpose' if is_transpose else 'theorem1_columns'}"
+                    f"{'FT' if is_transpose else 'F'}"
                 )
                 charts.append(
                     {
                         "chart_id": chart_id,
                         "lambda_sample": run["lambda"],
                         "clique_indices": clique["clique"],
-                        "theorem_application": application_key,
-                        "witness_found": True,
-                        "criterion_applicable": True,
+                        "family_test": family_test,
                         "witness": witness,
                         "system": build_b3_system(witness, is_transpose),
                     }
                 )
 
-    if args.output.exists():
-        raise FileExistsError(f"Refusing to overwrite existing result: {args.output}")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(
         json.dumps(
             {
                 "campaign_id": "k3_fourier_structure",
-                "status": "exact_theorem1_chart_equations_not_eliminated",
+                "status": "exact_chart_equations_not_eliminated",
                 "source_diagnostic": str(args.input),
                 "chart_count": len(charts),
                 "charts": charts,
