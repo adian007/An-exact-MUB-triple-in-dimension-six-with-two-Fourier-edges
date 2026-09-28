@@ -90,7 +90,7 @@ to the existing fourth-vector witness and certification workflow.
 
 The fold/A₄ results now feed the repository-native
 [`i3_singular_locus`](../../research/campaigns/i3_singular_locus/protocol.md)
-campaign. The Fourier-family work is tracked separately in the
+campaign. The K3 transition-structure audit is tracked separately in the
 [`k3_fourier_structure` campaign](../../research/campaigns/k3_fourier_structure/protocol.md).
 It is a parallel analysis of the same validated B₃ cliques:
 

@@ -7,7 +7,7 @@ However, the old literature route that ruled out H2-reducible matrices in a hypo
 The robust route is instead:
 
   K3 third-MUB structure
-      -> Fourier-family transition matrix
-      -> rigorous whole-Fourier-family quartet obstruction.
+      -> Theorem 1 condition: transposed Fourier OR 2-circulant
+      -> only the Fourier-family branch gives the whole-Fourier-family quartet obstruction.
 
 This avoids relying on the disputed H2-reducible theorem.

@@ -1,4 +1,4 @@
-"""Negative controls for the three-minus-one transition-matrix diagnostic.
+"""Negative controls for the legacy one-column/three-row diagnostic.
 
 Run from the repository root:
     python test/test_three_minus_one_negative_controls.py

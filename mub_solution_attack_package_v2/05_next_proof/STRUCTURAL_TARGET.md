@@ -1,21 +1,27 @@
 # Structural theorem target
 
-Let V3(lambda) be the complete third-MUB incidence variety for H_D(lambda). Let C be a complete B3 clique. We want to prove that, modulo the verified A4 action and the natural MUB equivalences, at least one transition matrix among
+Let V3(lambda) be the complete third-MUB incidence variety for H_D(lambda),
+and let C be a complete B3 clique. The target is to establish, modulo the
+verified A4 action and natural MUB equivalences, that a transition associated
+with every relevant component satisfies Theorem 1's three-distinct-columns
+condition. Then determine whether its conclusion is transposed Fourier or
+2-circulant.
 
-1. H_D(lambda),
-2. B3(lambda),
-3. H_D(lambda)^* B3(lambda)
+Only a separately established Fourier-family branch lets the
+Jaming--Matolcsi--Mora--Szollosi--Weiner theorem rule out such a quartet; the
+2-circulant alternative needs separate treatment.
 
-belongs to the Fourier family F(x,y).
-
-A successful proof would imply that any fourth basis extending the triple would extend a pair of bases whose transition is Fourier-family. The Jaming--Matolcsi--Mora--Szollosi--Weiner theorem rules out such a quartet for every Fourier-family parameter value.
-
-The difficult step is to prove the Fourier-family membership algebraically for the entire relevant component and to prove that no additional B3 components escape the A4/known-component classification.
+The difficult steps are to prove the theorem condition on the entire relevant
+component, resolve its family alternative, and show that no additional B3
+components escape the A4/known-component classification.
 
 A particularly promising implementation is:
 
 1. Represent the B3 transition matrix by dephased polynomial variables.
-2. Add the Fourier-family incidence equations (two unit-modulus parameters plus a finite row/column permutation chart).
+2. For the Fourier branch only, add Fourier-family incidence equations (two
+   unit-modulus parameters plus a finite row/column permutation chart).
+   Theorem 1's condition is not itself Fourier-family incidence, and the
+   2-circulant branch must also be handled.
 3. Compute the elimination ideal of the B3 incidence variety intersected with the complement of the Fourier subvariety.
 4. Show the resulting component is empty, ideally by Groebner elimination or exact numerical algebraic geometry.
 5. Repeat for the transpose-Fourier chart if necessary.
