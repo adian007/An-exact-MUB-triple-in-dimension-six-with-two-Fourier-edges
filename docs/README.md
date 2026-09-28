@@ -14,6 +14,9 @@ remain in `results/`.
 4. **[Claim audit](overview/claim_audit.md)** — claim-by-claim support and scope.
 5. **[Known results](overview/known_results_table.md)** and
    **[open problems](overview/open_problems.md)**.
+6. **[Exact incidence systems](EXACT_SYSTEM.md)** — algebraic setup for the
+   F6 third-basis arc and the separate fourth-vector extension problem,
+   including symmetry, elimination, and fold-certification requirements.
 
 ## Documentation map
 
@@ -23,6 +26,10 @@ remain in `results/`.
 | Paper drafts and proofs | `docs/paper/` |
 | Research notes, literature, definitions, and agent reports | `docs/research/` |
 | Human-readable result summaries | `docs/results/` |
+
+See [Repository organization](ORGANIZATION.md) for the role of each top-level
+directory, the distinction between `research/` and `docs/research/`, and the
+recommended structure for new computational campaigns.
 
 The project scope is the Karlsson three-parameter complex Hadamard family
 \(K_6^{(3)}\), not all complex Hadamard matrices in dimension six and not a

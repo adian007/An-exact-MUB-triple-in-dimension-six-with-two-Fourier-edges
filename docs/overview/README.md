@@ -34,7 +34,34 @@ T3 is **not** a certificate on the full \(\lambda\)-circle or on covering region
 | ID | Statement | Where |
 |----|-----------|-------|
 | **T2** | Third MUB at \(126/126\) Dita periodicity samples and \(628/628\) dense probes; all-\(\lambda\) extension is informal | [`../paper/proofs/dita_third_mub_methods.tex`](../paper/proofs/dita_third_mub_methods.tex) |
-| **C2 / Track D** | Two reproducing HP-verified third-MUB loci in the audited search: F6 \(\theta=0\) bounded \(\lambda\)-arc (\(\approx 0.118\) rad) and Dita full \(\lambda\)-circle | [`results/locus_classification.json`](results/locus_classification.json) |
+| **C2 / Track D** | Two reproducing HP-verified third-MUB loci in the audited search: F6 \(\theta=0\) bounded \(\lambda\)-arc (\(\approx 0.118\) rad) and Dita full \(\lambda\)-circle | Arc extent: [`results/f6_boundary_reverify.txt`](../../results/f6_boundary_reverify.txt) (400-bit bracket search, the authoritative number). Locus catalogue: [`results/locus_classification.json`](results/locus_classification.json) — note its `topology` interval is the sampled-point range, **not** the arc boundary (see §"Defect resolution" in `research/reports/audit_followup_2026-09-26.md`). |
+
+> **Path B / C2 status (2026-09-26) — read before explaining the arc/circle contrast.**
+> The two loci are not in question; their *explanation* is. Two candidate mechanisms have
+> now been disposed of, in this order:
+> 1. **Retired (false).** "F6 A-block non-Hermitian vs Dita Hermitian." Both blocks are
+>    **non-Hermitian**: `results/arc_circle_asymmetry.txt` records `A Hermitian=false` for
+>    both loci (lines 7, 13) while its prose asserts the contrast (lines 35, 50–51). The
+>    Dita block `[[i,-1],[-1,i]]` is symmetric and satisfies `AA† = 2I`, but `i ≠ -i`, so it
+>    is not Hermitian. Lemma L3 is correct and never asserted Hermiticity; the false wording
+>    was added downstream of it.
+> 2. **Refuted as a mechanism (coincidental two-point match).** The replacement invariant
+>    `D = |α|² − |β|²` is a function of `(θ,φ)` only, and both loci hold `(θ,φ)` fixed along
+>    their `λ`-loop. So `D` is **constant along each locus** and takes the *same* value at
+>    surviving (in-arc) and non-surviving (out-of-arc) points of the F6 locus. It cannot
+>    generate the boundary. `D` remains a correct stratum/degeneracy classifier (Karlsson
+>    arXiv:1003.4177 Sec. 5 defines it as the Möbius liveness condition), but the link from
+>    the stratum to `κ(H(λ)) ≥ 6` is **open**.
+> 3. **The phenomenon itself is prior art.** Bounded parameter regions for third-MUB
+>    existence in non-affine order-six CHM families are published: Goyeneche, *J. Phys. A*
+>    **46**, 105301 (2013), **arXiv:1209.4126**, Table 1 (`K6^(3)` black/white regions;
+>    `M6^(1)` bounded intervals; `D6^(1)`, `F6^(2)` full-range). **Do not present the
+>    arc/circle contrast as a new structural discovery**, and do not cite this repo for the
+>    phenomenon. What would be new is a *mechanism*, which is not published.
+>
+> Details: [`research/reports/audit_followup_2026-09-26.md`](../../research/reports/audit_followup_2026-09-26.md),
+> section "D-invariant dichotomy – resolved".
+
 
 ### Other contributions
 

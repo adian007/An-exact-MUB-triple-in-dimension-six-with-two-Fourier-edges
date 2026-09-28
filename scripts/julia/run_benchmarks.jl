@@ -34,7 +34,8 @@ prov = provenance_record(
     tolerances = Dict("solve_verify_tol" => 1e-8, "cluster_tol" => 1e-8,
                       "w1_residual_tol" => 1e-8),
     extra = Dict("runner" => "scripts/julia/run_benchmarks.jl",
-                 "quick_mode" => QUICK),
+                "quick_mode" => QUICK,
+                "arguments" => copy(ARGS)),
 )
 
 results = Dict{String,Any}()
@@ -103,6 +104,34 @@ results["verdicts"] = Dict(
 
 path = write_result(joinpath(OUT_DIR, "benchmarks.json"), results; provenance = prov)
 println("Wrote ", path)
+
+# Run manifest: records reproducibility metadata
+manifest = Dict{String,Any}(
+    "schema_version" => "1.0",
+    "runner" => "scripts/julia/run_benchmarks.jl",
+    "arguments" => copy(ARGS),
+    "inputs" => [
+        "scripts/julia/run_benchmarks.jl",
+        "Project.toml",
+        "Manifest.toml",
+        "src/MubSearch.jl",
+        "src/mub_zauner_6d_liang_chen.jl",
+        "src/Karlsson.jl",
+        "src/Pool.jl",
+        "src/Cliques.jl",
+        "src/Certification.jl",
+        "src/Benchmarks.jl",
+        "src/Provenance.jl",
+    ],
+    "outputs" => [
+        "results/benchmarks/benchmarks.json",
+        "results/benchmarks/benchmarks.md",
+    ],
+    "completion_status" => "completed",
+    "_provenance" => prov,  # attach git/version info to the manifest too
+)
+manifest_path = write_result(joinpath(OUT_DIR, "run_manifest.json"), manifest; provenance = nothing)
+println("Wrote ", manifest_path)
 
 # Human-readable summary
 open(joinpath(OUT_DIR, "benchmarks.md"), "w") do io

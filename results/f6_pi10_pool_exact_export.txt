@@ -1,0 +1,5 @@
+Exact F6(theta=0, lambda=pi/10) matrix: 36/36 entries unimodular; H*H^*=6I.
+Coefficient field: Q(zeta_60), degree 16.
+Exact per-vector MU-pool ideal exported: 10 equations, 10 variables.
+Macaulay2 input: /mnt/d/MUBs in 6-dimension/symbolic_export/f6_pi10_pool_exact.m2
+No Gröbner result is recorded by the exporter; the M2 script runs gb I.

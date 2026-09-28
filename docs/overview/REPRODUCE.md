@@ -68,7 +68,9 @@ Benchmark pins (do not adjust results to pass): F6 pool = **48** vectors;
 D₀-equivalent point λ=π/2 = **120** vectors / **10** third bases / N_p = 0 /
 W₁ empty on all 10 cliques; Tao S₆ = no third MUB. Artifacts:
 `results/benchmarks/benchmarks.{json,md}` with full PoolAudit bookkeeping and
-provenance. The audit and bug ledger: [`docs/METHODOLOGY_AUDIT.md`](docs/METHODOLOGY_AUDIT.md).
+provenance, plus `results/benchmarks/run_manifest.json` which records the exact
+runner, arguments, input paths, and reproducibility metadata. The audit and
+bug ledger: [`docs/METHODOLOGY_AUDIT.md`](docs/METHODOLOGY_AUDIT.md).
 
 ---
 
