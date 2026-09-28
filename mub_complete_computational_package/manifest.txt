@@ -1,0 +1,16 @@
+MUB COMPLETE COMPUTATIONAL PACKAGE
+Generated: 2026-09-28
+
+01_symbolic_I3/
+  Original symbolic I3 and fixed-symmetry computational artifacts.
+
+docs/
+  Research context, file guide, reproducibility, proof/evidence status.
+
+project_integration/
+  Main-project folder layout, merge instructions, validation checklist.
+
+02_symmetry/, 03_dita_exact/, 04_fold_analysis/, 05_fourth_MUB/, 06_results/
+  Reserved structured locations for the next reproducible computational stages. They intentionally do not contain invented scripts/results.
+
+Important: this package contains all source/output files currently available from the recent I3 symbolic branch work. It does not recreate unavailable scripts from earlier sessions merely from memory.

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "runner": "scripts/python/dita_i3.py",
+  "inputs": [
+    {
+      "path": "scripts/python/dita_i3.py",
+      "sha256": "5dae68781bc84dc9278f2e882c5e6b1c14a27204c0d076010fffc1be01263faf"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "symbolic_export/I3/i3_branch_definition.md",
+      "sha256": "9e64b028a375128b71eb49d81184fec99644b235dd8a426c199cd8e0de5fdbc1"
+    },
+    {
+      "path": "symbolic_export/I3/I3_equations.py",
+      "sha256": "add4d49f181de1c6d5a675539e1efc77bf6fc3bd6b63d6bf451c66215c51d598"
+    },
+    {
+      "path": "symbolic_export/I3/I3_single_vector.txt",
+      "sha256": "bcfccca8dc89d4996e676b8cef9f4daff0aca43bca4a2c887ecb32a1383ce11b"
+    },
+    {
+      "path": "symbolic_export/I3/I3_stats.txt",
+      "sha256": "9bb32e06047a597f0e1a5fb120b66e615df4fe2425811c1705f1be7ac97c9cc2"
+    },
+    {
+      "path": "symbolic_export/I3/symmetry_test.txt",
+      "sha256": "a95ebe39502d33e4fd2bb7636cae873a50e428f66b7e4e24e875944215ffbc43"
+    }
+  ],
+  "python_version": "3.13.14",
+  "sympy_version": "1.14.0",
+  "git_commit": "97977df6fd3c71606e162579905f18726cd4fabf",
+  "git_dirty": true,
+  "timestamp_utc": "2026-09-28T19:35:13.065425+00:00",
+  "random_seed": null,
+  "completion_status": "completed",
+  "remarks": "Deterministic exact symbolic generation; timestamp is run metadata."
+}

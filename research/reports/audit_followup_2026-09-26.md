@@ -3,7 +3,7 @@
 **Agent:** RESEARCH (`researcher`) - **Date:** 2026-09-26 - **Branch/commit:** `main` / `b1c81e1`
 **Scope:** Part 2, Blocker C only. One new file written (this report). No existing file in
 `results/` was modified, so no `.bak_2026-09-26` backup was required. No `paper/*.tex`, no
-`docs/paper/`, no `docs/SCIENTIFIC_STATUS.md`, and no `docs/results/final_honest_status.md`
+`docs/paper/`, no `docs/scientific_status.md`, and no `docs/results/final_honest_status.md`
 were touched.
 
 ---
@@ -831,7 +831,7 @@ evidential basis `arc_circle_asymmetry.txt` self-contradicts (both blocks record
 `Hermitian=false` in its own numeric field), and the `D`-invariant replacement is
 refuted here as a mechanism. The phenomenon is attributed to Goyeneche.
 
-`docs/overview/README.md:37` (the C2 / Track D row) is a *description* of the two loci and
+`docs/overview/readme.md:37` (the C2 / Track D row) is a *description* of the two loci and
 is factually correct as far as it goes; it is annotated, not rewritten, because the loci
 themselves are not in question — only the explanation of their shapes is.
 
@@ -914,7 +914,7 @@ normalization convention. `final_honest_status.md:33` ("arc width 0.117643;
 f6_boundary_reverify.txt") uses the *correct* boundary number and is unaffected.
 
 **Required follow-up edit (flagged, done below under archive):**
-`docs/overview/README.md:37` cites `results/locus_classification.json` for the
+`docs/overview/readme.md:37` cites `results/locus_classification.json` for the
 "~0.118 rad" width, but that JSON carries the sample-range string `[0.2925, 0.3000]`, not
 0.118. The correct citation for the width is `results/f6_boundary_reverify.txt`.
 

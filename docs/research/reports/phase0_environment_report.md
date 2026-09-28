@@ -81,7 +81,7 @@ future experiments must hash-pin their inputs (already repo policy).
 
 ### 3.2 Existing claim structure
 
-From README.md, docs/FINDINGS.md, results/final_honest_status.md:
+From readme.md, docs/findings.md, results/final_honest_status.md:
 
 - **T1 (Proved):** θ=0 gauge structure; Dita-slice λ CHM-inequivalence.
 - **T3 (Certified):** no fourth MUB at **seven** Dita-λ points

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "i3_singular_locus",
+  "target_lambda": "0.1114802243779665542913031975274",
+  "sample_offsets": [
+    "-2e-6",
+    "0",
+    "2e-6"
+  ],
+  "expected_regular_pool_counts": {
+    "below": 120,
+    "critical": 72,
+    "above": 72
+  },
+  "expected_augmented_physical_singular_count": 24,
+  "expected_singular_orbit_sizes": [
+    12,
+    12
+  ],
+  "clique_parameters": [
+    0.4,
+    1.0471975511965976,
+    2.0943951023931953
+  ],
+  "conventions": {
+    "matrix_orientation": "columns",
+    "vector_gauge": "(1,x1,...,x5)/sqrt(6)",
+    "parameter_relation": "z*t - 1 = 0"
+  }
+}

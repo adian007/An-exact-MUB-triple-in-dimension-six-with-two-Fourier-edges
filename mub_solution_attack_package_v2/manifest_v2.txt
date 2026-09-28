@@ -1,0 +1,15 @@
+MUB Solution Attack Package v2
+Updated 2026-09-28
+
+Includes previous solution-attack package plus current literature status and the K3-to-Fourier theorem target.
+
+Primary provenance:
+- mub_complete_computational_package.zip
+- mub_fold_a4_computation_final.zip
+- mub_b3_a4_i4_computation.zip
+
+Current data:
+- Dita/K3 third-MUB pools at λ=0.4, π/3, 2π/3
+- Fold λ*=0.1114802243779665542913031975274...
+- A4 orbit data
+- Fourier-transition sample fits

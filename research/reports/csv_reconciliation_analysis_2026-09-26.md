@@ -17,7 +17,7 @@
 | Is the `588 vs 928` relationship itself *explained*? | **NO — the "GAP EXPLANATION" section is sign-incoherent and self-refuting.** |
 | Is `848` explained? | **YES — a mundane cause: a different, older input CSV + a different `ref_ref` filter.** |
 
-**Bottom line for the docs agent:** the open discrepancy in `docs/SCIENTIFIC_STATUS.md` §6 is
+**Bottom line for the docs agent:** the open discrepancy in `docs/scientific_status.md` §6 is
 **substantially de-risked but NOT yet closed**, because the one-line fix that reconciles
 848/15 with 928/45 is a *code* change (`CSV_PATH` in the Python validator) that has **not been
 made and not been re-run**. Until that patch is made and re-run, the discrepancy is *explained*,
@@ -59,9 +59,9 @@ push!(lines, @sprintf("  historical baseline (phase2): 471 rows, gap=117"))
   **"(negative = more rows than target)"**. The script's own author therefore intended
   `588 = target`, `n_csv = achieved`.
 * Independent corroboration that 588 is a design target, not a measurement:
-  * `docs/overview/REPRODUCE.md:104` — "Completing search set `\\mathcal{S}_{588}` to 588 rows
+  * `docs/overview/reproduce.md:104` — "Completing search set `\\mathcal{S}_{588}` to 588 rows
     requires an overnight run"; line 113 — "Design target `\\mathcal{S}_{588}` is a subset".
-  * `docs/overview/README.md:53` — "928 … Design target `\\mathcal{S}_{588}`; extended-refinement superset".
+  * `docs/overview/readme.md:53` — "928 … Design target `\\mathcal{S}_{588}`; extended-refinement superset".
   * `docs/results/final_honest_status.md:43` — "**928 rows** … design target `S_588`".
   * `results/phase2_technical.txt:8` — `search_special_loci.jl --verify-only, expected_rows=588`.
     So 588 originates as an `expected_rows` assertion in the *search* script, i.e. a target.
@@ -77,10 +77,10 @@ literal in `csv_reconciliation.jl`. It is not a measurement. `928` is a measurem
 
 Line 3 of the artifact points to `docs/SEARCH_SETS.md`. That file **does not exist**
 (verified: `Test-Path docs/SEARCH_SETS.md` -> `False`; no `docs/SEARCH*` file exists at all).
-Evidence tag: **`sampled/numerical only`** (filesystem check). `docs/overview/README.md:89`
+Evidence tag: **`sampled/numerical only`** (filesystem check). `docs/overview/readme.md:89`
 lists `SEARCH_SETS` in a directory sketch, so the document appears to have been lost or
 never committed. The S588 definition is therefore only recoverable from
-`REPRODUCE.md`, `README.md` and `phase2_technical.txt` — not from the file the artifact cites.
+`reproduce.md`, `readme.md` and `phase2_technical.txt` — not from the file the artifact cites.
 
 
 ---
@@ -242,7 +242,7 @@ Python validator has not been pointed at the authoritative CSV.
 
 **Caveat (must not be overstated):** this explains the *arithmetic* completely, but it does **not**
 establish that `search.csv` is scientifically *correct* — only that it is the designated
-authoritative artifact (`docs/SCIENTIFIC_STATUS.md:128`, `REPRODUCE.md:113`, `README.md:53`).
+authoritative artifact (`docs/scientific_status.md:128`, `reproduce.md:113`, `readme.md:53`).
 `results/phase2_technical.txt` §2.2 already records that at least 4 `ref_degen_*` rows carry
 **stale `max_clique=6` labels from a pre-argmax-fix run**, and one of them,
 `ref_ref_degen_circulant_match`, is present in `search.csv` with `max_clique=2`. So the 45
@@ -330,7 +330,7 @@ over-production heading, and two of its four items are falsified by the very fil
 **Q1 — Is 588 a hard-coded design target?** YES. Bare literals at `csv_reconciliation.jl:137-139`
 and `:201`; no flag, no config, no computation. It originates as `expected_rows=588` in
 `search_special_loci.jl --verify-only` (`phase2_technical.txt:8`) and is documented as
-`\mathcal{S}_{588}` in `REPRODUCE.md:104,113`, `README.md:53`, `final_honest_status.md:43`.
+`\mathcal{S}_{588}` in `reproduce.md:104,113`, `readme.md:53`, `final_honest_status.md:43`.
 **So 588-vs-928 is target-vs-achieved overshoot and is NOT the Python/Julia discrepancy.**
 `exact symbolic`.
 
@@ -370,14 +370,14 @@ queue was overshot by 340 rows, and it also usefully documents the CSV's composi
    count=45") are **internally inconsistent on this exact point** and must be reconciled by a human.
 3. **`ref_ref` staleness.** `phase2_technical.txt` §2.2 records ≥4 `ref_degen_*` rows retaining
    pre-fix `max_clique=6` labels. The 45 should be re-derived from a post-fix run.
-4. **`docs/SEARCH_SETS.md` is missing** though cited by the artifact and sketched in `README.md:89`.
+4. **`docs/SEARCH_SETS.md` is missing** though cited by the artifact and sketched in `readme.md:89`.
 5. **Julia was unavailable**, so no Julia code path was executed. All Julia claims are
    **source-reading (`exact symbolic`)** or **recount (`sampled/numerical only`)**. No claim here
    is tagged `certified numerical (interval arithmetic)`.
 
 ---
 
-## 8. RECOMMENDED WORDING for `docs/SCIENTIFIC_STATUS.md` §6
+## 8. RECOMMENDED WORDING for `docs/scientific_status.md` §6
 
 > Ready-to-paste. The docs agent should replace the current §6 sentence *"First reconcile the
 > Python audit's 848-row/15-candidate view with the Julia audit's 928-row/45-candidate view.

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "k3_fourier_structure",
+  "source_campaign": "i3_singular_locus",
+  "sample_lambdas": [
+    0.4,
+    1.0471975511965976,
+    2.0943951023931953
+  ],
+  "pool_files": [
+    "mub_solution_attack_package_v2/01_results/pool_0.400000000000.npz",
+    "mub_solution_attack_package_v2/01_results/pool_1.047197551197.npz",
+    "mub_solution_attack_package_v2/01_results/pool_2.094395102393.npz"
+  ],
+  "expected_pool_count": 72,
+  "expected_clique_count": 4,
+  "charts": {
+    "row_permutations": true,
+    "column_permutations": true,
+    "dephasing_invariant": true,
+    "fourier_transpose": true
+  },
+  "status": "diagnostic_numerical_stage"
+}

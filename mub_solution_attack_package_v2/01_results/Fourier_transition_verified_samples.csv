@@ -1,0 +1,7 @@
+lambda,object,classification,status,max_error
+0.4,B3 representative,is_numerically_equivalent_to_Fourier_family,verified_numerically,2.5e-15
+0.4,H_D^dagger_B3,not_tested_to_completion,insufficient_run,
+1.047197551197,B3 representative,not_Fourier_under_best_fixed_pattern_test,needs_other_transition_test,
+1.047197551197,H_D^dagger_B3,not_tested_to_completion,insufficient_run,
+2.094395102393,B3 representative,is_numerically_equivalent_to_Fourier_family,verified_numerically,5.4e-15
+2.094395102393,H_D^dagger_B3,not_tested_to_completion,insufficient_run,

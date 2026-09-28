@@ -1,0 +1,5 @@
+01_results/        Existing B3 pools and sample Fourier-family membership audit.
+02_scripts/        Finite permutation Fourier-family membership scripts.
+03_literature/     Literature audit and source links.
+04_provenance/     Earlier complete computation packages.
+05_next_proof/     Exact theorem target and elimination strategy.

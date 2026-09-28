@@ -105,7 +105,7 @@ Algebraic gauge structure and the certified/exact fourth-MUB theorems are proved
 \section{Scope and Logical Status of Results}
 \label{sec:scope}
 
-Scoped to $K_6^{(3)}$ and the search sets in \repo{../overview/REPRODUCE.md}.
+Scoped to $K_6^{(3)}$ and the search sets in \repo{../overview/reproduce.md}.
 \begin{itemize}
     \item \textbf{HP-verified findings.} Locus identification and sampled Dita persistence (Findings~\ref{thm:trackd},~\ref{thm:T2},~\ref{prop:L5},~\ref{prop:L6}); not theorems on all of $K_6^{(3)}$.
     \item \textbf{Confirmatory numerics.} $\mathcal{S}^*$ and CSV \texttt{found\_fourth=false}; weaker than the seven-point certificate in~\cite{JaupiTheorems2026}.
@@ -171,7 +171,7 @@ The pipeline is implemented in Julia~1.12.6 (HomotopyContinuation~2.22, Graphs~1
     \item \texttt{dita\_lambda\_fourth\_dense.jl}, \texttt{fourth\_mub\_locus\_sweep.jl} --- Track~A/C fourth-MUB probes;
     \item \texttt{karlsson\_k6\_3.py}, \texttt{chm\_equivalence.py}, \texttt{finish\_project\_audit.py}.
 \end{itemize}
-Reproduction commands and search-set definitions are in \texttt{REPRODUCE.md} and \texttt{docs/SEARCH\_SETS.md}.
+Reproduction commands and search-set definitions are in \texttt{reproduce.md} and \texttt{docs/SEARCH\_SETS.md}.
 
 \section{Results}
 \label{sec:results}
@@ -238,7 +238,7 @@ Detailed probe statistics appear in Appendix~\ref{app:probes} (Tables~\ref{tab:l
 
 \subsection{Certified Search Set \texorpdfstring{$\mathcal{S}_{588}$}{S588} and Extended CSV}
 I define the \textbf{certified search set} $\mathcal{S}\subset K_6^{(3)}$ as points with \texttt{pool\_complete\_flag}=\texttt{true} and $n_{\text{certified}} = n_{\text{tracked}}$.
-The design target $\mathcal{S}_{588}$ is documented in \repo{../overview/REPRODUCE.md}.
+The design target $\mathcal{S}_{588}$ is documented in \repo{../overview/reproduce.md}.
 The on-disk CSV \repo{results/special_loci_search.csv} contains $928$ certified rows ($899$ pool-complete, $0$ with \texttt{found\_fourth}=\texttt{true}) as of 2026-08-05.
 Reproducible third-MUB anchors: $F_6$ at $\theta=0$ and Dita; $\theta=\pi/2$ \texttt{circulant\_match} rows are \textbf{tolerance artifacts} ($\texttt{max\_clique}=6$ at $\texttt{ortho\_tol}=10^{-8}$ but $2$ at $10^{-12}$).
 \textbf{$\mathcal{S}^*$ phased batches:} authoritative full primary sweep $1863/1865$ distinct points, \texttt{found\_fourth}=\texttt{false} throughout (\repo{special_loci_degen1845.meta.txt}).
@@ -275,7 +275,7 @@ I define a covering region for future exhaustive search:
 \[
 \mathcal{R}=\mathcal{S}^*\cup\{\text{Dita }\lambda\text{-circle}\}\cup\{\text{F6 }\theta=0\ \lambda\text{-arc}\}\cup\{\text{anchors}\},
 \]
-where $\mathcal{S}^*$ is the full-degeneracy primary queue from \repo{search_special_loci.jl}; see \repo{../overview/REPRODUCE.md}.
+where $\mathcal{S}^*$ is the full-degeneracy primary queue from \repo{search_special_loci.jl}; see \repo{../overview/reproduce.md}.
 \textbf{Status:} certified search CSV: $928$ rows, $\texttt{found\_fourth}=\texttt{false}$ throughout.
 $\mathcal{S}^*$ primary: $1863/1865$ distinct candidate points ($1852$ pool-complete, $21$ candidate loci with $\texttt{max\_clique}=6$, $0$ fourth).
 \textbf{Track~A:} dense Dita $\lambda$ probes ($628/628$ clique$\ge6$, fourth$=0$).
@@ -291,8 +291,8 @@ The $512$-point coarse grid already missed every known third-MUB locus (\S\ref{s
 
 \subsection{Reproducibility}
 \label{sec:infra}
-Reproducibility is pinned in \repo{REPRODUCE.md} (Julia~1.12.6, project-local \repo{.julia-depot}).
-Search sets $\mathcal{S}_{588}$, $\mathcal{S}^*$, and $\mathcal{R}$ are formalized in \repo{../overview/REPRODUCE.md}; claims are tracked in \repo{../results/final_honest_status.md} (Proved / HP-verified / Conjectured / Open).
+Reproducibility is pinned in \repo{reproduce.md} (Julia~1.12.6, project-local \repo{.julia-depot}).
+Search sets $\mathcal{S}_{588}$, $\mathcal{S}^*$, and $\mathcal{R}$ are formalized in \repo{../overview/reproduce.md}; claims are tracked in \repo{../results/final_honest_status.md} (Proved / HP-verified / Conjectured / Open).
 
 \begin{table}[t]
 \caption{Pool completeness at anchor points (\texttt{pool\_completeness\_report}). Deduplicated pool size $|P|$ varies with $\lambda$ on the Dita slice ($72$--$120$ in companion T3 runs).}
@@ -494,7 +494,7 @@ $\lambda$ & clique@$\pi/4$ & clique@$\pi/4{+}0.001$ & HP \\
 
 \section{Reproduction and Symbolic Logs}
 \label{app:reproduce}
-One-command regeneration of all artifacts is documented in \texttt{REPRODUCE.md}.
+One-command regeneration of all artifacts is documented in \texttt{reproduce.md}.
 Key deliverables: \repo{results/special_loci_search.csv} ($928$ rows), \repo{results/special_loci_degen1845.meta.txt} ($\mathcal{S}^*$ primary: $1863/1865$, log-backed), \repo{results/locus_classification.json}, \repo{results/dita_lambda_fourth_dense.csv} ($628$ probes), \repo{results/project_finish_audit.txt}, \repo{results/track_c_elimination/m2_fourth_mub_reduced_Dita.log} ($35$ generators, $\dim I=-1$ over $\mathbb{C}$, inconclusive).
 The claim ledger (\repo{../results/final_honest_status.md}) tracks each statement as Proved / HP-verified / Conjectured / Open.
 

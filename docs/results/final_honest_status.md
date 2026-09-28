@@ -1,6 +1,6 @@
 # Final Honest Status — Claim ledger (2026-08-05)
 
-Search-set definitions and reproduction: [`../overview/REPRODUCE.md`](../overview/REPRODUCE.md). Scientific interpretation: [`../SCIENTIFIC_STATUS.md`](../SCIENTIFIC_STATUS.md). Finish audit: [`../../results/project_finish_audit.txt`](../../results/project_finish_audit.txt).
+Search-set definitions and reproduction: [`../overview/reproduce.md`](../overview/reproduce.md). Scientific interpretation: [`../scientific_status.md`](../scientific_status.md). Finish audit: [`../../results/project_finish_audit.txt`](../../results/project_finish_audit.txt).
 
 ## Ledger key
 
@@ -114,4 +114,4 @@ Audit and fixes: [`docs/METHODOLOGY_AUDIT.md`](../docs/METHODOLOGY_AUDIT.md) (ca
 | Dedup stability under tolerance sweep 1e-6…1e-12 | **HP-verified** | `dedup_tolerance_diagnostics`: counts 48/120/72/90 invariant at all four benchmark points |
 | Claim-tier vocabulary + provenance on all new artifacts | **Enforced** | `Certification.jl` tiers; `write_result` stamps git commit/seed/tolerances |
 
-Environment note (F4): Windows Smart App Control (On since ~2026-09) blocks unsigned Julia core DLLs; all Julia computation now runs in WSL2 Ubuntu (documented in `../overview/REPRODUCE.md`). No security policy was modified.
+Environment note (F4): Windows Smart App Control (On since ~2026-09) blocks unsigned Julia core DLLs; all Julia computation now runs in WSL2 Ubuntu (documented in `../overview/reproduce.md`). No security policy was modified.

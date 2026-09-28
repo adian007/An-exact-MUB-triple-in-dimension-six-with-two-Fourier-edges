@@ -1,0 +1,10 @@
+6 exact MU equations generated.
+equations=6
+variables=12
+ideal_generators=12
+F1: terms=36, degree=2, z=False, t=False
+F2: terms=36, degree=4, z=True, t=True
+F3: terms=36, degree=4, z=True, t=True
+F4: terms=36, degree=4, z=True, t=True
+F5: terms=36, degree=4, z=True, t=True
+F6: terms=36, degree=2, z=False, t=False

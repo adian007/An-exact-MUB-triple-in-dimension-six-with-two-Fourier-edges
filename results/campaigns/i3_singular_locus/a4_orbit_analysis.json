@@ -1,0 +1,168 @@
+{
+  "singular": {
+    "source": "results\\campaigns\\i3_singular_locus\\augmented_singular_roots.json",
+    "target_lambda": 0.11148022437796655,
+    "lambda_tolerance_in_z": 1e-05,
+    "parameter_cluster_tolerance_in_z": 1e-07,
+    "physical_candidate_count": 24,
+    "critical_parameter_clusters": [
+      {
+        "parameter_z_re_im": [
+          0.9937925125883492,
+          0.11124945808109037
+        ],
+        "lambda": 0.11148022437796644,
+        "root_count": 24,
+        "certified_root_count": 24,
+        "certification_available": true,
+        "all_roots_certified": true,
+        "max_system_residual": 3.580361673049448e-15,
+        "orbit_sizes": [
+          12,
+          12
+        ],
+        "stabilizer_orders": [
+          1,
+          1
+        ],
+        "orbit_decomposition": [
+          {
+            "representative": 0,
+            "members": [
+              0,
+              2,
+              4,
+              9,
+              10,
+              13,
+              16,
+              17,
+              18,
+              19,
+              21,
+              23
+            ],
+            "orbit_size": 12,
+            "stabilizer_order": 1
+          },
+          {
+            "representative": 1,
+            "members": [
+              1,
+              3,
+              5,
+              6,
+              7,
+              8,
+              11,
+              12,
+              14,
+              15,
+              20,
+              22
+            ],
+            "orbit_size": 12,
+            "stabilizer_order": 1
+          }
+        ],
+        "matches_two_12_orbit_hypothesis": true
+      }
+    ],
+    "augmented_finite_roots": 1920,
+    "augmented_mixed_volume_estimate": 12224,
+    "claim_scope": "numerical roots in the supplied H_D(z) gauge",
+    "transition_reconciliation": {
+      "below_regular_count": 120,
+      "critical_regular_count": 72,
+      "critical_singular_root_count": 24,
+      "critical_total_after_augmentation": 96,
+      "above_regular_count": 72,
+      "expected_counts": [
+        120,
+        96,
+        72
+      ],
+      "observed_counts": [
+        120,
+        96,
+        72
+      ],
+      "matches_expected": true,
+      "interpretation": "The critical pool solve counts regular roots; the augmented physical singular roots are added for the critical total."
+    }
+  },
+  "cliques": {
+    "lambda_pi_over_3": {
+      "lambda": 1.0471975511965976,
+      "pool_count": 72,
+      "verified_clique_count": 4,
+      "orbit_sizes": [
+        4
+      ],
+      "stabilizer_orders": [
+        3
+      ],
+      "orbit_decomposition": [
+        {
+          "representative": 0,
+          "members": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "orbit_size": 4
+        }
+      ],
+      "claim_scope": "A4 invariance of verified cliques in the supplied recovered pool"
+    },
+    "lambda_0_4": {
+      "lambda": 0.4,
+      "pool_count": 72,
+      "verified_clique_count": 4,
+      "orbit_sizes": [
+        4
+      ],
+      "stabilizer_orders": [
+        3
+      ],
+      "orbit_decomposition": [
+        {
+          "representative": 0,
+          "members": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "orbit_size": 4
+        }
+      ],
+      "claim_scope": "A4 invariance of verified cliques in the supplied recovered pool"
+    },
+    "lambda_2pi_over_3": {
+      "lambda": 2.0943951023931953,
+      "pool_count": 72,
+      "verified_clique_count": 4,
+      "orbit_sizes": [
+        4
+      ],
+      "stabilizer_orders": [
+        3
+      ],
+      "orbit_decomposition": [
+        {
+          "representative": 0,
+          "members": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "orbit_size": 4
+        }
+      ],
+      "claim_scope": "A4 invariance of verified cliques in the supplied recovered pool"
+    }
+  }
+}

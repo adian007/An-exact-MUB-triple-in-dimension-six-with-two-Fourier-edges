@@ -57,7 +57,7 @@ cluster representatives, F6 arc `(0, 0.5, 0.3)` and Diţă circle `(0.9553166181
 The brief states: *"the status doc cites `chm_equivalence.txt` for a number that file does not contain."*
 **This is FALSE as stated, and I decline to repeat it.** Checked directly:
 
-- `docs/SCIENTIFIC_STATUS.md` **never mentions `chm_equivalence.txt` at all** (full-file read; the
+- `docs/scientific_status.md` **never mentions `chm_equivalence.txt` at all** (full-file read; the
   file is 157 lines and cites only the T1/T3/T4 scripts, `w1_D0_groebner.m2`, and the `results/` logs
   at lines 103–122). It makes no 5.24 claim.
 - `docs/results/final_honest_status.md` cites `chm_equivalence.txt` twice, at **line 30** ("φ is
@@ -185,7 +185,7 @@ as written ("get mv below 5000 for n_wit=2") is aimed at the wrong target. The l
 n_wit=1 witness (`Certification.jl:42–72`, `w1_witness_certificate`), which returns
 `EMPTY_CERTIFIED / CERTIFIED_NUMERICAL` or `INCOMPLETE / OPEN` and enforces
 `complete = (n_tracked == mv && n_cert == n_tracked)` at line 148 — a formulation already tractable at
-mv=252 (item 2). Note also that `docs/SCIENTIFIC_STATUS.md:136–140` records the normalization hazard
+mv=252 (item 2). Note also that `docs/scientific_status.md:136–140` records the normalization hazard
 that forced this rewrite; the item-(2) artifacts predate it, which bears on how much weight they
 carry (see 2.4).
 
@@ -252,8 +252,8 @@ clique_indices=idx, B3=B3p)` — transporting the λ_src cliques to λ+π and re
 
 **(b) Is 40/40 really 40 independent certificates?**
 → **YES for the tally as published: 40/40 = 40 independent HC solves, with NO double counting in
-any current document.** Every place the tally appears — `docs/SCIENTIFIC_STATUS.md:121–122`,
-`docs/overview/FORENSIC_GROUND_TRUTH_REPORT.md:21–23` and `76–80`,
+any current document.** Every place the tally appears — `docs/scientific_status.md:121–122`,
+`docs/overview/forensic_ground_truth_report.md:21–23` and `76–80`,
 `docs/overview/claim_audit.md:13`, `docs/overview/known_results_table.md:15`, and the T3 statement
 in `docs/paper/proofs/fourth_mub_theorems.tex` — derives 40 from the two all-clique logs only,
 22 + 18. `verify_chm_b3_transfer.txt` is nowhere added to the 40.
@@ -329,7 +329,7 @@ artifacts do not overstate themselves. `found4=false` is combinatorial (clique g
   unit-normalized pool vectors were incorrectly tested with RHS=6". The legacy path used here does
   auto-detect (`_witness_mu_to_basis`, `src/mub_zauner_6d_liang_chen.jl:669–684`), but comparisons
   with post-fix results must be checked for convention consistency, as
-  `docs/SCIENTIFIC_STATUS.md:136–140` warns.
+  `docs/scientific_status.md:136–140` warns.
 - **Scope unchanged:** not a full-circle result, not `K_6^(3)`, not `N(6)=3`. No upgrade.
 
 ---
@@ -423,7 +423,7 @@ full-circle or full-`K_6^(3)` certificate exists, and none was produced.**
    artifact says "certificates are not independent" (`verify_nwit1_referee_checks.txt:22`) while the
    status doc and paper say "seven points". Both are true but invite opposite readings; the paper's
    "four CHM classes" parenthetical is the right fix and should propagate to
-   `docs/SCIENTIFIC_STATUS.md:38,121–122`.
+   `docs/scientific_status.md:38,121–122`.
 7. **F6-vs-Diţă "distinct components":** the comparison is column-only. Should we run
    `chm_equivalence_residual_full` (`scripts/python/chm_equivalence.py:100`, row+column) before that
    label is used in prose? Currently it excludes only the tested subgroup.

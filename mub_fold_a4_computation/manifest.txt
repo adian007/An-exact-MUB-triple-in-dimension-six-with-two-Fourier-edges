@@ -1,0 +1,8 @@
+Fold/A4 package
+run_fold_a4.py
+README.md
+docs/SINGULAR_SYSTEM.md
+docs/A4_ORBIT_PROTOCOL.md
+docs/STATUS.md
+docs/REPRODUCE_WINDOWS.md
+source_context/01_symbolic_I3/*

@@ -1,0 +1,207 @@
+[
+  {
+    "orbit": 1,
+    "seed": 0,
+    "size": 6,
+    "matched_indices": [
+      0,
+      2,
+      69,
+      79,
+      81,
+      82
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 2,
+    "seed": 1,
+    "size": 11,
+    "matched_indices": [
+      1,
+      16,
+      22,
+      32,
+      39,
+      46,
+      51,
+      54,
+      66,
+      67,
+      75
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 3,
+    "seed": 3,
+    "size": 12,
+    "matched_indices": [
+      3,
+      21,
+      23,
+      30,
+      38,
+      42,
+      43,
+      44,
+      53,
+      77,
+      84,
+      88
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 4,
+    "seed": 4,
+    "size": 6,
+    "matched_indices": [
+      4,
+      11,
+      13,
+      31,
+      45,
+      65
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 5,
+    "seed": 5,
+    "size": 6,
+    "matched_indices": [
+      5,
+      29,
+      37,
+      50,
+      55,
+      72
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 6,
+    "seed": 6,
+    "size": 4,
+    "matched_indices": [
+      6,
+      47,
+      68,
+      91
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 7,
+    "seed": 7,
+    "size": 4,
+    "matched_indices": [
+      7,
+      20,
+      83,
+      90
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 8,
+    "seed": 8,
+    "size": 12,
+    "matched_indices": [
+      8,
+      15,
+      26,
+      28,
+      57,
+      59,
+      62,
+      71,
+      74,
+      86,
+      89,
+      92
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 9,
+    "seed": 9,
+    "size": 12,
+    "matched_indices": [
+      9,
+      10,
+      12,
+      17,
+      25,
+      33,
+      40,
+      41,
+      52,
+      58,
+      60,
+      76
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 10,
+    "seed": 14,
+    "size": 4,
+    "matched_indices": [
+      14,
+      18,
+      35,
+      49
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 11,
+    "seed": 19,
+    "size": 6,
+    "matched_indices": [
+      19,
+      36,
+      61,
+      63,
+      64,
+      73
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 12,
+    "seed": 24,
+    "size": 3,
+    "matched_indices": [
+      24,
+      78,
+      85
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 13,
+    "seed": 27,
+    "size": 4,
+    "matched_indices": [
+      27,
+      48,
+      80,
+      87
+    ],
+    "closure_ok": true
+  },
+  {
+    "orbit": 14,
+    "seed": 34,
+    "size": 3,
+    "matched_indices": [
+      34,
+      56,
+      70
+    ],
+    "closure_ok": true
+  }
+]

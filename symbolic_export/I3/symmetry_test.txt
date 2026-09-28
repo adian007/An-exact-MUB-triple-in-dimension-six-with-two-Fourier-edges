@@ -1,0 +1,18 @@
+Exact conjugation candidate: z<->t, x_j<->y_j, i->-i.
+F1 -> [1]
+F2 -> [2]
+F3 -> [3]
+F4 -> [4]
+F5 -> [5]
+F6 -> [6]
+
+Exact parameter symmetry z->-z, x4<->x5, y4<->y5:
+F1 -> [1]
+F2 -> [2]
+F3 -> [4]
+F4 -> [3]
+F5 -> [5]
+F6 -> [6]
+G2: U*H_D*Q = H_D (exact modulo z*t-1)
+G3: U*H_D*Q = H_D (exact modulo z*t-1)
+row_permutation_group_order=12
