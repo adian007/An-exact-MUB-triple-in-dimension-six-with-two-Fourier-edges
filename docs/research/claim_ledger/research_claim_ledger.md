@@ -19,3 +19,15 @@
 ## Rule
 
 Never upgrade a row because a larger sample has the same outcome. Upgrade only when the mathematical quantifier changes: fixed point to interval, finite sample to complete family, or numerical coefficient to exact coefficient.
+
+## 2026-09-29 K3 family-membership audit
+
+| Finding | Tier | Evidence SHA-256 | Scope / limitation |
+|---|---|---|---|
+| The paper's Fourier-family placement is transpose to the repository fitter's direct placement in the tested generic controls | NUMERICAL | `d2d864f2bf2228ebcfd89ad4875376f4e0d3c110b1a67197fa1f3e05d2aa92c9` | Five generic paper parameters plus the Fourier endpoint; floating-point fits |
+| Extension of \((Id,H)\), \((Id,H^\dagger)\), and \((Id,H^T)\) is equivalent under common-unitary changes and simultaneous conjugation | EXACT | `d2d864f2bf2228ebcfd89ad4875376f4e0d3c110b1a67197fa1f3e05d2aa92c9` | Direct basis-level equivalence argument |
+| Five constrained random \(X_6\) controls fit \(X_6\) and have no direct or transpose-call F fit | NUMERICAL | `d2d864f2bf2228ebcfd89ad4875376f4e0d3c110b1a67197fa1f3e05d2aa92c9` | Five generated controls; no family-level conclusion |
+| All 36 sampled transition matrices classify as F, F, or \(F^T\), with no X6 fit; four cliques persist at all three orthogonality tolerances | NUMERICAL | `d2d864f2bf2228ebcfd89ad4875376f4e0d3c110b1a67197fa1f3e05d2aa92c9` | Three \(\lambda\) samples only; pool completeness not addressed |
+| The 12-element monomial action is transitive on the four supplied cliques at each tested \(\lambda\) | NUMERICAL | `d2d864f2bf2228ebcfd89ad4875376f4e0d3c110b1a67197fa1f3e05d2aa92c9` | Finite pool and sampled parameters only; no parameter-coordinate law asserted |
+| Quartet exclusion: published computer-assisted theorem (cited, not reproduced) applied to numerically fitted membership | NUMERICAL | `d2d864f2bf2228ebcfd89ad4875376f4e0d3c110b1a67197fa1f3e05d2aa92c9` | Conditional on exact membership; numerical fits alone do not prove that hypothesis |
+| The earlier pi/3 fixed-pattern non-fit is superseded for the selected sample by an exhaustive direct-F numerical fit | NUMERICAL | `d2d864f2bf2228ebcfd89ad4875376f4e0d3c110b1a67197fa1f3e05d2aa92c9` | Selected representative only; package originals remain untouched |
