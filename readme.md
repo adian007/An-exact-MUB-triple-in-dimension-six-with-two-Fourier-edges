@@ -4,7 +4,7 @@ Research code, symbolic computations, numerical experiments, and reproducibility
 artifacts for the study of mutually unbiased bases (MUBs) in dimension six.
 
 > **TL;DR.** We construct an explicit MUB triple in $\mathbb{C}^6$,
-> $\{\,I,\ D(\rho)/\sqrt{6},\ B\,\}$ with $\rho = e^{i\pi/3}$, built from the
+> $\lbrace I,\ D(\rho)/\sqrt{6},\ B \rbrace$ with $\rho = e^{i\pi/3}$, built from the
 > Diţă slice of Karlsson's three-parameter family of complex Hadamard matrices.
 > The two transition matrices involving the new basis $B$ lie (up to equivalence
 > and transposition) in the two-parameter **Fourier family**. A known
@@ -36,7 +36,7 @@ Read this first.
 
 | Statement | Status |
 |---|---|
-| The constructed triple $\{I, D(\rho)/\sqrt6, B\}$ is non-extendable to a fourth MUB | **Claimed**, via the Fourier-family obstruction |
+| The constructed triple $\lbrace I, D(\rho)/\sqrt6, B\rbrace $ is non-extendable to a fourth MUB | **Claimed**, via the Fourier-family obstruction |
 | Every MUB triple in dimension six is non-extendable | **Not claimed** |
 | Four MUBs do not exist in dimension six ($N(6)=3$) | **Not claimed** |
 | Results hold for all complex Hadamard matrices of order 6 | **Not claimed**; the work is confined to the Karlsson $K_6^{(3)}$ family and the Diţă slice |
@@ -52,9 +52,9 @@ three.
 A set of orthonormal bases $\mathcal B_1,\dots,\mathcal B_k$ in $\mathbb C^d$ is
 **mutually unbiased** if, for every pair of distinct bases,
 
-$$
+```math
 |\langle u_i, v_j\rangle|^2 = \frac1d .
-$$
+```
 
 For $d=6$ this reads $|\langle u_i, v_j\rangle| = 1/\sqrt6$.
 
@@ -64,9 +64,9 @@ long-standing open problem; the largest set known is three bases.
 **Connection to Hadamard matrices.** Fix the computational basis $I$. A basis
 unbiased to $I$ is encoded by a complex Hadamard matrix $H$:
 
-$$
-H H^\dagger = 6\,I, \qquad |H_{jk}| = 1 .
-$$
+```math
+H H^\dagger = 6 I, \qquad |H_{jk}| = 1 .
+```
 
 Normalizing by $1/\sqrt6$ gives a unitary whose columns form the unbiased basis.
 This project works through that correspondence, focusing on Karlsson's
@@ -78,10 +78,10 @@ three-parameter family $K_6^{(3)}$ and its one-parameter Diţă slice.
 
 The central object is the exact triple
 
-$$
-\left\{\, I,\ \frac{D(\rho)}{\sqrt6},\ B \,\right\},
+```math
+\left\lbrace I,\ \frac{D(\rho)}{\sqrt6},\ B \right\rbrace,
 \qquad \rho = e^{i\pi/3},
-$$
+```
 
 where
 
@@ -105,7 +105,7 @@ A second exact construction is studied at $z = 1$.
 
 The project uses the following one-parameter slice of the Karlsson family:
 
-$$
+```math
 D(z)=
 \begin{pmatrix}
 1&1&1&1&1&1\\
@@ -116,7 +116,7 @@ D(z)=
 1&-\bar z&-1&-i&z&i
 \end{pmatrix},
 \qquad |z|=1,\quad z = e^{i\lambda}.
-$$
+```
 
 | Point | Role |
 |---|---|
