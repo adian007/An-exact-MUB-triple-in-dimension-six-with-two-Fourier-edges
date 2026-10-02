@@ -39,3 +39,4 @@ See [the directory map](docs/directory_map.md) for the full root layout. These b
 The project uses Julia dependencies declared in `Project.toml` and locked in
 `Manifest.toml`. See the reproduction guide before running expensive searches.
 # MUB-in-dimension-6
+"# An-exact-MUB-triple-in-dimension-six-with-two-Fourier-edges" 
