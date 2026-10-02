@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "results"
-CSV_PATH = RESULTS / "special_loci_search_backup848.csv"
+CSV_PATH = RESULTS / "special_loci_search.csv"
 DITA = math.acos(1 / math.sqrt(3))
 
 

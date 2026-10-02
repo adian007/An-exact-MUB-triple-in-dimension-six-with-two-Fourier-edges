@@ -1,0 +1,14 @@
+6 MU equations generated.
+F1: terms=36, degree=2
+F2: terms=36, degree=4
+F3: terms=36, degree=4
+F4: terms=36, degree=4
+F5: terms=36, degree=4
+F6: terms=36, degree=2
+Parameter dependence:
+F1: z=False, t=False
+F2: z=True, t=True
+F3: z=True, t=True
+F4: z=True, t=True
+F5: z=True, t=True
+F6: z=False, t=False

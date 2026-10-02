@@ -1,299 +1,465 @@
-% Paper 1 (theorems): T1, T3 (lead), T4 (pipeline validation), C1.
-% Compile from paper/: pdflatex main_theorems.tex && pdflatex main_theorems.tex
-% TITLE: P1-B (author-approved 2026-08-16)
+% arXiv preprint. Compile with: pdflatex main && pdflatex main
+% TODO(author): create an ancillary exact-verification bundle; see the Data and code section.
+\documentclass[11pt]{article}
 
-\documentclass[onecolumn]{IEEEtran}
-\input{preamble_common}
+\usepackage[utf8]{inputenc}
+\IfFileExists{lmodern.sty}{\usepackage[T1]{fontenc}\usepackage{lmodern}}{}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
 
-% Convention (this document): Theorem/Lemma/Proof for T1 (algebra), T3
-% (certified W_1 emptiness), and T4 (exact Groebner pipeline validation).
-% Computational locus audits live in the companion methods report~\cite{JaupiMethods2026}.
+\numberwithin{equation}{section}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\I}{\mathbf{I}}
+\newcommand{\dg}{^{\dagger}}
+\newcommand{\Dita}{\texorpdfstring{Di\c{t}\u{a}}{Dita}}
+\hypersetup{pdftitle={An exact MUB triple in dimension six with two Fourier-family edges},pdfauthor={Adian Jaupi}}
+
+\title{A Fourier--Fourier--\Dita{} triangle:\\
+an exact triple of mutually unbiased bases in dimension six\\
+with two non-extendable Fourier-family edges}
+\author{Adian Jaupi%
+% TODO(author): add affiliation and e-mail, e.g. \\ {\small Affiliation, City, Country} \\ {\small\texttt{name@domain}}
+}
+\date{}
 
 \begin{document}
-
-\title{Gauge Structure and Certified Non-Extendability for Selected Karlsson Hadamards in Dimension Six}
-
-\author{%
-\IEEEauthorblockN{Adian Jaupi}%
-}
-
 \maketitle
 
 \begin{abstract}
-Within Karlsson's three-parameter family $K_6^{(3)}$ only, I prove a gauge-structure theorem, give a certified fourth-MUB obstruction at seven Dita-$\lambda$ points, independently re-verify one Brierley--Weigert instance by exact Gr\"obner methods, and correct a literature transcription of Karlsson's $A$-matrix.
-\textbf{(T1, Theorem~\ref{thm:T1}):} at $\theta{=}0$, $\phi$ is a parametrization gauge; on the Dita slice, $\lambda$ is not a matrix-level gauge, while CHM class is $\pi$-periodic (four classes among $\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$).
-\textbf{(T3, Theorem~\ref{thm:T3}; lead result):} at seven Dita-$\lambda$ points $\lambda\in\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$, HomotopyContinuation \texttt{certify()} yields a numerical-interval certificate that the single-vector witness $W_1$ is empty at every recovered-pool $6$-clique ($\mathbf{40/40}$), which implies no fourth MUB at those instances.
-\textbf{(T4, Theorem~\ref{thm:T4}; pipeline validation):} at the $D_0$-equivalent pair $(D_{\mathrm{bc}},F_D)$, an exact ideal-membership proof shows that the witness ideal $W_1$ is the unit ideal over $\mathbb{Q}(\zeta_{24},\sqrt5)$ (Gr\"obner basis $\{1\}$). This independently re-checks a fact already in Brierley--Weigert~\cite{Brierley2009}; it is not billed as a co-equal headline with T1/T3. A regression rerun of the pipeline (2026-09) additionally reproduces Brierley--Weigert's complete-pool counts at the CHM-equivalent point $\lambda{=}\pi/2$---$120$ vectors, $10$ third bases, no mutually unbiased pair among them, and all ten $W_1$ witnesses certified empty---so the exact certificate and the numerical pipeline now agree on the same instance. The closed-form third basis $F_D$ follows Bengtsson--Bruzda--Ericsson--Larsson--Tadej--\.Zyczkowski~\cite{BengtssonMUH2007}.
-\textbf{(C1)} The McNulty--Weigert printed $A$-matrix differs from Karlsson's by a leading-sign error and a broken conjugate structure; symbolically $A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger\neq2I$ on a Zariski-open set (corroborated by a $0/349$ numerical audit).
-Third-MUB locus identification, search-set audits, and reproducibility artifacts are documented in a companion computational report~\cite{JaupiMethods2026}.
+We give an explicit algebraic triple of mutually unbiased bases (MUBs) in $\C^6$ containing the computational basis and a member of the \Dita{} slice of Karlsson's three-parameter family. Exact calculations identify the other two transition matrices as transposed members of the two-parameter Fourier family. Jaming et al.'s theorem therefore shows that both corresponding pairs are non-extendable, and in particular that this specific triple cannot be extended to four MUBs. We also give a closed form $D(z)$ for the whole \Dita{} slice and exactly count its Hadamard $2\times2$ submatrices: 51 generically and 75 at $z=1$. We do not infer non-extendability of the \Dita{} edge from this count: the published count criterion used for that inference has been challenged, and its authors' reply says that the disputed theorem is not presently established. Numerical continuation at seven slice parameters recovers 40 third bases; all show the same Fourier--Fourier pattern to residual at most $5\times10^{-15}$. This is numerical evidence only and motivates a structural conjecture. We also record a transcription discrepancy in a recent review and the degeneracy of Karlsson's M\"obius parametrisation on the slices used here.
 \end{abstract}
 
-\begin{IEEEkeywords}
-Complex Hadamard matrices, Karlsson family, mutually unbiased bases, homotopy continuation, Gr\"obner bases, certified computation
-\end{IEEEkeywords}
+\noindent\textbf{Keywords:} mutually unbiased bases; complex Hadamard matrices; Fourier family; \Dita{} family; Karlsson family; $H_2$-reducible matrices; exact algebraic computation.
 
-\section{Introduction}
-\label{sec:intro}
+\noindent\textbf{MSC 2020:} 05B20, 15B34, 81P15.
 
-Mutually unbiased bases (MUBs) in $\mathbb{C}^d$ are orthonormal bases $\mathcal{B}_0,\ldots,\mathcal{B}_{m-1}$ such that for all $a\neq b$ and all $|\psi\rangle\in\mathcal{B}_a$, $|\phi\rangle\in\mathcal{B}_b$,
-\begin{equation}
-    \label{eq:mu}
-    \bigl|\langle\psi|\phi\rangle\bigr|^2 = \frac{1}{d}.
-\end{equation}
-MUBs play a central role in quantum state tomography, cryptography, and the study of finite geometry~\cite{Bengtsson2007, Brierley2009}.
-For prime-power dimensions $d=p^n$, exactly $d+1$ MUBs exist~\cite{Ivanovic1981, Wootters1989}.
-For composite $d$, the maximum number $N(d)$ of MUBs is unknown in general; in dimension six, Zauner conjectured $N(6)=3$~\cite{Zauner1999, Scott2010}.
+%=====================================================================
+\section{Introduction}\label{sec:intro}
+%=====================================================================
 
-A standard construction route passes through complex Hadamard matrices (CHMs): unimodular $d\times d$ matrices $H$ with $HH^\dagger=dI$.
-Karlsson~\cite{Karlsson2011} parametrized a three-dimensional family $K_6(\theta,\phi,\lambda)$ of $6\times6$ CHMs.
-Grassl~\cite{Grassl2004} showed that $\{\mathbf{I},F_6\}$ extends to at most three MUBs, so searches must be \emph{per} Hadamard matrix.
-Brierley--Weigert~\cite{Brierley2009} constructed all MU vectors at the Di\c{t}a matrix $D_0$ in closed form and showed that none of the ten third bases are pairwise MU.
+Orthonormal bases $\mathcal B_0,\dots,\mathcal B_{m-1}$ of $\C^d$ are \emph{mutually unbiased} if $|\langle\psi|\phi\rangle|^2=1/d$ whenever $\psi$ and $\phi$ belong to different bases. Complete sets of $d+1$ MUBs exist in every prime-power dimension~\cite{Ivanovic1981,Wootters1989}, but in dimension six it is still unknown whether even four exist. Zauner's conjecture asserts that the maximum is three~\cite{Zauner1999}; see the review of McNulty and Weigert~\cite{McNultyWeigert2026} for the current state of the problem.
 
-This paper is theorem-first within $K_6^{(3)}$ only.
-The lead result is a certified fourth-MUB obstruction at seven Dita-$\lambda$ points (T3).
-Supporting algebra is the gauge structure of Karlsson parameters (T1).
-An exact Gr\"obner re-verification at one $D_0$-equivalent pair (T4) validates the witness pipeline against Brierley--Weigert but does not extend that literature.
-A literature correction (C1) records that Karlsson's original $A$-matrix, not the McNulty--Weigert transcription, produces valid CHMs in numerical tests.
-The computational identification of third-MUB loci (Dita circle; $F_6$ $\theta{=}0$ arc), the covering region $\mathcal{R}$, and reproducibility audits appear in the companion methods report~\cite{JaupiMethods2026}; the loci used to instantiate $B_3$ in the T3 runs are documented there.
+Fixing one basis to be the computational basis $\I$, every further basis unbiased to $\I$ is the column set of $H/\sqrt6$ for a complex Hadamard matrix (CHM) $H$, i.e. a $6\times6$ matrix with unimodular entries and $HH\dg=6\I$. The theorem of Jaming et al. excludes every pair $(\I,F(a,b))$ from a MUB quartet when $F(a,b)$ belongs to the two-parameter Fourier family~\cite{Jaming2009}.
 
-\subsection{Contributions}
+Several benchmark cases are already understood. Grassl classified the vectors unbiased to $\{\I,F_6\}$; they give sixteen third bases, each maximal as a MUB triple~\cite{Grassl2004}. For the $D_6$ example, Brierley and Weigert report 120 vectors and ten third bases, building on the complete vector set identified by Bengtsson et al.~\cite{Brierley2009,BengtssonMUH2007}. We use these cases only as checks on the numerical pipeline, not as new results.
+
+A submatrix-count obstruction was stated by Chen, Liang, Hu and Chen~\cite{Chen2021}. McNulty and Weigert argue that a lemma needed for the later count exclusions is incorrectly proved~\cite{McNultyWeigert2025Comment}. Liang and Chen's reply establishes some related count restrictions but says they cannot presently establish the disputed exclusion theorem~\cite{LiangChen2025Reply}. We therefore do not infer non-extendability from the number of Hadamard $2\times2$ submatrices; see Remark~\ref{rem:chen-status}.
+
+Karlsson's three-parameter family $K_6^{(3)}$~\cite{Karlsson2011} consists of all $H_2$-reducible CHMs of order six~\cite{KarlssonH2}. It contains the Fourier and \Dita{} families as subfamilies, and the review~\cite{McNultyWeigert2026} records that $D_6^{(1)}$ is recovered on the slice $(\theta,\phi)=(\arccos(1/\sqrt3),\pi/4)$. Numerical searches for MUB triples inside $K_6^{(3)}$ were carried out by Brierley and Weigert~\cite{Brierley2009}, Goyeneche~\cite{Goyeneche2013} and Maxwell and Brierley~\cite{MaxwellBrierley2015}. More recently, Matolcsi, Matszangosz, Varga and Weiner encoded MUB triples by ``Hadamard cubes''~\cite{Matolcsi2025}, and Matszangosz and Sz\"oll\H{o}si gave an exact recognition criterion for the transposed Fourier family~\cite{MatszangoszSzollosi2024}. Both works make it natural to ask \emph{which families of CHMs can occur together as the three edges of a MUB triple}.
+
+\paragraph{Contributions.}
 \begin{enumerate}
-    \item[\textbf{T3}] \textbf{Lead:} certified $W_1$-emptiness (HomotopyContinuation \texttt{certify()}, tolerance-based) at seven Dita-$\lambda$ points, $40/40$ recovered-pool $6$-cliques (Theorem~\ref{thm:T3}).
-    \item[\textbf{T1}] Gauge structure: $\phi$-gauge at $\theta{=}0$; $\lambda$-periodicity; Dita block specialization; Dita $\lambda$ matrix moduli with $\pi$-periodic CHM class (Theorem~\ref{thm:T1}).
-    \item[\textbf{C1}] Literature correction: explicit algebraic discrepancy between Karlsson's $A$ and the McNulty--Weigert transcription (Section~\ref{sec:audit}).
-    \item[\textbf{T4}] Pipeline validation: exact unit-ideal certificate for $W_1$ at $(D_{\mathrm{bc}},F_D)$, subordinate to Brierley--Weigert~\cite{Brierley2009} (Theorem~\ref{thm:T4}).
+\item \textbf{An exact triple with two Fourier edges} (\cref{thm:main}). We specify an algebraic triple $\{\I,D(\rho)/\sqrt6,B\}$, with $\rho=e^{i\pi/3}$ and $D(\rho)$ on the \Dita{} slice. Both transitions involving $B$ are, after exact monomial operations and transposition, members of the Fourier family $F(a,b)$~\cite{Jaming2009}.
+\item \textbf{Two exact non-extendability conclusions} (\cref{cor:three-edges}). Each of those two Fourier-family pairs is non-extendable by Jaming et al.; consequently this particular triple cannot be extended to a quartet. We make no non-extendability claim here for the third pair $(\I,D(\rho)/\sqrt6)$.
+\item \textbf{An exact description of the \Dita{} slice} (\cref{prop:slice}). We give a closed form $D(z)$ for $|z|=1$, independent of Karlsson's degenerate M\"obius relations, and count its Hadamard $2\times2$ submatrices exactly. The count is not used as an extension obstruction.
+\item \textbf{Numerical evidence and a conjecture} (\cref{sec:numerics}). At seven slice parameters, 40 recovered third bases have Fourier-family transitions to both $\I$ and $D(z)$ to fitting residual at most $5\times10^{-15}$. This motivates \cref{conj:triangle}; it does not prove exact membership or pool completeness.
+\item \textbf{A literature-status correction} (\cref{rem:chen-status,app:erratum}). We explain why the disputed submatrix-count theorem is not invoked and record a transcription discrepancy in the displayed $A$-block of a recent review.
 \end{enumerate}
 
-\section{Scope and Logical Status of Results}
-\label{sec:scope}
+\paragraph{What is and is not new.} The exact triple and the two Fourier-family edge identifications are the main contribution. The closed form and submatrix count for $D(z)$ are exact structural information, but the count alone does not establish non-extendability of $(\I,D(z)/\sqrt6)$ in light of the status of the cited criterion. The numerical data do not settle that question for the whole slice or for generic members of $K_6^{(3)}$. At the sample point $K_6(0.3,0.5,0.2)$ we count nine Hadamard $2\times2$ submatrices; this single sample does not establish a general count or an extension obstruction.
 
-All results concern Karlsson's family $K_6(\theta,\phi,\lambda)$ only; CHMs outside $K_6^{(3)}$ are not treated.
-\begin{itemize}
-    \item \textbf{Proved (algebra).} Theorem~\ref{thm:T1} (T1); symbolic non-unitarity of the printed McNulty--Weigert $A$-block (C1).
-    \item \textbf{Certified (numerical interval).} Theorem~\ref{thm:T3} (T3): \texttt{certify()} over a square subsystem of $W_1$ at seven listed points; not a certificate on the full $\lambda$-circle, on $\mathcal{R}$, or on $N(6)$.
-    \item \textbf{Exact ideal membership (one point).} Theorem~\ref{thm:T4} (T4): Gr\"obner basis $\{1\}$ over $\mathbb{Q}(\zeta_{24},\sqrt5)$ at $(D_{\mathrm{bc}},F_D)$; independent re-verification of a BW fact, not a new extendability theorem on the circle.
-    \item \textbf{Companion only (reproducibility).} Third-MUB locus identification, $\mathcal{S}^*$ sweeps, grid-miss narrative, pool-completeness tables, and the Open Problem on all of $\mathcal{R}$~\cite{JaupiMethods2026}. Theorem~\ref{thm:T3} does not logically depend on that Open Problem.
-\end{itemize}
-This paper does not prove Zauner's conjecture $N(6){=}3$ or fourth-MUB absence on all of $K_6^{(3)}$.
+\section{Preliminaries}\label{sec:prelim}
+%=====================================================================
 
-\section*{Main Theorem}
-\label{sec:main-theorem}
-\noindent\textbf{Lead result (Theorem~\ref{thm:T3}).}
-For each
-\[
-\lambda\in\Lambda_{\mathrm{cert}}:=\Bigl\{0,\ 0.4,\ \tfrac{\pi}{3},\ \tfrac{2\pi}{3},\ \pi,\ \tfrac{4\pi}{3},\ \tfrac{5\pi}{3}\Bigr\}
-\]
-and every size-$6$ clique $B_3$ in the recovered MU pool of $\{\mathbf{I},H(\theta_D,\pi/4,\lambda)\}$ with $\theta_D=\arccos(1/\sqrt{3})$, the single-vector witness $W_1(H,B_3)$ is empty under HomotopyContinuation interval \texttt{certify()} of a generic square subsystem (mixed volume $252$), so $\{\mathbf{I},H,B_3\}$ admits no fourth MUB.
+\subsection{Equivalence and extendability of pairs}
 
-\noindent
-\fbox{\parbox{0.92\linewidth}{\centering\vspace{4pt}
-$\displaystyle\mathbf{40/40}$ certified obstructions
-(native all-pool-clique exhaustion at the seven listed $\lambda$).\vspace{4pt}}}
+Two CHMs are \emph{equivalent}, $H\simeq H'$, if $H'=P_1\Delta_1H\Delta_2P_2$ with permutation matrices $P_i$ and unitary diagonal matrices $\Delta_i$. A pair of orthonormal bases (written as unitary matrices) $(U_1,U_2)$ is \emph{extendable} if there are unitaries $U_3,U_4$ such that $\{U_1,\dots,U_4\}$ is a MUB quartet.
 
-\noindent Certificate details---including the square-subsystem completeness bridge ($N_{\mathrm{expected}}=N_{\mathrm{tracked}}=N_{\mathrm{certified}}=252$, $N_{\mathrm{full\text{-}system}}=0$)---are in Appendix~\ref{sec:proof-t3}; they are not deferred to the companion report.
-
-\section{Background}
-\label{sec:background}
-
-\subsection{MUBs From Hadamard Matrices}
-Let $H$ be a $6\times6$ CHM with $|H_{ij}|=1$ and $HH^\dagger=6I$.
-The normalized columns $c_k=H_{:,k}/\sqrt{6}$ form an orthonormal basis $\mathcal{B}_H$ satisfying~\eqref{eq:mu} with the computational basis $\mathcal{B}_I=\{e_0,\ldots,e_5\}$.
-A third MUB requires six unit vectors pairwise orthogonal and unbiased to both $\mathcal{B}_I$ and $\mathcal{B}_H$; a fourth MUB requires a second disjoint six-vector set with the same property relative to that third basis.
-
-\subsection{Karlsson's Three-Parameter Family}
-Following Karlsson~\cite{Karlsson2011} and McNulty--Weigert~\cite{McNulty2026},
-\begin{equation}
-    K_6(\theta,\phi,\lambda)=
-    \begin{bmatrix}
-        F_2 & Z_1 & Z_2 \\
-        Z_3 & \tfrac{1}{2}Z_3 A Z_1 & \tfrac{1}{2}Z_3 B Z_2 \\
-        Z_4 & \tfrac{1}{2}Z_4 B Z_1 & \tfrac{1}{2}Z_4 A Z_2
-    \end{bmatrix},
-\end{equation}
-where $F_2=\begin{pmatrix}1&1\\1&-1\end{pmatrix}$, $B=-F_2-A$, and $Z_j$ are $2\times2$ blocks from unimodular parameters $z_1,\ldots,z_4$ with $z_1=e^{i\lambda}$.
-The block $A$ depends on $(\theta,\phi)$.
-Karlsson's original $A$-matrix formulas are used throughout; the McNulty--Weigert printed transcription is algebraically invalid as a CHM block (Section~\ref{sec:audit}; contribution C1).
-
-\section{Methods}
-\label{sec:methods}
-
-\subsection{Per-$H$ MU pool and fourth-MUB witness}
-For fixed $H$, seek unit vectors unbiased to $\mathcal{B}_I$ and $\mathcal{B}_H$.
-With gauge $v_0=1$ and $z_i=v_i\sqrt{6}$, unbiasedness to the five independent columns of $H$ together with unimodular auxiliaries $z_iw_i=1$ yields a square $10\times10$ polynomial system depending on $H$.
-Solutions on the conjugate locus are mapped to unit vectors, verified at tolerance $10^{-8}$, and deduplicated modulo global phase by projective (Fubini--Study) clustering at $128$-bit precision; an independent re-seeded re-solve must agree on the physical count before a pool is accepted, and the resulting finite set is the recovered MU pool $\mathcal{P}$.
-A third basis $B_3$ is any orthonormal $6$-frame whose columns form a size-$6$ clique in the orthogonality graph on $\mathcal{P}$ (edge when $|\langle v,w\rangle|<\varepsilon_{\mathrm{ortho}}$).
-The single-vector witness $W_1(H,B_3)$ encodes existence of a unit vector unbiased to $\mathbf{I}$, $H$, and $B_3$ ($17$ equations in $10$ variables after unimodular auxiliaries; $n_{\mathrm{wit}}=1$).
-Emptiness of $W_1$ implies no fourth MUB at that $(H,B_3)$.
-(Full pipeline engineering, search sets, and reproducibility pins appear in~\cite{JaupiMethods2026}; they are not required to read the T3 certificate.)
-
-\subsection{T3 certificate (numerical interval)}
-At each listed $\lambda$, every recovered-pool $6$-clique is submitted to a generic square subsystem of $W_1$ (mixed volume $252$), HomotopyContinuation path tracking, interval-arithmetic \texttt{certify()}, and residual check against the full system (tolerance $10^{-8}$).
-Emptiness means $N_{\mathrm{expected}}=N_{\mathrm{tracked}}=N_{\mathrm{certified}}=252$ and $N_{\mathrm{full\text{-}system}}=0$ (Appendix~\ref{sec:proof-t3}).
-This is \emph{not} a Gr\"obner unit-ideal certificate.
-
-\subsection{T4 certificate (exact ideal membership)}
-At $(D_{\mathrm{bc}},F_D)$ with algebraic entries in $\mathbb{Q}(\zeta_{24},\sqrt5)$, Macaulay2 computes a Gr\"obner basis of the $W_1$ ideal equal to $\{1\}$ (Section~\ref{sec:proof-t3}).
-
-\subsection{Central open obstacle}
-\label{sec:symbolic}
-A theorem of fourth-MUB absence on all of a covering region $\mathcal{R}\subset K_6^{(3)}$ (defined in~\cite{JaupiMethods2026}) would require exact-coefficient elimination with $B_3$ in a genuine number field at points not CHM-equivalent to $D_0$.
-The reduced two-vector witness run over \texttt{CC} is inconclusive (inexact-field warning; Remark~\ref{rem:m2-inexact}).
-T4 works precisely because $B_3=F_D$ is closed-form at a $D_0$-equivalent point---corollary-grade relative to Brierley--Weigert as a mathematical result, valuable here as a machine-checkable cross-check.
-Theorem~\ref{thm:T3} does not depend on resolving that open obstacle.
-
-\section{Results}
-\label{sec:results}
-
-\subsection{Correction to the McNulty--Weigert \texorpdfstring{$A$}{A}-matrix transcription}
-\label{sec:audit}
-
-Karlsson~\cite{Karlsson2011} uses
-\[
-A_{11}=-\tfrac12+i\tfrac{\sqrt3}{2}\bigl(\cos\theta+e^{-i\phi}\sin\theta\bigr),\quad
-A_{12}=-\tfrac12+i\tfrac{\sqrt3}{2}\bigl(-\cos\theta+e^{i\phi}\sin\theta\bigr),
-\]
-with Hermitian block structure $A=\begin{pmatrix}A_{11}&A_{12}\\ \overline{A_{12}}&-\overline{A_{11}}\end{pmatrix}$.
-Eqs.~(7.3)--(7.5) of~\cite{McNulty2026}, as printed, instead take leading $+\tfrac12$ in $A_{11}$ and assemble $A=\begin{pmatrix}A_{11}&A_{12}\\ A_{12}&-A_{11}\end{pmatrix}$ (no conjugate on the off-diagonal).
-
-\begin{lemma}[Printed McNulty--Weigert $A$ is not unitary]
-\label{lem:C1-symbolic}
-Let $A_{\mathrm{MW}}(\theta,\phi)$ be the printed block above.
-Then
-\[
-\bigl(A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger-2I\bigr)_{11}
-=\sqrt3\,\sin\phi\,\sin\theta,
-\]
-which is not identically zero.
-Hence $A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger\neq2I$ on a Zariski-open subset of $(\theta,\phi)$, so the printed transcription cannot define a valid Karlsson CHM on that open set.
-Moreover $A_{11}^{\mathrm{(Karlsson)}}-A_{11}^{\mathrm{(MW)}}=-1$ identically (leading-sign discrepancy).
+\begin{lemma}[Operations preserving extendability]\label{lem:pair-ops}
+Let $U$ be a unitary matrix that is unbiased to $\I$. Each of the following replacements leaves the extendability of the pair $(\I,U)$ unchanged:
+(i) $U\mapsto P_1\Delta_1U\Delta_2P_2$;
+(ii) $U\mapsto U\dg$;
+(iii) $U\mapsto\overline U$;
+(iv) $U\mapsto U^{T}$.
+Moreover, for unitaries $V,U$ unbiased to each other, $(V,U)$ is extendable if and only if $(\I,V\dg U)$ is.
 \end{lemma}
 
 \begin{proof}
-Direct expansion of $A_{\mathrm{MW}}A_{\mathrm{MW}}^\dagger$ (computer algebra; reproducible from \repo{scripts/python/audit\_karlsson\_variants.py} formulas) yields the displayed $(1,1)$ entry.
-The leading-sign identity is immediate from $\pm\tfrac12$.
+Applying one fixed unitary to every basis preserves all overlaps, and so does reordering or rephasing the vectors inside a basis. For (i), left multiplication by $P_1\Delta_1$ maps $\I$ to itself up to reordering and rephasing, and right multiplication by $\Delta_2P_2$ only reorders and rephases the columns of $U$. For (ii), apply $U\dg$ to every basis: the pair becomes $(U\dg,\I)$. For (iii), take entrywise complex conjugates of every basis; this preserves $|\langle\psi|\phi\rangle|$. Statement (iv) is (ii) followed by (iii). The final claim follows by applying $V\dg$ to every basis.
 \end{proof}
 
-\begin{table}[t]
-\caption{Correction summary for the $A$-matrix transcription.}
-\label{tab:audit-summary}
-\centering
-\begin{tabular}{@{}lcc@{}}
-\toprule
- & Karlsson 2011 & McNulty--Weigert (as printed) \\
-\midrule
-Symbolic $A$ formula & valid & leading $+1/2$; non-conjugate structure \\
-$AA^\dagger=2I$ & identity & fails: $(AA^\dagger-2I)_{11}=\sqrt3\sin\phi\sin\theta$ \\
-$349$-point numerical audit & $348/349$ pass & $0/349$ pass \\
-Identified error & --- & Eqs.~(7.3)--(7.5) as printed \\
-\bottomrule
-\end{tabular}
-\end{table}
+\subsection{The Fourier family}
 
-\begin{table}[t]
-\caption{Numerical audit of $A$-matrix variants on $349$ parameter points (corroboration of Lemma~\ref{lem:C1-symbolic}). Pass criteria: $\|AA^\dagger-2I\|_\infty<10^{-8}$, $\|BB^\dagger-2I\|_\infty<10^{-8}$, valid CHM, M\"obius consistency $<10^{-6}$.}
-\label{tab:audit}
+Following~\cite[Eq.~(3)]{Jaming2009}, put $\omega=e^{2\pi i/3}$, $x=e^{2\pi ia}$, $y=e^{2\pi ib}$ and
+\begin{equation}\label{eq:jaming}
+\sqrt6\,F(a,b)=
+\begin{bmatrix}
+1&1&1&1&1&1\\
+1&-\omega^2x&\omega&-x&\omega^2&-\omega x\\
+1&\omega y&\omega^2&y&\omega&\omega^2y\\
+1&-1&1&-1&1&-1\\
+1&\omega^2x&\omega&x&\omega^2&\omega x\\
+1&-\omega y&\omega^2&-y&\omega&-\omega^2y
+\end{bmatrix}.
+\end{equation}
+With $\rho=e^{i\pi/3}$, this is $(\rho^{T_{jk}}E_{jk})_{j,k=0}^5$, where $T_{jk}=jk\bmod 6$ is the exponent table of the order-six Fourier matrix (so $\rho^{T_{jk}}$ is its $(j,k)$ entry) and $E_{jk}$ equals $x$ for $(j,k)\in\{1,4\}\times\{1,3,5\}$, $y$ for $(j,k)\in\{2,5\}\times\{1,3,5\}$, and $1$ otherwise.
+
+\begin{theorem}[{\cite[Thm.~1.4]{Jaming2009}}]\label{thm:jaming}
+For all $a,b\in\mathbb R$, the pair $(\I,F(a,b))$ is not extendable.
+\end{theorem}
+
+By \cref{lem:pair-ops}, the same conclusion holds for every unitary $U$ with $\sqrt6\,U^{T}\simeq\sqrt6\,F(a,b)$, i.e.\ for every member of the transposed Fourier family.
+
+\subsection{\texorpdfstring{$H_2$}{H2}-reducibility and the status of a count criterion}
+
+A $2\times2$ submatrix of a CHM is a \emph{Hadamard submatrix} if it is proportional to a unitary matrix. A CHM of order six is \emph{$H_2$-reducible} if, after equivalence, all nine blocks of its $3\times3$ block partition into $2\times2$ blocks are Hadamard submatrices. Karlsson showed that these are exactly the members of $K_6^{(3)}$~\cite{KarlssonH2,Karlsson2011}.
+
+\begin{remark}[Status of the submatrix-count obstruction]\label{rem:chen-status}
+Chen et al. state that an $H_2$-reducible matrix in a MUB quartet has exactly nine Hadamard $2\times2$ submatrices, which they use to exclude the \Dita{} family~\cite{Chen2021}. McNulty and Weigert show that the argument relies on an earlier lemma whose proof has a gap~\cite{McNultyWeigert2025Comment}. Liang and Chen rule out some other possible counts, including $10$--$16$ and $18$, but state that counts $17,19,20,\ldots$ still need to be excluded to establish the claimed theorem, and that they cannot presently save it~\cite{LiangChen2025Reply}. We treat this count criterion as unresolved and do not use it to infer non-extendability.
+\end{remark}
+
+\subsection{Karlsson's family and the \Dita{} slice}
+
+Karlsson's family is~\cite{Karlsson2011}
+\begin{equation}\label{eq:karlsson}
+K_6(\theta,\phi,\lambda)=
+\begin{bmatrix}
+F_2 & Z_1 & Z_2\\
+Z_3 & \tfrac12Z_3AZ_1 & \tfrac12Z_3BZ_2\\
+Z_4 & \tfrac12Z_4BZ_1 & \tfrac12Z_4AZ_2
+\end{bmatrix},\qquad
+F_2=\begin{pmatrix}1&1\\1&-1\end{pmatrix},\quad B=-F_2-A,
+\end{equation}
+where $Z_j=\begin{pmatrix}1&1\\z_j&-z_j\end{pmatrix}$ for $j=1,2$, $Z_k=\begin{pmatrix}1&z_k\\1&-z_k\end{pmatrix}$ for $k=3,4$, $|z_i|=1$, $z_1=e^{i\lambda}$, and
+\begin{equation}\label{eq:Ablock}
+A=\begin{pmatrix}A_{11}&A_{12}\\\overline{A_{12}}&-\overline{A_{11}}\end{pmatrix},\quad
+\begin{aligned}
+A_{11}&=-\tfrac12+\tfrac{i\sqrt3}{2}\bigl(\cos\theta+e^{-i\phi}\sin\theta\bigr),\\
+A_{12}&=-\tfrac12+\tfrac{i\sqrt3}{2}\bigl(-\cos\theta+e^{i\phi}\sin\theta\bigr).
+\end{aligned}
+\end{equation}
+For generic parameters, $z_2,z_3,z_4$ are fixed by M\"obius relations $z_3^2=\mathcal M_A(z_1^2)$, $z_4^2=\mathcal M_B(z_1^2)$, $z_3^2=\mathcal M_B(z_2^2)$, $z_4^2=\mathcal M_A(z_2^2)$, where $\mathcal M_X(w)=(\alpha_Xw-\beta_X)/(\overline{\beta_X}w-\overline{\alpha_X})$ with $\alpha_X=X_{12}^2$ and $\beta_X=X_{11}^2$~\cite{Karlsson2011,McNultyWeigert2026}.
+
+At $\theta_D=\arccos(1/\sqrt3)$ and $\phi=\pi/4$, \eqref{eq:Ablock} gives
+\begin{equation}\label{eq:AB-dita}
+A=\begin{pmatrix}i&-1\\-1&i\end{pmatrix},\qquad B=\begin{pmatrix}-1-i&0\\0&1-i\end{pmatrix}.
+\end{equation}
+
+\begin{proposition}[The \Dita{} slice in closed form]\label{prop:slice}
+For $|z|=1$ let
+\begin{equation}\label{eq:Dz}
+D(z)=
+\begin{bmatrix}
+1&1&1&1&1&1\\
+1&-1&z&-z&i&-i\\
+1&-i&i&i&-i&-1\\
+1&i&-z&z&-1&-i\\
+1&\bar z&-i&-1&-\bar z&i\\
+1&-\bar z&-1&-i&\bar z&i
+\end{bmatrix}.
+\end{equation}
+Then:
+\begin{enumerate}
+\item $D(z)$ is the branch of \eqref{eq:karlsson} with $A,B$ as in \eqref{eq:AB-dita} and $(z_1,z_2,z_3,z_4)=(z,i,-i,\bar z)$. It is a CHM for every $|z|=1$, and it is $H_2$-reducible.
+\item For every $|z|=1$, at least $51$ of the $225$ $2\times2$ submatrices of $D(z)$ are Hadamard submatrices; exactly $51$ for generic $z$, and $75$ at $z=1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) Block multiplication with \eqref{eq:AB-dita} gives $\tfrac12Z_3AZ_1=\begin{pmatrix}i&i\\-z&z\end{pmatrix}$, $\tfrac12Z_3BZ_2=\begin{pmatrix}-i&-1\\-1&-i\end{pmatrix}$, $\tfrac12Z_4BZ_1=\begin{pmatrix}-i&-1\\-1&-i\end{pmatrix}$ (using $z_4z_1=1$) and $\tfrac12Z_4AZ_2=\begin{pmatrix}-\bar z&i\\\bar z&i\end{pmatrix}$, which assemble to \eqref{eq:Dz}. The Gram matrix $D(z)D(z)\dg$ has entries that are Laurent polynomials in $z$ of degree at most one in $z$ and $\bar z=z^{-1}$; expanding them gives $6\I$ identically. Each of the nine blocks is visibly a Hadamard submatrix, so $D(z)$ is $H_2$-reducible.
+
+(2) For rows $r<r'$ and columns $c<c'$, the submatrix is Hadamard exactly when $D_{rc}\overline{D_{r'c}}+D_{rc'}\overline{D_{r'c'}}=0$. This is a Laurent polynomial in $z$, and it vanishes identically for exactly $51$ of the $225$ choices. The remaining ones vanish only at finitely many $z$; at $z=1$ we count $75$.
+
+\end{proof}
+
+\begin{remark}\label{rem:dita-class}
+$D(1)$ has entries in $\{\pm1,\pm i\}$, and its Haagerup invariant multiset coincides numerically with that of \Dita{}'s matrix $D_6$~\cite{Dita2004}, consistent with the identification of this slice with $D_6^{(1)}$ in~\cite{McNultyWeigert2026}. This comparison is evidence for the identification at the displayed point; it does not establish equivalence of every $D(z)$ to a single representative, nor does the exact submatrix count give an extension obstruction in view of \cref{rem:chen-status}.
+\end{remark}
+
+\begin{remark}[Degeneracy of the M\"obius parametrisation]\label{rem:mobius}
+On the \Dita{} slice $\alpha_A=1$ and $\beta_A=-1$, so $\alpha_Aw-\beta_A=w+1=-(\overline{\beta_A}w-\overline{\alpha_A})$, and hence $\mathcal M_A\equiv-1$ is constant (and undefined at $w=-1$). Thus $z_1$ does \emph{not} determine $z_4$ through $\mathcal M_A$, and the relation $z_4^2=\mathcal M_A(z_2^2)$ is the indeterminate form $0/0$ at $z_2^2=-1$. Similarly, at $\theta=0$ one finds $\mathcal M_A\equiv\mathcal M_B\equiv1$. Statements that $z_1$ determines the remaining parameters uniquely~\cite{McNultyWeigert2026} therefore need qualification on both slices. The closed form \eqref{eq:Dz} avoids the issue: it is verified directly, not derived from the M\"obius relations.
+\end{remark}
+
+%=====================================================================
+\section{The exact triple}\label{sec:main}
+%=====================================================================
+
+Let $q=e^{i\pi/18}$, a primitive $36$th root of unity, so $q^{12}-q^6+1=0$. Then $\rho=q^6$, $\omega=q^{12}$ and $i=q^9$. Let $a,b,c\in\C$ satisfy $323a^2=d_a(q)$, $323b^2=d_b(q)$, $323c^2=d_c(q)$, where
+\begin{align*}
+d_a(q)&=-16q^{11}+35q^{10}-170q^9+18q^8-120q^7-32q^6\\&\qquad+166q^5+157q^4-8q^3+46q^2+48q+66,\\
+d_b(q)&=166q^{11}-192q^{10}-170q^9+46q^8+72q^7-32q^6\\&\qquad-150q^5+35q^4-8q^3-64q^2-120q+66,\\
+d_c(q)&=-150q^{11}+157q^{10}-170q^9-64q^8+48q^7-32q^6\\&\qquad-16q^5-192q^4-8q^3+18q^2+72q+66.
+\end{align*}
+The choice of square roots does not matter (see below). Define $M=[v_0\ \cdots\ v_5]$ with
+\begin{align*}
+v_0&=(1,\,a,\,-qa,\,q^{-10},\,q^{-16}a,\,q^{-8})^{T}, &
+v_1&=(1,\,-a,\,qa,\,q^{-10},\,q^{2}a,\,q^{-8})^{T},\\
+v_2&=(1,\,b,\,q^7b,\,q^2,\,q^{-4}b,\,q^{16})^{T}, &
+v_3&=(1,\,-b,\,-q^7b,\,q^2,\,-q^{-4}b,\,q^{16})^{T},\\
+v_4&=(1,\,c,\,q^{-5}c,\,q^{14},\,q^8c,\,q^4)^{T}, &
+v_5&=(1,\,-c,\,-q^{-5}c,\,q^{14},\,-q^8c,\,q^4)^{T},
+\end{align*}
+and put $B=M/\sqrt6$ and $W=D(\rho)\dg M/\sqrt6$.
+
+\begin{theorem}\label{thm:main}
+With the notation above:
+\begin{enumerate}
+\item $\{\I,\ D(\rho)/\sqrt6,\ B\}$ is a MUB triple; equivalently (since $D(\rho)$ is a CHM) $M$ and $W$ are CHMs.
+\item \textbf{(Fourier edge $\I\to B$.)} Let $p=(2,0,4,3,1,5)$ and $s=(4,3,1,0,2,5)$ (zero-based), let $N_{jk}=M_{s_k,p_j}$, and dephase: $C_{jk}=N_{jk}N_{00}/(N_{j0}N_{0k})$. Then $C=\sqrt6\,F(a_1,b_1)$ exactly, with
+\[
+x_1=e^{2\pi ia_1}=q^{30}\,\frac{b}{a},\qquad y_1=e^{2\pi ib_1}=q^{24}\,\frac{b}{c}.
+\]
+Hence $M^{T}\simeq\sqrt6\,F(a_1,b_1)$.
+\item \textbf{(Fourier edge $D(\rho)\to B$.)} With $p'=(0,4,2,1,5,3)$, $s'=(0,1,2,5,4,3)$ and $N'_{jk}=W_{s'_k,p'_j}$, the dephased matrix $C'$ equals $\sqrt6\,F(a_2,b_2)$ exactly, for unimodular $x_2,y_2\in\Q(q,a,b,c)$ (given in \cref{app:exact}). Hence $W^{T}\simeq\sqrt6\,F(a_2,b_2)$.
+\item \textbf{(Factorisation.)} $D(\rho)=M\,W\dg/\sqrt6$: the \Dita{}-slice matrix is, up to scale, a product of two Hadamard matrices whose transposes lie in the Fourier family.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Unimodularity.} Since $d_\bullet$ has rational coefficients and $|q|=1$, we have $\overline{d_\bullet(q)}=d_\bullet(q^{-1})$. Reduction modulo $q^{12}-q^6+1$ gives $d_\bullet(q)\,d_\bullet(q^{-1})=323^2$ for $\bullet\in\{a,b,c\}$, so $|a|=|b|=|c|=1$, and every entry of $M$ is unimodular. In particular $\bar a=a\,\overline{a^2}$, and similarly for $b$ and $c$, so complex conjugation acts on $\Q(q,a,b,c)$ by $q\mapsto q^{-1}$, $a\mapsto a\,d_a(q^{-1})/323$, and so on.
+
+\emph{Item 1.} All required identities live in the field $\Q(q)(a,b,c)$, whose degree over $\Q$ is at most $12\cdot2^3=96$. We represent its elements as $\sum_{\epsilon\in\{0,1\}^3}\kappa_\epsilon(q)\,a^{\epsilon_1}b^{\epsilon_2}c^{\epsilon_3}$ with $\kappa_\epsilon\in\Q[q]/(q^{12}-q^6+1)$ and reduce $a^2,b^2,c^2$ by the defining relations. In this representation, exact rational arithmetic gives: $v_j\dg v_k=0$ for all $j<k$ (15 identities); $|D(\rho)_{:,j}\dg v_k|^2=6$ for all $j,k$ (36 identities); and $D(\rho)D(\rho)\dg=6\I$. Hence $M/\sqrt6$ is unitary and unbiased to both $\I$ and $D(\rho)/\sqrt6$, and $W$ is a CHM.
+
+\emph{Items 2 and 3.} All entries of $N$ and $N'$ are nonzero (both matrices have unimodular entries), so the dephased matrices are defined. Requiring $C=\sqrt6F(a_1,b_1)$ amounts to: $C_{jk}=\rho^{T_{jk}}$ at the 24 parameter-free positions, and $C_{jk}/\rho^{T_{jk}}$ constant on each of the two parameter sets of \eqref{eq:jaming}. After clearing denominators these become polynomial identities in $\Q(q)(a,b,c)$, and we verified all of them exactly for both $N$ and $N'$. The displayed values of $x_1,y_1$ follow by evaluating $C_{11}/\rho$ and $C_{21}/\rho^2$. All parameters are unimodular, because they are ratios of unimodular numbers. Dephasing and the two permutations are monomial operations, and $N$ is the permuted transpose of $M$, so $M^{T}\simeq C$; likewise $W^{T}\simeq C'$.
+
+\emph{Item 4.} By definition $W=D(\rho)\dg M/\sqrt6$. Since $D(\rho)D(\rho)\dg=6\I$, this gives $D(\rho)W=\sqrt6\,M$, and since $WW\dg=6\I$, it gives $D(\rho)=M W\dg/\sqrt6$.
+\end{proof}
+
+\begin{remark}
+Item~3 is what makes the triple a ``triangle'' with two Fourier edges. Changing the sign of $a$, $b$ or $c$ swaps the columns of one pair $(v_{2k},v_{2k+1})$, so the basis is independent of the choice of square roots.
+\end{remark}
+
+\begin{corollary}[The Fourier edges are obstructed]\label{cor:three-edges}
+The pairs $(\I,B)$ and $(D(\rho)/\sqrt6,B)$ are non-extendable. Consequently, the triple of \cref{thm:main} is not contained in any MUB quartet. This argument does not decide whether the third pair $(\I,D(\rho)/\sqrt6)$ is extendable.
+\end{corollary}
+
+\begin{proof}
+For $(\I,B)$, apply \cref{thm:main}(2), the equivalence operations in \cref{lem:pair-ops}, and \cref{thm:jaming}. For $(D(\rho)/\sqrt6,B)$, \cref{lem:pair-ops} reduces extendability to that of $(\I,W/\sqrt6)$; then use \cref{thm:main}(3) and \cref{thm:jaming}. A quartet containing the triple would extend each pair, so either obstruction rules out such a quartet.
+\end{proof}
+
+\begin{figure}[ht]
 \centering
+\setlength{\unitlength}{1mm}
+\begin{picture}(120,78)
+  \put(20,60){\circle*{2}}
+  \put(100,60){\circle*{2}}
+  \put(60,20){\circle*{2}}
+  \put(20,70){\makebox(0,0){$\mathcal B_0=\I$}}
+  \put(100,70){\makebox(0,0){$\mathcal B_1=B$}}
+  \put(60,8){\makebox(0,0){$\mathcal B_D=D(\rho)/\sqrt6$}}
+  \put(25,60){\line(1,0){70}}
+  \put(25,55){\line(1,-1){35}}
+  \put(95,55){\line(-1,-1){35}}
+  \put(60,64){\makebox(0,0){\scriptsize Fourier; non-extendable}}
+  \put(12,34){\makebox(0,0){\scriptsize open here}}
+  \put(108,34){\makebox(0,0){\scriptsize Fourier; non-extendable}}
+\end{picture}
+\caption{Status of the three pairs in the exact triple at $\lambda=\pi/3$. The two edges incident to $B$ are identified exactly with the Fourier family, so the triple cannot lie in a quartet. Extendability of the remaining pair $(\I,D(\rho)/\sqrt6)$ is not decided here.}
+\label{fig:triangle-status}
+\end{figure}
+
+\begin{remark}[Relation to known triples]
+Jaming et al.\ construct triples $(\I,F(0,b(t)),C(t))$~\cite[Thm.~2.4]{Jaming2009}. To compare, we used the power sums $\sum\lambda^m$ ($m\le12$) of the Haagerup invariants $\lambda=h_{jk}h_{lm}\overline{h_{jm}h_{lk}}$. These are invariant under equivalence and transposition, and the line $a=0$ is closed under complex conjugation. Numerically, neither $F(a_1,b_1)$ nor $F(a_2,b_2)$ matches any member of the line $a=0$: for $F(a_1,b_1)$, the differences in the sixth and twelfth power sums vanish at different values of $b$. The triple is therefore \emph{not} one of the triples of~\cite[Thm.~2.4]{Jaming2009}. This comparison is numerical evidence rather than a proof.
+\end{remark}
+
+%=====================================================================
+\section{Numerical evidence on the \Dita{} slice}\label{sec:numerics}
+%=====================================================================
+
+The computations in this section are finite and numerical. They describe what was recovered, not what exists.
+
+\paragraph{Method.} For a fixed CHM $H$, vectors unbiased to both $\I$ and $H$ are written in the gauge $v_0=1$ as $z_k=\sqrt6\,v_k$. Replacing $\bar z_k$ by independent variables $w_k$ gives five equations $z_kw_k=1$ and five independent unbiasedness equations (the sixth follows from Parseval). We solve this system by homotopy continuation~\cite{HomotopyContinuation}, keep the roots on the real locus $w_k=\bar z_k$, check them against the original equations, and remove duplicates. Orthogonal pairs among the retained vectors define a graph, and its $6$-cliques are candidate third bases. For each candidate triple we tracked a square subsystem of the single-vector witness system for a fourth basis (mixed volume $252$) and filtered the endpoints against the full system.
+
+\paragraph{Results.} \Cref{tab:numerics} summarises the runs on the slice $D(e^{i\lambda})$, with full counts in \cref{app:audit}.
+
+\begin{table}[ht]
+\centering\small
+\caption{Recovered pools and third bases on the \Dita{} slice. ``Fourier fits'' means a numerical fit of the transition to the Fourier family (up to equivalence and transposition) with maximum residual $\le5\times10^{-15}$.}
+\label{tab:numerics}
 \begin{tabular}{@{}lccc@{}}
 \toprule
-Variant & Pass & Fail & Notes \\
+$\lambda$ & retained MU vectors & $6$-cliques (third bases) & both edges fit Fourier\\
 \midrule
-Karlsson 2011 (original) & 348 & 1 & One NaN at degenerate M\"obius point \\
-McNulty--Weigert (as printed) & 0 & 349 & $A$ not unitary; CHM invalid \\
+$0,\ \pi$ & 120 & 10 each & 20/20\\
+$0.4,\ \pi/3,\ 2\pi/3,\ 4\pi/3,\ 5\pi/3$ & 72 & 4 each & 20/20\\
+\midrule
+total (7 values) & & 40 & 40/40\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent
-The correction is also enforced as a regression test: the literal transcription fails $AA^\dagger=2I$ at $40/40$ random parameter points in the repository test suite, while Karlsson's original passes at every point where the family is defined.
+At $\lambda=0$ the recovered pool size and ten third bases agree with the Dita-matrix search of Brierley and Weigert~\cite{Brierley2009}; their paper discusses the complete vector set identified earlier by Bengtsson et al.~\cite{BengtssonMUH2007}. None of the $40$ tracked witness systems had an endpoint passing the full-system residual filter at $10^{-8}$. This is a finite numerical search and does not prove that the witness systems are empty. In a dense scan of $628$ values $\lambda\in\{0,0.01,\dots,6.27\}$, every sample had a recovered $6$-clique. Nine high-precision perturbations off the slice with $|\Delta\phi|\ge10^{-3}$ lost the $6$-clique. At the single tested point $K_6(0.3,0.5,0.2)$, the largest recovered clique had size two; this finite run does not prove pool completeness.
 
-\subsection{Gauge Structure (T1)}
-Theorem~\ref{thm:T1} records that at $\theta{=}0$, $\phi$ does not enter $H$; the family is $2\pi$-periodic in $\lambda$; on the Dita slice $\lambda$ changes the matrix (Lemma~\ref{lem:L4-matrix}) while CHM class is $\pi$-periodic with four classes among the seven sample points of Lemma~\ref{lem:L4}.
-Proof: Appendix~\ref{sec:proofs}.
+The striking feature is the last column of \cref{tab:numerics}: every recovered third basis forms a Fourier--Fourier--\Dita{} triangle, as the exact triple of \cref{thm:main} does.
 
-\subsection{Certified Fourth-MUB Obstruction at Seven Dita Points (T3)}
-\label{sec:t3-results}
-Theorem~\ref{thm:T3} is the lead result (Section~\ref{sec:main-theorem}): at
-$\Lambda_{\mathrm{cert}}=\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$,
-\texttt{certify()} finds $W_1$ empty for all recovered-pool $6$-cliques ($\mathbf{40/40}$), covering four CHM classes (Lemma~\ref{lem:L4}).
-Full proof: Appendix~\ref{sec:proofs}.
-Confirmatory dense probes and search-set negatives outside these seven points are reproducibility material in~\cite{JaupiMethods2026}; they are not part of T3.
+The exact construction at $\lambda=\pi/3$ in \cref{thm:main} is an algebraic third basis with exact Fourier charts, but we have not proved that it coincides with any of the four bases recovered numerically at that parameter. For the other six sampled parameter values, no exact closed forms for the recovered third bases were obtained. Thus all 40 identifications in the table remain numerical fits, and none of the seven recovered pools is proved complete.
 
-\subsection{Pipeline Validation: Exact Re-Verification at the \texorpdfstring{$D_0$}{D0}-Equivalent Pair (T4)}
-\label{sec:t4-results}
-Theorem~\ref{thm:T4} establishes $W_1(D_{\mathrm{bc}},F_D)=\langle 1\rangle$ by Gr\"obner basis over $\mathbb{Q}(\zeta_{24},\sqrt5)$.
-Brierley--Weigert already proved the stronger complete-pool statement ($N_v{=}120$, $N_t{=}10$, $N_p{=}0$); T4 covers one third basis by a different exact method and is billed here as independent pipeline validation (Remark~\ref{rem:T4-scope}).
-After the methodology hardening documented in the companion report~\cite{JaupiMethods2026}, the same pipeline also \emph{reproduces} the complete-pool statement numerically at the CHM-equivalent point $\lambda{=}\pi/2$ on the Dita slice: a certified solve returns exactly $120$ physical MU vectors ($N_v$) forming $10$ independently verified third bases ($N_t$), with no mutually unbiased pair among all $45$ basis pairs ($N_p{=}0$; worst defect $0.015$), and the single-vector witness certified empty for all $10/10$ cliques---the four Brierley--Weigert counts, regenerated end-to-end by the audited pipeline rather than imported from the literature.
+The exactification attempts are limited. One recovered clique at $\lambda=\pi/3$ has a 110-digit numerical coordinate export, and the exact ansatz is numerically consistent with it at about $10^{-100}$. Bounded PSLQ returned candidate relations, but no minimal polynomials or common number field were certified, so exact identity with that stored clique has not been proved. At $\lambda=0.4$, an LLL search in a small multiquadratic field used cached Float64 coordinates and matched only the six trivial first-row entries, so it gives no exact reconstruction. The other 38 recovered bases have no high-precision coordinate exports in the current data. A systematic PSLQ/LLL reconstruction of those bases has therefore not been carried out.
 
-\section{Discussion}
-\label{sec:discussion}
+\begin{conjecture}[Triangle conjecture]\label{conj:triangle}
+For every $|z|=1$ and every orthonormal basis $X$ unbiased to both $\I$ and $D(z)/\sqrt6$, both transitions $\sqrt6X$ and $D(z)\dg X$ are, up to transposition, equivalent to members of the Fourier family $F(a,b)$.
+\end{conjecture}
 
-T3 is a pointwise certified obstruction, not a theorem on $\mathcal{R}$ or $N(6)$.
-T4 does not extend Brierley--Weigert; it cross-checks one algebraic instance of the same witness ideal used numerically in T3.
-The September 2026 regression rerun (pool counts at $F_6$, the $D_0$-equivalent $\lambda{=}\pi/2$ point, and Tao's isolated order-$6$ matrix) is a pipeline-audit artifact documented with the companion report~\cite{JaupiMethods2026}; it changes no claim tier in this paper.
-C1 is an algebraic transcription correction (Lemma~\ref{lem:C1-symbolic}) and should be reported to the authors of~\cite{McNulty2026}.
-The companion report~\cite{JaupiMethods2026} documents search-set reproducibility and why dense-grid negatives alone cannot promote sweep results to theorems---reinforcing that T3 is the exception that does not rest on grid density.
+\begin{remark}
+If proved, \cref{conj:triangle} together with \cref{thm:jaming} would imply that every such triple is non-extendable: each of its two edges incident to a third basis would be a Fourier-family pair. The conjecture would not decide extendability of the pair $(\I,D(z)/\sqrt6)$ by itself. It would provide a structural description of MUB triples through $D_6^{(1)}$ and exact input for the Hadamard-cube programme of~\cite{Matolcsi2025}. A proof requires (a) completeness of the third-basis pool and (b) exact identification of its members. The recognition criterion of~\cite{MatszangoszSzollosi2024} has additional hypotheses: it concerns a normalized CHM with three distinct columns each containing an entry $-1$, and its conclusion allows a 2-circulant outcome as well as the transposed Fourier family. We have not certified these hypotheses for the numerically recovered candidates. The fits reported here do not establish exact membership.
+\end{remark}
 
-\section{Conclusion}
-\label{sec:conclusion}
+%=====================================================================
+\section{Discussion}\label{sec:discussion}
+%=====================================================================
 
-Scoped to $K_6^{(3)}$ only, this paper delivers a gauge theorem (T1), a lead certified fourth-MUB obstruction at seven Dita-$\lambda$ points (T3), an algebraic literature correction (C1), and an exact pipeline-validation re-check at one $D_0$-equivalent pair (T4), subordinate to Brierley--Weigert.
-A post-audit regression run additionally reproduces Brierley--Weigert's complete-pool counts end-to-end ($120$ vectors, $10$ third bases, $N_p{=}0$, $W_1$ empty $10/10$) at the CHM-equivalent point, closing the loop between the exact certificate and the numerical pipeline.
-I do not claim fourth-MUB absence on all of $K_6^{(3)}$ or on $N(6)$.
-Closing the gap to a theorem on $\mathcal{R}$ requires algebraic $B_3$ at points not CHM-equivalent to $D_0$; see~\cite{JaupiMethods2026} for the reproducibility record of that open obstacle.
+The exact triple of \cref{thm:main} has two proved non-extendable edges, both identified with the Fourier family; either one rules out a quartet containing the triple. The status of the third pair $(\I,D(\rho)/\sqrt6)$ remains open here. The factorisation in \cref{thm:main} explains how this \Dita{}-slice matrix occurs between two transposed Fourier-family transitions. The numerical evidence suggests this pattern may recur along the slice, but it does not establish that claim.
 
-\section*{Acknowledgment}
-I thank the open-source developers of HomotopyContinuation.jl and the maintainers of the Karlsson CHM literature surveys.
+An open problem is the extension question for pairs in the generic part of Karlsson's family. At the single tested point $K_6(0.3,0.5,0.2)$, we count nine Hadamard $2\times2$ submatrices and recovered no third basis (the largest recovered clique had size two). This count neither invokes nor satisfies a proven extension obstruction: the cited count criterion is unresolved, and the finite numerical pool is not certified complete. Establishing completeness at a specific algebraic parameter, for example by certified homotopy continuation or exact elimination, would be needed before a negative search result could imply non-extendability.
 
-\appendices
-\section{Proofs of T1, T3, and T4}
-\label{sec:proofs}
-Theorem and Proof are used for T1 (Lemmas~\ref{lem:L1}--\ref{lem:L4}), T3, and T4.
-\input{proofs/gauge_structure}
-\input{proofs/fourth_mub_theorems}
+%=====================================================================
+\section*{Data and code availability}
+%=====================================================================
+Code and data are intended for public release at \url{TODO-repository-link}. The repository should contain the exact-arithmetic verification scripts and certificates, parameter values and recovered basis exports, search scripts and run manifests, all tolerances and residual definitions, the Macaulay2 input and Gr\"obner-basis log, and software-version information. The $D(z)$ count and unitarity check is now available in \texttt{scripts/python/verify\_dita\_slice\_counts.py}; exact triple checks use \texttt{verify\_pi3\_exact\_remainders.py} and \texttt{prove\_pi3\_fourier\_exact\_direct.py}, and the printed $A$-block identity uses \texttt{verify\_printed\_a\_block.py}.
+% TODO(author): publish the current scripts with numerical exports, run manifests and Macaulay2 certificate at a persistent public URL; include a script for the second Fourier-edge chart, which was checked exactly but is not yet bundled as a standalone verifier.
 
+\section*{Acknowledgements}
+I thank the developers of HomotopyContinuation.jl, Macaulay2 and SymPy.
+
+\appendix
+
+%=====================================================================
+\section{A misprint in a printed form of Karlsson's \texorpdfstring{$A$}{A}-block}\label{app:erratum}
+%=====================================================================
+
+In~\cite[Eqs.~(7.3)--(7.5)]{McNultyWeigert2026} (arXiv:2410.23997v2), the block is printed as
+\[
+A_{\mathrm{MW}}=\begin{pmatrix}A^{\mathrm{MW}}_{11}&A_{12}\\A_{12}&-A^{\mathrm{MW}}_{11}\end{pmatrix},\qquad
+A^{\mathrm{MW}}_{11}=+\tfrac12+\tfrac{i\sqrt3}{2}\bigl(\cos\theta+e^{-i\phi}\sin\theta\bigr),
+\]
+with $A_{12}$ as in \eqref{eq:Ablock}. This differs from Karlsson's \eqref{eq:Ablock} in the sign of the constant term of $A_{11}$, and in the missing complex conjugations in the second row.
+
+\begin{lemma}\label{lem:misprint}
+With $\Delta=\sqrt3\sin\theta\sin\phi$ and $\Gamma=\sin\theta\cos\phi\,(\sqrt3+3\sin\theta\sin\phi)$,
+\[
+A_{\mathrm{MW}}A_{\mathrm{MW}}\dg-2\I=\begin{pmatrix}\Delta&-i\Gamma\\ i\Gamma&\Delta\end{pmatrix}.
+\]
+For real $\theta,\phi$ this vanishes if and only if $\sin\theta=0$, whereas Karlsson's block satisfies $AA\dg=2\I$ identically. Hence the printed block fails the identity $AA\dg=2\I$ required in Karlsson's construction whenever $\sin\theta\ne0$.
+\end{lemma}
+
+\begin{proof}
+Direct expansion. If $\sin\theta\ne0$, then $\Delta=0$ forces $\sin\phi=0$, and then $\Gamma=\sqrt3\sin\theta\cos\phi\ne0$.
+\end{proof}
+
+%=====================================================================
+\section{An independent Gr\"obner check at \texorpdfstring{$D_6$}{D6}}\label{app:groebner}
+%=====================================================================
+
+\begin{proposition}[reported computation]\label{prop:groebner}
+Let $D_{\mathrm{bc}}$ be a block-circulant representative of $D_6$ and $F_D$ the third basis of~\cite{BengtssonMUH2007}. The single-vector witness ideal for a fourth basis (five relations $z_kw_k=1$ and twelve unbiasedness equations in $\Q(\zeta_{24},\sqrt5)[z_1,\dots,z_5,w_1,\dots,w_5]$) is the unit ideal. Hence no vector is unbiased to $\I$, $D_{\mathrm{bc}}$ and $F_D$ simultaneously.
+\end{proposition}
+
+The field has degree $16$: $[\Q(\zeta_{24}):\Q]=\varphi(24)=8$. The prime $73$ splits completely in $\Q(\zeta_{24})$ because $73\equiv1\pmod{24}$, whereas $5$ is not a square modulo $73$; hence $\sqrt5\notin\Q(\zeta_{24})$, and adjoining it doubles the degree. The computation was performed in Macaulay2 (version 1.24.05), and the reduced Gr\"obner basis is reported to be $\{1\}$. This re-verifies one fixed instance already covered by Brierley and Weigert's stronger pool result~\cite{Brierley2009}; it is included as an independent cross-check and has not been rerun for this version.
+
+%=====================================================================
+\section{Exact verification record}\label{app:exact}
+%=====================================================================
+
+The exact verification is currently distributed across project scripts rather than consolidated in the previously named \texttt{verify\_exact.py}. In particular, \texttt{verify\_pi3\_exact\_remainders.py} checks the $36$ cross-unbiasedness equations for the three phase embeddings, \texttt{derive\_pi3\_pairwise\_relations.py} checks the $15$ column-orthogonality identities, and \texttt{prove\_pi3\_fourier\_exact\_direct.py} verifies one Fourier-family chart and its phase-modulus identities. The new \texttt{verify\_dita\_slice\_counts.py} checks $D(z)D(z)^*=6\I$ and the exact submatrix counts. The second Fourier-edge chart was checked exactly but does not yet have a standalone bundled script; see the TODO in the data-availability statement.
+The parameters of the second Fourier edge are $x_2=ac\,\kappa_x(q)$ and $y_2=ab\,\kappa_y(q)$, where
+\begin{align*}
+323\,\kappa_x(q)&=-46+20q+53q^2+86q^3+188q^4-204q^5\\&\qquad+64q^6+30q^7+51q^8-4q^9-98q^{10}+264q^{11},\\
+323\,\kappa_y(q)&=136-98q+64q^2-26q^3+124q^4-48q^5\\&\qquad-100q^6+252q^7+39q^8+94q^9-4q^{10}-72q^{11}.
+\end{align*}
+Numerically, $(a_1,b_1)\approx(0.66275,\,0.61417)$ and $(a_2,b_2)\approx(0.07522,\,0.95466)$ modulo $1$.
+
+%=====================================================================
+\section{Finite-search audit}\label{app:audit}
+%=====================================================================
+
+\begin{table}[ht]
+\centering\small
+\caption{Run-level counts for the numerical searches (reported). Pass labels refer to the stated numerical filters, not to exact certification.}
+\label{tab:audit}
+\begin{tabular}{@{}p{3.2cm}p{11.6cm}@{}}
+\toprule
+Audit & Counts and parameters\\
+\midrule
+Printed $A$-block & 349 real parameter points: Karlsson's block passed 348 (one degenerate M\"obius point); the printed block of~\cite{McNultyWeigert2026} failed all 349, consistent with \cref{lem:misprint}.\\
+Parameter rows & Of 928 rows, 899 passed the pool gate and 45 reported a $6$-clique; 36 survived 256-bit re-verification. The other nine ($\theta=\pi/2$) dropped from clique size six at $10^{-8}$ to two at $10^{-12}$.\\
+Independent queue & 1{,}863 of 1{,}865 points processed and 1{,}852 passed the gate; 21 loci had a recovered $6$-clique.\\
+$F_6$ and $\theta=0$ & $F_6$: 156 roots, 48 retained vectors, largest clique six (cf.~\cite{Grassl2004}). On the $\theta=0$ slice, $6$-cliques appeared at 6 of 36 sampled $\lambda$; the boundary offsets around $\lambda_0=0.3$ were $+0.0550448$ and $-0.0625984$.\\
+\Dita{} endpoints & $\lambda\in\{0,0.4,\pi/3,2\pi/3,\pi,4\pi/3,5\pi/3\}$: $10,4,4,4,10,4,4$ cliques (40 total); 252 paths per witness system; no endpoint passed at $10^{-8}$.\\
+Dense \Dita{} scan & 628 values of $\lambda$, each with a recovered $6$-clique and no fourth-witness endpoint at $10^{-6},10^{-8},10^{-10}$; 126 further periodicity probes.\\
+Off-slice probes & Nine tests with $|\Delta\phi|\ge10^{-3}$ lost the $6$-clique; a $20\times20$ grid in $(\phi,\lambda)$ missed the locus because it did not sample $\phi=\pi/4$.\\
+Fourier fits & 40 bases (12 stored, 28 regenerated); both edges fitted 40/40, maximum residual $\le5\times10^{-15}$.\\
+Sampled classes & Pairs $(\lambda,\lambda+\pi)$ for $\lambda\in\{0,\pi/3,2\pi/3\}$ are numerically equivalent (residual $\sim10^{-15}$); $D(1)$, $D(e^{0.4i})$, $D(\rho)$, $D(\rho^2)$ are pairwise numerically inequivalent (minimum residual $\approx0.49$).\\
+Generic point & $K_6(0.3,0.5,0.2)$: 83 roots, 48 retained vectors, largest recovered clique two; nine Hadamard $2\times2$ submatrices at this tested point.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%=====================================================================
 \begin{thebibliography}{99}
-
-\bibitem{JaupiMethods2026}
-A.~Jaupi, ``Computational Identification and Audit of Third-MUB Loci Within Karlsson's Three-Parameter Family,'' companion methods manuscript to the present theorems note, 2026.
-
-\bibitem{Zauner1999}
-G.~Zauner, ``Quantendesigns---Grundz\"uge einer nichtkommutativen Designtheorie,'' Ph.D. dissertation, Univ.\ Wien, 1999.
-
-\bibitem{Scott2010}
-A.~J.~Scott and M.~Grassl, ``SIC-POVMs and MUBs from algebraic number theory,'' \emph{J.\ Math.\ Phys.}, vol.~51, no.~4, p.~042203, 2010.
-
-\bibitem{Bengtsson2007}
-I.~Bengtsson, W.~Tadej, and K.~\.Zyczkowski, ``Five qubit entangled states, positive maps, and matrix pencils,'' \emph{Phys.\ Rev.\ A}, vol.~75, no.~3, p.~032319, 2007.
-
-\bibitem{BengtssonMUH2007}
-I.~Bengtsson, W.~Bruzda, {\AA}.~Ericsson, J.-{\AA}.~Larsson, W.~Tadej, and K.~\.Zyczkowski, ``Mutually unbiased bases and Hadamard matrices of order six,'' \emph{J.\ Math.\ Phys.}, vol.~48, no.~5, p.~052106, 2007. [Online]. Available: \url{https://arxiv.org/abs/quant-ph/0610161}
-
-\bibitem{Brierley2009}
-S.~Brierley and S.~Weigert, ``Constructing mutually unbiased bases in dimension six,'' \emph{Phys.\ Rev.\ A}, vol.~79, no.~5, p.~052316, 2009. [Online]. Available: \url{https://arxiv.org/abs/0901.4051}
-
-\bibitem{Brierley2008}
-S.~Brierley and S.~Weigert, ``Maximal sets of mutually unbiased quantum states in dimension six,'' \emph{Phys.\ Rev.\ A}, vol.~78, no.~4, p.~042312, 2008.
-
-\bibitem{Grassl2004}
-M.~Grassl, ``On SIC-POVMs and MUBs in dimension six,'' arXiv:quant-ph/0405174, 2004.
+%=====================================================================
 
 \bibitem{Ivanovic1981}
-I.~D.~Ivanovi\'c, ``Geometrical description of quantal state determination,'' \emph{J.\ Phys.\ A}, vol.~14, no.~12, pp.~3241--3245, 1981.
+I.~D.~Ivanovi\'c, Geometrical description of quantal state determination, \emph{J.\ Phys.\ A} \textbf{14}, 3241--3245 (1981).
 
 \bibitem{Wootters1989}
-W.~K.~Wootters and B.~D.~Fields, ``Optimal state-determination by mutually unbiased measurements,'' \emph{Ann.\ Phys.}, vol.~191, no.~2, pp.~363--381, 1989.
+W.~K.~Wootters and B.~D.~Fields, Optimal state-determination by mutually unbiased measurements, \emph{Ann.\ Phys.} \textbf{191}, 363--381 (1989).
+
+\bibitem{Zauner1999}
+G.~Zauner, \emph{Quantendesigns -- Grundz\"uge einer nichtkommutativen Designtheorie}, PhD thesis, Universit\"at Wien (1999).
+
+\bibitem{McNultyWeigert2026}
+D.~McNulty and S.~Weigert, Mutually unbiased bases in composite dimensions -- a review, \emph{Quantum} \textbf{10}, 2051 (2026), doi:10.22331/q-2026-04-01-2051, arXiv:2410.23997.
+
+\bibitem{Jaming2009}
+P.~Jaming, M.~Matolcsi, P.~M\'ora, F.~Sz\"oll\H{o}si and M.~Weiner, A generalized Pauli problem and an infinite family of MUB-triplets in dimension~6, \emph{J.\ Phys.\ A: Math.\ Theor.} \textbf{42}, 245305 (2009), doi:10.1088/1751-8113/42/24/245305, arXiv:0902.0882.
+
+\bibitem{Chen2021}
+X.~Chen, M.~Liang, M.~Hu and L.~Chen, $H_2$-reducible matrices in six-dimensional mutually unbiased bases, \emph{Quantum Inf.\ Process.} \textbf{20}, 353 (2021), doi:10.1007/s11128-021-03278-8, arXiv:2110.13646.
+
+\bibitem{McNultyWeigert2025Comment}
+D.~McNulty and S.~Weigert, Comment on ``Product states and Schmidt rank of mutually unbiased bases in dimension six'', \emph{J.\ Phys.\ A: Math.\ Theor.} \textbf{58}, 168001 (2025), doi:10.1088/1751-8121/adcb07, arXiv:2504.13067.
+
+\bibitem{LiangChen2025Reply}
+M.~Liang and L.~Chen, Reply to Comment on ``Product states and Schmidt rank of mutually unbiased bases in dimension six'', arXiv:2504.15576 (2025; revised 2026).
 
 \bibitem{Karlsson2011}
-A.~Karlsson, ``Three-parameter families of complex Hadamard matrices of order 6,'' arXiv:1003.4177, 2011.
+B.~R.~Karlsson, Three-parameter complex Hadamard matrices of order~6, \emph{Linear Algebra Appl.} \textbf{434}, 247--258 (2011), arXiv:1003.4177.
 
-\bibitem{Dita2009}
-P.~Dita, ``Some results on the parametrization of complex Hadamard matrices of order 6,'' \emph{J.\ Phys.\ A}, vol.~42, no.~46, p.~465305, 2009.
+\bibitem{KarlssonH2}
+B.~R.~Karlsson, $H_2$-reducible complex Hadamard matrices of order~6, \emph{Linear Algebra Appl.} \textbf{434}, 239--246 (2011), doi:10.1016/j.laa.2010.08.021, arXiv:1003.4133.
 
-\bibitem{McNulty2026}
-D.~McNulty and S.~Weigert, ``Mutually Unbiased Bases in Composite Dimensions -- A Review,'' \emph{Quantum}, vol.~10, p.~2051, 2026.
+\bibitem{Brierley2009}
+S.~Brierley and S.~Weigert, Constructing mutually unbiased bases in dimension six, \emph{Phys.\ Rev.\ A} \textbf{79}, 052316 (2009), doi:10.1103/PhysRevA.79.052316, arXiv:0901.4051.
+
+\bibitem{Goyeneche2013}
+D.~Goyeneche, Mutually unbiased triplets from non-affine families of complex Hadamard matrices in dimension six, \emph{J.\ Phys.\ A: Math.\ Theor.} \textbf{46}, 105301 (2013), doi:10.1088/1751-8113/46/10/105301, arXiv:1209.4126.
+
+\bibitem{MaxwellBrierley2015}
+A.~Maxwell and S.~Brierley, On properties of Karlsson Hadamards and sets of mutually unbiased bases in dimension six, \emph{Linear Algebra Appl.} \textbf{466}, 296 (2015).
+
+\bibitem{Matolcsi2025}
+M.~Matolcsi, \'A.~K.~Matszangosz, D.~Varga and M.~Weiner, Triplets of mutually unbiased bases, \emph{J. Algebraic Combin.} \textbf{63}, art.~26 (2026), doi:10.1007/s10801-026-01506-x, arXiv:2503.14752.
+
+\bibitem{MatszangoszSzollosi2024}
+\'A.~K.~Matszangosz and F.~Sz\"oll\H{o}si, A characterization of complex Hadamard matrices appearing in families of MUB triplets, \emph{Des.\ Codes Cryptogr.} \textbf{92}, 4313--4333 (2024), doi:10.1007/s10623-024-01503-w, arXiv:2405.09991.
+
+\bibitem{Dita2004}
+P.~Di\c{t}\u{a}, Some results on the parametrization of complex Hadamard matrices, \emph{J.\ Phys.\ A: Math.\ Gen.} \textbf{37}, 5355--5374 (2004), arXiv:quant-ph/0212036.
+
+\bibitem{BengtssonMUH2007}
+I.~Bengtsson, W.~Bruzda, \AA.~Ericsson, J.-\AA.~Larsson, W.~Tadej and K.~\.Zyczkowski, Mutually unbiased bases and Hadamard matrices of order six, \emph{J.\ Math.\ Phys.} \textbf{48}, 052106 (2007), arXiv:quant-ph/0610161.
+
+\bibitem{Grassl2004}
+M.~Grassl, On SIC-POVMs and MUBs in dimension~6, arXiv:quant-ph/0406175 (2004).
 
 \bibitem{HomotopyContinuation}
-P.~Breiding and S.~Timme, ``HomotopyContinuation.jl: A package for homotopy continuation in Julia,'' in \emph{Proc.\ ICMS}, 2018. [Software] Version 2.22.
+P.~Breiding and S.~Timme, HomotopyContinuation.jl: a package for homotopy continuation in Julia, in \emph{Mathematical Software -- ICMS 2018}, LNCS \textbf{10931}, 458--465 (2018).
 
 \end{thebibliography}
 

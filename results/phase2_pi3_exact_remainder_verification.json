@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "pair_0_plus": {
+      "all_six_hadamard_equations_zero": true,
+      "zero_equations": 6
+    },
+    "pair_0_minus": {
+      "all_six_hadamard_equations_zero": true,
+      "zero_equations": 6
+    },
+    "pair_1_plus": {
+      "all_six_hadamard_equations_zero": true,
+      "zero_equations": 6
+    },
+    "pair_1_minus": {
+      "all_six_hadamard_equations_zero": true,
+      "zero_equations": 6
+    },
+    "pair_2_plus": {
+      "all_six_hadamard_equations_zero": true,
+      "zero_equations": 6
+    },
+    "pair_2_minus": {
+      "all_six_hadamard_equations_zero": true,
+      "zero_equations": 6
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// Exact independence test for the three quadratic phase extensions over K=Q(q).
+// Each phase gcd is x^2+C_i(q), so its square class is d_i=-C_i(q).
+// The compositum is a field of degree 8 iff every nonempty product of d_i
+// is nonsquare in K. Factor y^2-product exactly over K for all seven subsets.
+ring r=(0,q),(y),dp;
+minpoly=q^12-q^6+1;
+
+number dA=-(16*q^11-35*q^10+170*q^9-18*q^8+120*q^7+32*q^6
+  -166*q^5-157*q^4+8*q^3-46*q^2-48*q-66)/323;
+number dB=-(-166*q^11+192*q^10+170*q^9-46*q^8-72*q^7+32*q^6
+  +150*q^5-35*q^4+8*q^3+64*q^2+120*q-66)/323;
+number dC=-(150*q^11-157*q^10+170*q^9+64*q^8-48*q^7+32*q^6
+  +16*q^5+192*q^4+8*q^3-18*q^2-72*q-66)/323;
+
+print("Subset A: y^2-dA"); factorize(y^2-dA);
+print("Subset B: y^2-dB"); factorize(y^2-dB);
+print("Subset C: y^2-dC"); factorize(y^2-dC);
+print("Subset AB: y^2-dA*dB"); factorize(y^2-dA*dB);
+print("Subset AC: y^2-dA*dC"); factorize(y^2-dA*dC);
+print("Subset BC: y^2-dB*dC"); factorize(y^2-dB*dC);
+print("Subset ABC: y^2-dA*dB*dC"); factorize(y^2-dA*dB*dC);
+quit;

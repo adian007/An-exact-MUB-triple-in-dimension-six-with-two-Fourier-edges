@@ -1,0 +1,30 @@
+On branch main
+Your branch is ahead of 'origin/main' by 14 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   readme.md
+	modified:   results/third_mub_candidates_audit_py.csv
+	modified:   results/validation_summary_py.txt
+	modified:   scripts/python/validate_third_mub_table.py
+	deleted:    src/hpc/M1Hardware.jl
+	deleted:    src/hpc/M2Mubness.jl
+	deleted:    src/hpc/M3Search.jl
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	INTERFACES.md
+	PLAN_next_steps_4th_mub.md
+	b3_a4_i4_results/
+	provenance/
+	results/phase2_status.json
+	results/phase2_w1_setup.json
+	scripts/python/.hermes-tmp.52E4As
+	scripts/python/defect_minimization.py
+	scripts/python/ref_ref_resolver.py
+	scripts/python/validate_third_mub_simple.py
+	scripts/python/w1_pi3_groebner.py
+
+no changes added to commit (use "git add" and/or "git commit -a")

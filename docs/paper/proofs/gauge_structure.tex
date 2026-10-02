@@ -14,7 +14,7 @@ For all $\phi,\phi'\in[0,\pi)$ and $\lambda\in\mathbb{R}$,
 A(0,\phi)=A(0,\phi')=
 \begin{bmatrix}
 -\tfrac12 + i\tfrac{\sqrt3}{2} & -\tfrac12 - i\tfrac{\sqrt3}{2} \\
--\tfrac12 - i\tfrac{\sqrt3}{2} & \tfrac12 - i\tfrac{\sqrt3}{2}
+-\tfrac12 + i\tfrac{\sqrt3}{2} & \tfrac12 + i\tfrac{\sqrt3}{2}
 \end{bmatrix}.
 \]
 \end{lemma}
@@ -64,8 +64,8 @@ A(\theta_D,\pi/4)=
 \begin{proof}
 With $\cos\theta=1/\sqrt3$, $\sin\theta=\sqrt{2/3}$, and $\phi=\pi/4$,
 \[
-A_{11}=-\tfrac12+i\tfrac{\sqrt3}{2}\Bigl(\tfrac{1}{\sqrt3}-i\tfrac{\sqrt2}{\sqrt3}\Bigr)=i,\quad
-A_{12}=-\tfrac12+i\tfrac{\sqrt3}{2}\Bigl(-\tfrac{1}{\sqrt3}-i\tfrac{\sqrt2}{\sqrt3}\Bigr)=-1.
+A_{11}=-\tfrac12+i\tfrac{\sqrt3}{2}\Bigl(\tfrac{1}{\sqrt3}+\tfrac{1-i}{\sqrt3}\Bigr)=i,\quad
+A_{12}=-\tfrac12+i\tfrac{\sqrt3}{2}\Bigl(-\tfrac{1}{\sqrt3}+\tfrac{1+i}{\sqrt3}\Bigr)=-1.
 \]
 Hermitian structure $A=\begin{pmatrix}A_{11}&A_{12}\\ \overline{A_{12}}&-\overline{A_{11}}\end{pmatrix}$ yields the matrix shown.
 Direct computation gives $AA^\dagger=2I$.
@@ -78,8 +78,7 @@ If $\lambda\not\equiv\lambda'\pmod{2\pi}$, then $H(\lambda)\neq H(\lambda')$ as 
 \end{lemma}
 
 \begin{proof}
-At $(\theta_D,\pi/4)$ the block $A$ is fixed (Lemma~\ref{lem:L3}).
-The only $\lambda$-dependence enters through $z_1=e^{i\lambda}$; distinct $z_1$ modulo $2\pi$ change the M\"obius-derived blocks $Z_j$, so the assembled $6\times6$ matrices differ entrywise.
+In the block assembly, the one-based entry $H(\lambda)_{2,3}$ is $(Z_1)_{2,1}=z_1=e^{i\lambda}$. Therefore equality of $H(\lambda)$ and $H(\lambda')$ implies $e^{i\lambda}=e^{i\lambda'}$, hence $\lambda\equiv\lambda'\pmod{2\pi}$.
 \end{proof}
 
 \begin{lemma}[CHM class structure on the Dita $\lambda$-circle]
@@ -94,7 +93,7 @@ Let $\theta_D=\arccos(1/\sqrt3)$, $\phi=\pi/4$, and $H(\lambda):=H(\theta_D,\phi
     \item \emph{Not a parametrization gauge.} Distinct $\lambda$ modulo $2\pi$ never yield identical matrices (Lemma~\ref{lem:L4-matrix}); $\lambda$ is a genuine moduli coordinate at the matrix level, even though CHM class is $\pi$-periodic.
 \end{enumerate}
 In particular, it is \textbf{not} claimed that every pair $\lambda\not\equiv\lambda'\pmod{2\pi}$ gives CHM-inequivalent matrices---that would contradict item~(1).
-A complete invariant-theoretic classification of all $\lambda\in[0,2\pi)$ modulo diagonal-phase/permutation CHM moves remains open; items~(1)--(2) record the class structure used by the seven-point certificate below.
+A complete invariant-theoretic classification of all $\lambda\in[0,2\pi)$ modulo diagonal-phase/permutation CHM moves remains open; items~(1)--(2) record the numerical class structure used for the seven-point endpoint tests below.
 \end{lemma}
 
 \begin{proof}

@@ -1,0 +1,31 @@
+{
+  "n_vectors": 72,
+  "n_cliques": 4,
+  "n_orbits": 2,
+  "orbits": [
+    {
+      "representative": [
+        0,
+        1,
+        2,
+        11,
+        15,
+        29
+      ],
+      "orbit_size": 2,
+      "fourth_best_inf_residual": 0.910924903712377
+    },
+    {
+      "representative": [
+        0,
+        0,
+        3,
+        29,
+        58,
+        66
+      ],
+      "orbit_size": 2,
+      "fourth_best_inf_residual": 0.9243807359401596
+    }
+  ]
+}

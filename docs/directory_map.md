@@ -11,6 +11,16 @@ MUBs in 6-dimension/
 │  ├─ Manifest.toml (locked dependencies)
 │  └─ improvements.md (summary of changes)
 │
+├─ 📦 Standalone research bundles (keep paths stable)
+│  ├─ mub_complete_computational_package/ (self-contained research package)
+│  ├─ mub_fold_a4_computation/ (fold/A4 computations and reproduction notes)
+│  ├─ mub_solution_attack_package_v2/ (versioned research handoff)
+│  └─ b3_a4_i4_results/ (B3/A4 and reduced fourth-vector results)
+│
+├─ 🗃️ Preserved research state
+│  ├─ archives/ (dated snapshots)
+│  └─ provenance/ (source and provenance records)
+│
 ├─ 📚 docs/ (human-readable documentation)
 │  ├─ readme.md (index)
 │  ├─ organization.md (THIS GUIDES STRUCTURE)
@@ -105,14 +115,22 @@ MUBs in 6-dimension/
 │  ├─ pool_Dita.m2
 │  └─ ... (17 Macaulay2 system files)
 │
-├─ 📖 pdf/ (literature)
-│  └─ ... (40+ research papers and scripts)
+├─ 📄 Root-level PDFs (unclassified; do not move yet)
+│
+├─ .github/agents/ (workspace-scoped custom agents)
 │
 ├─ 📚 runs/ (saved run snapshots)
 │  └─ 2026-09-17T170232Z_phase1_definitions/
 │
 └─ .julia-depot/ (Julia packages, not tracked)
 ```
+
+The standalone bundles are referenced by active reports, campaigns, and
+manifests. Keep their root paths stable unless all references are migrated and
+the recorded hashes are rechecked. The PDFs currently at the root have not been
+classified as source literature versus compiled project documents; move them
+only after checking their role. See [organization.md](organization.md) for the
+directory responsibilities and migration rules.
 
 ## What goes where: decision tree
 

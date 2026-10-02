@@ -1,0 +1,72 @@
+{
+  "direct": {
+    "family": "F6^(2)(a,b)",
+    "status": "FIT",
+    "fit_tolerance": 1e-08,
+    "row_permutation": [
+      1,
+      2,
+      5,
+      4,
+      3,
+      0
+    ],
+    "column_permutation": [
+      1,
+      5,
+      3,
+      0,
+      4,
+      2
+    ],
+    "a": [
+      -0.8903713104927033,
+      0.4552350266087906
+    ],
+    "b": [
+      -0.9597013374830423,
+      -0.2810219614785648
+    ],
+    "consistency_error": 5.117875266520904e-16,
+    "fixed_entry_max_residual": 4.965068306494546e-16,
+    "total_max_residual": 4.965068306494546e-16,
+    "total_frobenius_residual": 1.617107637423135e-15,
+    "charts_checked": 518400,
+    "admissible_fixed_charts": 1728
+  },
+  "transpose": {
+    "family": "F6^(2)(a,b)",
+    "status": "NONE",
+    "fit_tolerance": 1e-08,
+    "row_permutation": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5
+    ],
+    "column_permutation": [
+      1,
+      2,
+      0,
+      4,
+      3,
+      5
+    ],
+    "a": [
+      -0.47399994269949935,
+      0.8805248743339801
+    ],
+    "b": [
+      0.5255569384875777,
+      0.8507584289371247
+    ],
+    "consistency_error": 0.4392550539792944,
+    "fixed_entry_max_residual": 0.468249270169846,
+    "total_max_residual": 0.468249270169846,
+    "total_frobenius_residual": 1.3374432767477373,
+    "charts_checked": 518400,
+    "admissible_fixed_charts": 0
+  }
+}

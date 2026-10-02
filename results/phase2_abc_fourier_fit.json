@@ -1,0 +1,72 @@
+{
+  "direct": {
+    "family": "F6^(2)(a,b)",
+    "status": "NONE",
+    "fit_tolerance": 1e-08,
+    "row_permutation": [
+      4,
+      3,
+      0,
+      1,
+      2,
+      5
+    ],
+    "column_permutation": [
+      5,
+      2,
+      0,
+      4,
+      3,
+      1
+    ],
+    "a": [
+      -0.16536336952826733,
+      0.9862327088564127
+    ],
+    "b": [
+      0.9334396794838649,
+      -0.35873439306130034
+    ],
+    "consistency_error": 0.8342370111968217,
+    "fixed_entry_max_residual": 0.8032463647224851,
+    "total_max_residual": 0.8342370111968217,
+    "total_frobenius_residual": 2.446634250416267,
+    "charts_checked": 518400,
+    "admissible_fixed_charts": 576
+  },
+  "transpose": {
+    "family": "F6^(2)(a,b)",
+    "status": "NONE",
+    "fit_tolerance": 1e-08,
+    "row_permutation": [
+      5,
+      0,
+      1,
+      3,
+      2,
+      4
+    ],
+    "column_permutation": [
+      4,
+      1,
+      0,
+      5,
+      2,
+      3
+    ],
+    "a": [
+      -0.29494178375433405,
+      -0.9555152244709717
+    ],
+    "b": [
+      -0.6800295662174851,
+      0.7331846896042354
+    ],
+    "consistency_error": 0.8093538646341006,
+    "fixed_entry_max_residual": 0.8784823857350992,
+    "total_max_residual": 0.8784823857350992,
+    "total_frobenius_residual": 2.9244735600526153,
+    "charts_checked": 518400,
+    "admissible_fixed_charts": 0
+  }
+}

@@ -1,9 +1,9 @@
 ==============================================================================
 Phase 1 - Definitions and conventions test suite (EXACT, SymPy)
 ==============================================================================
-timestamp (UTC) : 2026-09-17T22:03:44.233521+00:00
+timestamp (UTC) : 2026-10-02T16:36:53.725929+00:00
 python          : 3.13.14 (CPython)
-platform        : Windows-11-10.0.26200-SP0
+platform        : Windows-11-10.0.26300-SP0
 sympy           : 1.14.0
 mpmath          : 1.3.0
 script          : D:\MUBs in 6-dimension\research\definitions\phase1_definitions_suite.py
@@ -56,4 +56,4 @@ arithmetic      : exact symbolic (SymPy). No floating point is used to decide an
 [PASS] T7.4 b2 = (1-2i)/sqrt5 is unimodular and |b2| = 1 (tan alpha = 2, alpha = arg b2)  -- b2 = e^{i alpha} with tan(alpha) = -2 (Bengtsson b_2)
 [PASS] T7.5 the F_D twist z24^9 * b2 lies in Q(z24, sqrt5) = Q(i, sqrt2, sqrt3, sqrt5)  -- z24^9 = z24^9 in Q(z24); b2 needs sqrt5 -> the anchor field is Q(z24, sqrt5), degree 16 (see CONVENTIONS.md note on Q(z120), degree 32, which is strictly larger)
 
-SUMMARY: 45 passed, 0 failed, 45 total   (runtime 5.28 s)
+SUMMARY: 45 passed, 0 failed, 45 total   (runtime 7.09 s)

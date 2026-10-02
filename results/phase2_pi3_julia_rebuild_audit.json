@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "fresh_julia_pool_count": 72,
+  "fresh_julia_clique_count": 4,
+  "fresh_julia_raw_solutions": 240,
+  "fresh_julia_verified_mu_vectors": 72,
+  "all_252_mixed_volume_paths_tracked": true,
+  "high_precision_max_mu_defect": 7.446395439178151e-16,
+  "archived_clique_vectors_matched": 24,
+  "max_component_match_error": 5.812523845664519e-15,
+  "scope": "rebuild corroborates the four archived cliques and 72-vector recovered pool; root tracking is numerical, not a certified completeness proof"
+}

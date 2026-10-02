@@ -1,0 +1,18 @@
+{
+  "status": "setup_complete",
+  "H_verified": true,
+  "B3_loaded": true,
+  "lambda": "1.0471975511965976",
+  "z_value": "(0.5000000000000001+0.8660254037844386j)",
+  "pool_size": 72,
+  "clique_used": [
+    2,
+    24,
+    35,
+    47,
+    66,
+    67
+  ],
+  "B3_unitarity_defect": 14.067807536304828,
+  "timestamp": "2026-09-29T20:18:44.256475"
+}

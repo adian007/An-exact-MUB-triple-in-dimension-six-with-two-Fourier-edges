@@ -12,6 +12,7 @@ what the evidence supports.
 | `src/` | Reusable Julia modules and mathematical implementations. |
 | `scripts/` | Runnable analysis, validation, certification, and export entry points, grouped by language. |
 | `test/` | Automated regression and structural tests for `src/`. |
+| `.github/agents/` | Workspace-scoped Copilot agents for focused research workflows. |
 | `research/` | Structured or machine-readable research inputs: catalogues, parameterizations, claim data, and protocols. |
 | `docs/research/` | Human-readable research notes, literature assessments, and reports. |
 | `docs/overview/` | Project status, claims, known results, and reproduction guidance. |
@@ -20,12 +21,24 @@ what the evidence supports.
 | `results/` | Generated numerical outputs, machine-readable results, and execution logs. |
 | `symbolic_export/` | Generated exact systems consumed by symbolic algebra tools such as Macaulay2. |
 | `runs/` | Snapshots of a particular run when preserving its working inputs and outputs together is useful. |
-| `pdf/` | Literature PDFs and their associated source or extraction utilities. |
+| `archives/` | Dated snapshots retained for historical comparison; do not use for active work. |
+| `provenance/` | Source and provenance records associated with research artifacts. |
+| `mub_complete_computational_package/` | Self-contained computational research package with its own documentation and manifest. |
+| `mub_fold_a4_computation/` | Standalone fold/A4 computation bundle with its own inputs, results, and reproduction notes. |
+| `mub_solution_attack_package_v2/` | Versioned research handoff containing pools, scripts, literature notes, and provenance. |
+| `b3_a4_i4_results/` | Self-contained B3/A4 and reduced fourth-vector result bundle. |
+| `pdf/` | Optional home for PDFs confirmed to be source literature; classify loose root PDFs before moving them. |
 
 `research/` and `docs/research/` are deliberately different: put data or
 protocols that scripts consume in the former; put explanations written for
 researchers in the latter. Do not keep duplicate copies of the same report in
 both locations.
+
+The standalone package directories are intentionally kept at stable root paths:
+campaign protocols, reports, and manifests refer to their contents. Do not move
+or merge them without updating every path and verifying package hashes. Root PDF
+files should remain in place until identified as either source literature or
+compiled project documents.
 
 ## How work moves through the repository
 

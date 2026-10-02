@@ -387,3 +387,30 @@ and the phantom-function and double-counting findings are in
 `research/reports/csv_reconciliation_analysis_2026-09-26.md`; the numerical
 claims behind §2 and §4 are re-derived in
 `research/reports/verification_2026-09-26.md`.
+
+## 7. Follow-up exact and singular-root checks (2026-10-01)
+
+The pi/3 distinct-phase candidate now has an exact identity audit: all 15
+pairwise B3 inner products and all 18 Hadamard-unbiasedness equations reduce
+to zero in the specified cyclotomic/phase quotient. The phase relations are
+consistent by exact resultant elimination. These are statements about the
+specified candidate, not a classification of all third bases. The exhaustive
+pool-graph check is confined to the restored 72-vector pool.
+
+The saved fold augmented system has 1,920/1,920 certified roots. Twenty-four
+physical roots lie within `5.42e-16` in angle of the recorded numerical fold
+parameter, and an independent 24-root refinement matches them one-to-one.
+The two previously reported 12-element A4 orbits map onto these certified
+roots. This does not establish exact equality with the rounded parameter,
+completeness of the pool, or maximality of the symmetry group. See
+`research/reports/phase2_fold_certified_singular_roots_2026-10-01.md`.
+
+The exact pi/3 W1 witness Gröbner run was attempted in WSL with Macaulay2
+1.26.06 and stopped at its 30-minute limit without a result; the log contains
+only `interrupted, stopping`. A follow-up exact Singular computation has now
+proved the joint phase coefficient algebra is a degree-8 field over
+Q(q), degree 96 over Q, by irreducible quadratic gcds and independence of
+their three square classes. The witness input was reformulated over that
+field, but a Macaulay2 smoke test and rerun are pending because WSL cannot
+create a VM while the host paging file is too small. Thus W1 emptiness remains
+open. See `research/reports/phase2_w1_coefficient_field_2026-10-01.md`.

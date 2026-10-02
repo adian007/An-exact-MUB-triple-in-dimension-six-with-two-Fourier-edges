@@ -18,6 +18,7 @@ using Test
 using Random
 using LinearAlgebra
 
+include(joinpath(@__DIR__, "norm_detection.jl"))
 include(joinpath(@__DIR__, "..", "src", "MubSearch.jl"))
 using .MubSearch
 

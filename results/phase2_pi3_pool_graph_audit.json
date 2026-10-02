@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "pool_size": 72,
+  "row_norm_max_error_from_6": 0.0,
+  "orth_graph_edges": 226,
+  "mu_graph_edges": 0,
+  "mu_pair_threshold": "abs(abs(<v_i,v_j>)-sqrt(6)) < 1e-9",
+  "orth_edge_max_abs_inner": 9.764096861663316e-10,
+  "mu_edge_max_abs_inner_error": 0.0,
+  "max_orth_clique_size": 6,
+  "orth_cliques_size_at_least_6": [
+    [
+      2,
+      22,
+      23,
+      61,
+      65,
+      71
+    ],
+    [
+      10,
+      24,
+      41,
+      42,
+      51,
+      56
+    ],
+    [
+      11,
+      19,
+      28,
+      48,
+      64,
+      69
+    ],
+    [
+      31,
+      40,
+      46,
+      58,
+      62,
+      67
+    ]
+  ],
+  "known_clique_checks": [
+    {
+      "clique": [
+        2,
+        22,
+        23,
+        61,
+        65,
+        71
+      ],
+      "is_orthogonal_6_clique": true,
+      "internal_mu_edges": 0
+    },
+    {
+      "clique": [
+        10,
+        24,
+        41,
+        42,
+        51,
+        56
+      ],
+      "is_orthogonal_6_clique": true,
+      "internal_mu_edges": 0
+    },
+    {
+      "clique": [
+        11,
+        19,
+        28,
+        48,
+        64,
+        69
+      ],
+      "is_orthogonal_6_clique": true,
+      "internal_mu_edges": 0
+    },
+    {
+      "clique": [
+        31,
+        40,
+        46,
+        58,
+        62,
+        67
+      ],
+      "is_orthogonal_6_clique": true,
+      "internal_mu_edges": 0
+    }
+  ],
+  "scope": "restored 72-vector pool only; not a completeness theorem for all MU vectors"
+}

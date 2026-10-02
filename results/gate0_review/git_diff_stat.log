@@ -1,0 +1,10 @@
+warning: in the working copy of 'readme.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/python/validate_third_mub_table.py', LF will be replaced by CRLF the next time Git touches it
+ readme.md                                  |   1 +
+ results/third_mub_candidates_audit_py.csv  |  15 --
+ results/validation_summary_py.txt          |   9 +-
+ scripts/python/validate_third_mub_table.py |   2 +-
+ src/hpc/M1Hardware.jl                      | 117 --------------
+ src/hpc/M2Mubness.jl                       | 210 ------------------------
+ src/hpc/M3Search.jl                        | 249 -----------------------------
+ 7 files changed, 6 insertions(+), 597 deletions(-)

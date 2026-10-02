@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "source": "results\\phase2_pi3_B3_mp100.json",
+  "export": "symbolic_export/w1_pi3_exact_abc.m2",
+  "precision_dps": 120,
+  "shortcut_tested": false,
+  "max_residual": 1.5983308671466162e-72,
+  "residuals": {
+    "P(a)": 4.334191478365441e-97,
+    "P(b)": 2.241911886794764e-95,
+    "P(c)": 4.079719302365604e-95,
+    "L0(q,a)": 1.828380816482918e-74,
+    "L1(q,b)": 2.9659759512707914e-73,
+    "L2(q,c)": 1.5983308671466162e-72,
+    "q^12-q^6+1": 1.9362959574246591e-121,
+    "template_max_abs": 6.761523995534449e-101,
+    "pairwise_max_abs": 1.4966010970867774e-100,
+    "unit_norm_max_abs": 9.575738587094273e-102,
+    "H_MU_max_abs": 1.4243112189068607e-101
+  }
+}

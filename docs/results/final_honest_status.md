@@ -115,3 +115,18 @@ Audit and fixes: [`docs/METHODOLOGY_AUDIT.md`](../docs/METHODOLOGY_AUDIT.md) (ca
 | Claim-tier vocabulary + provenance on all new artifacts | **Enforced** | `Certification.jl` tiers; `write_result` stamps git commit/seed/tolerances |
 
 Environment note (F4): Windows Smart App Control (On since ~2026-09) blocks unsigned Julia core DLLs; all Julia computation now runs in WSL2 Ubuntu (documented in `../overview/reproduce.md`). No security policy was modified.
+
+---
+
+## 19. Exact pi/3 and certified fold follow-up (2026-10-01)
+
+| Claim | Ledger | Evidence |
+|-------|--------|----------|
+| pi/3 distinct-phase B3 ansatz satisfies pairwise orthogonality and all Hadamard MU equations | **Exact algebraic identity check for the supplied ansatz** | 15 pairwise inner products reduce to zero modulo `q^12-q^6+1`; 18/18 MU equations reduce to zero modulo the cyclotomic, phase, and phase-specific relations; see `research/reports/phase2_pi3_exact_remainder_verification_2026-10-01.md` |
+| pi/3 phase embeddings are mutually consistent | **Exact elimination check** | Three phase resultants have degree 24 and common factor `Phi_36` of degree 12; `results/phase2_pi3_phase_field_ideal.json` |
+| 72-vector pi/3 restored-pool orthogonality graph | **Exhaustive only within the supplied pool** | 226 edges; maximum clique size 6; exactly four 6-cliques; `results/phase2_pi3_pool_graph_audit.json` |
+| pi/3 canonical pool rebuild | **NUMERICALLY_SUPPORTED** | 252 paths tracked; 72 vectors and four cliques; rebuilt clique vectors match saved pool within `5.82e-15`; `results/phase2_pi3_julia_rebuild_audit.json`; no completeness proof |
+| Fold augmented-system roots near the numerical critical parameter | **CERTIFIED_NUMERICAL** | 1,920/1,920 saved augmented roots certified; 24 physical candidates within `5.42e-16` in parameter angle match 24 distinct certified roots; independent refined data match all 24; see `research/reports/phase2_fold_certified_singular_roots_2026-10-01.md` |
+| pi/3 W1 witness emptiness / non-extension | **Open; witness GB not rerun** | Initial WSL Macaulay2 run timed out inconclusively. The joint phase coefficient quotient is now proved to be a degree-96 field over Q by exact Singular gcd and square-class tests; the witness input has been reduced to this field. A smoke test/rerun is pending because the host paging file prevents WSL VM startup; see `research/reports/phase2_w1_coefficient_field_2026-10-01.md`. |
+
+These results do not establish completeness of the pi/3 pool, exact equality of the certified fold parameter with its rounded decimal target, maximality of the recorded A4 group, or a family-wide/fourth-MUB exclusion.

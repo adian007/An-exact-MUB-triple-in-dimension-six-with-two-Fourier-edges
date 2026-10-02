@@ -1,0 +1,23 @@
+{
+  "lambda_star": "0.1114802243779665542913031975274172717685818097497045",
+  "counts": {
+    "below_2e-6": 120,
+    "critical_distinct": 96,
+    "above_2e-6": 72
+  },
+  "singular_roots_refined": 24,
+  "a4_orbit_sizes": [
+    12,
+    12
+  ],
+  "a4_max_match_error": 8.505162872852291e-10,
+  "fold_abs_wFl_range": [
+    3.018086390967352,
+    5.38956257133805
+  ],
+  "fold_abs_wQ_range": [
+    1.0780090873212262,
+    4.659641582746488
+  ],
+  "status": "numerical evidence; not interval-certified"
+}

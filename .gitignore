@@ -13,6 +13,7 @@ Manifest.toml.bak
 # Python
 __pycache__/
 *.pyc
+.pytest_cache/
 
 # Scratch / logs not part of the record
 debug-*.log

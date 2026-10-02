@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "source_physical_root_count": 192,
+  "certified_augmented_root_count": 1920,
+  "uncertified_augmented_root_count": 0,
+  "near_lambda_star_count_within_1e-8": 24,
+  "lambda_star": 0.11148022437796655,
+  "maximum_delta_lambda_for_near_roots": 5.412337245047638e-16,
+  "independent_refined_singular_candidates": 24,
+  "refined_candidate_to_certified_root_max_phase_error": 3.44539397012511e-10,
+  "refined_candidate_matches_within_1e-8": 24,
+  "distinct_certified_roots_hit_by_refined_candidates": 24,
+  "recorded_a4_orbits_mapped_to_certified_roots": [
+    {
+      "recorded_orbit_size": 12,
+      "certified_root_hits": 12,
+      "max_match_error_in_source_orbit": 8.490118650406652e-10
+    },
+    {
+      "recorded_orbit_size": 12,
+      "certified_root_hits": 12,
+      "max_match_error_in_source_orbit": 8.505162872852291e-10
+    }
+  ],
+  "all_physical_roots_uniquely_matched": true,
+  "all_physical_roots_max_match_error": 0.0,
+  "near_roots": [
+    {
+      "lambda": 0.11148022437796651,
+      "delta_lambda_from_target": 4.163336342344337e-17,
+      "physical_system_residual": 2.010699415441723e-15,
+      "physical_defect": 2.6558837364083264e-16,
+      "certified_root_index": 12,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796673,
+      "delta_lambda_from_target": 1.8041124150158794e-16,
+      "physical_system_residual": 2.1556631856153973e-15,
+      "physical_defect": 2.482534153247273e-16,
+      "certified_root_index": 58,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796655,
+      "delta_lambda_from_target": 0.0,
+      "physical_system_residual": 1.9860273225978185e-15,
+      "physical_defect": 8.95090418262362e-16,
+      "certified_root_index": 81,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796655,
+      "delta_lambda_from_target": 0.0,
+      "physical_system_residual": 3.580361673049448e-15,
+      "physical_defect": 3.510833468576701e-16,
+      "certified_root_index": 87,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796637,
+      "delta_lambda_from_target": 1.8041124150158794e-16,
+      "physical_system_residual": 1.9860273225978185e-15,
+      "physical_defect": 4.442111658486589e-16,
+      "certified_root_index": 123,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796616,
+      "delta_lambda_from_target": 3.885780586188048e-16,
+      "physical_system_residual": 9.930136612989092e-16,
+      "physical_defect": 3.510833468576701e-16,
+      "certified_root_index": 131,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796601,
+      "delta_lambda_from_target": 5.412337245047638e-16,
+      "physical_system_residual": 2.975418419039454e-15,
+      "physical_defect": 1.047382306668854e-15,
+      "certified_root_index": 151,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796641,
+      "delta_lambda_from_target": 1.3877787807814457e-16,
+      "physical_system_residual": 2.1556631856153973e-15,
+      "physical_defect": 4.742874840267547e-16,
+      "certified_root_index": 166,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796673,
+      "delta_lambda_from_target": 1.8041124150158794e-16,
+      "physical_system_residual": 1.7763568394002505e-15,
+      "physical_defect": 6.473657049138938e-16,
+      "certified_root_index": 167,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.1114802243779666,
+      "delta_lambda_from_target": 5.551115123125783e-17,
+      "physical_system_residual": 2.6645352591003757e-15,
+      "physical_defect": 2.482534153247273e-16,
+      "certified_root_index": 332,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796631,
+      "delta_lambda_from_target": 2.3592239273284576e-16,
+      "physical_system_residual": 2.5121479338940403e-15,
+      "physical_defect": 5.23691153334427e-16,
+      "certified_root_index": 391,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796654,
+      "delta_lambda_from_target": 1.3877787807814457e-17,
+      "physical_system_residual": 1.790180836524724e-15,
+      "physical_defect": 4.742874840267547e-16,
+      "certified_root_index": 402,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796672,
+      "delta_lambda_from_target": 1.6653345369377348e-16,
+      "physical_system_residual": 2.5121479338940403e-15,
+      "physical_defect": 1.1106620397052277e-15,
+      "certified_root_index": 415,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796662,
+      "delta_lambda_from_target": 6.938893903907228e-17,
+      "physical_system_residual": 1.3322676295501878e-15,
+      "physical_defect": 3.1401849173675503e-16,
+      "certified_root_index": 478,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796637,
+      "delta_lambda_from_target": 1.8041124150158794e-16,
+      "physical_system_residual": 1.9860273225978185e-15,
+      "physical_defect": 5.578801654593729e-16,
+      "certified_root_index": 563,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796612,
+      "delta_lambda_from_target": 4.3021142204224816e-16,
+      "physical_system_residual": 2.6325398974912097e-15,
+      "physical_defect": 7.447602459741819e-16,
+      "certified_root_index": 777,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796642,
+      "delta_lambda_from_target": 1.249000902703301e-16,
+      "physical_system_residual": 1.831026719408895e-15,
+      "physical_defect": 2.220446049250313e-16,
+      "certified_root_index": 786,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.1114802243779666,
+      "delta_lambda_from_target": 5.551115123125783e-17,
+      "physical_system_residual": 1.386737556090068e-15,
+      "physical_defect": 2.482534153247273e-16,
+      "certified_root_index": 842,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796641,
+      "delta_lambda_from_target": 1.3877787807814457e-16,
+      "physical_system_residual": 1.831026719408895e-15,
+      "physical_defect": 3.1401849173675503e-16,
+      "certified_root_index": 1072,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796647,
+      "delta_lambda_from_target": 8.326672684688674e-17,
+      "physical_system_residual": 2.7012892057857038e-15,
+      "physical_defect": 3.510833468576701e-16,
+      "certified_root_index": 1220,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796687,
+      "delta_lambda_from_target": 3.191891195797325e-16,
+      "physical_system_residual": 1.831026719408895e-15,
+      "physical_defect": 4.002966042486721e-16,
+      "certified_root_index": 1230,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796652,
+      "delta_lambda_from_target": 2.7755575615628914e-17,
+      "physical_system_residual": 1.099152334353211e-15,
+      "physical_defect": 2.2887833992611187e-16,
+      "certified_root_index": 1626,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796637,
+      "delta_lambda_from_target": 1.8041124150158794e-16,
+      "physical_system_residual": 1.831026719408895e-15,
+      "physical_defect": 3.9461813575387086e-16,
+      "certified_root_index": 1695,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    },
+    {
+      "lambda": 0.11148022437796663,
+      "delta_lambda_from_target": 8.326672684688674e-17,
+      "physical_system_residual": 1.831026719408895e-15,
+      "physical_defect": 4.710277376051325e-16,
+      "certified_root_index": 1753,
+      "certified": true,
+      "max_coordinate_match_error": 0.0,
+      "unique_certificate_match": true
+    }
+  ],
+  "scope": "isolated roots of the augmented system near lambda_star; not a proof of exact equality with the rounded target parameter or of global pool completeness"
+}

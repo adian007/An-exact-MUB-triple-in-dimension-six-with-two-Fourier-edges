@@ -1,0 +1,13 @@
+{
+  "singular_records": 30,
+  "filtered_singular_candidates": 24,
+  "critical_julia_pool": 72,
+  "candidate_to_pool_min_phase_distance_max": 1.3935028239008362,
+  "candidate_to_pool_matches_at_1e-7": 0,
+  "candidate_to_pool_matches_at_1e-5": 0,
+  "reported_a4_orbit_sizes": [
+    12,
+    12
+  ],
+  "reported_a4_max_match_error": 8.505162872852291e-10
+}

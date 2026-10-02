@@ -1,16 +1,1 @@
 index,name,theta,phi,lambda,d_theta0,nearest_locus,nearest_dist,exact_confirmed,found_fourth
-1,F6_theta0,0.0,0.5,0.3,0.0,Fourier_theta0,0.0,theta=0,false
-2,Dita,0.9553166181245092,0.7853981633974483,0.4,0.9553166181245092,Dita,0.0,phi=pi/4; theta=arccos(1/sqrt(3)),false
-3,ref_F6_theta0,0.0,0.495,0.2975,0.0,Fourier_theta0,0.0,theta=0,false
-4,ref_F6_theta0,0.0,0.495,0.3,0.0,Fourier_theta0,0.0,theta=0,false
-5,ref_F6_theta0,0.0,0.4975,0.2975,0.0,Fourier_theta0,0.0,theta=0,false
-6,ref_F6_theta0,0.0,0.4975,0.3,0.0,Fourier_theta0,0.0,theta=0,false
-7,ref_F6_theta0,0.0,0.5,0.2975,0.0,Fourier_theta0,0.0,theta=0,false
-8,ref_F6_theta0,0.0,0.5025,0.2975,0.0,Fourier_theta0,0.0,theta=0,false
-9,ref_F6_theta0,0.0,0.5025,0.3,0.0,Fourier_theta0,0.0,theta=0,false
-10,ref_F6_theta0,0.0,0.505,0.2975,0.0,Fourier_theta0,0.0,theta=0,false
-11,ref_F6_theta0,0.0,0.505,0.3,0.0,Fourier_theta0,0.0,theta=0,false
-12,ref_Dita,0.9553166181245092,0.7853981633974483,0.395,0.9553166181245092,Dita,0.0,phi=pi/4; theta=arccos(1/sqrt(3)),false
-13,ref_Dita,0.9553166181245092,0.7853981633974483,0.3975,0.9553166181245092,Dita,0.0,phi=pi/4; theta=arccos(1/sqrt(3)),false
-14,ref_Dita,0.9553166181245092,0.7853981633974483,0.4025,0.9553166181245092,Dita,0.0,phi=pi/4; theta=arccos(1/sqrt(3)),false
-15,ref_Dita,0.9553166181245092,0.7853981633974483,0.405,0.9553166181245092,Dita,0.0,phi=pi/4; theta=arccos(1/sqrt(3)),false

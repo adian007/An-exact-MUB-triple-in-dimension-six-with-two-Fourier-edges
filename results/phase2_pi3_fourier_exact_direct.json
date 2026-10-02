@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "python_version": "3.13.14",
+  "sympy_version": "1.14.0",
+  "inputs": [
+    "symbolic_export/pi3_exact_B3_ansatz.md",
+    "docs/research/reports/phase2_w1_coefficient_field_2026-10-01.md"
+  ],
+  "field_relation": "q^12-q^6+1=0",
+  "row_permutation": [
+    4,
+    3,
+    1,
+    0,
+    2,
+    5
+  ],
+  "column_permutation": [
+    2,
+    0,
+    4,
+    3,
+    1,
+    5
+  ],
+  "fourier_parameters": {
+    "x": "b/(q^6*a)",
+    "y": "b/(q^12*c)"
+  },
+  "chart_entry_checks": 36,
+  "chart_failures": [],
+  "phase_modulus_checks": 3,
+  "phase_modulus_failures": {},
+  "scope": "Exact Fourier membership and phase-modulus checks only; MUB identities are recorded in the exact remainder report."
+}

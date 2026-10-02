@@ -6,7 +6,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PAPER = ROOT / "paper"
+PAPER = ROOT / "docs" / "paper"
+if not PAPER.exists():
+    PAPER = ROOT / "paper"
 SOURCE = PAPER / "methods_audit_multifile.tex"
 OUT = PAPER / "methods_audit.tex"
 INPUT_RE = re.compile(r"^[^%\n]*\\input\{([^}]+)\}", re.MULTILINE)

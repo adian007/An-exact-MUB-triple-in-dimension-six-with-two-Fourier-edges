@@ -11,8 +11,9 @@
 \input{preamble_common}
 
 % Convention (this document): Findings for HP audits; Open Problem for R.
-% Algebraic gauge theorem (T1) and certified/exact fourth-MUB theorems (T3/T4)
-% live in the companion theorems paper~\cite{JaupiTheorems2026}.
+% T1 (gauge), T4 (exact D0 witness ideal), and T5 (fixed-triple Fourier
+% corollary) live in the companion theorems paper~\cite{JaupiTheorems2026}.
+% T3 is a numerical-interval endpoint-test finding, not a W_1 emptiness theorem.
 
 \begin{document}
 
@@ -28,8 +29,8 @@
 I document a reproducible per-$H$ computational pipeline for mutually unbiased basis (MUB) extendability inside Karlsson's three-parameter family $K_6^{(3)}$ only, together with a computational identification of third-MUB loci in audited search sets.
 Within a certified search CSV ($928$ rows, $899$ pool-complete) and HP re-verification, the only reproducing third-MUB loci found are the $F_6$ $\theta{=}0$ bounded $\lambda$-arc and the Dita full $\lambda$-circle (Finding~\ref{thm:trackd})---an identification of the audited search, not a theorem on all of $K_6^{(3)}$.
 Supporting HP probes (Findings~\ref{prop:L5},~\ref{prop:L6},~\ref{thm:T2}), the $\mathcal{S}^*$ primary sweep ($1863/1865$ candidates, no fourth MUB observed), a documented $512$-point coarse-grid miss of every known third-MUB locus, pool-completeness tables, and reproduction pins are included so the report is independently citable as methodology.
-A 2026-09 regression-hardened rerun pins the pipeline to literature values---$F_6$ pool $48$ vectors; the $D_0$-equivalent Dita point pool $120$ vectors, $10$ third bases, and all ten fourth-MUB witnesses certified empty (independently reproducing Brierley--Weigert's complete-pool counts); Tao's isolated $S_6$ pool $90$ vectors with no third MUB---and resolves the Dita pool-size structure: $120$ vectors in four $\lambda$-intervals of width ${\approx}0.22$ rad centered at $\lambda\in\{0,\pi/2,\pi,3\pi/2\}$ (mod $2\pi$), $72$ vectors elsewhere (Table~\ref{tab:benchmarks}).
-Certified fourth-MUB obstruction at seven Dita points and exact $D_0$ re-verification appear in the companion theorems paper~\cite{JaupiTheorems2026}; confirmatory negatives here do not replace that certificate.
+A 2026-09 regression-hardened rerun pins the pipeline to literature counts---$F_6$ pool $48$ vectors; at the Karlsson input $\lambda=\pi/2$, numerically matched to $D_0$, pool $120$ vectors, $10$ recovered third bases, and no mutually unbiased pair among the $45$ tested basis pairs (independently reproducing Brierley--Weigert's counts); the witness endpoint tests had no full-system residual pass for $10/10$ cliques, which is not an emptiness proof. Tao's isolated $S_6$ pool has $90$ vectors with no third MUB in the reported search. The rerun also records the Dita pool-size structure: $120$ vectors in four $\lambda$-intervals of width ${\approx}0.22$ rad centered at $\lambda\in\{0,\pi/2,\pi,3\pi/2\}$ (mod $2\pi$), $72$ vectors elsewhere (Table~\ref{tab:benchmarks}).
+The companion theorems paper~\cite{JaupiTheorems2026} records T3 square-system endpoint tests (not a proof of $W_1$ emptiness), the exact T4 re-verification at a fixed $D_0$ pair, and the exact Fourier-family identification for one triple in T5. The fixed-triple non-extension conclusion in T5 is a corollary of Jaming et al.'s published theorem.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -44,14 +45,14 @@ Mutually unbiased bases (MUBs) in $\mathbb{C}^d$ satisfy
     \label{eq:mu}
     \bigl|\langle\psi|\phi\rangle\bigr|^2 = \frac{1}{d}
 \end{equation}
-for vectors from distinct bases~\cite{Bengtsson2007, Brierley2009}.
+for vectors from distinct bases~\cite{BengtssonMUH2007, Brierley2009}.
 In dimension six, Zauner conjectured $N(6)=3$~\cite{Zauner1999, Scott2010}.
 Complex Hadamard matrices (CHMs) supply second bases; Karlsson's family $K_6(\theta,\phi,\lambda)$~\cite{Karlsson2011} is a three-parameter source of $6\times6$ CHMs treated in the composite-dimension MUB review of McNulty--Weigert~\cite{McNulty2026}.
 Grassl~\cite{Grassl2004} showed that searches must be \emph{per} Hadamard matrix, not via a fixed pool unbiased only to $F_6$.
 
 This companion report is a stand-alone computational methodology and audit document.
 Its primary contributions are: (i)~a corrected per-$H$ homotopy/clique pipeline with formal search sets; (ii)~computational identification of two reproducing third-MUB loci in audited data; (iii)~honest negative evidence on larger sets, including a self-correcting $512$-point grid miss that warns against over-reading sweep negatives.
-Algebraic gauge structure and the certified/exact fourth-MUB theorems are proved in the companion theorems paper~\cite{JaupiTheorems2026}.
+The algebraic gauge result (T1), exact fixed-pair computation (T4), and fixed-triple Fourier corollary (T5) are in the companion theorems paper~\cite{JaupiTheorems2026}; its T3 endpoint tests are numerical findings, not fourth-MUB non-existence theorems.
 
 \subsection{Contributions}
 \begin{enumerate}
@@ -66,9 +67,9 @@ Algebraic gauge structure and the certified/exact fourth-MUB theorems are proved
 Scoped to $K_6^{(3)}$ and the search sets in \repo{../overview/reproduce.md}.
 \begin{itemize}
     \item \textbf{HP-verified findings.} Locus identification and sampled Dita persistence (Findings~\ref{thm:trackd},~\ref{thm:T2},~\ref{prop:L5},~\ref{prop:L6}); not theorems on all of $K_6^{(3)}$.
-    \item \textbf{Confirmatory numerics.} $\mathcal{S}^*$ and CSV \texttt{found\_fourth=false}; weaker than the seven-point certificate in~\cite{JaupiTheorems2026}.
+    \item \textbf{Confirmatory numerics.} $\mathcal{S}^*$, the CSV, dense probes, and the companion T3 endpoint tests report negative numerical outcomes; they do not prove witness emptiness.
     \item \textbf{Open.} Absence of a fourth MUB on all of $\mathcal{R}$ (Open Problem~\ref{op:trackc}).
-    \item \textbf{Companion theorems~\cite{JaupiTheorems2026}.} T1 (gauge), T3 (\texttt{certify()} at seven points), T4 (exact GB at one $D_0$-equivalent pair), and the Karlsson/$A$-matrix literature correction.
+    \item \textbf{Companion theorems~\cite{JaupiTheorems2026}.} T1 (gauge), T3 (square-system endpoint tests), T4 (exact GB at one fixed $D_0$ pair), T5 (exact Fourier reduction and fixed-triple corollary), and the Karlsson/$A$-matrix literature correction.
 \end{itemize}
 
 \section{Background}
@@ -228,7 +229,7 @@ Nine $\theta=\pi/2$ \texttt{circulant\_match} CSV rows are non-reproducing under
 
 \subsection{Fourth-MUB Negative Evidence (Confirmatory; Track~C, Track~A)}
 \label{sec:trackc}
-Beyond the pointwise certified obstruction of the companion theorems paper~\cite{JaupiTheorems2026}, this subsection records confirmatory negative numerics on larger audited sets; Open Problem~\ref{op:trackc} remains open.
+Alongside the fixed-triple exact corollary T5 in the companion theorems paper~\cite{JaupiTheorems2026}, this subsection records confirmatory negative numerics on larger audited sets; Open Problem~\ref{op:trackc} remains open.
 I define a covering region for future exhaustive search:
 \[
 \mathcal{R}=\mathcal{S}^*\cup\{\text{Dita }\lambda\text{-circle}\}\cup\{\text{F6 }\theta=0\ \lambda\text{-arc}\}\cup\{\text{anchors}\},
@@ -244,7 +245,7 @@ $\mathcal{S}^*$ primary: $1863/1865$ distinct candidate points ($1852$ pool-comp
 For all $(\theta,\phi,\lambda)\in\mathcal{R}$ with \texttt{pool\_complete\_flag}=\texttt{true}, no fourth MUB exists extending $\{\mathbf{I},H(\theta,\phi,\lambda)\}$.
 \end{conjecture}
 \noindent
-\textbf{Status:} Open Problem~\ref{op:trackc} unproven; the companion paper~\cite{JaupiTheorems2026} settles seven Dita-$\lambda$ points by certificate.
+\textbf{Status:} Open Problem~\ref{op:trackc} remains unproven; the companion paper~\cite{JaupiTheorems2026} records seven-point endpoint tests but does not prove $W_1$ emptiness there.
 The $512$-point coarse grid already missed every known third-MUB locus (\S\ref{sec:coarsesweep}); the same class of method produces these negatives, so they are confirmatory, not a substitute for Open Problem~\ref{op:trackc}.
 
 \subsection{Reproducibility}
@@ -303,7 +304,7 @@ The per-$H$ reformulation is essential for testing Karlsson-family extendability
 \textbf{What this report claims.} Finding~\ref{thm:trackd} identifies two HP-verified third-MUB loci in the audited search. Findings~\ref{thm:T2},~\ref{prop:L5},~\ref{prop:L6} supply sampled persistence and boundary geometry. Open Problem~\ref{op:trackc} remains open.
 
 \textbf{Self-correction, and why it cuts both ways.} An initial coarse $512$-point grid incorrectly suggested $\texttt{max\_clique}=2$ everywhere; re-audit found third-MUB loci that the grid missed.
-That disclosure is methodological, but it is also a warning: the same style of dense parameter sweep produced the \emph{negative} fourth-MUB reports (CSV, $\mathcal{S}^*$, $628/628$ Dita probes). A method that silently missed all known third-MUB loci is not, by itself, a reason to trust ``no fourth MUB found'' on a larger set. The certified seven-point obstruction~\cite{JaupiTheorems2026} is the exception.
+That disclosure is methodological, but it is also a warning: the same style of dense parameter sweep produced the \emph{negative} fourth-MUB reports (CSV, $\mathcal{S}^*$, $628/628$ Dita probes). A method that silently missed all known third-MUB loci is not, by itself, a reason to trust ``no fourth MUB found'' on a larger set. The companion T3 endpoint tests have the same scope limitation; only its T5 result is an exact non-extension statement, and only for one algebraically specified triple.
 
 Explaining why the bounded $\lambda$-arc at $F_6$ and the full circle at Dita differ uses the companion gauge theorem~\cite{JaupiTheorems2026}: at $\theta=0$, $\phi$ is gauge; at Dita, $\lambda$ is a genuine moduli direction. An analytic formula for $\kappa$ in terms of M\"obius data remains open (\repo{arc\_circle\_asymmetry.txt}).
 
@@ -311,7 +312,7 @@ Explaining why the bounded $\lambda$-arc at $F_6$ and the full circle at Dita di
 \label{sec:conclusion}
 
 This computational report identifies two reproducing third-MUB loci in audited Karlsson search sets, documents a corrected per-$H$ pipeline and its failure modes (including the $512$-point grid miss), and records confirmatory fourth-MUB negatives on $\mathcal{S}^*$ and related sets without promoting them to theorems.
-Certified and exact fourth-MUB results, gauge algebra, and the $A$-matrix literature correction are in the companion theorems paper~\cite{JaupiTheorems2026}.
+The exact T4 fixed-pair result, T5 fixed-triple corollary, gauge algebra, and the $A$-matrix literature correction are in the companion theorems paper~\cite{JaupiTheorems2026}; T3 there is an endpoint-test finding, not a fourth-MUB theorem.
 I do not claim a theorem on fourth-MUB absence in all of $K_6^{(3)}$ or on $N(6)$.
 
 \section*{Acknowledgment}
@@ -381,7 +382,7 @@ The claim ledger (\repo{../results/final_honest_status.md}) tracks each statemen
 \begin{thebibliography}{99}
 
 \bibitem{JaupiTheorems2026}
-A.~Jaupi, ``Gauge Structure and Certified Non-Extendability for Selected Karlsson Hadamards in Dimension Six,'' companion theorems manuscript to the present methods report, 2026.
+A.~Jaupi, ``Gauge Structure and Exact Local MUB Results for Selected Karlsson Hadamards in Dimension Six,'' companion theorems manuscript to the present methods report, 2026.
 
 \bibitem{Zauner1999}
 G.~Zauner, ``Quantendesigns---Grundz\"uge einer nichtkommutativen Designtheorie,'' Ph.D. dissertation, Univ.\ Wien, 1999.
@@ -389,8 +390,8 @@ G.~Zauner, ``Quantendesigns---Grundz\"uge einer nichtkommutativen Designtheorie,
 \bibitem{Scott2010}
 A.~J.~Scott and M.~Grassl, ``SIC-POVMs and MUBs from algebraic number theory,'' \emph{J.\ Math.\ Phys.}, vol.~51, no.~4, p.~042203, 2010.
 
-\bibitem{Bengtsson2007}
-I.~Bengtsson, W.~Tadej, and K.~\.Zyczkowski, ``Five qubit entangled states, positive maps, and matrix pencils,'' \emph{Phys.\ Rev.\ A}, vol.~75, no.~3, p.~032319, 2007.
+\bibitem{BengtssonMUH2007}
+I.~Bengtsson, W.~Bruzda, {\AA}.~Ericsson, J.-{\AA}.~Larsson, W.~Tadej, and K.~\.Zyczkowski, ``Mutually unbiased bases and Hadamard matrices of order six,'' \emph{J.\ Math.\ Phys.}, vol.~48, no.~5, p.~052106, 2007. [Online]. Available: \url{https://arxiv.org/abs/quant-ph/0610161}
 
 \bibitem{Brierley2009}
 S.~Brierley and S.~Weigert, ``Constructing mutually unbiased bases in dimension six,'' \emph{Phys.\ Rev.\ A}, vol.~79, no.~5, p.~052316, 2009. [Online]. Available: \url{https://arxiv.org/abs/0901.4051}
@@ -399,7 +400,7 @@ S.~Brierley and S.~Weigert, ``Constructing mutually unbiased bases in dimension 
 M.~Grassl, ``On SIC-POVMs and MUBs in dimension six,'' arXiv:quant-ph/0405174, 2004.
 
 \bibitem{Karlsson2011}
-A.~Karlsson, ``Three-parameter families of complex Hadamard matrices of order 6,'' arXiv:1003.4177, 2011.
+B.~R.~Karlsson, ``Three-parameter complex Hadamard matrices of order 6,'' \emph{Linear Algebra Appl.}, vol.~434, no.~1, pp.~247--258, 2011. [Online]. Available: \url{https://arxiv.org/abs/1003.4177}
 
 \bibitem{McNulty2026}
 D.~McNulty and S.~Weigert, ``Mutually Unbiased Bases in Composite Dimensions -- A Review,'' \emph{Quantum}, vol.~10, p.~2051, 2026.

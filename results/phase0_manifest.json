@@ -1,0 +1,445 @@
+{
+  "created_utc": "2026-10-01T14:32:55.174442+00:00",
+  "repository": "D:\\MUBs in 6-dimension",
+  "git_head": "73ee3002e576bde0af03585e4b70707e3ca0d03a",
+  "git_status_short": [
+    "## main...origin/main [ahead 14]",
+    " M .gitignore",
+    " M docs/directory_map.md",
+    " M docs/organization.md",
+    " M docs/results/final_honest_status.md",
+    " M docs/scientific_status.md",
+    " D pdf/.env",
+    " D pdf/1809.07442.pdf",
+    " D pdf/2110.12206.pdf",
+    " D pdf/2110.12206.txt",
+    " D pdf/2110.12206_full.txt",
+    " D pdf/2503.14752",
+    " D pdf/3488559.pdf",
+    " D pdf/78-files-data-ec5decca5ed3d6b8079e2e7e7bacc9f2-127.pdf",
+    " D \"pdf/A concise guide to complex Hadamard matrices.pdf\"",
+    " D \"pdf/Extension of the Set of Complex Hadamard Matrices of Size 8.pdf\"",
+    " D \"pdf/MUTUALLY UNBIASED BASES AND.pdf\"",
+    " D \"pdf/Mutually Unbiased Bases in Composite Dimensions -- A Review.pdf\"",
+    " D pdf/PRXQuantum.3.010101.pdf",
+    " D \"pdf/THREE-PARAMETER COMPLEX HADAMARD.pdf\"",
+    " D pdf/_all_model_ids.txt",
+    " D pdf/_anal.out",
+    " D pdf/_anal.py",
+    " D pdf/_anal2.py",
+    " D pdf/_analm.py",
+    " D pdf/_analyze_tmp.py",
+    " D pdf/_build_page_nvidia__ai-classification-ocr-2.html",
+    " D pdf/_build_page_nvidia__htc-ocr-2.html",
+    " D pdf/_build_page_nvidia__llava-3.2-8b-vit.html",
+    " D pdf/_build_page_nvidia__mumu-0.5-8b.html",
+    " D pdf/_build_page_nvidia__nemotron-parse-2.0.html",
+    " D pdf/_build_page_nvidia__phi-3.5-vision-instruct.html",
+    " D pdf/_fetchbuild_dump.py",
+    " D pdf/_fetchbuild_out.txt",
+    " D pdf/_probe_results.txt",
+    " D pdf/_showids.py",
+    " D pdf/_top_files.txt",
+    " D pdf/beauchamp_nicoara_2006.pdf",
+    " D pdf/bell_inequalities_mub.pdf",
+    " D pdf/brierley_weigert_grobner.pdf",
+    " D pdf/butterley_hall_numerical.pdf",
+    " D pdf/fetchbuild.py",
+    " D pdf/four_most_distant_bases.pdf",
+    " D pdf/full_list.py",
+    " D pdf/g3.py",
+    " D pdf/grepnode.py",
+    " D pdf/grepparse.py",
+    " D pdf/grepparse2.py",
+    " D pdf/jaming_matolcsi_mora_mub6.pdf",
+    " D pdf/karlsson_hadamards_mub6.pdf",
+    " D pdf/list-models.py",
+    " D pdf/matolcsi_triplets_mub.pdf",
+    " D pdf/mconnell_zauner_evidence.pdf",
+    " D pdf/model_report.txt",
+    " D pdf/mub_composite_dims_review.pdf",
+    " D pdf/parse_dump.py",
+    " D pdf/probe.py",
+    " D pdf/probe2.py",
+    " D pdf/probe3.py",
+    " D pdf/probe_models.py",
+    " D pdf/probe_writer.py",
+    " D pdf/search_models.py",
+    " M readme.md",
+    " M results/campaigns/i3_singular_locus/root_certification.json",
+    " M results/campaigns/i3_singular_locus/third_mub_cliques.json",
+    " M results/third_mub_candidates_audit_py.csv",
+    " M results/validation_summary_py.txt",
+    " M scripts/python/validate_third_mub_table.py",
+    " D src/hpc/M1Hardware.jl",
+    " D src/hpc/M2Mubness.jl",
+    " D src/hpc/M3Search.jl",
+    " M test/norm_detection.jl",
+    " M test/runtests.jl",
+    "?? .github/",
+    "?? INTERFACES.md",
+    "?? PLAN_fourier_route_fourth_mub.md",
+    "?? PLAN_next_steps_4th_mub.md",
+    "?? b3_a4_i4_results/",
+    "?? docs/research/reports/alphaxiv_consultation_2026-10-01.md",
+    "?? docs/research/reports/phase2_fold_certified_singular_roots_2026-10-01.md",
+    "?? docs/research/reports/phase2_fold_critical_match_audit_2026-09-30.md",
+    "?? docs/research/reports/phase2_pi3_distinct_embedding_audit_2026-10-01.md",
+    "?? docs/research/reports/phase2_pi3_exact_remainder_verification_2026-10-01.md",
+    "?? docs/research/reports/phase2_pi3_julia_rebuild_2026-10-01.md",
+    "?? docs/research/reports/phase2_pi3_phase_field_consistency_2026-10-01.md",
+    "?? docs/research/reports/phase2_pi3_pool_graph_audit_2026-10-01.md",
+    "?? docs/research/reports/phase2_pi3_reconstruction_probe_2026-09-30.md",
+    "?? docs/research/reports/phase2_w1_coefficient_field_2026-10-01.md",
+    "?? docs/research/reports/phase2_w1_groebner_run_2026-10-01.md",
+    "?? provenance/",
+    "?? pytest.ini",
+    "?? results/gate0_review/",
+    "?? results/phase0_manifest.json",
+    "?? results/phase2_abc_fourier_fit.json",
+    "?? results/phase2_exact_pi3_b3_validation.json",
+    "?? results/phase2_exact_pi3_fourier_fit.json",
+    "?? results/phase2_exact_pi3_fourier_symbolic.json",
+    "?? results/phase2_fold_certified_singular_roots.json",
+    "?? results/phase2_fold_critical_match_audit.json",
+    "?? results/phase2_pi3_B3_mp100.json",
+    "?? results/phase2_pi3_distinct_embedding_audit.json",
+    "?? results/phase2_pi3_exact_remainder_verification.json",
+    "?? results/phase2_pi3_julia_rebuild_audit.json",
+    "?? results/phase2_pi3_phase_field_ideal.json",
+    "?? results/phase2_pi3_pool_graph_audit.json",
+    "?? results/phase2_status.json",
+    "?? results/phase2_w1_coefficient_field_preflight.log",
+    "?? results/phase2_w1_quadratic_square_classes.log",
+    "?? results/phase2_w1_setup.json",
+    "?? results/pi3_phase_groebner_basis.txt",
+    "?? results/track_c_elimination/m2_w1_pi3_exact_abc.log",
+    "?? results/track_c_elimination/m2_w1_pi3_exact_abc_wsl.log",
+    "?? scripts/python/.hermes-tmp.52E4As",
+    "?? scripts/python/algdep_pi3_probe.py",
+    "?? scripts/python/analyze_pool_graph_pi3.py",
+    "?? scripts/python/audit_certified_fold_singular_roots.py",
+    "?? scripts/python/audit_fold_critical_match.py",
+    "?? scripts/python/audit_julia_pi3_rebuild.py",
+    "?? scripts/python/check_pi3_phase_field_ideal.py",
+    "?? scripts/python/create_phase0_manifest.py",
+    "?? scripts/python/defect_minimization.py",
+    "?? scripts/python/derive_pi3_all_phase_polynomials.py",
+    "?? scripts/python/derive_pi3_pairwise_relations.py",
+    "?? scripts/python/derive_pi3_phase_polynomial.py",
+    "?? scripts/python/export_pi3_exact_abc_w1.py",
+    "?? scripts/python/export_pi3_exact_w1.py",
+    "?? scripts/python/fit_exact_pi3_candidate.py",
+    "?? scripts/python/fit_pi3_abc_candidate.py",
+    "?? scripts/python/probe_pi3_field.py",
+    "?? scripts/python/prove_pi3_fourier_field.py",
+    "?? scripts/python/prove_pi3_fourier_symbolic.py",
+    "?? scripts/python/ref_ref_resolver.py",
+    "?? scripts/python/refine_pi3_vector_mp.py",
+    "?? scripts/python/validate_pi3_distinct_embedding.py",
+    "?? scripts/python/validate_pi3_exact_b3_field.py",
+    "?? scripts/python/validate_third_mub_simple.py",
+    "?? scripts/python/verify_pi3_exact_remainders.py",
+    "?? scripts/python/w1_pi3_groebner.py",
+    "?? symbolic_export/pi3_exact_B3_ansatz.md",
+    "?? symbolic_export/w1_pi3_coefficient_field_preflight.sing",
+    "?? symbolic_export/w1_pi3_exact_abc.m2",
+    "?? symbolic_export/w1_pi3_exact_ansatz.m2",
+    "?? symbolic_export/w1_pi3_m2_field_smoke.m2",
+    "?? symbolic_export/w1_pi3_quadratic_square_classes.sing"
+  ],
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "artifacts": {
+    "Project.toml": {
+      "exists": true,
+      "sha256": "9cff23aad0b5064541a1c3e295a89f3c21234cde382b261b732227b5ecbe5776",
+      "size_bytes": 969
+    },
+    "Manifest.toml": {
+      "exists": true,
+      "sha256": "51486b585f849ef1cf22044500bb8c917d32ab12fbebd6cb5665ed3f7d76c244",
+      "size_bytes": 46408
+    },
+    "PLAN_next_steps_4th_mub.md": {
+      "exists": true,
+      "sha256": "dc392500eddede24f279436e50dfbd81c17eabd44b679ba715b7ae57663ba7e7",
+      "size_bytes": 26269
+    },
+    "INTERFACES.md": {
+      "exists": true,
+      "sha256": "f8677b6bfd7643aaaac7328bdcdd1834d3d47c7f0d21a74c9e2b6037e39e5b7b",
+      "size_bytes": 2882
+    },
+    "docs/scientific_status.md": {
+      "exists": true,
+      "sha256": "5ec9e28bdee7f7ddf96b490eafc0ff6143d46cdfa7c26135f93abfdcc77af11a",
+      "size_bytes": 24577
+    },
+    "docs/results/final_honest_status.md": {
+      "exists": true,
+      "sha256": "7b40d678ed6038d2fba8c2d4be15884b61dbadbc16411e9a5de8729b4e84e30a",
+      "size_bytes": 15017
+    },
+    "docs/results/phase1b_certified_clique_audit_2026-09-29.md": {
+      "exists": true,
+      "sha256": "127b9b6cd1f8c27593ddbbfa48e9f8ca044876b2c4da095d1547ee65a7c333ec",
+      "size_bytes": 11140
+    },
+    "docs/results/fold_sweep_phase2_2026-09-29.md": {
+      "exists": true,
+      "sha256": "7e6f9f1e56eb14a7dd4e2d009528b3f0ec738d477dfbf22b5099de2f253a1f36",
+      "size_bytes": 9672
+    },
+    "b3_a4_i4_results/summary.json": {
+      "exists": true,
+      "sha256": "63275fd7b673b9dadcc100c6a774badb0147c2c83b47e1e865a1783feb73c111",
+      "size_bytes": 2366
+    },
+    "b3_a4_i4_results/pool_pi_over_3.npz": {
+      "exists": true,
+      "sha256": "20adf0957e87afdf50259fb29ed74c464fd5bfe851612fbc4f42bdeffbf43262",
+      "size_bytes": 7168
+    },
+    "scripts/python/w1_pi3_groebner.py": {
+      "exists": true,
+      "sha256": "baa06bc6f5e534b6f1f0281c516e2c40bd811d78a8432babb3814223a3295a91",
+      "size_bytes": 5885
+    },
+    "scripts/python/refine_pi3_vector_mp.py": {
+      "exists": true,
+      "sha256": "8f35e59b46af4495f2aca8a374726170ad92e0ddf4eec6560770afb2c8a7d149",
+      "size_bytes": 3333
+    },
+    "docs/research/reports/phase2_pi3_reconstruction_probe_2026-09-30.md": {
+      "exists": true,
+      "sha256": "4d3f0474ce49d17e8055a06966427e0f6b2346fd5ccbcf2cb7eb95c1ccecfb23",
+      "size_bytes": 3785
+    },
+    "results/phase2_pi3_B3_mp100.json": {
+      "exists": true,
+      "sha256": "4f8fd6caae5400aba10aa071dc5c47d2731894ece20afeefab9cd2396eb8206c",
+      "size_bytes": 8856
+    },
+    "results/pi3_phase_groebner_basis.txt": {
+      "exists": true,
+      "sha256": "230be07db328545e4737da06b668429332ee73acfb37b4649564e05bc3a7bcf1",
+      "size_bytes": 689
+    },
+    "symbolic_export/pi3_exact_B3_ansatz.md": {
+      "exists": true,
+      "sha256": "8516e91d0e34f8c2669326bf980b14a889cd45965480334a320e99d6815f0bde",
+      "size_bytes": 2397
+    },
+    "symbolic_export/w1_pi3_exact_ansatz.m2": {
+      "exists": true,
+      "sha256": "0d5e2611895efeb37bf70ef523278428573c86f482b128e3e331dc973401dfef",
+      "size_bytes": 6868
+    },
+    "scripts/python/audit_fold_critical_match.py": {
+      "exists": true,
+      "sha256": "b5374278b231ea67994f870ee1e33086cec441bc495d4fc8b4fcaa7614196e1f",
+      "size_bytes": 2478
+    },
+    "docs/research/reports/phase2_fold_critical_match_audit_2026-09-30.md": {
+      "exists": true,
+      "sha256": "47652be6f766a55c9abdf4d06439a1957dc43b152296875e002a91e7d21f687f",
+      "size_bytes": 1161
+    },
+    "results/phase2_fold_critical_match_audit.json": {
+      "exists": true,
+      "sha256": "f59b3099ad81f87b6193fc5806791d98347642903a941bf0b2adf78c999cd293",
+      "size_bytes": 366
+    },
+    "scripts/python/fit_exact_pi3_candidate.py": {
+      "exists": true,
+      "sha256": "7815ad07e1aacc612d05e50ec4112d73c46fc6122e8bf9608bfe419e158c520e",
+      "size_bytes": 1521
+    },
+    "scripts/python/prove_pi3_fourier_symbolic.py": {
+      "exists": true,
+      "sha256": "233f4179c39995a092aca08e86f11f4249bb10b0792bb206188716ba71b68195",
+      "size_bytes": 4127
+    },
+    "results/phase2_exact_pi3_fourier_fit.json": {
+      "exists": true,
+      "sha256": "4fe819701ca6f01e7ea99d2c2c85fbe0c9df4079afc2b0f1740353b13b8d7bf2",
+      "size_bytes": 1429
+    },
+    "scripts/python/export_pi3_exact_abc_w1.py": {
+      "exists": true,
+      "sha256": "8e9fc0458ead255b2503a47574c94f9169104d26bc2f0ce78f3664e804290b22",
+      "size_bytes": 4787
+    },
+    "symbolic_export/w1_pi3_exact_abc.m2": {
+      "exists": true,
+      "sha256": "d64c82ace68a81c45037c01409dd64358fcd6970985f3aff9ef3cdadd7158392",
+      "size_bytes": 6807
+    },
+    "scripts/python/verify_pi3_exact_remainders.py": {
+      "exists": true,
+      "sha256": "b86b242465532a656e97e5a06af3ee14e7017c9f790fc42045057d28be8d8ef1",
+      "size_bytes": 4814
+    },
+    "results/phase2_pi3_exact_remainder_verification.json": {
+      "exists": true,
+      "sha256": "5e116da0c5c2432b6e7ec0c37702650525472cacf340d7532f5ee674a940dd25",
+      "size_bytes": 340
+    },
+    "docs/research/reports/phase2_pi3_exact_remainder_verification_2026-10-01.md": {
+      "exists": true,
+      "sha256": "005a07a18e3c5d85aa9846c606ef9a2e3fc5066dbd04f1794f6b9c44e606ea39",
+      "size_bytes": 1039
+    },
+    "scripts/python/analyze_pool_graph_pi3.py": {
+      "exists": true,
+      "sha256": "49928dbadb884533dcc2ddd4f6fc9f5a2e9805db5e6c3864184fbe561535d251",
+      "size_bytes": 2386
+    },
+    "results/phase2_pi3_pool_graph_audit.json": {
+      "exists": true,
+      "sha256": "dda371b5b26ddaeac5ef20421aee87407a75cc65be37b052a84ab6e8f1bdfb8c",
+      "size_bytes": 1563
+    },
+    "docs/research/reports/phase2_pi3_pool_graph_audit_2026-10-01.md": {
+      "exists": true,
+      "sha256": "7a40712f97a331e789fafe15424e0f21a653f95675a17e61106a83513c094e31",
+      "size_bytes": 790
+    },
+    "results/phase2_w1_setup.json": {
+      "exists": true,
+      "sha256": "9369797911fc28d3a7ed726ce2e9bd865de73898d882e4582460f8534650a7fd",
+      "size_bytes": 1149
+    },
+    "results/track_c_elimination/m2_w1_pi3_exact_abc.log": {
+      "exists": true,
+      "sha256": "eda88a7e98c735065920d91994b59b4eebf94769c07fb7ce6faef3a6dd55730e",
+      "size_bytes": 96
+    },
+    "results/track_c_elimination/m2_w1_pi3_exact_abc_wsl.log": {
+      "exists": true,
+      "sha256": "5c64e2bc3cce64f3d6aabcf20288350b05c6f3c0b57986ae5e82c592b438cff7",
+      "size_bytes": 22
+    },
+    "docs/research/reports/phase2_w1_groebner_run_2026-10-01.md": {
+      "exists": true,
+      "sha256": "1cb20104513845d01763c01a98d936e1295119530a145d9b9bd0dac5eba040ba",
+      "size_bytes": 2130
+    },
+    "symbolic_export/w1_pi3_coefficient_field_preflight.sing": {
+      "exists": true,
+      "sha256": "fc64bd4dd89ccaaf2bd80a48c80f868e0ad52150293819c84f61bca1aab2dcd8",
+      "size_bytes": 2594
+    },
+    "symbolic_export/w1_pi3_quadratic_square_classes.sing": {
+      "exists": true,
+      "sha256": "051e6f341202a2f85aa3af5255b1f97c56dae2598fd998b87f4781b5abf9d501",
+      "size_bytes": 1024
+    },
+    "symbolic_export/w1_pi3_m2_field_smoke.m2": {
+      "exists": true,
+      "sha256": "a3a22de71a6bf397859c352a1d34e1d7855187c8e9b58b25d74979b40e9f2bcf",
+      "size_bytes": 839
+    },
+    "results/phase2_w1_coefficient_field_preflight.log": {
+      "exists": true,
+      "sha256": "5146ffb0a62fb9af75c947a1ab4f51d74747262f0242251c047fd4336839f7f8",
+      "size_bytes": 615
+    },
+    "results/phase2_w1_quadratic_square_classes.log": {
+      "exists": true,
+      "sha256": "5b6ab23ca33d6baac86d58000e699d488cb5993efe1a75b59548f62cad51d1f5",
+      "size_bytes": 1139
+    },
+    "docs/research/reports/phase2_w1_coefficient_field_2026-10-01.md": {
+      "exists": true,
+      "sha256": "a552240e36c9fb2a3da41f44e3cb504d84ce8caec7c66aa67e842b943ab23017",
+      "size_bytes": 2820
+    },
+    "scripts/python/audit_certified_fold_singular_roots.py": {
+      "exists": true,
+      "sha256": "2a28d0d6ed9d9604846f9b06997eb55b2d482b879368a7354ded0f8be4a848f9",
+      "size_bytes": 5313
+    },
+    "results/phase2_fold_certified_singular_roots.json": {
+      "exists": true,
+      "sha256": "57b75a3eaa7fe06eb9aa545f544e624ea29a93fe042b7bb9280ae971e9e1a952",
+      "size_bytes": 9854
+    },
+    "docs/research/reports/phase2_fold_certified_singular_roots_2026-10-01.md": {
+      "exists": true,
+      "sha256": "3495e32a1091891eddade138fc6b49b2162ea61b650875eb9b11ddb0482657ab",
+      "size_bytes": 1320
+    },
+    "results/campaigns/i3_singular_locus/root_certification.json": {
+      "exists": true,
+      "sha256": "1b3e84986c3a40475bf558f39cf4f30c9d5c9987f7c022311f7e0ffa284b1d60",
+      "size_bytes": 1883242
+    },
+    "scripts/python/audit_julia_pi3_rebuild.py": {
+      "exists": true,
+      "sha256": "c8b7b15b38ca6a06e000996c89418089c5f818b767ebe9e8ed6b981d94f97746",
+      "size_bytes": 2192
+    },
+    "results/phase2_pi3_julia_rebuild_audit.json": {
+      "exists": true,
+      "sha256": "7dc07b5420be4193ef7e217a2d05a681e108c91adc580774eb34c752b6909c3b",
+      "size_bytes": 529
+    },
+    "results/campaigns/i3_singular_locus/third_mub_cliques.json": {
+      "exists": true,
+      "sha256": "732823ce9ce35e639ce106619bd3343718cdd9caad7b4bbf3191f426eb96e142",
+      "size_bytes": 18528
+    },
+    "docs/research/reports/phase2_pi3_julia_rebuild_2026-10-01.md": {
+      "exists": true,
+      "sha256": "9ecbfa557eab05b1a16d422763e57f08362ee19e25de3aa240c8272dc8c905cd",
+      "size_bytes": 857
+    },
+    "docs/research/reports/alphaxiv_consultation_2026-10-01.md": {
+      "exists": true,
+      "sha256": "56f80e12d3dceaf36b21b07ed7310564b322fd573985b6eb2dbe2549f47ea115",
+      "size_bytes": 1680
+    },
+    "scripts/python/check_pi3_phase_field_ideal.py": {
+      "exists": true,
+      "sha256": "c47a5b434de29fc97bcf7d1d146f604974bec6f2fadc1bfe2656d8d13762a5d9",
+      "size_bytes": 4219
+    },
+    "results/phase2_pi3_phase_field_ideal.json": {
+      "exists": true,
+      "sha256": "0355306764b430974c4e93c5e431751112e2d72b17c6fa606b8d6cd0ff3b3f1f",
+      "size_bytes": 308
+    },
+    "docs/research/reports/phase2_pi3_phase_field_consistency_2026-10-01.md": {
+      "exists": true,
+      "sha256": "81b07f32a8656e3f74c6f9800460856d6fd12a4365341de4a1f1cd99859e6706",
+      "size_bytes": 629
+    },
+    "scripts/python/fit_pi3_abc_candidate.py": {
+      "exists": true,
+      "sha256": "0fbb7094a04e4dce31f20a8f8f88d2d9cf829dae98c09e5cce6672e22d63fd9b",
+      "size_bytes": 1766
+    },
+    "results/phase2_abc_fourier_fit.json": {
+      "exists": true,
+      "sha256": "54fff6e8c4b277f0d4108606c8f93c84cb58644e545d0ef85165dbae66b731e4",
+      "size_bytes": 1421
+    },
+    "scripts/python/validate_pi3_exact_b3_field.py": {
+      "exists": true,
+      "sha256": "1100bbf7b63b7e25e39304ff520e38d62e2c1d4b8beb97cc98bcf2590aece6dd",
+      "size_bytes": 4307
+    },
+    "results/phase2_exact_pi3_b3_validation.json": {
+      "exists": true,
+      "sha256": "abd54f8bacefe8dc7f264c4e8b1075042f981c4374e1a8205a56ea7169b90e74",
+      "size_bytes": 1177
+    }
+  },
+  "execution_contract": {
+    "pool_target": "lambda=pi/3; summary key 1.0471975511965976",
+    "w1_script": "scripts/python/w1_pi3_groebner.py",
+    "next_external_step": "exact or certified-high-precision B3 reconstruction before Groebner elimination"
+  }
+}

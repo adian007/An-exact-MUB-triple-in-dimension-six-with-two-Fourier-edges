@@ -1,0 +1,12 @@
+{
+  "status": "CONSISTENT",
+  "unit_ideal": false,
+  "common_q_factor_degree": 12,
+  "resultant_degrees": [
+    24,
+    24,
+    24
+  ],
+  "elimination": "exact univariate resultants and gcd with cyclotomic polynomial",
+  "scope": "phase embedding ideal only; excludes the W1 witness variables"
+}
